@@ -1,0 +1,35 @@
+.headScreenTitle {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vw;
+  width: 75%;
+}
+
+.categoryCourseText {
+  display: flex;
+  font-size: 1.25vw;
+  color: white;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+}
+
+.nameCourseText {
+  display: flex;
+  font-size: 3.35vw;
+  color: white;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+}
+
+.descriptionCourseText {
+  display: flex;
+  font-size: 0.94vw;
+  color: white;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  margin-top: 1vw;
+}

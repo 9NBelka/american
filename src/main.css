@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --font-akatab: 'Akatab';
+  --font-weight-normal: 400;
+  --font-weight-bold: 900;
+  --font-lineh-normal: 1.3em;
+  --font-lineh-small: 1.2em;
+}

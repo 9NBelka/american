@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "path": "/architecture",
+    "logoCourse": "/src/assets/img/ArchLogo.png",
+    "logoUnity": "https://lms.k-syndicate.school/wp-content/uploads/2022/08/Unity-logo-new.png",
+    "categoryCourse": "Course",
+    "nameCourse": "ARCHITECTURE UNITY MOBILE GAME",
+    "subNameCourse": "",
+    "descriptionCourse": "The course is for those who have basic development skills, knowledge of C# and want to deepen their understanding of game architecture in industrial approaches, and in general - how to make these games.",
+    "notificationCourse": "",
+    "titleSalesOnTimer": "",
+    "endDateTime": "",
+    "stickyBlockVideo": "https://www.youtube.com/embed/fIveNLynbMs?si=Xu9dZ_O_rFTpW90s",
+    "stickyBlockPrice": "$500",
+    "stickyBlockLinkBuy": "#"
+  }
+]

@@ -1,0 +1,58 @@
+.stickyBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30vw;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5vw;
+  margin-top: 10vw;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #656565;
+  transition: 0.5s;
+}
+
+.stickyBlockVideo {
+  display: flex;
+  width: 100%;
+  height: 11vw;
+  border-radius: 0.4vw;
+  border: 0;
+  transition: 0.3s;
+  /* filter: brightness(0.5); */
+}
+
+.viewCourseScreenVideoIframe:hover {
+  filter: brightness(1);
+}
+
+.stickyBlockPrice {
+  display: flex;
+  justify-content: center;
+  font-size: 2.2vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  margin-top: 0.5vw;
+}
+
+.stickyBlockBuyNow {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  color: white;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+  background-color: #d74f3e;
+  text-align: center;
+  border-radius: 0.25vw;
+  margin-top: 0.5vw;
+}
