@@ -3,7 +3,7 @@ import css from './HeadScreenHeader.module.css';
 // import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
 
-export default function HeadScreenHeader({ info }) {
+export default function HeadScreenHeader({ currentInfo }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,24 +26,10 @@ export default function HeadScreenHeader({ info }) {
         <nav className={css.headerNav}>
           <div className={css.headerLogosAndButtonAnswer}>
             <div>
-              {info.map((src, index) => (
-                <img
-                  key={index}
-                  className={clsx(css.headerLogo)}
-                  src={src.logoCourse}
-                  alt='icon-logo'
-                />
-              ))}
+              <img className={clsx(css.headerLogo)} src={currentInfo.logoCourse} alt='icon-logo' />
             </div>
             <div>
-              {info.map((src, index) => (
-                <img
-                  key={index}
-                  className={css.headerLogoUnity}
-                  src={src.logoUnity}
-                  alt='icon-unity'
-                />
-              ))}
+              <img className={css.headerLogoUnity} src={currentInfo.logoUnity} alt='icon-unity' />
             </div>
           </div>
           <ul className={css.headerNavText}>

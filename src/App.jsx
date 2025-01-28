@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ArchitecturePageOne from './pages/ArchitecturePageOne/ArchitecturePageOne';
 import ArchitecturePageTwo from './pages/ArchitecturePageTwo/ArchitecturePageTwo';
 import ArchitecturePageThree from './pages/ArchitecturePageThree/ArchitecturePageThree';
+import TeamLead from './pages/TeamLead/TeamLead';
 import allInfo from './allPagesInformation.json';
 
 const Loading = () => <h1>Загрузка...</h1>;
@@ -16,11 +17,11 @@ const TestPage = ({ page, Component, ...restProps }) => {
     const savedPage = localStorage.getItem('firstPage');
 
     if (!savedPage) {
-      // Сохраняем первую страницу в localStorage
+      // Сохраняем текущую страницу как первую
       localStorage.setItem('firstPage', page);
       setIsLoading(false);
     } else if (savedPage !== page) {
-      // Редирект на сохранённую страницу с обновлением URL
+      // Если сохранённая страница отличается от текущей, делаем редирект
       navigate(`/architecture/${savedPage}`, { replace: true });
     } else {
       setIsLoading(false);
@@ -35,7 +36,25 @@ const TestPage = ({ page, Component, ...restProps }) => {
   return <Component {...restProps} />;
 };
 
-const App = () => {
+export default function App() {
+  const location = useLocation();
+
+  // Получаем id курса на основе текущего пути
+  const getCourseIdByPath = (path) => {
+    const course = allInfo.find((item) =>
+      Array.isArray(item.path) ? item.path.some((link) => link === path) : item.path === path,
+    );
+
+    return course ? course.id : null;
+  };
+
+  const courseId = getCourseIdByPath(location.pathname);
+  const currentInfo = allInfo.find((item) => item.id === courseId);
+  console.log(currentInfo); // Для отладки
+  if (!currentInfo) {
+    return <NotFoundPage />;
+  }
+
   return (
     <Routes>
       {/*
@@ -50,7 +69,7 @@ const App = () => {
           <TestPage
             page='a'
             Component={ArchitecturePageOne}
-            info={allInfo} // Пропс info для страницы A
+            currentInfo={currentInfo} // Пропс info для страницы A
           />
         }
       />
@@ -61,7 +80,7 @@ const App = () => {
           <TestPage
             page='b'
             Component={ArchitecturePageTwo}
-            info={allInfo} // Пропс info для страницы B
+            currentInfo={currentInfo} // Пропс info для страницы B
           />
         }
       />
@@ -72,16 +91,15 @@ const App = () => {
           <TestPage
             page='c'
             Component={ArchitecturePageThree}
-            info={allInfo} // Пропс info для страницы C
+            currentInfo={currentInfo} // Пропс info для страницы C
           />
         }
       />
       {/* Если путь просто /architecture то перенаправляет на страницу А */}
       <Route path='/architecture' element={<ArchitecturePageOne />} />
+      <Route path='/teamlead' element={<TeamLead />} />
       {/* Страница 404 */}
       <Route path='*' element={<NotFoundPage />} />
     </Routes>
   );
-};
-
-export default App;
+}

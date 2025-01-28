@@ -3,7 +3,7 @@
   top: 1.5vw;
   width: 100%;
   z-index: 1000;
-  padding: 0.5vw 0;
+  padding: 0.6vw 0;
   transition: 0.5s;
   background-color: #092332;
 }
@@ -50,7 +50,7 @@
   justify-content: center;
   align-items: center;
   padding: 0.25vw 1vw;
-  font-size: 0.8vw;
+  font-size: 0.85vw;
   color: white;
   border: 0.1vw solid #0055ff;
   font-family: var(--font-akatab), sans-serif;
@@ -77,13 +77,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 2vw;
+  gap: 1.6vw;
 }
 
 .headerNavText a,
 .headerNavText li {
   display: flex;
-  font-size: 0.8vw;
+  font-size: 0.85vw;
   font-family: var(--font-akatab), sans-serif;
   font-weight: var(--font-weight-normal);
   line-height: var(--font-lineh-normal);
@@ -102,7 +102,7 @@
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  gap: 1.5vw;
+  gap: 1vw;
   padding: 0;
   margin: 0;
 }

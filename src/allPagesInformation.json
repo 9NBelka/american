@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "path": "/architecture",
+    "path": ["/architecture", "/architecture/a", "/architecture/b", "/architecture/c"],
     "logoCourse": "/src/assets/img/ArchLogo.png",
     "logoUnity": "https://lms.k-syndicate.school/wp-content/uploads/2022/08/Unity-logo-new.png",
     "categoryCourse": "Course",
@@ -13,6 +13,108 @@
     "endDateTime": "",
     "stickyBlockVideo": "https://www.youtube.com/embed/fIveNLynbMs?si=Xu9dZ_O_rFTpW90s",
     "stickyBlockPrice": "$500",
-    "stickyBlockLinkBuy": "#"
+    "stickyBlockLinkBuy": "#",
+    "viewCourseScreenText": [
+      "A course on how to make confident games. This is not a guru course trying to tell you about everything, but instead contains a set of approaches and practices suitable for projects of any scale. The project in the course specifically does not use third-party libraries in order to give a detailed understanding of all parts of the project (DI, entry point, etc.).",
+      "After you write this project consistently and together with us, there will be nothing left that you do not know about it. Every corner containing simple or complex code will be known to you.",
+      "We created videos for the course based on our experience as speakers. They do not contain hour and a half discussions of slides. They are as practical, concentrated and divided into small portions that allow you to control the absorption of information.",
+      "Game development teaches you to solve not only immediate programming problems, but rather problems of the product as a whole. Therefore, we consider both the product code and the setup of its environment."
+    ],
+    "forWhomScreen": [
+      {
+        "forWhomScreenTitleList": "Independent developers",
+        "forWhomScreenListTextTitle": "Take industrial solutions for systemic problems from us and create space for creativity.",
+        "forWhomScreenListTextOne": "Want to spend less time fiddling with unstable architecture and focus on gameplay fun and content?",
+        "forWhomScreenListTextTwo": "Want to scale up your projects? Take our industrial solutions for systemic problems and free up space for creativity.",
+        "forWhomScreenListTextThree": ""
+      },
+      {
+        "forWhomScreenTitleList": "Developers are already in the industry",
+        "forWhomScreenListTextTitle": "Take industrial solutions for systemic problems from us and create space for creativity.",
+        "forWhomScreenListTextOne": "Do you make games but often run into issues of stability, extensibility and support?",
+        "forWhomScreenListTextTwo": "Do you want to deepen your understanding of design and architecture?",
+        "forWhomScreenListTextThree": "Do you want to expand your toolbox? Then you are welcome to join us!"
+      },
+      {
+        "forWhomScreenTitleList": ".Net Developers who want to get into gamedev",
+        "forWhomScreenListTextTitle": "Take industrial solutions for systemic problems from us and create space for creativity.",
+        "forWhomScreenListTextOne": "Have you always wanted to make games, but it didn't work out?",
+        "forWhomScreenListTextTwo": "We'll tell you what parts games consist of, how to think when solving typical problems, and how to write games so that they work as a coherent system.",
+        "forWhomScreenListTextThree": "After the course, you'll know enough to move into the gaming industry."
+      }
+    ],
+    "speakerScreen": [
+      {
+        "nameSpeaker": "ALEXEY NAUMENKO",
+        "descriptionSpeaker": [
+          "12 years of development experience. CEO of Black Tower Basement.",
+          "Previous: Unity Software Architect on Raid: Shadow Legends and several other world-class mobile projects."
+        ],
+        "linkedInSpeaker": "https://www.linkedin.com/in/oleksii-naumenko-0766bb59/",
+        "imageSpeaker": "/src/assets/img/spikers-lexa.jpg",
+        "linkedInButton": "/src/assets/img/linkedIn.png"
+      },
+      {
+        "nameSpeaker": "EKATERINA REVVO",
+        "descriptionSpeaker": [
+          "10 years of experience in developing and leading a project team.",
+          "CTO Black Tower Basement. In the past: Client Team Lead on Raid: Shadow Legends and Shadow Legends and several other large-scale projects"
+        ],
+        "linkedInSpeaker": "https://www.linkedin.com/in/kate-revvo-400721a8/",
+        "imageSpeaker": "/src/assets/img/spikers-katya.jpg",
+        "linkedInButton": "/src/assets/img/linkedIn.png"
+      }
+    ],
+    "speakerScreenGeneralInformation": [
+      {
+        "generalInfo": "После ухода из Plarium в начале 2020 перешли к фулл-тайм реализации собственных идей и проектов (среди которых – эта школа :)).",
+        "generalInfoListTitle": "Спикеры курса имеют большой опыт публичных выступлений.",
+        "generalInfoList": [
+          {
+            "beforeLinkText": "доклад про ECS – ",
+            "linkText": "Unity, ECS и люди",
+            "afterLinkText": ""
+          },
+          {
+            "beforeLinkText": "",
+            "linkText": "DI + UNITY = ZENJECT ",
+            "afterLinkText": "| Dependency injection в Unity"
+          },
+          {
+            "beforeLinkText": "",
+            "linkText": "Рефакторинг кода в Unity-проектах",
+            "afterLinkText": "| Разрываем зависимости"
+          },
+          {
+            "beforeLinkText": "",
+            "linkText": "UNIT TESTING ",
+            "afterLinkText": "| Правильно внедряем unit-тесты в Unity проект"
+          }
+        ],
+        "generalInfoListLinks": [
+          "https://www.youtube.com/watch?v=4sDnBChfV0o",
+          "https://www.youtube.com/watch?v=mbuzSrKHBHI",
+          "https://www.youtube.com/watch?v=65Dp9Qmt_Hw",
+          "https://www.youtube.com/watch?v=6mkrxvyZp0Y"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "path": "/teamlead",
+    "logoCourse": "/src/assets/img/teamlead/teamlead-logo.png",
+    "logoUnity": "https://lms.k-syndicate.school/wp-content/uploads/2022/08/Unity-logo-new.png",
+    "categoryCourse": "Master Class",
+    "nameCourse": "Team Lead",
+    "subNameCourse": "developers in gamedev",
+    "descriptionCourse": "",
+    "notificationCourse": "",
+    "titleSalesOnTimer": "",
+    "endDateTime": "",
+    "stickyBlockVideo": "",
+    "stickyBlockPrice": "",
+    "stickyBlockLinkBuy": "",
+    "viewCourseScreenText": []
   }
 ]

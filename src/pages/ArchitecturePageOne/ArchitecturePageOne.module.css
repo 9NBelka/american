@@ -5,6 +5,15 @@
   height: 100%;
 }
 
+.titleScreens {
+  font-size: 2.4vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  margin-top: 3vw;
+}
+
 .backgroundHeadScreen {
   display: flex;
   background-color: #092332;
@@ -33,7 +42,8 @@
 
 .leftColumn {
   display: flex;
-  width: 69%;
+  flex-direction: column;
+  width: 60.5%;
 }
 
 .rightColumn {
@@ -42,4 +52,12 @@
   right: 0;
   width: 31%; /* Ширина правой колонки */
   height: 100%;
+}
+
+.backgroundViewCourseScreen {
+  margin-top: 3vw;
+  background-color: #f2f6ff;
+  border-radius: 0.8vw;
+  padding: 1vw 1vw;
+  padding-right: 2.8vw;
 }

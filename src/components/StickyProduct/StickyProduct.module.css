@@ -8,10 +8,10 @@
   position: -webkit-sticky;
   position: sticky;
   top: 5vw;
-  margin-top: 10vw;
+  margin-top: -17.6vw;
   padding: 1vw;
   border-radius: 0.5vw;
-  border: 0.1vw solid #656565;
+  border: 0.05vw solid #656565;
   transition: 0.5s;
 }
 
@@ -45,7 +45,8 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 2vw;
+  font-size: 1.5vw;
+  padding: 0.2vw 0vw;
   color: white;
   font-family: var(--font-akatab), sans-serif;
   font-weight: var(--font-weight-bold);

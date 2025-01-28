@@ -1,8 +1,8 @@
 .headScreenTitle {
   display: flex;
   flex-direction: column;
-  padding-top: 10vw;
-  width: 75%;
+  padding-top: 8vw;
+  width: 60.5%;
 }
 
 .categoryCourseText {
@@ -17,19 +17,20 @@
 
 .nameCourseText {
   display: flex;
-  font-size: 3.35vw;
+  font-size: 3.4vw;
   color: white;
   font-family: var(--font-akatab), sans-serif;
   font-weight: var(--font-weight-bold);
-  line-height: var(--font-lineh-normal);
+  line-height: var(--font-lineh-small);
 }
 
 .descriptionCourseText {
   display: flex;
-  font-size: 0.94vw;
+  font-size: 0.85vw;
   color: white;
   font-family: var(--font-akatab), sans-serif;
   font-weight: var(--font-weight-normal);
   line-height: var(--font-lineh-normal);
   margin-top: 1vw;
+  width: 75%;
 }
