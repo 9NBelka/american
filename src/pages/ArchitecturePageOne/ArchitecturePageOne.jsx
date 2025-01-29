@@ -1,4 +1,5 @@
 import ForWhomScreen from '../../components/ForWhomScreen/ForWhomScreen';
+import GamesScreen from '../../components/GamesScreen/GamesScreen';
 import HeadScreenHeader from '../../components/HeadScreenHeader/HeadScreenHeader';
 import HeadScreenTitle from '../../components/HeadScreenTitle/HeadScreenTitle';
 import SpeakersScreen from '../../components/SpeakersScreen/SpeakersScreen';
@@ -25,6 +26,8 @@ export default function ArchitecturePageOne({ currentInfo }) {
             <ForWhomScreen infoForWhom={currentInfo} />
             <h3 className={css.titleScreens}>Who</h3>
             <SpeakersScreen speakersInfo={currentInfo} />
+            <h3 className={css.titleScreens}>We worked on:</h3>
+            <GamesScreen gamesInfo={currentInfo} />
           </div>
           <div className={css.rightColumn}>
             <StickyProduct infoAboutProduct={currentInfo} />

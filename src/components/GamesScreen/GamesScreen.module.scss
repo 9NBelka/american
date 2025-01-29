@@ -1,0 +1,138 @@
+.gameBlockMain {
+  margin-top: 1vw;
+}
+
+.gamesGap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+}
+
+.gamesGap:first-child {
+  margin: 0;
+}
+
+.gamesBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+
+  .gamesImageblock {
+    width: 20%;
+
+    .imageGame {
+      display: flex;
+      width: 100%;
+      border-radius: 0.5vw;
+    }
+  }
+}
+
+.gamesInfoBlock {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.nameGame {
+  display: flex;
+  font-size: 1.25vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+}
+
+.descriptionGameBlock {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 0.5vw;
+}
+
+.descriptionGameBlockWidth {
+  width: 100%;
+}
+
+.descriptionGame {
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: black;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+  }
+}
+
+.descriptionGameMarg {
+  margin-top: 1vw;
+}
+
+.descriptionGameButton {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  margin-top: 1vw;
+  cursor: pointer;
+}
+
+.descriptionGameButtonHide {
+  display: none;
+}
+
+.expandedDescription {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  overflow: hidden;
+  max-height: 0vw;
+  transition: max-height 0.4s ease-out;
+
+  ul {
+    margin: 0;
+    margin-top: 1vw;
+  }
+}
+
+.expandedDescription.show {
+  max-height: 20vw; /* подстрой под высоту списка */
+  transition: max-height 0.4s ease-in;
+}
+
+.linkOnGameGreedventoryBlock {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vw;
+  gap: 0.3vw;
+}
+
+.linkOnGameGreedventory {
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+}
+
+.generalTextForGames {
+  margin-top: 1vw;
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+}
