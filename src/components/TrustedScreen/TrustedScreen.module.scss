@@ -1,0 +1,18 @@
+.trustedScreenBlocks {
+  background-color: bisque;
+  margin-top: 1.5vw;
+}
+
+.trustedScreenBlock {
+  padding: 0 1vw;
+}
+
+.trustedScreenImages {
+  width: 100%;
+  filter: grayscale(100%) contrast(0.5);
+  transition: 0.3s;
+
+  &:hover {
+    filter: grayscale(0) contrast(1);
+  }
+}

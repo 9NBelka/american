@@ -61,3 +61,13 @@
   padding: 1vw 1vw;
   padding-right: 2.8vw;
 }
+
+.backgroundWhatsInsideScreen {
+  height: 59vw;
+}
+.backgroundFooterScreen {
+  display: flex;
+  justify-content: center;
+  padding: 3vw 0;
+  background-color: #092332;
+}

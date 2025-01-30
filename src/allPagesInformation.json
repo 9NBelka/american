@@ -161,7 +161,107 @@
         "descriptionGame": "The first project of the indie studio of our speakers Black Tower Basement. From a pet project to release, it has gone through many transformations and tested the architecture that we talk about in the courses."
       }
     ],
-    "fourGamesScreenGeneralText": "*Images and names of game projects RAID: Shadow Legends, Soldiers Inc: Mobile Warfare, Stormfall: Rise of Balur and Total Domination – Reborn belong to their rightful owners – Plarium Global Ltd."
+    "fourGamesScreenGeneralText": "*Images and names of game projects RAID: Shadow Legends, Soldiers Inc: Mobile Warfare, Stormfall: Rise of Balur and Total Domination – Reborn belong to their rightful owners – Plarium Global Ltd.",
+    "insideScreen": [
+      {
+        "insideScreenTitle": "Setting up the environment for work",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will connect advertising (Unity Ads) and in-app purchases",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will compile builds for devices",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "Setting up the environment for work",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "What about Dependency Injection?",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will compile builds for devices",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "Setting up the environment for work",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "Setting up the environment for work",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      },
+      {
+        "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+      }
+    ],
+    "demoVideos": {
+      "demoVideosTitle": [
+        "Animation Events",
+        "Animation Events",
+        "Introductions",
+        "Animation Events",
+        "Gizmos",
+        "State Machinevent"
+      ],
+      "demoVideosLink": [
+        "https://www.youtube.com/embed/po8UTUzi8dM",
+        "https://www.youtube.com/embed/cJFNRyG0sKA",
+        "https://www.youtube.com/embed/M7CRZ3UChXM",
+        "https://www.youtube.com/embed/QwlbqQLw95A",
+        "https://www.youtube.com/embed/RgofmP7BouU",
+        "https://www.youtube.com/embed/4EoX0Ir_fUI"
+      ],
+      "demoVideosLinkTimeLine": ["3:31", "8:37", "4:13", "1:18", "7:49", "6:16"]
+    },
+    "sampleCertificate": "/src/assets/img/sampleCertificate.jpg",
+    "trustedScreenImages": [
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/logo-HeroCraft.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/mytona.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/perfect-play.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/PixodeLOGO0809.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/play.cat_.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/RJ_Games.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/univirlab-.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/voodoo.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/logo-HeroCraft.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/mytona.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/perfect-play.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/PixodeLOGO0809.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/play.cat_.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/RJ_Games.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/univirlab-.png",
+      "https://lms.k-syndicate.school/wp-content/uploads/2024/07/voodoo.png"
+    ]
   },
   {
     "id": 1,

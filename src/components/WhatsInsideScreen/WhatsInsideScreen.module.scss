@@ -1,0 +1,78 @@
+.whatsInsideBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin-top: 1vw;
+}
+
+.spoilerBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.spoilerHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding-bottom: 0.4vw;
+  border-bottom: 0.05vw solid black;
+}
+
+.spoilerHeaderOpen {
+  border-bottom: none;
+  padding-bottom: 0vw;
+
+  .insideScreenTitle {
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.iconBs {
+  transition: transform 0.3s ease;
+  width: 0.8vw;
+  height: 0.8vw;
+}
+
+.insideScreenTitle {
+  font-size: 1.2vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  width: 85%;
+}
+
+.spoilerContent {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.spoilerContent.open {
+  max-height: 10vw; /* Устанавливаем примерное ограничение */
+  opacity: 1;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  border-bottom: 0.05vw solid black;
+}
+
+.spoilerContent.closed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.insideScreenContent {
+  font-size: 0.865vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+}

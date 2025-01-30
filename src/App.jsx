@@ -55,6 +55,15 @@ export default function App() {
     return <NotFoundPage />;
   }
 
+  //плавный скролл
+  const scrollToSection = (id, offset = 0) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  };
+
   return (
     <Routes>
       {/*
@@ -69,7 +78,8 @@ export default function App() {
           <TestPage
             page='a'
             Component={ArchitecturePageOne}
-            currentInfo={currentInfo} // Пропс info для страницы A
+            currentInfo={currentInfo}
+            scrollToSection={scrollToSection} // Пропс info для страницы A
           />
         }
       />

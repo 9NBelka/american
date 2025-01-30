@@ -3,7 +3,7 @@ import css from './HeadScreenHeader.module.css';
 // import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
 
-export default function HeadScreenHeader({ currentInfo }) {
+export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,25 +34,25 @@ export default function HeadScreenHeader({ currentInfo }) {
           </div>
           <ul className={css.headerNavText}>
             <li>
-              <a href='#'>For whom?</a>
+              <a onClick={() => scrollToSection('forWhom', 100)}>For whom?</a>
             </li>
             <li>
-              <a href='#'>Who?</a>
+              <a onClick={() => scrollToSection('who', 100)}>Who?</a>
             </li>
             <li>
-              <a href='#'>Reviews</a>
+              <a onClick={() => scrollToSection('reviews', 100)}>Reviews</a>
             </li>
             <li>
-              <a href='#'>We worked on:</a>
+              <a onClick={() => scrollToSection('weWorkedOn', 100)}>We worked on:</a>
             </li>
             <li>
-              <a href='#'>What's inside?</a>
+              <a onClick={() => scrollToSection('whatsInside', 100)}>What's inside?</a>
             </li>
             <li>
-              <a href='#'>Demo lessons</a>
+              <a onClick={() => scrollToSection('demoLessons', 100)}>Demo lessons</a>
             </li>
             <li>
-              <a href='#'>Our projects</a>
+              <a>Our projects</a>
             </li>
           </ul>
           <ul className={css.headerList}>
