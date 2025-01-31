@@ -110,7 +110,16 @@ export default function App() {
         }
       />
       {/* Если путь просто /architecture то перенаправляет на страницу А */}
-      <Route path='/architecture' element={<ArchitecturePageOne />} />
+      <Route
+        path='/architecture'
+        element={
+          <ArchitecturePageOne
+            currentInfo={currentInfo}
+            scrollToSection={scrollToSection} // Пропс info для страницы A
+            reviewsArchitecture={reviewsArchitecture}
+          />
+        }
+      />
       <Route path='/teamlead' element={<TeamLead />} />
       {/* Страница 404 */}
       <Route path='*' element={<NotFoundPage />} />
