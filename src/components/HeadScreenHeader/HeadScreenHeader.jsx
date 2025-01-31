@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import css from './HeadScreenHeader.module.css';
+import scss from './HeadScreenHeader.module.scss';
 // import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
 
@@ -21,20 +21,20 @@ export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
   }, []);
 
   return (
-    <header className={clsx(css.header, `${isScrolled ? css.headerScrolled : ''}`)}>
-      <div className={css.container}>
-        <nav className={css.headerNav}>
-          <div className={css.headerLogosAndButtonAnswer}>
+    <header className={clsx(scss.header, `${isScrolled ? scss.headerScrolled : ''}`)}>
+      <div className={scss.container}>
+        <nav className={scss.headerNav}>
+          <div className={scss.headerLogosAndButtonAnswer}>
             <div>
-              <img className={clsx(css.headerLogo)} src={currentInfo.logoCourse} alt='icon-logo' />
+              <img className={clsx(scss.headerLogo)} src={currentInfo.logoCourse} alt='icon-logo' />
             </div>
             <div>
-              <img className={css.headerLogoUnity} src={currentInfo.logoUnity} alt='icon-unity' />
+              <img className={scss.headerLogoUnity} src={currentInfo.logoUnity} alt='icon-unity' />
             </div>
           </div>
-          <ul className={css.headerNavText}>
+          <ul className={scss.headerNavText}>
             <li>
-              <a onClick={() => scrollToSection('forWhom', 100)}>For whom?</a>
+              <a onClick={() => scrollToSection('forWhom', 100)}>For who?</a>
             </li>
             <li>
               <a onClick={() => scrollToSection('who', 100)}>Who?</a>
@@ -46,18 +46,15 @@ export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
               <a onClick={() => scrollToSection('weWorkedOn', 100)}>We worked on:</a>
             </li>
             <li>
-              <a onClick={() => scrollToSection('whatsInside', 100)}>What's inside?</a>
+              <a onClick={() => scrollToSection('whatsInside', 100)}>What`s inside?</a>
             </li>
             <li>
               <a onClick={() => scrollToSection('demoLessons', 100)}>Demo lessons</a>
             </li>
-            <li>
-              <a>Our projects</a>
-            </li>
           </ul>
-          <ul className={css.headerList}>
-            <li className={css.headerButtonAnswer}>Ask a question</li>
-            <li className={css.headerButtonSingUp}>Sign Up</li>
+          <ul className={scss.headerList}>
+            <li className={scss.headerButtonAnswer}>Ask a question</li>
+            <li className={scss.headerButtonSingUp}>Sign Up</li>
             {/* <li><BurgerMenu isScrolled={isScrolled} /></li> */}
           </ul>
         </nav>

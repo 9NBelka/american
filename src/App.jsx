@@ -6,6 +6,7 @@ import ArchitecturePageTwo from './pages/ArchitecturePageTwo/ArchitecturePageTwo
 import ArchitecturePageThree from './pages/ArchitecturePageThree/ArchitecturePageThree';
 import TeamLead from './pages/TeamLead/TeamLead';
 import allInfo from './allPagesInformation.json';
+import reviewsArchitecture from './review-jsons/review-architecture.json';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -80,6 +81,7 @@ export default function App() {
             Component={ArchitecturePageOne}
             currentInfo={currentInfo}
             scrollToSection={scrollToSection} // Пропс info для страницы A
+            reviewsArchitecture={reviewsArchitecture}
           />
         }
       />
@@ -91,6 +93,7 @@ export default function App() {
             page='b'
             Component={ArchitecturePageTwo}
             currentInfo={currentInfo} // Пропс info для страницы B
+            reviewsArchitecture={reviewsArchitecture}
           />
         }
       />
@@ -102,6 +105,7 @@ export default function App() {
             page='c'
             Component={ArchitecturePageThree}
             currentInfo={currentInfo} // Пропс info для страницы C
+            reviewsArchitecture={reviewsArchitecture}
           />
         }
       />

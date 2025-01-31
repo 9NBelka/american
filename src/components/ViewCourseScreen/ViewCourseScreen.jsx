@@ -1,12 +1,12 @@
-import css from './ViewCourseScreen.module.css';
+import scss from './ViewCourseScreen.module.scss';
 import { BsArrowRightShort } from 'react-icons/bs';
 
 export default function ViewCourseScreen({ currentInfo }) {
   return (
-    <ul className={css.viewCourseScreenList}>
+    <ul className={scss.viewCourseScreenList}>
       {currentInfo.viewCourseScreenText.map((text, index) => (
-        <li key={index} className={css.viewCourseScreenItem}>
-          <BsArrowRightShort className={css.viewCourseScreenIcon} />
+        <li key={index} className={scss.viewCourseScreenItem}>
+          <BsArrowRightShort className={scss.viewCourseScreenIcon} />
           <h5>{text}</h5>
         </li>
       ))}

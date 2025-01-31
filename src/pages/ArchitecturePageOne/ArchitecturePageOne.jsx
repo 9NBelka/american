@@ -4,6 +4,7 @@ import ForWhomScreen from '../../components/ForWhomScreen/ForWhomScreen';
 import GamesScreen from '../../components/GamesScreen/GamesScreen';
 import HeadScreenHeader from '../../components/HeadScreenHeader/HeadScreenHeader';
 import HeadScreenTitle from '../../components/HeadScreenTitle/HeadScreenTitle';
+import ReviewsScreen from '../../components/ReviewsScreen/ReviewsScreen';
 import SampleCertificate from '../../components/SampleCertificate/SampleCertificate';
 import SpeakersScreen from '../../components/SpeakersScreen/SpeakersScreen';
 import StickyProduct from '../../components/StickyProduct/StickyProduct';
@@ -12,7 +13,7 @@ import ViewCourseScreen from '../../components/ViewCourseScreen/ViewCourseScreen
 import WhatsInsideScreen from '../../components/WhatsInsideScreen/WhatsInsideScreen';
 import css from './ArchitecturePageOne.module.css';
 
-export default function ArchitecturePageOne({ currentInfo, scrollToSection }) {
+export default function ArchitecturePageOne({ currentInfo, scrollToSection, reviewsArchitecture }) {
   return (
     <>
       <div className={css.backgroundHeadScreen}>
@@ -28,19 +29,23 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection }) {
               <ViewCourseScreen currentInfo={currentInfo} />
             </div>
             <h3 className={css.titleScreens} id='forWhom'>
-              For whom
+              For who
             </h3>
             <ForWhomScreen infoForWhom={currentInfo} />
             <h3 className={css.titleScreens} id='who'>
               Who
             </h3>
             <SpeakersScreen speakersInfo={currentInfo} />
+            <h3 className={css.titleScreens} id='reviews'>
+              Reviews
+            </h3>
+            <ReviewsScreen reviews={reviewsArchitecture} />
             <h3 className={css.titleScreens} id='weWorkedOn'>
               We worked on:
             </h3>
             <GamesScreen gamesInfo={currentInfo} />
             <h3 className={css.titleScreens} id='whatsInside'>
-              What's inside
+              What`s inside
             </h3>
             <div className={css.backgroundWhatsInsideScreen}>
               <WhatsInsideScreen programCourseInfo={currentInfo} />

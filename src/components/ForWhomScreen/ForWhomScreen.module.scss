@@ -2,12 +2,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 1vw;
-}
 
-.forWhomScreenBlock:first-child {
-  margin-top: 0;
+  &:first-child {
+    margin-top: 0vw;
+  }
 }
-
 .forWhomScreenTitleList {
   font-size: 1.25vw;
   color: black;
@@ -31,12 +30,12 @@
   padding: 0;
   margin: 0;
   margin-top: 1vw;
-}
 
-.forWhomScreenList li {
-  font-size: 0.85vw;
-  color: black;
-  font-family: var(--font-akatab), sans-serif;
-  font-weight: var(--font-weight-normal);
-  line-height: var(--font-lineh-normal);
+  & li {
+    font-size: 0.85vw;
+    color: black;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
 }
