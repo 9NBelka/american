@@ -10,6 +10,13 @@
   gap: 15vw;
 }
 
+@media (max-width: 800px) {
+  .footerScreenBlocks {
+    flex-direction: column;
+    gap: 5vw;
+  }
+}
+
 .footerScreenBlock {
   display: flex;
   flex-direction: column;
@@ -22,6 +29,16 @@
     font-family: var(--font-akatab), sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 800px) {
+  .footerScreenBlock {
+    gap: 1.5vw;
+
+    & h5 {
+      font-size: 2.6vw;
+    }
   }
 }
 
@@ -43,11 +60,28 @@
   }
 }
 
+@media (max-width: 800px) {
+  .footerScreenBlockIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+  }
+
+  .footerScreenBlockIcon {
+    width: 2.5vw;
+    height: 2.5vw;
+
+    &:hover {
+      fill: white;
+    }
+  }
+}
+
 .footerScreenBlockInfoColumn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3vw;
+  margin-top: 6.5vw;
 }
 
 .footerScreenBlockInfo {
@@ -71,6 +105,20 @@
   }
 }
 
+@media (max-width: 800px) {
+  .footerScreenBlockInfo {
+    gap: 5vw;
+
+    & h6 {
+      font-size: 1.6vw;
+    }
+
+    & h6:hover {
+      opacity: 1;
+    }
+  }
+}
+
 .footerScreenGeneralInfo {
   font-size: 0.65vw;
   color: white;
@@ -81,6 +129,16 @@
   opacity: 0.5;
 }
 
+@media (max-width: 800px) {
+  .footerScreenGeneralInfo {
+    width: 85%;
+    font-size: 1.4vw;
+    margin-top: 1vw;
+    text-align: center;
+    opacity: 0.5;
+  }
+}
+
 // form
 
 .footerScreenBlockForm {
@@ -89,7 +147,10 @@
 
   & input {
     display: flex;
-    width: 9vw;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 0.85vw;
     background-color: #656565;
     border-radius: 0.25vw;
     color: white;
@@ -107,8 +168,11 @@
 
   & button {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.5vw 1.5vw;
     border: 0;
+    font-size: 0.85vw;
     background: #0055ff;
     color: white;
     font-family: var(--font-akatab), sans-serif;
@@ -129,8 +193,42 @@
   }
 }
 
+@media (max-width: 800px) {
+  .footerScreenBlockForm {
+    & input {
+      font-size: 1.4vw;
+      border-radius: 0.4vw;
+      padding: 0.9vw 1.5vw;
+    }
+
+    & button {
+      padding: 0.5vw 2.25vw;
+      font-size: 1.4vw;
+      border-radius: 0.4vw;
+    }
+
+    & button:hover {
+      box-shadow: none;
+    }
+  }
+}
+
 .footerScreenBlockInput {
   display: flex;
   flex-direction: row;
-  gap: 1vw;
+  gap: 1.5vw;
+}
+
+.errorMessage {
+  display: flex;
+  color: red !important;
+  font-size: 0.85vw;
+}
+
+@media (max-width: 800px) {
+  .errorMessage {
+    display: flex;
+    color: red;
+    font-size: 1.6vw;
+  }
 }

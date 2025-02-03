@@ -4,7 +4,7 @@ export default function SpeakersScreen({ speakersInfo }) {
   const generalInfo = speakersInfo.speakerScreenGeneralInformation[0];
 
   return (
-    <div>
+    <div className={scss.speakerBlocksMain}>
       {speakersInfo.speakerScreen.map((info, index) => (
         <div key={index} className={scss.speakerBlocks}>
           <div className={scss.speakerBlock}>

@@ -57,3 +57,40 @@
     margin-top: 0.5vw;
   }
 }
+
+@media (max-width: 800px) {
+  .stickyBlockFlex {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vw;
+  }
+
+  .stickyBlock {
+    height: 100%;
+    background-color: none;
+    position: -webkit-static;
+    position: static;
+    top: 0vw;
+    margin-top: 0vw;
+    padding: 0vw;
+    border-radius: 0vw;
+    border: 0vw;
+
+    & .stickyBlockVideo {
+      display: none;
+    }
+
+    & .stickyBlockPrice {
+      font-size: 6vw;
+      margin-top: 0vw;
+    }
+
+    & .stickyBlockBuyNow {
+      width: 50%;
+      font-size: 2.8vw;
+      padding: 0.6vw 0vw;
+      border-radius: 0.5vw;
+      margin-top: 1vw;
+    }
+  }
+}

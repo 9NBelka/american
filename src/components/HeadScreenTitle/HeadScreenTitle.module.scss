@@ -23,6 +23,10 @@
     line-height: var(--font-lineh-small);
   }
 
+  & .nameCoursePhone {
+    display: none;
+  }
+
   & .descriptionCourseText {
     display: flex;
     font-size: 0.85vw;
@@ -32,5 +36,50 @@
     line-height: var(--font-lineh-normal);
     margin-top: 1vw;
     width: 75%;
+  }
+}
+
+.headScreenVideoPhone {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .headScreenTitle {
+    justify-content: center;
+    align-items: center;
+    padding-top: 8vw;
+    width: 100%;
+
+    & .categoryCourseText {
+      font-size: 2.8vw;
+      margin-top: 6vw;
+    }
+
+    & .nameCourseText {
+      display: none;
+    }
+
+    & .nameCoursePhone {
+      display: flex;
+      font-size: 8vw;
+      color: white;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-small);
+    }
+
+    & .descriptionCourseText {
+      font-size: 1.8vw;
+      margin-top: 2vw;
+      width: 85%;
+    }
+  }
+
+  .headScreenVideoPhone {
+    display: flex;
+    width: 75%;
+    height: 29vw;
+    border-radius: 1.5vw;
+    border: 0;
   }
 }

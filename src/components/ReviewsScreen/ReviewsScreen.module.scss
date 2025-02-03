@@ -7,12 +7,21 @@
   margin-top: 1vw;
 }
 
+@media (max-width: 800px) {
+  .sliderReview {
+    padding: 2.25vw 2.25vw;
+    border-radius: 1.5vw;
+    margin-top: 3vw;
+  }
+}
+
 .sliderReviewBlock {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 10vw;
   touch-action: pan-y;
+  margin-top: 1vw;
 
   & p {
     font-size: 0.85vw;
@@ -45,6 +54,32 @@
   }
 }
 
+@media (max-width: 800px) {
+  .sliderReviewBlock {
+    height: 19vw;
+    margin-top: 1.5vw;
+
+    & p {
+      font-size: 1.8vw;
+      height: 19vw;
+      padding-right: 3vw;
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 1.5vw;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 1vw rgba(0, 0, 0, 0.2);
+        border-radius: 1.5vw;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.5vw;
+      }
+    }
+  }
+}
+
 .sliderReviewNavigationAndName {
   display: flex;
   flex-direction: row;
@@ -57,6 +92,16 @@
     font-family: var(--font-akatab), sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 800px) {
+  .sliderReviewNavigationAndName {
+    margin-top: 3vw;
+
+    & h3 {
+      font-size: 2.6vw;
+    }
   }
 }
 
@@ -97,5 +142,70 @@
       height: 0.75vw;
       fill: white;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .sliderReviewNavigation {
+    gap: 2.5vw;
+
+    & p {
+      font-size: 1.8vw;
+    }
+
+    & button {
+      border-radius: 0.5vw;
+      padding: 1.25vw;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+
+      & .sliderReviewNavigationButtonIcon {
+        width: 2vw;
+        height: 2vw;
+        fill: white;
+      }
+    }
+  }
+}
+
+// rating
+
+.rating {
+  display: flex;
+  gap: 0.25vw;
+}
+
+.starFilled,
+.starHalf,
+.starEmpty {
+  width: 1vw;
+  height: 1vw;
+
+  &.starFilled {
+    color: gold;
+  }
+
+  &.starHalf {
+    color: gold;
+  }
+
+  &.starEmpty {
+    color: lightgray;
+  }
+}
+
+@media (max-width: 800px) {
+  .rating {
+    display: flex;
+    gap: 0.75vw;
+  }
+
+  .starFilled,
+  .starHalf,
+  .starEmpty {
+    width: 2vw;
+    height: 2vw;
   }
 }

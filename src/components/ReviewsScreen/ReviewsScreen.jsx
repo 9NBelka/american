@@ -1,20 +1,28 @@
 import { useState } from 'react';
 import css from './ReviewsScreen.module.scss';
 import { BsCaretRightFill, BsCaretLeftFill } from 'react-icons/bs';
-// import clsx from 'clsx';
+import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
+
+function Rating({ value }) {
+  const stars = Array.from({ length: 5 }, (_, i) => {
+    if (value >= i + 1) {
+      return <BsStarFill key={i} className={css.starFilled} />;
+    } else if (value > i && value < i + 1) {
+      return <BsStarHalf key={i} className={css.starHalf} />;
+    } else {
+      return <BsStar key={i} className={css.starEmpty} />;
+    }
+  });
+
+  return <div className={css.rating}>{stars}</div>;
+}
 
 export default function ReviewsScreen({ reviews }) {
   const [selectedIdx, setSelectedIdx] = useState(0);
 
-  const handlePrev = () => {
-    setSelectedIdx((prevIdx) => Math.max(prevIdx - 1, 0));
-  };
+  const handlePrev = () => setSelectedIdx((prevIdx) => Math.max(prevIdx - 1, 0));
+  const handleNext = () => setSelectedIdx((prevIdx) => Math.min(prevIdx + 1, reviews.length - 1));
 
-  const handleNext = () => {
-    setSelectedIdx((prevIdx) => Math.min(prevIdx + 1, reviews.length - 1));
-  };
-
-  // Вычисляемые данные
   const isFirstElem = selectedIdx === 0;
   const isLastElem = selectedIdx === reviews.length - 1;
   const visibleArticle = reviews[selectedIdx];
@@ -24,6 +32,9 @@ export default function ReviewsScreen({ reviews }) {
   return (
     <div className={css.sliderReview}>
       <article>
+        <div className={css.ratingContainer}>
+          <Rating value={visibleArticle.rating} />
+        </div>
         <div className={css.sliderReviewBlock}>
           <p>{visibleArticle.studentsFeedback}</p>
         </div>

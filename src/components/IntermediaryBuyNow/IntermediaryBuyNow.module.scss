@@ -1,0 +1,62 @@
+.intermediaryBuyNowBlockMain {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .intermediaryBuyNowBlockMain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4vw;
+  }
+
+  .intermediaryBuyNowBlockMainGap {
+    margin-top: 6.5vw;
+  }
+
+  .intermediaryBuyNowBlock {
+    display: flex;
+    flex-direction: column;
+
+    & h5,
+    & h6 {
+      display: flex;
+      font-size: 2vw;
+      color: black;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      padding: 0;
+      margin: 0;
+    }
+
+    & .whiteText {
+      display: flex;
+      color: white;
+      font-size: 1.8vw;
+    }
+
+    & h6 {
+      font-weight: var(--font-weight-normal);
+    }
+
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2vw;
+      padding: 1vw 4.5vw;
+      color: white;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+      background-color: #d74f3e;
+      text-align: center;
+      border-radius: 0.5vw;
+      margin-top: 0.5vw;
+    }
+  }
+}

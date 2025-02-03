@@ -3,8 +3,20 @@
   margin-top: 1.5vw;
 }
 
+@media (max-width: 800px) {
+  .trustedScreenBlocks {
+    margin-top: 3vw;
+  }
+}
+
 .trustedScreenBlock {
   padding: 0 1vw;
+}
+
+@media (max-width: 800px) {
+  .trustedScreenBlock {
+    padding: 0 2vw;
+  }
 }
 
 .trustedScreenImages {
@@ -13,6 +25,13 @@
   transition: 0.3s;
 
   &:hover {
+    filter: grayscale(0) contrast(1);
+  }
+}
+
+@media (max-width: 800px) {
+  .trustedScreenImages {
+    width: 80%;
     filter: grayscale(0) contrast(1);
   }
 }

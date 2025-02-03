@@ -25,6 +25,9 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection, revi
       <div className={css.container}>
         <div className={css.pageWrapper}>
           <div className={css.leftColumn}>
+            <div className={css.stickyProduct}>
+              <StickyProduct infoAboutProduct={currentInfo} />
+            </div>
             <div className={css.backgroundViewCourseScreen}>
               <ViewCourseScreen currentInfo={currentInfo} />
             </div>
@@ -47,9 +50,7 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection, revi
             <h3 className={css.titleScreens} id='whatsInside'>
               What`s inside
             </h3>
-            <div className={css.backgroundWhatsInsideScreen}>
-              <WhatsInsideScreen programCourseInfo={currentInfo} />
-            </div>
+            <WhatsInsideScreen programCourseInfo={currentInfo} />
             <h3 className={css.titleScreens} id='demoLessons'>
               Demo lessons
             </h3>

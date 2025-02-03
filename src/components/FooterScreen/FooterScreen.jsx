@@ -1,5 +1,6 @@
 import { BsWhatsapp } from 'react-icons/bs';
 import scss from './FooterScreen.module.scss';
+import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -27,6 +28,8 @@ export default function FooterScreen() {
     setIsSubmitted(true);
     alert('The form is successfully sent!');
   };
+
+  const footer = true;
   return (
     <div className={scss.footerScreenBlockColumn}>
       <div className={scss.footerScreenBlocks}>
@@ -49,7 +52,7 @@ export default function FooterScreen() {
                   Subscribe
                 </button>
               </div>
-              <ErrorMessage name='email' component='div' style={{ color: 'red' }} />
+              <ErrorMessage name='email' component='div' className={scss.errorMessage} />
             </Form>
           </Formik>
         </div>
@@ -64,6 +67,7 @@ export default function FooterScreen() {
           </div>
         </div>
       </div>
+      <IntermediaryBuyNow forStyle={footer} />
       <div className={scss.footerScreenBlockInfoColumn}>
         <div className={scss.footerScreenBlockInfo}>
           <a href='#'>

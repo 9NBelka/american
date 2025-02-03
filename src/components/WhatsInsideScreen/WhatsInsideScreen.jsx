@@ -2,6 +2,7 @@ import { useState } from 'react';
 import scss from './WhatsInsideScreen.module.scss';
 import clsx from 'clsx';
 import { BsCaretRightFill, BsCaretDownFill } from 'react-icons/bs';
+import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 
 export default function WhatsInsideScreen({ programCourseInfo }) {
   const [activeIndex, setActiveIndex] = useState(null); // Хранит индекс активного спойлера
@@ -35,6 +36,7 @@ export default function WhatsInsideScreen({ programCourseInfo }) {
           </div>
         </div>
       ))}
+      <IntermediaryBuyNow />
     </div>
   );
 }

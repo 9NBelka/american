@@ -2,7 +2,7 @@ import scss from './StickyProduct.module.scss';
 
 export default function StickyProduct({ infoAboutProduct }) {
   return (
-    <>
+    <div className={scss.stickyBlockFlex}>
       <div className={scss.stickyBlock}>
         <iframe
           src={infoAboutProduct.stickyBlockVideo}
@@ -15,6 +15,6 @@ export default function StickyProduct({ infoAboutProduct }) {
           <h5>BUY NOW</h5>
         </a>
       </div>
-    </>
+    </div>
   );
 }

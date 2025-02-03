@@ -1,7 +1,7 @@
 .demoVideosBlocks {
   display: flex;
   flex-direction: column;
-  margin-top: 1vw;
+  margin-top: 3vw;
 }
 
 .demoVideosLink {
@@ -11,6 +11,13 @@
   font-weight: var(--font-weight-normal);
   line-height: var(--font-lineh-normal);
   margin-top: 0.5vw;
+}
+
+@media (max-width: 800px) {
+  .demoVideosLink {
+    font-size: 1.8vw;
+    margin-top: 1.5vw;
+  }
 }
 
 .demoVideosLink:first-child {
@@ -28,6 +35,22 @@
   &.demoVideosIconBackground {
     background-color: black;
     fill: white;
+  }
+}
+
+@media (max-width: 800px) {
+  .demoVideosIcon {
+    width: 1.5vw;
+    height: 1.5vw;
+    border: 0.01vw solid black;
+    border-radius: 2vw;
+    padding: 0.4vw;
+    margin-left: 0vw;
+
+    &.demoVideosIconBackground {
+      background-color: black;
+      fill: white;
+    }
   }
 }
 
@@ -51,11 +74,25 @@
   }
 }
 
+@media (max-width: 800px) {
+  .demoVideosBlockText {
+    border-bottom: 0.005vw solid black;
+    padding: 1vw 0;
+    gap: 1vw;
+  }
+}
+
 .demoVideosBlockIndexIconTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5vw;
+}
+
+@media (max-width: 800px) {
+  .demoVideosBlockIndexIconTitle {
+    gap: 2vw;
+  }
 }
 
 .demoVideosBlockTextBold {

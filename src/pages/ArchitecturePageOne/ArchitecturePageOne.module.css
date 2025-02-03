@@ -5,6 +5,12 @@
   height: 100%;
 }
 
+@media (max-width: 800px) {
+  .container {
+    width: 79.167vw;
+  }
+}
+
 .titleScreens {
   font-size: 2.4vw;
   color: black;
@@ -12,6 +18,13 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--font-lineh-normal);
   margin-top: 3vw;
+}
+
+@media (max-width: 800px) {
+  .titleScreens {
+    font-size: 4.5vw;
+    margin-top: 6vw;
+  }
 }
 
 .backgroundHeadScreen {
@@ -46,12 +59,32 @@
   width: 60.5%;
 }
 
+.leftColumn .stickyProduct {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .leftColumn {
+    width: 100%;
+  }
+
+  .leftColumn .stickyProduct {
+    display: block;
+  }
+}
+
 .rightColumn {
   display: flex;
   position: absolute;
   right: 0;
   width: 31%; /* Ширина правой колонки */
   height: 100%;
+}
+
+@media (max-width: 800px) {
+  .rightColumn {
+    display: none;
+  }
 }
 
 .backgroundViewCourseScreen {
@@ -62,12 +95,23 @@
   padding-right: 2.8vw;
 }
 
-.backgroundWhatsInsideScreen {
-  height: 59vw;
+@media (max-width: 800px) {
+  .backgroundViewCourseScreen {
+    margin-top: 8vw;
+    border-radius: 1.5vw;
+    padding: 3vw;
+  }
 }
+
 .backgroundFooterScreen {
   display: flex;
   justify-content: center;
   padding: 3vw 0;
   background-color: #092332;
+}
+
+@media (max-width: 800px) {
+  .backgroundFooterScreen {
+    padding: 6vw 0;
+  }
 }

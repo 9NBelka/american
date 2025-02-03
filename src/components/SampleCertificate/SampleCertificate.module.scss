@@ -3,6 +3,12 @@
   margin-top: 1vw;
 }
 
+@media (max-width: 800px) {
+  .sampleCertificateBlock {
+    margin-top: 3vw;
+  }
+}
+
 .sampleCertificate {
   width: 95%;
 }
