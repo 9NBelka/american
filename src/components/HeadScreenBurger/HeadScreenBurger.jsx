@@ -13,11 +13,15 @@ import {
   BsYoutube,
   BsDiscord,
   BsCaretRight,
+  BsWhatsapp,
+  BsLinkedin,
+  BsTwitterX,
+  BsReddit,
 } from 'react-icons/bs';
 import css from './HeadScreenBurger.module.scss';
 import { NavLink } from 'react-router-dom';
 
-export default function HeadScreenBurger({ isScrolled, scrollToSection }) {
+export default function HeadScreenBurger({ scrollToSection }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null); // Реф для меню
 
@@ -38,21 +42,16 @@ export default function HeadScreenBurger({ isScrolled, scrollToSection }) {
   return (
     <>
       <div onClick={toggleMenu} className={css.burgerIcon}>
-        <BsList className={css.headerIconBurger} />
+        <BsList
+          className={clsx(
+            css.headerIconBurger,
+            isOpen ? css.headerIconBurgerNone : css.headerIconBurger,
+          )}
+        />
       </div>
-      <div
-        ref={menuRef}
-        className={clsx(
-          css.menu,
-          { [css.open]: isOpen },
-          isScrolled ? css.menuPaddingTop : css.menu,
-        )}>
+      <div ref={menuRef} className={clsx(css.menu, { [css.open]: isOpen })}>
         <div>
-          <div
-            className={clsx(
-              css.menuLogoAndIcon,
-              isScrolled ? css.menuLogoAndIconMarginTop : css.menuLogoAndIcon,
-            )}>
+          <div className={css.menuLogoAndIcon}>
             <img className={css.menuLogo} src='/src/assets/img/logoBurger.webp' />
             <BsXLg onClick={toggleMenu} className={css.headerIconBurger} />
           </div>
@@ -167,11 +166,11 @@ export default function HeadScreenBurger({ isScrolled, scrollToSection }) {
         </div>
         <div className={css.menuListIconsAnd}>
           <div className={css.menuListSocialIcons}>
-            <BsTelegram className={css.menuListSocialIcon} />
-            <BsInstagram className={css.menuListSocialIcon} />
+            <BsLinkedin className={css.menuListSocialIcon} />
+            <BsTwitterX className={css.menuListSocialIcon} />
             <BsYoutube className={css.menuListSocialIcon} />
-            <BsDiscord className={css.menuListSocialIcon} />
-            <BsFacebook className={css.menuListSocialIcon} />
+            <BsReddit className={css.menuListSocialIcon} />
+            <BsWhatsapp className={css.menuListSocialIcon} />
           </div>
           <h5 className={css.menuAuthor}>Authorization</h5>
         </div>

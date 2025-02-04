@@ -1,4 +1,4 @@
-import { BsWhatsapp } from 'react-icons/bs';
+import { BsWhatsapp, BsLinkedin, BsTwitterX, BsYoutube, BsReddit } from 'react-icons/bs';
 import scss from './FooterScreen.module.scss';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 import { useState } from 'react';
@@ -59,10 +59,10 @@ export default function FooterScreen() {
         <div className={scss.footerScreenBlock}>
           <h5>Follow us:</h5>
           <div className={scss.footerScreenBlockIcons}>
-            <BsWhatsapp className={scss.footerScreenBlockIcon} />
-            <BsWhatsapp className={scss.footerScreenBlockIcon} />
-            <BsWhatsapp className={scss.footerScreenBlockIcon} />
-            <BsWhatsapp className={scss.footerScreenBlockIcon} />
+            <BsLinkedin className={scss.footerScreenBlockIcon} />
+            <BsTwitterX className={scss.footerScreenBlockIcon} />
+            <BsYoutube className={scss.footerScreenBlockIcon} />
+            <BsReddit className={scss.footerScreenBlockIcon} />
             <BsWhatsapp className={scss.footerScreenBlockIcon} />
           </div>
         </div>

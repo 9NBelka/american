@@ -68,8 +68,8 @@
   }
 
   .footerScreenBlockIcon {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 3vw;
+    height: 3vw;
 
     &:hover {
       fill: white;
@@ -202,14 +202,14 @@
 @media (max-width: 1024px) {
   .footerScreenBlockForm {
     & input {
-      font-size: 1.4vw;
+      font-size: 2vw;
       border-radius: 0.4vw;
-      padding: 0.9vw 1.5vw;
+      padding: 1.4vw 2vw;
     }
 
     & button {
-      padding: 0.5vw 2.25vw;
-      font-size: 1.4vw;
+      padding: 1.4vw 3vw;
+      font-size: 2vw;
       border-radius: 0.4vw;
     }
 
