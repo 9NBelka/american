@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import scss from './HeadScreenHeader.module.scss';
 // import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
+import HeadScreenBurger from '../HeadScreenBurger/HeadScreenBurger';
 
 export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +56,9 @@ export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
           <ul className={scss.headerList}>
             <li className={scss.headerButtonAnswer}>Ask a question</li>
             <li className={scss.headerButtonSingUp}>Sign Up</li>
-            {/* <li><BurgerMenu isScrolled={isScrolled} /></li> */}
+            <li className={scss.burgerMenu}>
+              <HeadScreenBurger isScrolled={isScrolled} scrollToSection={scrollToSection} />
+            </li>
           </ul>
         </nav>
       </div>

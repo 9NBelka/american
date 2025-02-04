@@ -1,7 +1,13 @@
 .demoVideosBlocks {
   display: flex;
   flex-direction: column;
-  margin-top: 3vw;
+  margin-top: 1vw;
+}
+
+@media (max-width: 800px) {
+  .demoVideosBlocks {
+    margin-top: 2vw;
+  }
 }
 
 .demoVideosLink {

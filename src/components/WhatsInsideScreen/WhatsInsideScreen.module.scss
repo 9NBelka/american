@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  margin-top: 2vw;
+  margin-top: 1vw;
+}
+
+@media (max-width: 800px) {
+  .whatsInsideBlock {
+    margin-top: 2vw;
+  }
 }
 
 .spoilerBlock {
