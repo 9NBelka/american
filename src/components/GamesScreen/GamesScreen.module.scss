@@ -12,7 +12,7 @@
   margin: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .gameBlockMain {
     margin-top: 3vw;
   }
@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .gamesBlock {
     gap: 3.5vw;
 
@@ -71,7 +71,7 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .nameGame {
     font-size: 2.6vw;
   }
@@ -88,7 +88,7 @@
   width: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .descriptionGameBlock {
     width: 45%;
     margin-top: 1vw;
@@ -120,7 +120,7 @@
   margin-top: 1vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .descriptionGame {
     font-size: 1.8vw;
   }
@@ -143,7 +143,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .descriptionGameButton {
     font-size: 1.8vw;
     margin-top: 2vw;
@@ -173,7 +173,7 @@
   transition: max-height 0.4s ease-in;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .expandedDescription {
     width: 90%;
 
@@ -204,7 +204,7 @@
   line-height: var(--font-lineh-normal);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .linkOnGameGreedventoryBlock {
     margin-top: 2vw;
     gap: 0.5vw;
@@ -224,7 +224,7 @@
   line-height: var(--font-lineh-normal);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .generalTextForGames {
     margin-top: 3vw;
     font-size: 1.8vw;

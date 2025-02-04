@@ -12,7 +12,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .header {
     top: 0vw;
     padding: 2vw 0;
@@ -26,7 +26,7 @@
   height: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .container {
     width: 79.167vw;
   }
@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .headerNav {
     .headerLogosAndButtonAnswer {
       gap: 0vw;
@@ -100,7 +100,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .headerNavText {
     display: none;
   }
@@ -142,7 +142,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .headerList {
     gap: 3vw;
 
@@ -169,7 +169,7 @@
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .burgerMenu {
     display: flex;
   }

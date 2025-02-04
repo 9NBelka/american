@@ -5,7 +5,7 @@
   height: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .container {
     width: 79.167vw;
   }
@@ -20,7 +20,7 @@
   margin-top: 3vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .titleScreens {
     font-size: 4.5vw;
     margin-top: 6vw;
@@ -63,7 +63,7 @@
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .leftColumn {
     width: 100%;
   }
@@ -81,7 +81,7 @@
   height: 100%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .rightColumn {
     display: none;
   }
@@ -95,7 +95,7 @@
   padding-right: 2.8vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .backgroundViewCourseScreen {
     margin-top: 8vw;
     border-radius: 1.5vw;
@@ -110,7 +110,7 @@
   background-color: #092332;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .backgroundFooterScreen {
     padding: 6vw 0;
   }

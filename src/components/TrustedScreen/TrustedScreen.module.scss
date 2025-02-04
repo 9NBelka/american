@@ -3,7 +3,7 @@
   margin-top: 1.5vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .trustedScreenBlocks {
     margin-top: 3vw;
   }
@@ -13,7 +13,7 @@
   padding: 0 1vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .trustedScreenBlock {
     padding: 0 2vw;
   }
@@ -29,7 +29,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .trustedScreenImages {
     width: 80%;
     filter: grayscale(0) contrast(1);

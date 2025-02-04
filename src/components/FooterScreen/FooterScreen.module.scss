@@ -10,7 +10,7 @@
   gap: 15vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenBlocks {
     flex-direction: column;
     gap: 5vw;
@@ -32,7 +32,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenBlock {
     gap: 1.5vw;
 
@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenBlockIcons {
     display: flex;
     flex-direction: row;
@@ -84,7 +84,7 @@
   margin-top: 3vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenBlockInfoColumn {
     margin-top: 6.5vw;
   }
@@ -111,7 +111,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenBlockInfo {
     gap: 5vw;
 
@@ -135,7 +135,7 @@
   opacity: 0.5;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenGeneralInfo {
     width: 85%;
     font-size: 1.4vw;
@@ -199,7 +199,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .footerScreenBlockForm {
     & input {
       font-size: 1.4vw;
@@ -231,7 +231,7 @@
   font-size: 0.85vw;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .errorMessage {
     display: flex;
     color: red;
