@@ -2,6 +2,7 @@ import { useState } from 'react';
 import css from './ReviewsScreen.module.scss';
 import { BsCaretRightFill, BsCaretLeftFill } from 'react-icons/bs';
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
+import clsx from 'clsx';
 
 function Rating({ value }) {
   const stars = Array.from({ length: 5 }, (_, i) => {
@@ -31,6 +32,10 @@ export default function ReviewsScreen({ reviews }) {
 
   return (
     <div className={css.sliderReview}>
+      <div
+        className={clsx(css.sliderReviewNavigationAndName, css.sliderReviewNavigationAndNamePhone)}>
+        <h3>{visibleArticle.studentsName}</h3>
+      </div>
       <article>
         <div className={css.ratingContainer}>
           <Rating value={visibleArticle.rating} />
@@ -41,7 +46,7 @@ export default function ReviewsScreen({ reviews }) {
       </article>
       <div className={css.sliderReviewNavigationAndName}>
         <h3>{visibleArticle.studentsName}</h3>
-        <div className={css.sliderReviewNavigation}>
+        <div className={clsx(css.sliderReviewNavigation, css.sliderReviewNavigationNone)}>
           <p>
             {current <= 9 ? '0' + current : current}/{total <= 9 ? '0' + total : total}
           </p>
@@ -51,6 +56,9 @@ export default function ReviewsScreen({ reviews }) {
             onClick={handlePrev}>
             <BsCaretLeftFill className={css.sliderReviewNavigationButtonIcon} />
           </button>
+          <p className={css.sliderReviewNavigationCount}>
+            {current <= 9 ? '0' + current : current}/{total <= 9 ? '0' + total : total}
+          </p>
           <button
             className={css.sliderReviewNavigationButton}
             disabled={isLastElem}

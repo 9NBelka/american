@@ -23,6 +23,20 @@
   }
 }
 
+@media (max-width: 576px) {
+  .speakerBlocksMain {
+    margin-top: 6vw;
+  }
+  .speakerBlocks {
+    margin-top: 7vw;
+
+    &:first-child {
+      margin-top: 0vw;
+      gap: 7vw;
+    }
+  }
+}
+
 .speakerBlock {
   display: flex;
   flex-direction: row;
@@ -32,11 +46,38 @@
   gap: 2vw;
 }
 
+.speakerBlockRow {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
 @media (max-width: 1024px) {
   .speakerBlock {
     padding: 2.25vw 2.25vw;
     border-radius: 1.5vw;
     gap: 2vw;
+  }
+
+  .speakerBlockRow {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .speakerBlock {
+    flex-direction: column;
+    padding: 4vw 4vw;
+    border-radius: 3vw;
+    gap: 4vw;
+  }
+
+  .speakerBlockRow {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
   }
 }
 
@@ -58,6 +99,16 @@
       display: flex;
       width: 100%;
       border-radius: 0.75vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .speakerImageblock {
+    width: 25%;
+
+    & .imageSpeaker {
+      border-radius: 1.5vw;
     }
   }
 }
@@ -93,6 +144,11 @@
   }
 }
 
+.descriptionSpeakerBlockPhone,
+.linkedInSpeaker.linkedInSpeakerPhone {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .speakerInfoBlock {
     width: 75%;
@@ -107,6 +163,34 @@
       & .descriptionSpeaker {
         font-size: 1.8vw;
       }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .speakerInfoBlock {
+    width: 50%;
+
+    & .nameSpeaker {
+      font-size: 5.5vw;
+      line-height: var(--font-lineh-small);
+    }
+
+    & .descriptionSpeakerBlockNone {
+      display: none;
+    }
+  }
+
+  .descriptionSpeakerBlockPhone {
+    display: block;
+    margin-top: 1vw;
+
+    & .descriptionSpeaker {
+      font-size: 3.2vw;
+      color: black;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
     }
   }
 }
@@ -147,6 +231,25 @@
     & img {
       display: flex;
       width: 8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .linkedInSpeakerNone {
+    display: none;
+  }
+
+  .linkedInSpeaker.linkedInSpeakerPhone {
+    display: flex;
+    width: 20vw;
+    margin-top: 1vw;
+    padding: 2.2vw 2.5vw;
+    border-radius: 1vw;
+
+    & img {
+      display: flex;
+      width: 15vw;
     }
   }
 }
@@ -210,6 +313,25 @@
       & li {
         font-size: 1.8vw;
         gap: 0.5vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .generalInfoBlock {
+    & .generalInfoText,
+    .generalInfoTitle {
+      font-size: 3.2vw;
+    }
+
+    & .generalInfoTitle {
+      margin-top: 4vw;
+    }
+    .generalInfoList {
+      & li {
+        display: block;
+        font-size: 3.2vw;
       }
     }
   }

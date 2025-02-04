@@ -15,6 +15,8 @@
     "stickyBlockVideo": "https://www.youtube.com/embed/fIveNLynbMs?si=Xu9dZ_O_rFTpW90s",
     "stickyBlockPrice": "$500",
     "stickyBlockLinkBuy": "#",
+    "stickyBlockInfoAboutCourseTitle": ["time", "videos", "students"],
+    "stickyBlockInfoAboutCourse": ["16h 40m", "145", "145"],
     "viewCourseScreenText": [
       "A course on how to make confident games. This is not a guru course trying to tell you about everything, but instead contains a set of approaches and practices suitable for projects of any scale. The project in the course specifically does not use third-party libraries in order to give a detailed understanding of all parts of the project (DI, entry point, etc.).",
       "After you write this project consistently and together with us, there will be nothing left that you do not know about it. Every corner containing simple or complex code will be known to you.",
@@ -73,7 +75,7 @@
         "generalInfoList": [
           {
             "beforeLinkText": "A report on ECS – ",
-            "linkText": "Unity, ECS and people",
+            "linkText": " Unity, ECS and people",
             "afterLinkText": ""
           },
           {
@@ -83,7 +85,7 @@
           },
           {
             "beforeLinkText": "",
-            "linkText": "Code refactoring in Unity projects",
+            "linkText": "Code refactoring in Unity projects ",
             "afterLinkText": "| Breaking dependencies"
           },
           {

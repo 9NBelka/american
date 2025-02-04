@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .container {
+    width: 82vw;
+  }
+}
+
 .titleScreens {
   font-size: 2.4vw;
   color: black;
@@ -24,6 +30,13 @@
   .titleScreens {
     font-size: 4.5vw;
     margin-top: 6vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .titleScreens {
+    font-size: 6.5vw;
+    margin-top: 20vw;
   }
 }
 
@@ -100,6 +113,14 @@
     margin-top: 8vw;
     border-radius: 1.5vw;
     padding: 3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .backgroundViewCourseScreen {
+    margin-top: 20vw;
+    border-radius: 3vw;
+    padding: 4vw;
   }
 }
 

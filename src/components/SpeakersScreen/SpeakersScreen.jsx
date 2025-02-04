@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import scss from './SpeakersScreen.module.scss';
 
 export default function SpeakersScreen({ speakersInfo }) {
@@ -8,22 +9,41 @@ export default function SpeakersScreen({ speakersInfo }) {
       {speakersInfo.speakerScreen.map((info, index) => (
         <div key={index} className={scss.speakerBlocks}>
           <div className={scss.speakerBlock}>
-            <div className={scss.speakerImageblock}>
-              <img className={scss.imageSpeaker} src={info.imageSpeaker} />
-            </div>
-            <div className={scss.speakerInfoBlock}>
-              <h3 className={scss.nameSpeaker}>{info.nameSpeaker}</h3>
-              <div className={scss.descriptionSpeakerBlock}>
-                {info.descriptionSpeaker.map((text, idx) => (
-                  <h5 key={idx} className={scss.descriptionSpeaker}>
-                    {text}
-                  </h5>
-                ))}
+            <div className={scss.speakerBlockRow}>
+              <div className={scss.speakerImageblock}>
+                <img className={scss.imageSpeaker} src={info.imageSpeaker} />
               </div>
-              <a href={info.linkedInSpeaker} className={scss.linkedInSpeaker} target='_blank'>
-                <img src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png' />
-              </a>
+              <div className={scss.speakerInfoBlock}>
+                <h3 className={scss.nameSpeaker}>{info.nameSpeaker}</h3>
+                <div
+                  className={clsx(scss.descriptionSpeakerBlock, scss.descriptionSpeakerBlockNone)}>
+                  {info.descriptionSpeaker.map((text, idx) => (
+                    <h5 key={idx} className={scss.descriptionSpeaker}>
+                      {text}
+                    </h5>
+                  ))}
+                </div>
+                <a
+                  href={info.linkedInSpeaker}
+                  className={clsx(scss.linkedInSpeaker, scss.linkedInSpeakerNone)}
+                  target='_blank'>
+                  <img src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png' />
+                </a>
+              </div>
             </div>
+            <div className={clsx(scss.descriptionSpeakerBlock, scss.descriptionSpeakerBlockPhone)}>
+              {info.descriptionSpeaker.map((text, idx) => (
+                <h5 key={idx} className={scss.descriptionSpeaker}>
+                  {text}
+                </h5>
+              ))}
+            </div>
+            <a
+              href={info.linkedInSpeaker}
+              className={clsx(scss.linkedInSpeaker, scss.linkedInSpeakerPhone)}
+              target='_blank'>
+              <img src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png' />
+            </a>
           </div>
 
           {/* Общая информация после первой карточки */}

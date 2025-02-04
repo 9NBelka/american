@@ -19,6 +19,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .header {
+    top: 0vw;
+    padding: 3vw 0;
+  }
+}
+
 .container {
   width: 68.75vw;
   margin: 0 auto;
@@ -29,6 +36,12 @@
 @media (max-width: 1024px) {
   .container {
     width: 79.167vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 83vw;
   }
 }
 
@@ -69,6 +82,14 @@
 
     .headerLogoUnity {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .headerNav {
+    .headerLogo {
+      width: 28vw;
     }
   }
 }
@@ -150,16 +171,28 @@
     .headerButtonSingUp {
       padding: 0.8vw 2.5vw;
       font-size: 2vw;
-      color: white;
-      border: 0.1vw solid #0055ff;
       border-radius: 0.5vw;
-
-      &.headerButtonSingUp {
-        background-color: #0055ff;
-      }
+      transition: 0s;
 
       &:hover {
         box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .headerList {
+    gap: 3vw;
+
+    .headerButtonAnswer,
+    .headerButtonSingUp {
+      padding: 1.2vw 5vw;
+      font-size: 3.2vw;
+      border-radius: 0.75vw;
+
+      &.headerButtonSingUp {
+        display: none;
       }
     }
   }

@@ -47,7 +47,7 @@
   .headScreenTitle {
     justify-content: center;
     align-items: center;
-    padding-top: 8vw;
+    padding-top: 14vw;
     width: 100%;
 
     & .categoryCourseText {
@@ -81,5 +81,39 @@
     height: 29vw;
     border-radius: 1.5vw;
     border: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .headScreenTitle {
+    padding-top: 16vw;
+    width: 100%;
+
+    & .categoryCourseText {
+      font-size: 3.2vw;
+      margin-top: 5vw;
+    }
+
+    & .nameCoursePhone {
+      display: none;
+    }
+
+    & .nameCourseText {
+      display: flex;
+      width: 98%;
+      font-size: 8vw;
+    }
+
+    & .descriptionCourseText {
+      font-size: 3.2vw;
+      margin-top: 4vw;
+      width: 100%;
+    }
+  }
+
+  .headScreenVideoPhone {
+    width: 100%;
+    height: 46.3vw;
+    border-radius: 2vw;
   }
 }

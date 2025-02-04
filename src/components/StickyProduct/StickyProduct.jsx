@@ -14,6 +14,14 @@ export default function StickyProduct({ infoAboutProduct }) {
         <a src={infoAboutProduct.stickyBlockLinkBuy} className={scss.stickyBlockBuyNow}>
           <h5>BUY NOW</h5>
         </a>
+        <div className={scss.stickyBlockInfoAboutCourse}>
+          {infoAboutProduct.stickyBlockInfoAboutCourseTitle.map((title, index) => (
+            <div key={index} className={scss.stickyBlockInfoAboutCourseBlock}>
+              <h6 key={index}>{title}</h6>
+              <h6 key={index}>{infoAboutProduct.stickyBlockInfoAboutCourse[index]}</h6>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

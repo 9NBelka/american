@@ -99,3 +99,101 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .stickyBlockFlex {
+    margin-top: 5vw;
+  }
+
+  .stickyBlock {
+    & .stickyBlockPrice {
+      font-size: 8vw;
+      margin-top: 0vw;
+    }
+
+    & .stickyBlockBuyNow {
+      width: 100%;
+      font-size: 4vw;
+      padding: 1vw 0vw;
+      border-radius: 0.75vw;
+      margin-top: 3vw;
+    }
+  }
+}
+
+.stickyBlockInfoAboutCourse {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2vw;
+}
+
+@media (max-width: 1024px) {
+  .stickyBlockInfoAboutCourse {
+    margin-top: 3vw;
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .stickyBlockInfoAboutCourse {
+    margin-top: 4vw;
+    width: 100%;
+  }
+}
+
+.stickyBlockInfoAboutCourseBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.333%;
+  border-right: 0.1vw solid #c6c6c6;
+  gap: 0.2vw;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  & h6 {
+    font-size: 1vw;
+    color: black;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+
+    &:first-child {
+      font-size: 0.85vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .stickyBlockInfoAboutCourseBlock {
+    width: 33.33%;
+    gap: 0.25vw;
+
+    & h6 {
+      font-size: 2.6vw;
+
+      &:first-child {
+        font-size: 2.2vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .stickyBlockInfoAboutCourseBlock {
+    width: 33.33%;
+    gap: 0.25vw;
+
+    & h6 {
+      font-size: 4vw;
+
+      &:first-child {
+        font-size: 3.2vw;
+      }
+    }
+  }
+}

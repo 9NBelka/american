@@ -53,3 +53,15 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .viewCourseScreenList {
+    gap: 5vw;
+
+    & .viewCourseScreenItem {
+      & h5 {
+        font-size: 3.2vw;
+      }
+    }
+  }
+}
