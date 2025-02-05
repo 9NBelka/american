@@ -1,0 +1,33 @@
+.descriptionGameGreedventory {
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  padding: 0;
+  margin: 0;
+
+  &.descriptionGameMarg {
+    margin-top: 1vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .descriptionGameGreedventory {
+    font-size: 1.8vw;
+
+    &.descriptionGameMarg {
+      margin-top: 2vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .descriptionGameGreedventory {
+    font-size: 3.2vw;
+
+    &.descriptionGameMarg {
+      margin-top: 2.5vw;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.linkOnGameGreedventoryBlock {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vw;
+  gap: 0.3vw;
+
+  & .linkOnGameGreedventory {
+    font-size: 0.85vw;
+    color: black;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 1024px) {
+  .linkOnGameGreedventoryBlock {
+    margin-top: 2vw;
+    gap: 0.5vw;
+
+    & .linkOnGameGreedventory {
+      font-size: 1.8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .linkOnGameGreedventoryBlock {
+    margin-top: 2vw;
+    gap: 1vw;
+
+    & .linkOnGameGreedventory {
+      font-size: 3.2vw;
+    }
+  }
+}

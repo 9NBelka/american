@@ -104,6 +104,7 @@
     ],
     "fourGamesScreen": [
       {
+        "id": 1,
         "imageGame": "https://lms.k-syndicate.school/wp-content/uploads/2021/07/w_160_raid-shadow-legends-ico-1.jpg",
         "nameGame": "RAID: Shadow Legends",
         "shortDescription": "MMO-Collection RPG (Battler). More than a million players per day. iOS, Android, Mac, PC.",
@@ -117,6 +118,7 @@
         ]
       },
       {
+        "id": 2,
         "imageGame": "https://lms.k-syndicate.school/wp-content/uploads/2021/07/warfare.png",
         "nameGame": "Soldiers Inc: Mobile Warfare",
         "shortDescription": "MMO-Strategy. 4+ years in release, 2,000,000+ installations on iOS, Android.",
@@ -129,6 +131,7 @@
         ]
       },
       {
+        "id": 3,
         "imageGame": "https://lms.k-syndicate.school/wp-content/uploads/2021/07/stormfall-1.jpg",
         "nameGame": "Stormfall: Rise of Balur",
         "shortDescription": "MMO-Strategy. 4+ years in release, 2,000,000+ installations on iOS, Android.",
@@ -143,6 +146,7 @@
         ]
       },
       {
+        "id": 4,
         "imageGame": "https://lms.k-syndicate.school/wp-content/uploads/2021/07/Total-Domination-Reborn-1.jpg",
         "nameGame": "Total Domination – Reborn",
         "shortDescription": "MMO-Strategy. 4+ years in release, 2,000,000+ installations on iOS, Android.",
@@ -155,6 +159,7 @@
         ]
       },
       {
+        "id": 5,
         "imageGame": "/src/assets/img/greedventory.jpg",
         "nameGame": "GREEDVENTORY",
         "shortDescription": "An ironic, bloody and demanding linear point'n'slash RPG in detailed pixel art.",

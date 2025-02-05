@@ -1,0 +1,50 @@
+.expandedDescription {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  overflow: hidden;
+  max-height: 0vw;
+  transition: max-height 0.4s ease-out;
+
+  ul {
+    margin: 0;
+    margin-top: 1vw;
+  }
+}
+
+.expandedDescription.show {
+  max-height: 20vw; /* подстрой под высоту списка */
+  transition: max-height 0.4s ease-in;
+}
+
+@media (max-width: 1024px) {
+  .expandedDescription {
+    width: 90%;
+
+    ul {
+      margin: 0;
+      margin-top: 2vw;
+      padding-left: 2.5vw;
+    }
+  }
+
+  .expandedDescription.show {
+    max-height: 30vw; /* подстрой под высоту списка */
+  }
+}
+
+@media (max-width: 576px) {
+  .expandedDescription {
+    width: 100%;
+
+    ul {
+      margin: 0;
+      margin-top: 3vw;
+      padding-left: 5vw;
+    }
+  }
+
+  .expandedDescription.show {
+    max-height: 60vw; /* подстрой под высоту списка */
+  }
+}

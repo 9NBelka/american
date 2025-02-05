@@ -2,216 +2,15 @@
   margin-top: 1vw;
 }
 
-.gamesGap {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1vw;
-}
-
-.gamesGap:first-child {
-  margin: 0;
-}
-
 @media (max-width: 1024px) {
   .gameBlockMain {
     margin-top: 3vw;
   }
-
-  .gamesGap {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.5vw;
-  }
 }
 
-.gamesBlock {
-  display: flex;
-  flex-direction: row;
-  gap: 2vw;
-
-  .gamesImageblock {
-    width: 20%;
-
-    .imageGame {
-      display: flex;
-      width: 100%;
-      border-radius: 0.5vw;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .gamesBlock {
-    gap: 3.5vw;
-
-    .gamesImageblock {
-      width: 20%;
-
-      .imageGame {
-        border-radius: 1vw;
-      }
-    }
-  }
-}
-
-.gamesInfoBlock {
-  display: flex;
-  width: 75%;
-  flex-direction: column;
-  align-items: start;
-}
-
-.nameGame {
-  display: flex;
-  font-size: 1.25vw;
-  color: black;
-  font-family: var(--font-akatab), sans-serif;
-  font-weight: var(--font-weight-bold);
-  line-height: var(--font-lineh-normal);
-  text-transform: uppercase;
-}
-
-@media (max-width: 1024px) {
-  .nameGame {
-    font-size: 2.6vw;
-  }
-}
-
-.descriptionGameBlock {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin-top: 0.5vw;
-}
-
-.descriptionGameBlockWidth {
-  width: 100%;
-}
-
-@media (max-width: 1024px) {
-  .descriptionGameBlock {
-    width: 45%;
-    margin-top: 1vw;
-  }
-
-  .descriptionGameBlockWidth {
-    width: 90%;
-  }
-}
-
-.descriptionGame {
-  font-size: 0.85vw;
-  color: black;
-  font-family: var(--font-akatab), sans-serif;
-  font-weight: var(--font-weight-normal);
-  line-height: var(--font-lineh-normal);
-  padding: 0;
-  margin: 0;
-
-  a {
-    color: black;
-    font-family: var(--font-akatab), sans-serif;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--font-lineh-normal);
-  }
-}
-
-.descriptionGameMarg {
-  margin-top: 1vw;
-}
-
-@media (max-width: 1024px) {
-  .descriptionGame {
-    font-size: 1.8vw;
-  }
-
-  .descriptionGameMarg {
-    margin-top: 2vw;
-  }
-}
-
-.descriptionGameButton {
-  background: none;
-  border: 0;
-  padding: 0;
-  font-size: 0.85vw;
-  color: black;
-  font-family: var(--font-akatab), sans-serif;
-  font-weight: var(--font-weight-bold);
-  line-height: var(--font-lineh-normal);
-  margin-top: 1vw;
-  cursor: pointer;
-}
-
-@media (max-width: 1024px) {
-  .descriptionGameButton {
-    font-size: 1.8vw;
-    margin-top: 2vw;
-  }
-}
-
-.descriptionGameButtonHide {
-  display: none;
-}
-
-.expandedDescription {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  overflow: hidden;
-  max-height: 0vw;
-  transition: max-height 0.4s ease-out;
-
-  ul {
-    margin: 0;
-    margin-top: 1vw;
-  }
-}
-
-.expandedDescription.show {
-  max-height: 20vw; /* подстрой под высоту списка */
-  transition: max-height 0.4s ease-in;
-}
-
-@media (max-width: 1024px) {
-  .expandedDescription {
-    width: 90%;
-
-    ul {
-      margin: 0;
-      margin-top: 2vw;
-      padding-left: 2.5vw;
-    }
-  }
-
-  .expandedDescription.show {
-    max-height: 30vw; /* подстрой под высоту списка */
-  }
-}
-
-.linkOnGameGreedventoryBlock {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1vw;
-  gap: 0.3vw;
-}
-
-.linkOnGameGreedventory {
-  font-size: 0.85vw;
-  color: black;
-  font-family: var(--font-akatab), sans-serif;
-  font-weight: var(--font-weight-bold);
-  line-height: var(--font-lineh-normal);
-}
-
-@media (max-width: 1024px) {
-  .linkOnGameGreedventoryBlock {
-    margin-top: 2vw;
-    gap: 0.5vw;
-  }
-
-  .linkOnGameGreedventory {
-    font-size: 1.8vw;
+@media (max-width: 576px) {
+  .gameBlockMain {
+    margin-top: 6vw;
   }
 }
 
@@ -228,5 +27,12 @@
   .generalTextForGames {
     margin-top: 3vw;
     font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .generalTextForGames {
+    margin-top: 5vw;
+    font-size: 3.2vw;
   }
 }

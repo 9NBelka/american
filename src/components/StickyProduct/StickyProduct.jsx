@@ -17,8 +17,8 @@ export default function StickyProduct({ infoAboutProduct }) {
         <div className={scss.stickyBlockInfoAboutCourse}>
           {infoAboutProduct.stickyBlockInfoAboutCourseTitle.map((title, index) => (
             <div key={index} className={scss.stickyBlockInfoAboutCourseBlock}>
-              <h6 key={index}>{title}</h6>
-              <h6 key={index}>{infoAboutProduct.stickyBlockInfoAboutCourse[index]}</h6>
+              <h6>{title}</h6>
+              <h6>{infoAboutProduct.stickyBlockInfoAboutCourse[index]}</h6>
             </div>
           ))}
         </div>
