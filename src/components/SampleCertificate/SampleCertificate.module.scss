@@ -9,6 +9,18 @@
   }
 }
 
+@media (max-width: 576px) {
+  .sampleCertificateBlock {
+    margin-top: 6vw;
+  }
+}
+
 .sampleCertificate {
   width: 95%;
+}
+
+@media (max-width: 576px) {
+  .sampleCertificate {
+    width: 100%;
+  }
 }

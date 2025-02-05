@@ -10,6 +10,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .demoVideosBlocks {
+    margin-top: 6vw;
+  }
+}
+
 .demoVideosLink {
   font-size: 0.85vw;
   color: black;
@@ -23,6 +29,13 @@
   .demoVideosLink {
     font-size: 1.8vw;
     margin-top: 1.5vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .demoVideosLink {
+    font-size: 3.2vw;
+    margin-top: 3vw;
   }
 }
 
@@ -57,6 +70,13 @@
       background-color: black;
       fill: white;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .demoVideosIcon {
+    width: 2vw;
+    height: 2vw;
   }
 }
 

@@ -136,3 +136,9 @@
     padding: 6vw 0;
   }
 }
+
+@media (max-width: 576px) {
+  .backgroundFooterScreen {
+    padding-bottom: 8vw;
+  }
+}

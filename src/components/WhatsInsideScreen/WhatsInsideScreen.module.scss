@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .whatsInsideBlock {
+    margin-top: 6vw;
+  }
+}
+
 .spoilerBlock {
   display: flex;
   flex-direction: column;
@@ -19,6 +25,16 @@
 @media (max-width: 1024px) {
   .spoilerBlock {
     margin-top: 1vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .spoilerBlock {
+    margin-top: 3vw;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -31,6 +47,12 @@
   user-select: none;
   padding-bottom: 0.4vw;
   border-bottom: 0.05vw solid black;
+}
+
+@media (max-width: 576px) {
+  .spoilerHeader {
+    padding-bottom: 1.5vw;
+  }
 }
 
 .spoilerHeaderOpen {
@@ -59,6 +81,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .iconBs {
+    width: 2.2vw;
+    height: 2.2vw;
+  }
+}
+
 .insideScreenTitle {
   font-size: 1.2vw;
   color: black;
@@ -72,6 +101,12 @@
   .insideScreenTitle {
     font-size: 1.8vw;
     width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .insideScreenTitle {
+    font-size: 3.6vw;
   }
 }
 
@@ -92,9 +127,18 @@
 
 @media (max-width: 1024px) {
   .spoilerContent.open {
-    max-height: 20vw; /* Устанавливаем примерное ограничение */
+    max-height: 30vw; /* Устанавливаем примерное ограничение */
     padding-top: 1vw;
     padding-bottom: 1.5vw;
+    border-bottom: 0.05vw solid black;
+  }
+}
+
+@media (max-width: 576px) {
+  .spoilerContent.open {
+    max-height: 80vw; /* Устанавливаем примерное ограничение */
+    padding-top: 3vw;
+    padding-bottom: 3vw;
     border-bottom: 0.05vw solid black;
   }
 }
@@ -115,5 +159,11 @@
 @media (max-width: 1024px) {
   .insideScreenContent {
     font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .insideScreenContent {
+    font-size: 3.2vw;
   }
 }

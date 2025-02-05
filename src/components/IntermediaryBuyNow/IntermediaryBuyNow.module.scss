@@ -60,3 +60,39 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .intermediaryBuyNowBlockMain {
+    margin-top: 6vw;
+  }
+
+  .intermediaryBuyNowBlockMainGap {
+    width: 80%;
+    margin-top: 0vw;
+  }
+
+  .intermediaryBuyNowBlock {
+    & h5,
+    & h6 {
+      font-size: 3.2vw;
+    }
+
+    & .whiteText {
+      font-size: 3.2vw;
+    }
+
+    & a {
+      font-size: 3.2vw;
+      padding: 1.2vw 5vw;
+      text-transform: none;
+    }
+
+    &.intermediaryBuyNowBlockBlue a {
+      background-color: #0055ff;
+    }
+
+    & .whiteTextNone {
+      display: none;
+    }
+  }
+}

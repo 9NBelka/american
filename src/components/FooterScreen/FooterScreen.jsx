@@ -4,6 +4,7 @@ import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import clsx from 'clsx';
 
 export default function FooterScreen() {
   const [isSubmitted, setIsSubmitted] = useState(false); // Флаг, чтобы предотвратить повторную отправку
@@ -32,8 +33,11 @@ export default function FooterScreen() {
   const footer = true;
   return (
     <div className={scss.footerScreenBlockColumn}>
+      <div className={clsx(scss.intermediaryBuyNowPhone)}>
+        <IntermediaryBuyNow forStyle={footer} />
+      </div>
       <div className={scss.footerScreenBlocks}>
-        <div className={scss.footerScreenBlock}>
+        <div className={clsx(scss.footerScreenBlock, scss.footerScreenBlockNone)}>
           <h5>Join our newsletter</h5>
           <Formik
             initialValues={{ email: '' }}
@@ -67,7 +71,9 @@ export default function FooterScreen() {
           </div>
         </div>
       </div>
-      <IntermediaryBuyNow forStyle={footer} />
+      <div className={scss.intermediaryBuyNow}>
+        <IntermediaryBuyNow forStyle={footer} />
+      </div>
       <div className={scss.footerScreenBlockInfoColumn}>
         <div className={scss.footerScreenBlockInfo}>
           <a href='#'>

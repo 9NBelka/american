@@ -9,13 +9,17 @@ export default function IntermediaryBuyNow({ forStyle }) {
         forStyle && scss.intermediaryBuyNowBlockMainGap,
       )}>
       <div className={scss.intermediaryBuyNowBlock}>
-        <h5 className={clsx(forStyle ? scss.whiteText : '')}>Want to scale up your projects? </h5>
-        <h6 className={clsx(forStyle ? scss.whiteText : '')}>
+        <h5 className={clsx(forStyle && scss.whiteText)}>Want to scale up your projects? </h5>
+        <h6 className={clsx(forStyle && scss.whiteText, scss.whiteTextNone)}>
           Take our industrial solutions for systemic problems!
         </h6>
       </div>
-      <div className={scss.intermediaryBuyNowBlock}>
-        <a href='#'>BUY NOW</a>
+      <div
+        className={clsx(
+          scss.intermediaryBuyNowBlock,
+          forStyle && scss.intermediaryBuyNowBlockBlue,
+        )}>
+        <a href='#'>Buy now</a>
       </div>
     </div>
   );

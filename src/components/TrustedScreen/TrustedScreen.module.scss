@@ -9,6 +9,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .trustedScreenBlocks {
+    margin-top: 6vw;
+  }
+}
+
 .trustedScreenBlock {
   padding: 0 1vw;
 }
@@ -16,6 +22,12 @@
 @media (max-width: 1024px) {
   .trustedScreenBlock {
     padding: 0 2vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .trustedScreenBlock {
+    padding: 0 1vw;
   }
 }
 
