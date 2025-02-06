@@ -19,7 +19,9 @@ export default function IntermediaryBuyNow({ forStyle }) {
           scss.intermediaryBuyNowBlock,
           forStyle && scss.intermediaryBuyNowBlockBlue,
         )}>
-        <a href='#'>Buy now</a>
+        <a href='#' target='_blank' rel='noopener noreferrer'>
+          Buy now
+        </a>
       </div>
     </div>
   );

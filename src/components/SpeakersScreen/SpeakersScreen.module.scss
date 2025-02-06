@@ -186,7 +186,7 @@
     margin-top: 1vw;
 
     & .descriptionSpeaker {
-      font-size: 3.2vw;
+      font-size: 3.6vw;
       color: black;
       font-family: var(--font-akatab), sans-serif;
       font-weight: var(--font-weight-normal);
@@ -322,7 +322,7 @@
   .generalInfoBlock {
     & .generalInfoText,
     .generalInfoTitle {
-      font-size: 3.2vw;
+      font-size: 3.6vw;
     }
 
     & .generalInfoTitle {
@@ -331,7 +331,7 @@
     .generalInfoList {
       & li {
         display: block;
-        font-size: 3.2vw;
+        font-size: 3.6vw;
       }
     }
   }

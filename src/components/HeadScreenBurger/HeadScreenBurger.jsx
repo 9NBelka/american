@@ -52,7 +52,7 @@ export default function HeadScreenBurger({ scrollToSection }) {
       <div ref={menuRef} className={clsx(css.menu, { [css.open]: isOpen })}>
         <div>
           <div className={css.menuLogoAndIcon}>
-            <img className={css.menuLogo} src='/src/assets/img/logoBurger.webp' />
+            <img className={css.menuLogo} src='/src/assets/img/logoBurger.webp' alt='menuLogo' />
             <BsXLg onClick={toggleMenu} className={css.headerIconBurger} />
           </div>
           {/* <h5 className={css.menuListTitle}>Courses</h5>

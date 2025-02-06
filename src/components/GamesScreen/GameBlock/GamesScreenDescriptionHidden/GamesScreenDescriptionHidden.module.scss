@@ -48,3 +48,25 @@
     max-height: 60vw; /* подстрой под высоту списка */
   }
 }
+
+.descriptionGame {
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .descriptionGame {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .descriptionGame {
+    font-size: 3.6vw;
+  }
+}

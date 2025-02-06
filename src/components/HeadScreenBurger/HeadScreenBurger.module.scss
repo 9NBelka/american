@@ -90,6 +90,7 @@
     padding: 2.5vw;
     padding-top: 3vw;
     border-top-left-radius: 3vw;
+    padding-bottom: 3vw;
   }
 }
 
@@ -116,7 +117,7 @@
 
 @media (max-width: 576px) {
   .menuListTitle {
-    font-size: 3vw;
+    font-size: 3.6vw;
     margin-top: 4vw;
   }
 }
@@ -225,7 +226,7 @@
 @media (max-width: 576px) {
   .menuListPoint h4,
   .menuList a {
-    font-size: 3.2vw;
+    font-size: 3.6vw;
   }
 }
 
@@ -327,7 +328,7 @@
 
 @media (max-width: 576px) {
   .menuAuthor {
-    font-size: 3.2vw;
+    font-size: 3.6vw;
     padding: 1.75vw 0.5vw;
     border-radius: 1vw;
     margin-top: 3.5vw;

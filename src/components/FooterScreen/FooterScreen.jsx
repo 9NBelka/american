@@ -76,13 +76,13 @@ export default function FooterScreen() {
       </div>
       <div className={scss.footerScreenBlockInfoColumn}>
         <div className={scss.footerScreenBlockInfo}>
-          <a href='#'>
+          <a href='#' target='_blank' rel='noopener noreferrer'>
             <h6>Privacy Policy</h6>
           </a>
-          <a href='#'>
+          <a href='#' target='_blank' rel='noopener noreferrer'>
             <h6>Privacy Policy</h6>
           </a>
-          <a href='#'>
+          <a href='#' target='_blank' rel='noopener noreferrer'>
             <h6>Privacy Policy</h6>
           </a>
         </div>

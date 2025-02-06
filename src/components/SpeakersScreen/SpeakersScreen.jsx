@@ -11,7 +11,11 @@ export default function SpeakersScreen({ speakersInfo }) {
           <div className={scss.speakerBlock}>
             <div className={scss.speakerBlockRow}>
               <div className={scss.speakerImageblock}>
-                <img className={scss.imageSpeaker} src={info.imageSpeaker} />
+                <img
+                  className={scss.imageSpeaker}
+                  src={info.imageSpeaker}
+                  alt={`speaker ${info.nameSpeaker}`}
+                />
               </div>
               <div className={scss.speakerInfoBlock}>
                 <h3 className={scss.nameSpeaker}>{info.nameSpeaker}</h3>
@@ -26,8 +30,12 @@ export default function SpeakersScreen({ speakersInfo }) {
                 <a
                   href={info.linkedInSpeaker}
                   className={clsx(scss.linkedInSpeaker, scss.linkedInSpeakerNone)}
-                  target='_blank'>
-                  <img src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png' />
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  <img
+                    src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png'
+                    alt={`linkedin ${info.nameSpeaker}`}
+                  />
                 </a>
               </div>
             </div>
@@ -41,8 +49,12 @@ export default function SpeakersScreen({ speakersInfo }) {
             <a
               href={info.linkedInSpeaker}
               className={clsx(scss.linkedInSpeaker, scss.linkedInSpeakerPhone)}
-              target='_blank'>
-              <img src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png' />
+              target='_blank'
+              rel='noopener noreferrer'>
+              <img
+                src='https://lms.k-syndicate.school/wp-content/uploads/2024/02/linkedIn-esc.png'
+                alt={`linkedin ${info.nameSpeaker}`}
+              />
             </a>
           </div>
 

@@ -11,7 +11,11 @@ export default function StickyProduct({ infoAboutProduct }) {
           allowFullScreen></iframe>
 
         <h5 className={scss.stickyBlockPrice}>{infoAboutProduct.stickyBlockPrice}</h5>
-        <a src={infoAboutProduct.stickyBlockLinkBuy} className={scss.stickyBlockBuyNow}>
+        <a
+          src={infoAboutProduct.stickyBlockLinkBuy}
+          className={scss.stickyBlockBuyNow}
+          target='_blank'
+          rel='noopener noreferrer'>
           <h5>BUY NOW</h5>
         </a>
         <div className={scss.stickyBlockInfoAboutCourse}>
