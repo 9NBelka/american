@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import clsx from 'clsx';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function FooterScreen() {
   const [isSubmitted, setIsSubmitted] = useState(false); // Флаг, чтобы предотвратить повторную отправку
@@ -18,7 +19,9 @@ export default function FooterScreen() {
 
   const handleSubmit = (values) => {
     if (isSubmitted) {
-      alert('You have already sent a form!');
+      toast('You have already sent a form!', {
+        icon: '👏',
+      });
       return;
     }
 
@@ -27,7 +30,8 @@ export default function FooterScreen() {
 
     // Помечаем форму как отправленную
     setIsSubmitted(true);
-    alert('The form is successfully sent!');
+    // alert('The form is successfully sent!');
+    toast.success('The form is successfully sent!');
   };
 
   const footer = true;
@@ -91,6 +95,7 @@ export default function FooterScreen() {
           RESPECTIVE OWNERS.
         </h6>
       </div>
+      <Toaster position='bottom-center' reverseOrder={false} />
     </div>
   );
 }

@@ -1,0 +1,150 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 35, 50, 0.4941176471);
+  backdrop-filter: blur(0.5vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  // display: none;
+}
+
+.modalOverlayOpacity {
+  display: flex;
+  animation-duration: 0.3s;
+  animation-name: slidein;
+}
+
+.modalOverlayOpacityNone {
+  display: none;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: white;
+  padding: 3vw 3vw;
+  padding-top: 2.5vw;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 37vw;
+  position: relative;
+
+  & h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5vw;
+    color: black;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
+}
+
+.modalOverlayCloseIcon {
+  position: absolute;
+  top: 0.5vw;
+  right: 0.5vw;
+  background: none;
+  border: none;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.modalOverlayForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vw;
+  gap: 1.2vw;
+}
+
+.modalOverlayFormNameAndSurname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1vw;
+
+  & .modalOverlayFormInputErrorColumn {
+    width: 100%;
+  }
+}
+
+.modalOverlayFormInputErrorColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.7vw 1.5vw;
+  border: 0.01vw solid #9ea6b8;
+  border-radius: 0.4vw;
+  background-color: #f2f6ff;
+
+  font-size: 0.85vw;
+  font-family: var(--font-albertSans), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  outline: black;
+
+  &::placeholder {
+    color: #9ea6b8;
+  }
+}
+
+.modalContentErrorText {
+  color: red;
+  font-size: 0.815vw;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+}
+
+.modalContentSubmitBlock {
+  display: flex;
+  justify-content: center;
+}
+
+.modalContentSubmitButton {
+  width: 50%;
+  border: 0;
+  border-radius: 0.5vw;
+  font-size: 1.5vw;
+  padding: 0.4vw 0vw;
+  color: white;
+  font-family: var(--font-akatab), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+  background-color: #d74f3e;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.modalContentSubmitButton:hover {
+  opacity: 0.8;
+}
+
+.open-modal-btn {
+  padding: 10px 15px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.open-modal-btn:hover {
+  background: #218838;
+}

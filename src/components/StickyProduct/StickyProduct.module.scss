@@ -60,6 +60,12 @@
     text-align: center;
     border-radius: 0.25vw;
     margin-top: 0.5vw;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 

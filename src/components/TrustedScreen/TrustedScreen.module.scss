@@ -1,5 +1,5 @@
 .trustedScreenBlocks {
-  background-color: #f2f6ff;
+  background-color: gray;
   margin-top: 1.5vw;
 }
 
@@ -16,23 +16,24 @@
 }
 
 .trustedScreenBlock {
-  padding: 0 1vw;
+  display: flex;
+  justify-content: center;
+  padding: 0.5vw 2vw;
 }
 
 @media (max-width: 1024px) {
   .trustedScreenBlock {
-    padding: 0 2vw;
+    padding: 1.5vw 1vw;
   }
 }
 
 @media (max-width: 576px) {
   .trustedScreenBlock {
-    padding: 0 1vw;
+    padding: 1.5vw 0.5vw;
   }
 }
 
 .trustedScreenImages {
-  width: 100%;
   filter: grayscale(100%) contrast(0.5);
   transition: 0.3s;
 
@@ -45,5 +46,11 @@
   .trustedScreenImages {
     width: 80%;
     filter: grayscale(0) contrast(1);
+  }
+}
+
+@media (max-width: 576px) {
+  .trustedScreenImages {
+    width: 70%;
   }
 }
