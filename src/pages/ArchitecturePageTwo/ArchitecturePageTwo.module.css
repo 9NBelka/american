@@ -1,0 +1,28 @@
+.mainBackground {
+  background-color: #29282d;
+}
+
+.container {
+  width: 68.75vw;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+.titleScreens {
+  font-size: 2.4vw;
+  color: white;
+  font-family: var(--font-hankenGrotesk), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  text-align: center;
+  margin-top: 3vw;
+}
+.backgroundHeadScreen {
+  display: flex;
+  background: url(/src/assets/img/HeadScreenBackgroundB.png);
+  background-color: #29282d;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 8vw;
+}

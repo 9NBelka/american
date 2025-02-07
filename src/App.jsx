@@ -64,7 +64,9 @@ export default function App() {
       window.scrollTo({ top, behavior: 'smooth' });
     }
   };
-
+  const architecturePageA = true;
+  const architecturePageB = true;
+  const architecturePageC = true;
   return (
     <Routes>
       {/*
@@ -82,6 +84,7 @@ export default function App() {
             currentInfo={currentInfo}
             scrollToSection={scrollToSection} // Пропс info для страницы A
             reviewsArchitecture={reviewsArchitecture}
+            architecturePageA={architecturePageA}
           />
         }
       />
@@ -92,8 +95,10 @@ export default function App() {
           <TestPage
             page='b'
             Component={ArchitecturePageTwo}
-            currentInfo={currentInfo} // Пропс info для страницы B
+            currentInfo={currentInfo}
+            scrollToSection={scrollToSection} // Пропс info для страницы B
             reviewsArchitecture={reviewsArchitecture}
+            architecturePageB={architecturePageB}
           />
         }
       />

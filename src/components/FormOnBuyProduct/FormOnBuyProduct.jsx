@@ -3,15 +3,16 @@ import * as Yup from 'yup';
 import scss from './FormOnBuyProduct.module.scss'; // Подключаем стили
 import toast, { Toaster } from 'react-hot-toast';
 import clsx from 'clsx';
+import { BsXLg } from 'react-icons/bs';
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string().email('Некорректный email').required('Обязательное поле'),
-  firstName: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
-  lastName: Yup.string().min(2, 'Минимум 2 символа').required('Обязательное поле'),
-  country: Yup.string().required('Выберите страну'),
+  email: Yup.string().email('Incorrect email').required('*Required field'),
+  firstName: Yup.string().min(2, 'Minimum 2 characters').required('*Required field'),
+  lastName: Yup.string().min(2, 'Minimum 2 characters').required('*Required field'),
+  country: Yup.string().min(2, 'Minimum 2 characters').required('*Required field'),
   phone: Yup.string()
-    .matches(/^\+?[0-9]{10,15}$/, 'Некорректный номер')
-    .required('Обязательное поле'),
+    .matches(/^\+?[0-9]{10,15}$/, 'Invalid number')
+    .required('*Required field'),
 });
 
 export default function FormOnBuyProduct({ toggleModal, isOpen }) {
@@ -27,9 +28,8 @@ export default function FormOnBuyProduct({ toggleModal, isOpen }) {
         <div
           className={clsx(scss.modalContent, isOpen && scss.modalContentOpacity)}
           onClick={(e) => e.stopPropagation()}>
-          <button className={scss.modalOverlayCloseIcon} onClick={toggleModal}>
-            ✖
-          </button>
+          <BsXLg className={scss.modalOverlayCloseIcon} onClick={toggleModal} />
+
           <h2>STUDENT FORM</h2>
 
           <Formik

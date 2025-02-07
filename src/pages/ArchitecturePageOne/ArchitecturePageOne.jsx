@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import DemoVideosScreen from '../../components/DemoVideosScreen/DemoVideosScreen';
 import FooterScreen from '../../components/FooterScreen/FooterScreen';
 import ForWhomScreen from '../../components/ForWhomScreen/ForWhomScreen';
@@ -12,21 +13,41 @@ import TrustedScreen from '../../components/TrustedScreen/TrustedScreen';
 import ViewCourseScreen from '../../components/ViewCourseScreen/ViewCourseScreen';
 import WhatsInsideScreen from '../../components/WhatsInsideScreen/WhatsInsideScreen';
 import css from './ArchitecturePageOne.module.css';
+import FormOnBuyProduct from '../../components/FormOnBuyProduct/FormOnBuyProduct';
 
-export default function ArchitecturePageOne({ currentInfo, scrollToSection, reviewsArchitecture }) {
+export default function ArchitecturePageOne({
+  currentInfo,
+  scrollToSection,
+  reviewsArchitecture,
+  architecturePageA,
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => setIsOpen(!isOpen);
+
   return (
     <>
       <div className={css.backgroundHeadScreen}>
-        <HeadScreenHeader currentInfo={currentInfo} scrollToSection={scrollToSection} />
+        <HeadScreenHeader
+          currentInfo={currentInfo}
+          scrollToSection={scrollToSection}
+          architecturePageA={architecturePageA}
+        />
         <div className={css.container}>
-          <HeadScreenTitle infoTitleAboutCourse={currentInfo} />
+          <HeadScreenTitle
+            infoTitleAboutCourse={currentInfo}
+            architecturePageA={architecturePageA}
+          />
         </div>
       </div>
       <div className={css.container}>
         <div className={css.pageWrapper}>
           <div className={css.leftColumn}>
             <div className={css.stickyProduct}>
-              <StickyProduct infoAboutProduct={currentInfo} />
+              <StickyProduct
+                infoAboutProduct={currentInfo}
+                toggleModal={toggleModal}
+                isOpen={isOpen}
+              />
             </div>
             <div className={css.backgroundViewCourseScreen}>
               <ViewCourseScreen currentInfo={currentInfo} />
@@ -50,7 +71,11 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection, revi
             <h3 className={css.titleScreens} id='whatsInside'>
               What`s inside
             </h3>
-            <WhatsInsideScreen programCourseInfo={currentInfo} />
+            <WhatsInsideScreen
+              programCourseInfo={currentInfo}
+              toggleModal={toggleModal}
+              isOpen={isOpen}
+            />
             <h3 className={css.titleScreens} id='demoLessons'>
               Demo lessons
             </h3>
@@ -60,14 +85,20 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection, revi
             <h3 className={css.titleScreens}>Wу are trusted by:</h3>
           </div>
           <div className={css.rightColumn}>
-            <StickyProduct infoAboutProduct={currentInfo} />
+            <StickyProduct
+              infoAboutProduct={currentInfo}
+              toggleModal={toggleModal}
+              isOpen={isOpen}
+            />
           </div>
         </div>
       </div>
+
       <TrustedScreen imageTrusted={currentInfo} />
       <div className={css.backgroundFooterScreen}>
-        <FooterScreen />
+        <FooterScreen toggleModal={toggleModal} isOpen={isOpen} />
       </div>
+      <FormOnBuyProduct toggleModal={toggleModal} isOpen={isOpen} />
     </>
   );
 }

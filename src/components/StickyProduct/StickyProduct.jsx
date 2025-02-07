@@ -2,10 +2,7 @@ import { useState } from 'react';
 import FormOnBuyProduct from '../FormOnBuyProduct/FormOnBuyProduct';
 import scss from './StickyProduct.module.scss';
 
-export default function StickyProduct({ infoAboutProduct }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => setIsOpen(!isOpen);
-
+export default function StickyProduct({ infoAboutProduct, toggleModal, isOpen }) {
   return (
     <div className={scss.stickyBlockFlex}>
       <div className={scss.stickyBlock}>
@@ -33,7 +30,6 @@ export default function StickyProduct({ infoAboutProduct }) {
           ))}
         </div>
       </div>
-      <FormOnBuyProduct toggleModal={toggleModal} isOpen={isOpen} />
     </div>
   );
 }

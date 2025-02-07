@@ -2,6 +2,7 @@
   {
     "id": 0,
     "path": ["/architecture", "/architecture/a", "/architecture/b", "/architecture/c"],
+    "knowledgeLogoMain": "/src/assets/img/knowledge-logo.png",
     "logoCourse": "/src/assets/img/ArchLogo.png",
     "logoUnity": "https://lms.k-syndicate.school/wp-content/uploads/2022/08/Unity-logo-new.png",
     "categoryCourse": "Course",
@@ -22,6 +23,22 @@
       "After you write this project consistently and together with us, there will be nothing left that you do not know about it. Every corner containing simple or complex code will be known to you.",
       "We created videos for the course based on our experience as speakers. They do not contain hour and a half discussions of slides. They are as practical, concentrated and divided into small portions that allow you to control the absorption of information.",
       "Game development teaches you to solve not only immediate programming problems, but rather problems of the product as a whole. Therefore, we consider both the product code and the setup of its environment."
+    ],
+    "viewCourseScreenTextForBPage": [
+      {
+        "text": [
+          "A course on how to make confident games. This is not a guru course trying to tell you about everything, but instead contains a set of approaches and practices suitable for projects of any scale. The project in the course specifically does not use third-party libraries in order to give a detailed understanding of all parts of the project (DI, entry point, etc.).",
+          "After you write this project consistently and together with us, there will be nothing left that you do not know about it. Every corner containing simple or complex code will be known to you."
+        ],
+        "video": "https://www.youtube.com/embed/fIveNLynbMs?si=tJRbRcgvkJjUo-zn"
+      },
+      {
+        "text": [
+          "We created videos for the course based on our experience as speakers. They do not contain hour and a half discussions of slides. They are as practical, concentrated and divided into small portions that allow you to control the absorption of information.",
+          "Game development teaches you to solve not only immediate programming problems, but rather problems of the product as a whole. Therefore, we consider both the product code and the setup of its environment."
+        ],
+        "video": "https://www.youtube.com/embed/M6CDHfeY2tY?si=7k0cQcZQgjwwmFKS"
+      }
     ],
     "forWhomScreen": [
       {

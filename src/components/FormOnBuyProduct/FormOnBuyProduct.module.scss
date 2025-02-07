@@ -37,7 +37,7 @@
   background: white;
   padding: 3vw 3vw;
   padding-top: 2.5vw;
-  border-radius: 8px;
+  border-radius: 0.5vw;
   width: 100%;
   max-width: 37vw;
   position: relative;
@@ -53,14 +53,58 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .modalContent {
+    padding: 5vw 3vw;
+    padding-top: 4vw;
+    border-radius: 0.75vw;
+    max-width: 70vw;
+
+    & h2 {
+      font-size: 5vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .modalContent {
+    padding: 8vw 5vw;
+    padding-top: 8vw;
+    border-radius: 1vw;
+    max-width: 80vw;
+
+    & h2 {
+      font-size: 8vw;
+    }
+  }
+}
+
 .modalOverlayCloseIcon {
+  width: 1vw;
+  height: 1vw;
   position: absolute;
+  fill: black;
   top: 0.5vw;
   right: 0.5vw;
-  background: none;
-  border: none;
-  font-size: 1vw;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .modalOverlayCloseIcon {
+    width: 2.5vw;
+    height: 2.5vw;
+    top: 1vw;
+    right: 1vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .modalOverlayCloseIcon {
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 2vw;
+    right: 2vw;
+  }
 }
 
 .modalOverlayForm {
@@ -68,6 +112,20 @@
   flex-direction: column;
   margin-top: 2vw;
   gap: 1.2vw;
+}
+
+@media (max-width: 1024px) {
+  .modalOverlayForm {
+    margin-top: 4vw;
+    gap: 2.5vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .modalOverlayForm {
+    margin-top: 5vw;
+    gap: 4vw;
+  }
 }
 
 .modalOverlayFormNameAndSurname {
@@ -78,6 +136,13 @@
 
   & .modalOverlayFormInputErrorColumn {
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .modalOverlayFormNameAndSurname {
+    flex-direction: column;
+    gap: 4vw;
   }
 }
 
@@ -103,12 +168,40 @@ input {
   }
 }
 
+@media (max-width: 1024px) {
+  input {
+    padding: 1.5vw 1.5vw;
+    border-radius: 0.5vw;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 576px) {
+  input {
+    padding: 2.5vw 4vw;
+    border-radius: 1vw;
+    font-size: 4vw;
+  }
+}
+
 .modalContentErrorText {
   color: red;
   font-size: 0.815vw;
   font-family: var(--font-akatab), sans-serif;
   font-weight: var(--font-weight-normal);
   line-height: var(--font-lineh-normal);
+}
+
+@media (max-width: 1024px) {
+  .modalContentErrorText {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .modalContentErrorText {
+    font-size: 3vw;
+  }
 }
 
 .modalContentSubmitBlock {
@@ -132,19 +225,24 @@ input {
   transition: 0.3s ease-in-out;
 }
 
+@media (max-width: 1024px) {
+  .modalContentSubmitButton {
+    width: 50%;
+    border-radius: 0.5vw;
+    font-size: 2.6vw;
+    padding: 1vw 0vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .modalContentSubmitButton {
+    width: 55%;
+    border-radius: 1vw;
+    font-size: 5vw;
+    padding: 1.5vw 0vw;
+  }
+}
+
 .modalContentSubmitButton:hover {
   opacity: 0.8;
-}
-
-.open-modal-btn {
-  padding: 10px 15px;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.open-modal-btn:hover {
-  background: #218838;
 }

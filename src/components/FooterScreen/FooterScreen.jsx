@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 import clsx from 'clsx';
 import toast, { Toaster } from 'react-hot-toast';
 
-export default function FooterScreen() {
+export default function FooterScreen({ toggleModal, isOpen }) {
   const [isSubmitted, setIsSubmitted] = useState(false); // Флаг, чтобы предотвратить повторную отправку
 
   // Схема валидации с использованием Yup
@@ -38,7 +38,7 @@ export default function FooterScreen() {
   return (
     <div className={scss.footerScreenBlockColumn}>
       <div className={clsx(scss.intermediaryBuyNowPhone)}>
-        <IntermediaryBuyNow forStyle={footer} />
+        <IntermediaryBuyNow forStyle={footer} toggleModal={toggleModal} isOpen={isOpen} />
       </div>
       <div className={scss.footerScreenBlocks}>
         <div className={clsx(scss.footerScreenBlock, scss.footerScreenBlockNone)}>
@@ -76,7 +76,7 @@ export default function FooterScreen() {
         </div>
       </div>
       <div className={scss.intermediaryBuyNow}>
-        <IntermediaryBuyNow forStyle={footer} />
+        <IntermediaryBuyNow forStyle={footer} toggleModal={toggleModal} isOpen={isOpen} />
       </div>
       <div className={scss.footerScreenBlockInfoColumn}>
         <div className={scss.footerScreenBlockInfo}>

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import scss from './IntermediaryBuyNow.module.scss';
 
-export default function IntermediaryBuyNow({ forStyle }) {
+export default function IntermediaryBuyNow({ forStyle, toggleModal, isOpen }) {
   return (
     <div
       className={clsx(
@@ -19,7 +19,7 @@ export default function IntermediaryBuyNow({ forStyle }) {
           scss.intermediaryBuyNowBlock,
           forStyle && scss.intermediaryBuyNowBlockBlue,
         )}>
-        <a href='#' target='_blank' rel='noopener noreferrer'>
+        <a rel='noopener noreferrer' onClick={toggleModal}>
           Buy now
         </a>
       </div>

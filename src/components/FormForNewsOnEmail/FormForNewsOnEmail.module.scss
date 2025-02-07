@@ -1,0 +1,81 @@
+.modalOverlay {
+  display: flex;
+  margin-top: 12vw;
+  width: 100%;
+}
+
+.modalOverlayForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0.75vw;
+  padding: 0.75vw 1.5vw;
+  width: 100%;
+}
+
+.modalOverlayFormInputErrorColumn {
+  display: flex;
+  flex-direction: column;
+  border-left: 0.1vw solid #c6c6c6;
+  // padding-left: 4vw;
+  padding: 0 3vw;
+
+  &:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  & label {
+    display: flex;
+    font-size: 0.85vw;
+    color: black;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
+
+  & input {
+    border: 0;
+    background: none;
+    padding: 0;
+    font-size: 1.2vw;
+    width: 13vw;
+    color: #d9d9d9;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+
+    &::placeholder {
+      color: #d9d9d9;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+    }
+  }
+
+  & .modalContentErrorText {
+    color: red;
+    font-size: 0.7vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
+}
+
+.modalContentSubmitButton {
+  display: flex;
+  background-color: #d9d9d9;
+  border-radius: 1vw;
+  border: 0;
+  padding: 0.4vw 3.5vw;
+  font-size: 0.85vw;
+  font-family: var(--font-hankenGrotesk), sans-serif;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: 0px 0vw 1vw 0vw black;
+  }
+}

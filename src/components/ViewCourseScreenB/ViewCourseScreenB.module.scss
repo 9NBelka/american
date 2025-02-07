@@ -1,0 +1,52 @@
+.viewCourseScreen {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vw;
+  gap: 4vw;
+}
+
+.viewCourseScreenBlockRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5vw;
+
+  & iframe {
+    display: flex;
+    width: 48%;
+    height: 18.6vw;
+    border: 0.01vw solid black;
+    border-radius: 1vw;
+    transition: 0.5s;
+    filter: brightness(0.7);
+
+    &:hover {
+      filter: brightness(1);
+    }
+  }
+}
+
+.viewCourseScreenList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 2vw;
+  width: 43%;
+
+  & li {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+
+    & h5 {
+      font-size: 0.85vw;
+      color: white;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+    }
+  }
+}

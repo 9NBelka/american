@@ -4,6 +4,17 @@
   padding-top: 8vw;
   width: 60.5%;
 
+  &.headScreenTitleB {
+    padding-top: 14vw;
+    width: 100%;
+  }
+
+  & .headScreenCourseInfoB {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   & .categoryCourseText {
     display: flex;
     font-size: 1.25vw;
@@ -12,6 +23,11 @@
     font-weight: var(--font-weight-bold);
     line-height: var(--font-lineh-normal);
     text-transform: uppercase;
+
+    &.categoryCourseTextB {
+      font-size: 1.15vw;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+    }
   }
 
   & .nameCourseText {
@@ -21,6 +37,13 @@
     font-family: var(--font-akatab), sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--font-lineh-small);
+
+    &.nameCourseTextB {
+      font-size: 4vw;
+      text-align: center;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      width: 70%;
+    }
   }
 
   & .nameCoursePhone {
@@ -36,6 +59,42 @@
     line-height: var(--font-lineh-normal);
     margin-top: 1vw;
     width: 75%;
+
+    &.descriptionCourseTextB {
+      text-align: center;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      width: 50%;
+      margin-top: 1.25vw;
+    }
+  }
+
+  & .headScreenButtonAnswer {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    background-color: #ff0000;
+    padding: 0.5vw 2.25vw;
+    border-radius: 2vw;
+    margin-top: 1.5vw;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0vw 1vw 0vw #ff0000;
+    }
+  }
+}
+
+.headScreenTitle {
+  & .nameCourseTextB {
+    display: flex;
+    font-size: 3.4vw;
+    color: white;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-small);
   }
 }
 

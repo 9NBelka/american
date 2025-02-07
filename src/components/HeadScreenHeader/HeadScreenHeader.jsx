@@ -4,7 +4,12 @@ import scss from './HeadScreenHeader.module.scss';
 import { useEffect, useState } from 'react';
 import HeadScreenBurger from '../HeadScreenBurger/HeadScreenBurger';
 
-export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
+export default function HeadScreenHeader({
+  currentInfo,
+  scrollToSection,
+  architecturePageA,
+  architecturePageB,
+}) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,18 +27,44 @@ export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
   }, []);
 
   return (
-    <header className={clsx(scss.header, `${isScrolled ? scss.headerScrolled : ''}`)}>
+    <header
+      className={clsx(
+        scss.header,
+        `${isScrolled ? scss.headerScrolled : ''}`,
+        architecturePageB && scss.headerB,
+      )}>
       <div className={scss.container}>
         <nav className={scss.headerNav}>
           <div className={scss.headerLogosAndButtonAnswer}>
-            <div>
-              <img className={clsx(scss.headerLogo)} src={currentInfo.logoCourse} alt='icon-logo' />
-            </div>
-            <div>
-              <img className={scss.headerLogoUnity} src={currentInfo.logoUnity} alt='icon-unity' />
-            </div>
+            {architecturePageA && (
+              <div>
+                <img
+                  className={clsx(scss.headerLogo)}
+                  src={currentInfo.logoCourse}
+                  alt='icon-logo'
+                />
+              </div>
+            )}
+            {architecturePageB && (
+              <div>
+                <img
+                  className={clsx(scss.headerKnowledgeLogoMain)}
+                  src={currentInfo.knowledgeLogoMain}
+                  alt='icon-logo'
+                />
+              </div>
+            )}
+            {architecturePageA && (
+              <div>
+                <img
+                  className={scss.headerLogoUnity}
+                  src={currentInfo.logoUnity}
+                  alt='icon-unity'
+                />
+              </div>
+            )}
           </div>
-          <ul className={scss.headerNavText}>
+          <ul className={clsx(scss.headerNavText, architecturePageB && scss.headerNavTextB)}>
             <li>
               <a onClick={() => scrollToSection('forWhom', 100)}>For who?</a>
             </li>
@@ -54,8 +85,14 @@ export default function HeadScreenHeader({ currentInfo, scrollToSection }) {
             </li>
           </ul>
           <ul className={scss.headerList}>
-            <li className={scss.headerButtonAnswer}>Ask a question</li>
-            <li className={scss.headerButtonSingUp}>Sign Up</li>
+            {architecturePageA && <li className={scss.headerButtonAnswer}>Ask a question</li>}
+            <li
+              className={clsx(
+                scss.headerButtonSingUp,
+                architecturePageB && scss.headerButtonSingUpB,
+              )}>
+              Sign Up
+            </li>
             <li className={scss.burgerMenu}>
               <HeadScreenBurger isScrolled={isScrolled} scrollToSection={scrollToSection} />
             </li>
