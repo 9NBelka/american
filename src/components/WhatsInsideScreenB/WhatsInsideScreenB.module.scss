@@ -1,0 +1,43 @@
+.insideScreenBlockMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5vw;
+  margin-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.insideScreenBlock {
+  display: flex;
+  width: 28%;
+}
+
+.insideScreenTitleAndContent {
+  display: flex;
+  flex-direction: column;
+
+  & h3 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.25vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    height: 6.5vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 0.05vw solid white;
+  }
+
+  & h5 {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin-top: 0.75vw;
+  }
+}

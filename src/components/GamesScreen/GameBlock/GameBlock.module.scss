@@ -4,6 +4,12 @@
   margin-top: 1vw;
 }
 
+.gamesMainB {
+  display: flex;
+  width: 20%;
+  margin-top: 0;
+}
+
 .gamesMain:first-child {
   margin: 0;
 }
@@ -32,6 +38,23 @@
       display: flex;
       width: 100%;
       border-radius: 0.5vw;
+    }
+  }
+}
+
+.gamesBlockB {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1vw;
+
+  .gamesImageblock {
+    width: 100%;
+
+    .imageGame {
+      display: flex;
+      width: 100%;
+      border-radius: 0.75vw;
     }
   }
 }
@@ -69,6 +92,10 @@
   width: 75%;
   flex-direction: column;
   align-items: start;
+
+  &.gamesInfoBlockB {
+    width: 100%;
+  }
 }
 
 .gamesInfoBlockDescriptionAndButtonPhone {
@@ -95,6 +122,11 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--font-lineh-normal);
   text-transform: uppercase;
+
+  &.nameGameB {
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+  }
 }
 
 @media (max-width: 1024px) {

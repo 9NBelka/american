@@ -1,5 +1,20 @@
 .gameBlockMain {
   margin-top: 1vw;
+
+  &.center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 3vw;
+    padding-bottom: 3vw;
+  }
+}
+
+.gameBlockMainB {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
 }
 
 @media (max-width: 1024px) {
@@ -21,6 +36,15 @@
   font-family: var(--font-akatab), sans-serif;
   font-weight: var(--font-weight-normal);
   line-height: var(--font-lineh-normal);
+
+  &.generalTextForGamesB {
+    display: flex;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    text-align: center;
+    margin-top: 3vw;
+    width: 70%;
+  }
 }
 
 @media (max-width: 1024px) {

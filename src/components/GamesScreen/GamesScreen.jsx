@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import scss from './GamesScreen.module.scss';
 import GameBlock from './GameBlock/GameBlock';
+import clsx from 'clsx';
 
-export default function GamesScreen({ gamesInfo }) {
+export default function GamesScreen({ gamesInfo, architecturePageB }) {
   const [expandedStates, setExpandedStates] = useState({});
 
   const toggleDescription = (id) => {
@@ -25,17 +26,23 @@ export default function GamesScreen({ gamesInfo }) {
   };
 
   return (
-    <div className={scss.gameBlockMain}>
-      {gamesInfo.fourGamesScreen.map((gamesInfo, index) => (
-        <GameBlock
-          key={index}
-          gamesInfo={gamesInfo}
-          expandedStates={expandedStates}
-          toggleDescription={toggleDescription}
-          getDescriptionWithLinks={getDescriptionWithLinks}
-        />
-      ))}
-      <h6 className={scss.generalTextForGames}>{gamesInfo.fourGamesScreenGeneralText}</h6>
+    <div className={clsx(scss.gameBlockMain, architecturePageB && scss.center)}>
+      <div className={clsx(architecturePageB && scss.gameBlockMainB)}>
+        {gamesInfo.fourGamesScreen.map((gamesInfo, index) => (
+          <GameBlock
+            key={index}
+            gamesInfo={gamesInfo}
+            expandedStates={expandedStates}
+            toggleDescription={toggleDescription}
+            getDescriptionWithLinks={getDescriptionWithLinks}
+            architecturePageB={architecturePageB}
+          />
+        ))}
+      </div>
+      <h6
+        className={clsx(scss.generalTextForGames, architecturePageB && scss.generalTextForGamesB)}>
+        {gamesInfo.fourGamesScreenGeneralText}
+      </h6>
     </div>
   );
 }

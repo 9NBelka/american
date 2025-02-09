@@ -6,7 +6,18 @@
   max-height: 0vw;
   transition: max-height 0.4s ease-out;
 
-  ul {
+  &.expandedDescriptionB {
+    width: 100%;
+
+    & ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 1vw;
+    }
+  }
+
+  & ul {
     margin: 0;
     margin-top: 1vw;
   }
@@ -57,6 +68,16 @@
   line-height: var(--font-lineh-normal);
   padding: 0;
   margin: 0;
+
+  &.descriptionGameB {
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    margin-top: 0.5vw;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 @media (max-width: 1024px) {

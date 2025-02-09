@@ -3,6 +3,10 @@ import HeadScreenHeader from '../../components/HeadScreenHeader/HeadScreenHeader
 import HeadScreenTitle from '../../components/HeadScreenTitle/HeadScreenTitle';
 import { useState } from 'react';
 import ViewCourseScreenB from '../../components/ViewCourseScreenB/ViewCourseScreenB';
+import ForWhomScreenB from '../../components/ForWhomScreenB/ForWhomScreenB';
+import GamesScreen from '../../components/GamesScreen/GamesScreen';
+import WhatsInsideScreenB from '../../components/WhatsInsideScreenB/WhatsInsideScreenB';
+import DemoVideosScreenB from '../../components/DemoVideosScreenB/DemoVideosScreenB';
 
 export default function ArchitecturePageOne({ currentInfo, scrollToSection, architecturePageB }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +34,22 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection, arch
           Course Overview
         </h3>
         <ViewCourseScreenB viewCourseInfo={currentInfo} architecturePageB={architecturePageB} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          For Who?
+        </h3>
+        <ForWhomScreenB infoForWhom={currentInfo} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          We worked on:
+        </h3>
+        <GamesScreen gamesInfo={currentInfo} architecturePageB={architecturePageB} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          What’s inside?
+        </h3>
+        <WhatsInsideScreenB programCourseInfo={currentInfo} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          Demo lessons
+        </h3>
+        <DemoVideosScreenB demoVideos={currentInfo} />
       </div>
     </div>
   );

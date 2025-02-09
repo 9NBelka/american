@@ -1,8 +1,13 @@
+import clsx from 'clsx';
 import scss from './GamesScreenGreedventoryLinks.module.scss';
 
-export default function GamesScreenGreedventoryLinks({ gamesInfo }) {
+export default function GamesScreenGreedventoryLinks({ gamesInfo, architecturePageB }) {
   return (
-    <div className={scss.linkOnGameGreedventoryBlock}>
+    <div
+      className={clsx(
+        scss.linkOnGameGreedventoryBlock,
+        architecturePageB && scss.linkOnGameGreedventoryBlockB,
+      )}>
       {gamesInfo.linksGame.includes('Steam') && (
         <a href={gamesInfo.linkOnGameSteam} target='_blank' rel='noopener noreferrer'>
           <h6 className={scss.linkOnGameGreedventory}>Steam,</h6>

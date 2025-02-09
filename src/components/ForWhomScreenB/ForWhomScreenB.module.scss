@@ -1,0 +1,128 @@
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5vw;
+  background: white;
+  border-radius: 1vw;
+  border-top-right-radius: 0;
+  overflow: hidden;
+  background: linear-gradient(-75deg, transparent 8vw, white 0);
+  margin-bottom: 6vw;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+
+  & h2 {
+    display: flex;
+    color: #ff0000;
+    font-size: 1.2vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+  }
+
+  & p {
+    display: flex;
+    color: #29282d;
+    font-size: 0.85vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  gap: 0.5vw;
+  padding-bottom: 2vw;
+
+  & .buttonNow,
+  & .buttonReadMore {
+    display: flex;
+    justify-content: center;
+    width: 9vw;
+    font-size: 0.85vw;
+    padding: 0.5vw 2vw;
+    background: #ff0000;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    border: none;
+    border-radius: 3vw;
+    cursor: pointer;
+
+    &.buttonReadMore {
+      color: black;
+      background: #d9d9d9;
+    }
+  }
+}
+
+.rightSide {
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  padding-right: 4.5vw;
+  gap: 1rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 11vw;
+  background: black;
+  padding: 0.75vw;
+  padding-bottom: 2vw;
+  min-height: 24vw;
+  border: 0.15vw solid transparent;
+  overflow: hidden;
+  border-radius: 1vw;
+  background-image: url('/src/assets/img/forwhobackgroundCardBGrey.png');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: skewX(165deg);
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    background-image: url('/src/assets/img/forwhobackgroundCardB.png');
+    border-color: #ff0000;
+  }
+
+  & h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 4.5vw;
+    color: white;
+    font-size: 1.15vw;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    text-align: center;
+    transform: skewX(-165deg);
+  }
+
+  & p {
+    display: flex;
+    color: white;
+    font-size: 0.85vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-align: center;
+    transform: skewX(-165deg);
+    margin: 0;
+    margin-top: 1vw;
+  }
+}

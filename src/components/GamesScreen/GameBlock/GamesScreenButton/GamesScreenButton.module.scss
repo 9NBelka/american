@@ -11,6 +11,11 @@
   cursor: pointer;
 }
 
+.descriptionGameButtonB {
+  color: white;
+  font-family: var(--font-hankenGrotesk), sans-serif;
+}
+
 @media (max-width: 1024px) {
   .descriptionGameButton {
     font-size: 1.8vw;
