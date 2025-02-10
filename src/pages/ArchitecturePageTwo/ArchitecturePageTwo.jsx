@@ -7,8 +7,15 @@ import ForWhomScreenB from '../../components/ForWhomScreenB/ForWhomScreenB';
 import GamesScreen from '../../components/GamesScreen/GamesScreen';
 import WhatsInsideScreenB from '../../components/WhatsInsideScreenB/WhatsInsideScreenB';
 import DemoVideosScreenB from '../../components/DemoVideosScreenB/DemoVideosScreenB';
+import SpeakersScreenB from '../../components/SpeakersScreenB/SpeakersScreenB';
+import ReviewsScreenB from '../../components/ReviewsScreenB/ReviewsScreenB';
 
-export default function ArchitecturePageOne({ currentInfo, scrollToSection, architecturePageB }) {
+export default function ArchitecturePageOne({
+  currentInfo,
+  scrollToSection,
+  reviewsArchitecture,
+  architecturePageB,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
 
@@ -39,12 +46,21 @@ export default function ArchitecturePageOne({ currentInfo, scrollToSection, arch
         </h3>
         <ForWhomScreenB infoForWhom={currentInfo} />
         <h3 className={css.titleScreens} id='forWhom'>
+          Who?
+        </h3>
+        <SpeakersScreenB speakersInfo={currentInfo} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          Reviews
+        </h3>
+        <ReviewsScreenB reviews={reviewsArchitecture} />
+        <h3 className={css.titleScreens} id='forWhom'>
           We worked on:
         </h3>
         <GamesScreen gamesInfo={currentInfo} architecturePageB={architecturePageB} />
         <h3 className={css.titleScreens} id='forWhom'>
           What’s inside?
         </h3>
+
         <WhatsInsideScreenB programCourseInfo={currentInfo} />
         <h3 className={css.titleScreens} id='forWhom'>
           Demo lessons

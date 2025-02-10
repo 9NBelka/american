@@ -1,0 +1,49 @@
+.speakersScreenGeneralMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3vw;
+}
+
+.generalInfoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .generalInfoText,
+  .generalInfoTitle {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+  }
+
+  & .generalInfoTitle {
+    margin-top: 1vw;
+  }
+
+  .generalInfoList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    & li {
+      display: flex;
+      font-size: 0.85vw;
+      color: white;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      gap: 0.25vw;
+    }
+
+    & li a {
+      text-decoration: none;
+      color: white;
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}

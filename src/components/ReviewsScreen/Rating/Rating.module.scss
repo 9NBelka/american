@@ -1,0 +1,54 @@
+// rating
+
+.rating {
+  display: flex;
+  gap: 0.25vw;
+}
+
+.starFilled,
+.starHalf,
+.starEmpty {
+  width: 1vw;
+  height: 1vw;
+
+  &.starFilled {
+    color: gold;
+  }
+
+  &.starHalf {
+    color: gold;
+  }
+
+  &.starEmpty {
+    color: lightgray;
+  }
+}
+
+@media (max-width: 1024px) {
+  .rating {
+    display: flex;
+    gap: 0.75vw;
+  }
+
+  .starFilled,
+  .starHalf,
+  .starEmpty {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .rating {
+    display: flex;
+    margin-top: 3vw;
+    gap: 1.2vw;
+  }
+
+  .starFilled,
+  .starHalf,
+  .starEmpty {
+    width: 4vw;
+    height: 4vw;
+  }
+}

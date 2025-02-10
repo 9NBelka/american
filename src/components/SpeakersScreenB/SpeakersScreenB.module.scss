@@ -1,0 +1,117 @@
+.speakersScreenBlockMain {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.speakersScreenBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 50%;
+  border-radius: 1vw;
+  padding: 2vw;
+}
+
+.imageSpeaker {
+  width: 5vw;
+  border-radius: 10vw;
+}
+
+.nameSpeaker {
+  display: flex;
+  color: black;
+  font-size: 1.15vw;
+  font-family: var(--font-hankenGrotesk), sans-serif;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+  margin-top: 1.4vw;
+}
+
+.subText {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #c6c6c6;
+  font-size: 0.85vw;
+  font-family: var(--font-hankenGrotesk), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+
+  &.lineAndUpper {
+    position: relative;
+    text-transform: uppercase;
+    margin-top: 1.4vw;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 7.8vw; /* Длина полос */
+      height: 0.01vw; /* Толщина */
+      background-color: lightgray;
+    }
+
+    &::before {
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.lineInstructor {
+    &::before,
+    &::after {
+      width: 9.8vw; /* Длина полос */
+    }
+  }
+}
+
+.linkedInSpeaker {
+  display: flex;
+  justify-content: center;
+  padding: 0.3vw 0;
+  width: 100%;
+  background: #ff0000;
+  color: white;
+  font-size: 0.85vw;
+  font-family: var(--font-hankenGrotesk), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  border-radius: 3vw;
+  cursor: pointer;
+  margin-top: 1.4vw;
+
+  &.youTubeSpeaker {
+    color: #000000;
+    background: #d9d9d9;
+    margin-top: 0.5vw;
+  }
+}
+
+.descriptionSpeakerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 1.4vw;
+
+  & .descriptionSpeaker {
+    color: #000000;
+    font-size: 0.85vw;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+}

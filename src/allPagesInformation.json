@@ -66,6 +66,7 @@
     "speakerScreen": [
       {
         "nameSpeaker": "ALEXEY NAUMENKO",
+        "characteristicSpeaker": "Speaker and CEO",
         "descriptionSpeaker": [
           "12 years of development experience. CEO of Black Tower Basement.",
           "Previous: Unity Software Architect on Raid: Shadow Legends and several other world-class mobile projects."
@@ -76,6 +77,7 @@
       },
       {
         "nameSpeaker": "EKATERINA REVVO",
+        "characteristicSpeaker": "Speaker and CEO",
         "descriptionSpeaker": [
           "10 years of experience in developing and leading a project team.",
           "CTO Black Tower Basement. In the past: Client Team Lead on Raid: Shadow Legends and Shadow Legends and several other large-scale projects"
