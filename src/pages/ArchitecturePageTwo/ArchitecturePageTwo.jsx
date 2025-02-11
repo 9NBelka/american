@@ -9,6 +9,9 @@ import WhatsInsideScreenB from '../../components/WhatsInsideScreenB/WhatsInsideS
 import DemoVideosScreenB from '../../components/DemoVideosScreenB/DemoVideosScreenB';
 import SpeakersScreenB from '../../components/SpeakersScreenB/SpeakersScreenB';
 import ReviewsScreenB from '../../components/ReviewsScreenB/ReviewsScreenB';
+import PriceScreenB from '../../components/PriceScreenB/PriceScreenB';
+import TrustedScreenB from '../../components/TrustedScreenB/TrustedScreenB';
+import FooterScreenB from '../../components/FooterScreenB/FooterScreenB';
 
 export default function ArchitecturePageOne({
   currentInfo,
@@ -60,12 +63,20 @@ export default function ArchitecturePageOne({
         <h3 className={css.titleScreens} id='forWhom'>
           What’s inside?
         </h3>
-
         <WhatsInsideScreenB programCourseInfo={currentInfo} />
         <h3 className={css.titleScreens} id='forWhom'>
           Demo lessons
         </h3>
         <DemoVideosScreenB demoVideos={currentInfo} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          Price
+        </h3>
+        <PriceScreenB infoAboutProduct={currentInfo} />
+        <h3 className={css.titleScreens} id='forWhom'>
+          We worked with:
+        </h3>
+        <TrustedScreenB imageTrusted={currentInfo} />
+        <FooterScreenB imageLogo={currentInfo} />
       </div>
     </div>
   );

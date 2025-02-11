@@ -109,9 +109,18 @@
     padding-top: 14vw;
     width: 100%;
 
+    &.headScreenTitleB {
+      padding-top: 14vw;
+      width: 100%;
+    }
+
     & .categoryCourseText {
       font-size: 2.8vw;
       margin-top: 6vw;
+
+      &.categoryCourseTextB {
+        font-size: 2.8vw;
+      }
     }
 
     & .nameCourseText {
@@ -125,12 +134,32 @@
       font-family: var(--font-akatab), sans-serif;
       font-weight: var(--font-weight-bold);
       line-height: var(--font-lineh-small);
+
+      &.nameCoursePhoneB {
+        text-align: center;
+      }
     }
 
     & .descriptionCourseText {
       font-size: 1.8vw;
       margin-top: 2vw;
       width: 85%;
+
+      &.descriptionCourseTextB {
+        width: 100%;
+        margin-top: 3vw;
+      }
+    }
+
+    & .headScreenButtonAnswer {
+      font-size: 1.8vw;
+      padding: 0.9vw 4vw;
+      border-radius: 3vw;
+      margin-top: 3vw;
+
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import scss from './ViewCourseScreenB.module.scss';
 
 export default function ViewCourseScreenB({ viewCourseInfo, architecturePageB }) {
@@ -19,7 +20,11 @@ export default function ViewCourseScreenB({ viewCourseInfo, architecturePageB })
               <iframe src={item.video} allow='autoplay; encrypted-media' allowFullScreen></iframe>
             </div>
           ) : (
-            <div className={scss.viewCourseScreenBlockRow}>
+            <div
+              className={clsx(
+                scss.viewCourseScreenBlockRow,
+                scss.viewCourseScreenBlockRowNoReverse,
+              )}>
               <iframe src={item.video} allow='autoplay; encrypted-media' allowFullScreen></iframe>
 
               <ul className={scss.viewCourseScreenList}>

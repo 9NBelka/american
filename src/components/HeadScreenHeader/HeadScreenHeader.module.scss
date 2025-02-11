@@ -12,6 +12,20 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .header {
+    top: 0vw;
+    padding: 2vw 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    top: 0vw;
+    padding: 3vw 0;
+  }
+}
+
 .headerB {
   top: 1vw;
   background-color: transparent;
@@ -36,16 +50,21 @@
 }
 
 @media (max-width: 1024px) {
-  .header {
+  .headerB {
     top: 0vw;
-    padding: 2vw 0;
-  }
-}
+    background-color: transparent;
 
-@media (max-width: 576px) {
-  .header {
-    top: 0vw;
-    padding: 3vw 0;
+    &.headerScrolled {
+      background: rgba(9, 35, 50, 0.5);
+      box-shadow: -0.5vw 0vw 1vw rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(0.5vw);
+
+      & .headerNav {
+        & .headerKnowledgeLogoMain {
+          width: 7vw;
+        }
+      }
+    }
   }
 }
 
@@ -106,6 +125,11 @@
 
     .headerLogo {
       width: 22vw;
+    }
+
+    .headerKnowledgeLogoMain {
+      display: flex;
+      width: 7vw;
     }
 
     .headerLogoUnity {
@@ -222,6 +246,16 @@
 
       &:hover {
         box-shadow: none;
+      }
+
+      &.headerButtonSingUpB {
+        border-radius: 4vw;
+        padding: 0.85vw 3vw;
+        font-size: 2vw;
+
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
   }

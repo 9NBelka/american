@@ -12,6 +12,20 @@
   margin-bottom: 6vw;
 }
 
+@media (max-width: 1024px) {
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    background: white;
+    border-radius: 2vw;
+    padding: 6vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+}
+
 .leftSide {
   display: flex;
   flex-direction: column;
@@ -34,6 +48,12 @@
     font-family: var(--font-akatab), sans-serif;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 1024px) {
+  .leftSide {
+    display: none;
   }
 }
 
@@ -73,6 +93,12 @@
   justify-content: flex-end;
   padding-right: 4.5vw;
   gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .rightSide {
+    display: none;
+  }
 }
 
 .block {

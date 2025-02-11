@@ -26,7 +26,9 @@ export default function HeadScreenTitle({
         <h1 className={clsx(scss.nameCourseText, architecturePageB && scss.nameCourseTextB)}>
           {infoTitleAboutCourse.nameCourse}
         </h1>
-        <h1 className={scss.nameCoursePhone}>{infoTitleAboutCourse.nameCoursePhone}</h1>
+        <h1 className={clsx(scss.nameCoursePhone, architecturePageB && scss.nameCoursePhoneB)}>
+          {infoTitleAboutCourse.nameCoursePhone}
+        </h1>
         <h2
           className={clsx(
             scss.descriptionCourseText,

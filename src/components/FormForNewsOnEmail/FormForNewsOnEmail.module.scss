@@ -4,6 +4,12 @@
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .modalOverlay {
+    margin-top: 10vw;
+  }
+}
+
 .modalOverlayForm {
   display: flex;
   flex-direction: row;
@@ -12,6 +18,30 @@
   border-radius: 0.75vw;
   padding: 0.75vw 1.5vw;
   width: 100%;
+
+  & h2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modalOverlayForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1vw;
+    padding: 3vw 5vw;
+
+    & h2 {
+      display: flex;
+      font-size: 3.8vw;
+      color: black;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      padding-bottom: 1vw;
+    }
+  }
 }
 
 .modalOverlayFormInputErrorColumn {
@@ -63,6 +93,36 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .modalOverlayFormInputErrorColumn {
+    border-left: none;
+    padding: 0 0vw;
+    margin-top: 2vw;
+
+    & label {
+      display: flex;
+      font-size: 1.8vw;
+    }
+
+    & input {
+      font-size: 2vw;
+      width: 45vw;
+      border-bottom: 0.01vw solid #bcbbbb;
+      padding: 0.75vw 0;
+      color: #bcbbbb;
+
+      &::placeholder {
+        color: #bcbbbb;
+      }
+    }
+
+    & .modalContentErrorText {
+      font-size: 1.8vw;
+      margin-top: 1vw;
+    }
+  }
+}
+
 .modalContentSubmitButton {
   display: flex;
   background-color: #d9d9d9;
@@ -77,5 +137,19 @@
 
   &:hover {
     box-shadow: 0px 0vw 1vw 0vw black;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modalContentSubmitButton {
+    border-radius: 3vw;
+    padding: 0.85vw 7vw;
+    font-size: 2.2vw;
+    background-color: #bcbbbb;
+    margin-top: 4vw;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 }

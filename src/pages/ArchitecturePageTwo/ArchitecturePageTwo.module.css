@@ -18,6 +18,14 @@
   text-align: center;
   margin-top: 3vw;
 }
+
+@media (max-width: 1024px) {
+  .titleScreens {
+    font-size: 4.5vw;
+    margin-top: 7vw;
+  }
+}
+
 .backgroundHeadScreen {
   display: flex;
   background: url(/src/assets/img/HeadScreenBackgroundB.png);
@@ -25,4 +33,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 8vw;
+}
+
+@media (max-width: 1024px) {
+  .backgroundHeadScreen {
+    background-position-x: -80vw;
+    padding-bottom: 15vw;
+  }
 }

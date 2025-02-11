@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import scss from './ForWhomScreenB.module.scss';
 import clsx from 'clsx';
+import ForWhomScreenBPhone from './ForWhomScreenBPhone/ForWhomScreenBPhone';
 
 export default function ForWhomScreenB({ infoForWhom }) {
   const [activeBlock, setActiveBlock] = useState(0);
@@ -32,6 +33,7 @@ export default function ForWhomScreenB({ infoForWhom }) {
           </div>
         ))}
       </div>
+      <ForWhomScreenBPhone infoForWhom={infoForWhom} />
     </div>
   );
 }

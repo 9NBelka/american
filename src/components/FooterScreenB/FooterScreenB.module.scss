@@ -1,0 +1,91 @@
+.footerMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5vw 0;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+
+  &:first-child {
+    width: 23%;
+  }
+
+  & img {
+    display: flex;
+    width: 11vw;
+  }
+
+  & .footerScreenGeneralInfo {
+    display: flex;
+    font-size: 0.7vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    opacity: 0.5;
+    margin-top: 2vw;
+  }
+
+  & h4 {
+    display: flex;
+    font-size: 1.2vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+  }
+
+  & .footerScreenBlockInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5vw;
+
+    a {
+      display: flex;
+      color: white;
+      text-decoration: none;
+      margin-top: 0.5vw;
+      transition: 0.3s;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      & h6 {
+        display: flex;
+        font-size: 0.85vw;
+        color: white;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-normal);
+      }
+    }
+  }
+
+  & .footerScreenBlockIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4vw;
+    margin-top: 1.5vw;
+
+    & .footerScreenBlockIcon {
+      display: flex;
+      width: 1.1vw;
+      height: 1.1vw;
+      fill: white;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
