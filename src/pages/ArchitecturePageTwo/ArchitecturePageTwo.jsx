@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ViewCourseScreenB from '../../components/ViewCourseScreenB/ViewCourseScreenB';
 import ForWhomScreenB from '../../components/ForWhomScreenB/ForWhomScreenB';
 import GamesScreen from '../../components/GamesScreen/GamesScreen';
+import WhatsInsideScreen from '../../components/WhatsInsideScreen/WhatsInsideScreen';
 import WhatsInsideScreenB from '../../components/WhatsInsideScreenB/WhatsInsideScreenB';
 import DemoVideosScreenB from '../../components/DemoVideosScreenB/DemoVideosScreenB';
 import SpeakersScreenB from '../../components/SpeakersScreenB/SpeakersScreenB';
@@ -18,6 +19,7 @@ export default function ArchitecturePageOne({
   scrollToSection,
   reviewsArchitecture,
   architecturePageB,
+  architecturePageWhiteColorB,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
@@ -59,11 +61,30 @@ export default function ArchitecturePageOne({
         <h3 className={css.titleScreens} id='forWhom'>
           We worked on:
         </h3>
-        <GamesScreen gamesInfo={currentInfo} architecturePageB={architecturePageB} />
+
+        <div className={css.gamesScreenBNonePhone}>
+          <GamesScreen gamesInfo={currentInfo} architecturePageB={architecturePageB} />
+        </div>
+        <div className={css.gamesScreenPhone}>
+          <GamesScreen
+            gamesInfo={currentInfo}
+            architecturePageWhiteColorB={architecturePageWhiteColorB}
+          />
+        </div>
         <h3 className={css.titleScreens} id='forWhom'>
           What’s inside?
         </h3>
-        <WhatsInsideScreenB programCourseInfo={currentInfo} />
+        <div className={css.whatsInsideScreenBNonePhone}>
+          <WhatsInsideScreenB programCourseInfo={currentInfo} />
+        </div>
+        <div className={css.whatsInsideScreenPhone}>
+          <WhatsInsideScreen
+            programCourseInfo={currentInfo}
+            toggleModal={toggleModal}
+            isOpen={isOpen}
+            architecturePageB={architecturePageB}
+          />
+        </div>
         <h3 className={css.titleScreens} id='forWhom'>
           Demo lessons
         </h3>

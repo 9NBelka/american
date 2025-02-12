@@ -5,12 +5,34 @@
   padding: 5vw 0;
 }
 
+@media (max-width: 1024px) {
+  .footerMain {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 8vw 0;
+  }
+}
+
+.footerColumnRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 10vw;
+}
+
+@media (max-width: 1024px) {
+  .footerColumnRow {
+    margin-left: 0vw;
+  }
+}
+
 .footerColumn {
   display: flex;
   flex-direction: column;
 
-  &:first-child {
-    width: 23%;
+  &.firstChild {
+    width: 35%;
   }
 
   & img {
@@ -85,6 +107,63 @@
 
       &:hover {
         opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footerColumn {
+    align-items: center;
+
+    &.firstChild {
+      width: 100%;
+      margin-top: 4vw;
+    }
+
+    & img {
+      display: flex;
+      width: 20vw;
+    }
+
+    & .footerScreenGeneralInfo {
+      text-align: center;
+      font-size: 1.6vw;
+      margin-top: 2vw;
+      width: 70%;
+    }
+
+    & h4 {
+      font-size: 2.2vw;
+    }
+
+    & .footerScreenBlockInfo {
+      margin-top: 3vw;
+
+      a {
+        margin-top: 1.5vw;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        & h6 {
+          font-size: 1.8vw;
+        }
+      }
+    }
+
+    & .footerScreenBlockIcons {
+      gap: 3vw;
+      margin-top: 3vw;
+
+      & .footerScreenBlockIcon {
+        width: 2.2vw;
+        height: 2.2vw;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

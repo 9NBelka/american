@@ -13,6 +13,7 @@ export default function GameBlock({
   toggleDescription,
   getDescriptionWithLinks,
   architecturePageB,
+  architecturePageWhiteColorB,
 }) {
   return (
     <div className={clsx(scss.gamesMain, architecturePageB && scss.gamesMainB)}>
@@ -21,7 +22,12 @@ export default function GameBlock({
           <img className={scss.imageGame} src={gamesInfo.imageGame} alt={gamesInfo.nameGame} />
         </div>
         <div className={clsx(scss.gamesInfoBlock, architecturePageB && scss.gamesInfoBlockB)}>
-          <h3 className={clsx(scss.nameGame, architecturePageB && scss.nameGameB)}>
+          <h3
+            className={clsx(
+              scss.nameGame,
+              architecturePageB && scss.nameGameB,
+              architecturePageWhiteColorB && scss.nameGameB,
+            )}>
             {gamesInfo.nameGame}
           </h3>
           <div className={scss.gamesInfoBlockDescriptionAndButton}>
@@ -29,16 +35,19 @@ export default function GameBlock({
               gamesInfo={gamesInfo}
               searchLinks={getDescriptionWithLinks}
               architecturePageB={architecturePageB}
+              architecturePageWhiteColorB={architecturePageWhiteColorB}
             />
             {gamesInfo.nameGame === 'GREEDVENTORY' && (
               <div>
                 <GamesScreenGreedventoryLinks
                   gamesInfo={gamesInfo}
                   architecturePageB={architecturePageB}
+                  architecturePageWhiteColorB={architecturePageWhiteColorB}
                 />
                 <GamesScreenDescriptionGreedventory
                   gamesInfo={gamesInfo}
                   architecturePageB={architecturePageB}
+                  architecturePageWhiteColorB={architecturePageWhiteColorB}
                 />
               </div>
             )}
@@ -47,6 +56,7 @@ export default function GameBlock({
               button={() => toggleDescription(gamesInfo.id)}
               isExpanded={!!expandedStates[gamesInfo.id]}
               architecturePageB={architecturePageB}
+              architecturePageWhiteColorB={architecturePageWhiteColorB}
             />
           </div>
         </div>
@@ -69,6 +79,7 @@ export default function GameBlock({
         gamesInfo={gamesInfo}
         isExpanded={!!expandedStates[gamesInfo.id]}
         architecturePageB={architecturePageB}
+        architecturePageWhiteColorB={architecturePageWhiteColorB}
       />
     </div>
   );

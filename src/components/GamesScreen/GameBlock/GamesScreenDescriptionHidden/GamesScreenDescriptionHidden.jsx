@@ -1,7 +1,12 @@
 import clsx from 'clsx';
 import scss from './GamesScreenDescriptionHidden.module.scss';
 
-export default function GamesScreenDescriptionHidden({ gamesInfo, isExpanded, architecturePageB }) {
+export default function GamesScreenDescriptionHidden({
+  gamesInfo,
+  isExpanded,
+  architecturePageB,
+  architecturePageWhiteColorB,
+}) {
   return (
     <>
       {gamesInfo.nameGame !== 'GREEDVENTORY' && (
@@ -20,6 +25,7 @@ export default function GamesScreenDescriptionHidden({ gamesInfo, isExpanded, ar
                   className={clsx(
                     scss.descriptionGame,
                     architecturePageB && scss.descriptionGameB,
+                    architecturePageWhiteColorB && scss.descriptionGameB,
                   )}>
                   {description}
                 </li>

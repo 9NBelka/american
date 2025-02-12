@@ -5,6 +5,12 @@
   margin-top: 3vw;
 }
 
+@media (max-width: 1024px) {
+  .speakersScreenGeneralMain {
+    margin-top: 5vw;
+  }
+}
+
 .generalInfoBlock {
   display: flex;
   flex-direction: column;
@@ -44,6 +50,29 @@
       text-decoration: none;
       color: white;
       font-weight: var(--font-weight-bold);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .generalInfoBlock {
+    & .generalInfoText,
+    .generalInfoTitle {
+      font-size: 1.8vw;
+      text-align: center;
+    }
+
+    & .generalInfoTitle {
+      margin-top: 4vw;
+    }
+
+    .generalInfoList {
+      margin-top: 2vw;
+
+      & li {
+        font-size: 1.8vw;
+        gap: 0.5vw;
+      }
     }
   }
 }

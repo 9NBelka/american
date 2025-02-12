@@ -17,19 +17,27 @@ export default function DemoVideosScreenB({ demoVideos }) {
   return (
     <div className={scss.sliderContainer}>
       <div className={scss.sliderText}>
-        <span>
+        <span className={scss.currentIndexNone}>
           {currentIndex <= 9 ? '0' + currentIndex : currentIndex}/
           {totalSlides <= 9 ? '0' + totalSlides : totalSlides}
         </span>
-        <h3>{demoVideos.demoVideos.demoVideosTitle[currentIndex - 1]}</h3>
-        <p>{demoVideos.demoVideos.demoVideosDescription[currentIndex - 1]}</p>
-        <div className={scss.sliderControls}>
-          <button onClick={prevSlide} disabled={currentIndex === 1}>
-            <BsArrowLeft className={scss.icon} />
-          </button>
-          <button onClick={nextSlide} disabled={currentIndex === totalSlides}>
-            <BsArrowRight className={scss.icon} />
-          </button>
+        <div className={scss.demoVideosTitleAndDescriptionReverse}>
+          <h3>{demoVideos.demoVideos.demoVideosTitle[currentIndex - 1]}</h3>
+          <p>{demoVideos.demoVideos.demoVideosDescription[currentIndex - 1]}</p>
+        </div>
+        <div className={scss.currentIndexAndSliderControls}>
+          <span>
+            {currentIndex <= 9 ? '0' + currentIndex : currentIndex}/
+            {totalSlides <= 9 ? '0' + totalSlides : totalSlides}
+          </span>
+          <div className={scss.sliderControls}>
+            <button onClick={prevSlide} disabled={currentIndex === 1}>
+              <BsArrowLeft className={scss.icon} />
+            </button>
+            <button onClick={nextSlide} disabled={currentIndex === totalSlides}>
+              <BsArrowRight className={scss.icon} />
+            </button>
+          </div>
         </div>
       </div>
       <div className={scss.sliderVideo}>

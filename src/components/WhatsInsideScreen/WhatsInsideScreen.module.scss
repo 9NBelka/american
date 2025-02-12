@@ -8,6 +8,10 @@
 @media (max-width: 1024px) {
   .whatsInsideBlock {
     margin-top: 2vw;
+    &.whatsInsideBlockB {
+      margin-top: 5vw;
+      padding-bottom: 5vw;
+    }
   }
 }
 
@@ -49,6 +53,15 @@
   border-bottom: 0.05vw solid black;
 }
 
+@media (max-width: 1024px) {
+  .spoilerHeader {
+    &.spoilerHeaderWhite {
+      border-bottom: 0.05vw solid white;
+      padding-bottom: 1.5vw;
+    }
+  }
+}
+
 @media (max-width: 576px) {
   .spoilerHeader {
     padding-bottom: 1.5vw;
@@ -72,6 +85,11 @@
   transition: transform 0.3s ease;
   width: 0.8vw;
   height: 0.8vw;
+  fill: black;
+
+  &.iconBsWhite {
+    fill: white;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -101,6 +119,10 @@
   .insideScreenTitle {
     font-size: 1.8vw;
     width: 90%;
+
+    &.insideScreenTitleWhite {
+      color: white;
+    }
   }
 }
 
@@ -131,6 +153,11 @@
     padding-top: 1vw;
     padding-bottom: 1.5vw;
     border-bottom: 0.05vw solid black;
+
+    &.open.openWhite {
+      padding-top: 2vw;
+      border: none;
+    }
   }
 }
 
@@ -159,11 +186,21 @@
 @media (max-width: 1024px) {
   .insideScreenContent {
     font-size: 1.8vw;
+
+    &.insideScreenContentWhite {
+      color: white;
+    }
   }
 }
 
 @media (max-width: 576px) {
   .insideScreenContent {
     font-size: 3.6vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intermediaryBuyNow {
+    display: none;
   }
 }

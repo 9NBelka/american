@@ -41,26 +41,52 @@ export default function ReviewsScreenB({ reviews }) {
 
           // Проверяем, превышает ли длина отзыва порог
           const isExpandable = review.studentsFeedback.length > 1000;
+          const isExpandableTablet = review.studentsFeedback.length > 600;
 
           return (
             <article key={reviewIndex} className={css.reviewItem}>
-              <div className={css.ratingContainer}>
-                <Rating value={review.rating} />
+              <div className={css.reviewRatingAndStudentName}>
+                <div className={css.ratingContainer}>
+                  <Rating value={review.rating} />
+                </div>
+                <h3>{review.studentsName}</h3>
               </div>
-              <h3>{review.studentsName}</h3>
               <div className={css.sliderReviewBlock}>
                 <div className={css.reviewBlock}>
                   <p className={clsx(css.reviewText, isExpanded && css.expanded)}>
                     {review.studentsFeedback}
                   </p>
                   {isExpandable && (
-                    <div className={clsx(isExpanded ? css.shadowNone : css.shadow)}></div>
+                    <div
+                      className={clsx(
+                        isExpanded ? css.shadowNone : css.shadow,
+                        css.desktopOnly,
+                      )}></div>
+                  )}
+                  {isExpandableTablet && (
+                    <div
+                      className={clsx(
+                        isExpanded ? css.shadowNone : css.shadow,
+                        css.tabletpOnly,
+                      )}></div>
                   )}
                 </div>
 
                 {/* Показываем кнопку только если отзыв можно развернуть */}
                 {isExpandable && (
-                  <button className={css.buttonReadMore} onClick={() => toggleExpand(reviewIndex)}>
+                  <button
+                    className={clsx(css.buttonReadMore, isExpandable && css.buttonReadMoreNone)}
+                    onClick={() => toggleExpand(reviewIndex)}>
+                    {isExpanded ? 'Show less' : 'Read more'}
+                  </button>
+                )}
+                {isExpandableTablet && (
+                  <button
+                    className={clsx(
+                      css.buttonReadMore,
+                      isExpandableTablet && css.buttonReadMorePhone,
+                    )}
+                    onClick={() => toggleExpand(reviewIndex)}>
                     {isExpanded ? 'Show less' : 'Read more'}
                   </button>
                 )}

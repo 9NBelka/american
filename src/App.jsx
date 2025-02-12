@@ -66,6 +66,7 @@ export default function App() {
   };
   const architecturePageA = true;
   const architecturePageB = true;
+  const architecturePageWhiteColorB = true;
   const architecturePageC = true;
   return (
     <Routes>
@@ -99,6 +100,7 @@ export default function App() {
             scrollToSection={scrollToSection} // Пропс info для страницы B
             reviewsArchitecture={reviewsArchitecture}
             architecturePageB={architecturePageB}
+            architecturePageWhiteColorB={architecturePageWhiteColorB}
           />
         }
       />

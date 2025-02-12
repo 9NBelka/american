@@ -20,6 +20,11 @@
 @media (max-width: 1024px) {
   .gameBlockMain {
     margin-top: 3vw;
+
+    &.margTop {
+      margin-top: 5vw;
+      padding-bottom: 5vw;
+    }
   }
 }
 
@@ -44,6 +49,15 @@
     text-align: center;
     margin-top: 3vw;
     width: 70%;
+  }
+
+  &.generalTextForGamesWhiteColorB {
+    display: flex;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    text-align: left;
+    margin-top: 3vw;
+    width: 100%;
   }
 }
 

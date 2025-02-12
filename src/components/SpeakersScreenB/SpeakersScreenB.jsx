@@ -12,7 +12,7 @@ export default function SpeakersScreenB({ speakersInfo }) {
             <img src={info.imageSpeaker} alt={info.nameSpeaker} className={scss.imageSpeaker} />
             <h3 className={scss.nameSpeaker}>{info.nameSpeaker}</h3>
             <h3 className={scss.subText}>{info.characteristicSpeaker}</h3>
-            <h3 className={clsx(scss.subText, scss.lineAndUpper)}>
+            <h3 className={clsx(scss.subText, scss.lineAndUpper, scss.phoneNone)}>
               lectures by {info.nameSpeaker}
             </h3>
             <a className={scss.linkedInSpeaker} href={info.linkedInSpeaker} target='_blank'>

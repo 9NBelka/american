@@ -3,6 +3,13 @@
   padding-bottom: 3vw;
 }
 
+@media (max-width: 1024px) {
+  .sliderReview {
+    margin-top: 5vw;
+    padding-bottom: 5vw;
+  }
+}
+
 .reviewItem {
   display: flex;
   flex-direction: column;
@@ -21,6 +28,21 @@
     line-height: var(--font-lineh-normal);
     text-transform: uppercase;
     margin-top: 1vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviewItem {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vw;
+
+    & h3 {
+      font-size: 2.2vw;
+      margin-top: 0vw;
+      border-right: 0.3vw solid #6b6b6b;
+      padding-right: 1.5vw;
+    }
   }
 }
 
@@ -44,6 +66,10 @@
       &.shadowNone {
         box-shadow: transparent;
       }
+    }
+
+    & .tabletpOnly {
+      display: none;
     }
   }
 
@@ -74,6 +100,54 @@
     line-height: var(--font-lineh-normal);
     margin-top: 0.5vw;
     cursor: pointer;
+
+    &.buttonReadMorePhone {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderReviewBlock {
+    margin-top: 3vw;
+
+    & .reviewBlock {
+      & .shadow {
+        width: 100%;
+        height: 15vw;
+        box-shadow: inset 0px -5.5vw 5vw -1vw #29282d;
+      }
+
+      & .desktopOnly {
+        display: none;
+      }
+
+      & .tabletpOnly {
+        display: flex;
+      }
+    }
+
+    & .reviewText {
+      font-size: 1.8vw;
+      max-height: 19vw;
+
+      &.expanded {
+        max-height: 100vw; /* Полное раскрытие */
+      }
+    }
+
+    & .buttonReadMore {
+      font-size: 1.8vw;
+      margin-top: 2vw;
+
+      &.buttonReadMoreNone {
+        display: none;
+      }
+
+      &.buttonReadMorePhone {
+        display: flex;
+      }
+    }
   }
 }
 
@@ -92,6 +166,17 @@
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
     margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderReviewNavigation {
+    margin-top: 5vw;
+
+    & p {
+      display: flex;
+      font-size: 1.8vw;
+    }
   }
 }
 
@@ -136,5 +221,43 @@
     fill: white;
     width: 1vw;
     height: 1vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderControls {
+    display: flex;
+    gap: 3vw;
+
+    & button {
+      padding: 0.5vw 0.5vw;
+      border: 0.1vw solid white;
+      border-radius: 3vw;
+
+      &:hover {
+        border: 0.1vw solid white;
+        background: none;
+      }
+
+      &:hover .icon {
+        fill: white;
+      }
+    }
+
+    & .icon {
+      fill: white;
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviewRatingAndStudentName {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 1vw;
   }
 }

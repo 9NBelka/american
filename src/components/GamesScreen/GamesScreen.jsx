@@ -3,7 +3,7 @@ import scss from './GamesScreen.module.scss';
 import GameBlock from './GameBlock/GameBlock';
 import clsx from 'clsx';
 
-export default function GamesScreen({ gamesInfo, architecturePageB }) {
+export default function GamesScreen({ gamesInfo, architecturePageB, architecturePageWhiteColorB }) {
   const [expandedStates, setExpandedStates] = useState({});
 
   const toggleDescription = (id) => {
@@ -26,7 +26,12 @@ export default function GamesScreen({ gamesInfo, architecturePageB }) {
   };
 
   return (
-    <div className={clsx(scss.gameBlockMain, architecturePageB && scss.center)}>
+    <div
+      className={clsx(
+        scss.gameBlockMain,
+        architecturePageB && scss.center,
+        architecturePageWhiteColorB && scss.margTop,
+      )}>
       <div className={clsx(architecturePageB && scss.gameBlockMainB)}>
         {gamesInfo.fourGamesScreen.map((gamesInfo, index) => (
           <GameBlock
@@ -36,11 +41,16 @@ export default function GamesScreen({ gamesInfo, architecturePageB }) {
             toggleDescription={toggleDescription}
             getDescriptionWithLinks={getDescriptionWithLinks}
             architecturePageB={architecturePageB}
+            architecturePageWhiteColorB={architecturePageWhiteColorB}
           />
         ))}
       </div>
       <h6
-        className={clsx(scss.generalTextForGames, architecturePageB && scss.generalTextForGamesB)}>
+        className={clsx(
+          scss.generalTextForGames,
+          architecturePageB && scss.generalTextForGamesB,
+          architecturePageWhiteColorB && scss.generalTextForGamesWhiteColorB,
+        )}>
         {gamesInfo.fourGamesScreenGeneralText}
       </h6>
     </div>

@@ -4,7 +4,12 @@ import clsx from 'clsx';
 import { BsCaretRightFill, BsCaretDownFill } from 'react-icons/bs';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 
-export default function WhatsInsideScreen({ programCourseInfo, toggleModal, isOpen }) {
+export default function WhatsInsideScreen({
+  programCourseInfo,
+  toggleModal,
+  isOpen,
+  architecturePageB,
+}) {
   const [activeIndex, setActiveIndex] = useState(null); // Хранит индекс активного спойлера
 
   const toggleSpoiler = (index) => {
@@ -12,31 +17,54 @@ export default function WhatsInsideScreen({ programCourseInfo, toggleModal, isOp
     setActiveIndex(activeIndex === index ? '' : index);
   };
   return (
-    <div className={scss.whatsInsideBlock}>
+    <div className={clsx(scss.whatsInsideBlock, architecturePageB && scss.whatsInsideBlockB)}>
       {programCourseInfo.insideScreen.map((info, index) => (
         <div key={index} className={scss.spoilerBlock}>
           <div
             className={clsx(
               scss.spoilerHeader,
               activeIndex === index ? scss.spoilerHeaderOpen : '',
+              architecturePageB && scss.spoilerHeaderWhite,
             )}
             onClick={() => toggleSpoiler(index)}>
-            <h3 className={scss.insideScreenTitle}>{info.insideScreenTitle}</h3>
+            <h3
+              className={clsx(
+                scss.insideScreenTitle,
+                architecturePageB && scss.insideScreenTitleWhite,
+              )}>
+              {info.insideScreenTitle}
+            </h3>
             <span className={scss.icon}>
               {activeIndex === index ? (
-                <BsCaretDownFill className={scss.iconBs} />
+                <BsCaretDownFill
+                  className={clsx(scss.iconBs, architecturePageB && scss.iconBsWhite)}
+                />
               ) : (
-                <BsCaretRightFill className={scss.iconBs} />
+                <BsCaretRightFill
+                  className={clsx(scss.iconBs, architecturePageB && scss.iconBsWhite)}
+                />
               )}
             </span>
           </div>
           <div
-            className={`${scss.spoilerContent} ${activeIndex === index ? scss.open : scss.closed}`}>
-            <h5 className={scss.insideScreenContent}>{info.insideScreenContent}</h5>
+            className={clsx(
+              scss.spoilerContent,
+              activeIndex === index ? scss.open : scss.closed,
+              architecturePageB && scss.openWhite,
+            )}>
+            <h5
+              className={clsx(
+                scss.insideScreenContent,
+                architecturePageB && scss.insideScreenContentWhite,
+              )}>
+              {info.insideScreenContent}
+            </h5>
           </div>
         </div>
       ))}
-      <IntermediaryBuyNow toggleModal={toggleModal} isOpen={isOpen} />
+      <div className={architecturePageB && scss.intermediaryBuyNow}>
+        <IntermediaryBuyNow toggleModal={toggleModal} isOpen={isOpen} />
+      </div>
     </div>
   );
 }
