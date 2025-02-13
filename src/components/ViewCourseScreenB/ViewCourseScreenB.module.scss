@@ -16,6 +16,14 @@
   }
 }
 
+@media (max-width: 576px) {
+  .viewCourseScreen {
+    margin-top: 5vw;
+    gap: 10vw;
+    padding-bottom: 5vw;
+  }
+}
+
 .viewCourseScreenBlockRow {
   display: flex;
   flex-direction: row;
@@ -58,6 +66,20 @@
   }
 }
 
+@media (max-width: 576px) {
+  .viewCourseScreenBlockRow {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10vw;
+
+    & iframe {
+      width: 100%;
+      height: 46vw;
+      border-radius: 3vw;
+    }
+  }
+}
+
 .viewCourseScreenList {
   display: flex;
   flex-direction: column;
@@ -94,6 +116,23 @@
 
       & h5 {
         font-size: 1.8vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .viewCourseScreenList {
+    gap: 5vw;
+    width: 100%;
+
+    & li {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5vw;
+
+      & h5 {
+        font-size: 3.6vw;
       }
     }
   }

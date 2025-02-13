@@ -17,7 +17,11 @@ export default function ViewCourseScreenB({ viewCourseInfo, architecturePageB })
                 ))}
               </ul>
 
-              <iframe src={item.video} allow='autoplay; encrypted-media' allowFullScreen></iframe>
+              <iframe
+                src={item.video}
+                title='YouTube video player'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;'
+                referrerPolicy='strict-origin-when-cross-origin'></iframe>
             </div>
           ) : (
             <div
@@ -25,7 +29,11 @@ export default function ViewCourseScreenB({ viewCourseInfo, architecturePageB })
                 scss.viewCourseScreenBlockRow,
                 scss.viewCourseScreenBlockRowNoReverse,
               )}>
-              <iframe src={item.video} allow='autoplay; encrypted-media' allowFullScreen></iframe>
+              <iframe
+                src={item.video}
+                title='YouTube video player'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;'
+                referrerPolicy='strict-origin-when-cross-origin'></iframe>
 
               <ul className={scss.viewCourseScreenList}>
                 {item.text.map((text, textIndex) => (

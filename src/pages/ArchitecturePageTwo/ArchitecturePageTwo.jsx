@@ -42,26 +42,23 @@ export default function ArchitecturePageOne({
         </div>
       </div>
       <div className={css.container}>
-        <h3 className={css.titleScreens} id='forWhom'>
-          Course Overview
-        </h3>
+        <h3 className={css.titleScreens}>Course Overview</h3>
         <ViewCourseScreenB viewCourseInfo={currentInfo} architecturePageB={architecturePageB} />
         <h3 className={css.titleScreens} id='forWhom'>
           For Who?
         </h3>
         <ForWhomScreenB infoForWhom={currentInfo} />
-        <h3 className={css.titleScreens} id='forWhom'>
+        <h3 className={css.titleScreens} id='who'>
           Who?
         </h3>
         <SpeakersScreenB speakersInfo={currentInfo} />
-        <h3 className={css.titleScreens} id='forWhom'>
+        <h3 className={css.titleScreens} id='reviews'>
           Reviews
         </h3>
-        <ReviewsScreenB reviews={reviewsArchitecture} />
-        <h3 className={css.titleScreens} id='forWhom'>
+        <ReviewsScreenB reviews={reviewsArchitecture} architecturePageB={architecturePageB} />
+        <h3 className={css.titleScreens} id='weWorkedOn'>
           We worked on:
         </h3>
-
         <div className={css.gamesScreenBNonePhone}>
           <GamesScreen gamesInfo={currentInfo} architecturePageB={architecturePageB} />
         </div>
@@ -71,7 +68,7 @@ export default function ArchitecturePageOne({
             architecturePageWhiteColorB={architecturePageWhiteColorB}
           />
         </div>
-        <h3 className={css.titleScreens} id='forWhom'>
+        <h3 className={css.titleScreens} id='whatsInside'>
           What’s inside?
         </h3>
         <div className={css.whatsInsideScreenBNonePhone}>
@@ -85,17 +82,15 @@ export default function ArchitecturePageOne({
             architecturePageB={architecturePageB}
           />
         </div>
-        <h3 className={css.titleScreens} id='forWhom'>
+        <h3 className={css.titleScreens} id='demoLessons'>
           Demo lessons
         </h3>
         <DemoVideosScreenB demoVideos={currentInfo} />
-        <h3 className={css.titleScreens} id='forWhom'>
+        <h3 className={css.titleScreens} id='price'>
           Price
         </h3>
         <PriceScreenB infoAboutProduct={currentInfo} />
-        <h3 className={css.titleScreens} id='forWhom'>
-          We worked with:
-        </h3>
+        <h3 className={css.titleScreens}>We worked with:</h3>
         <TrustedScreenB imageTrusted={currentInfo} />
         <FooterScreenB imageLogo={currentInfo} />
       </div>

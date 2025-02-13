@@ -68,6 +68,20 @@
   }
 }
 
+@media (max-width: 576px) {
+  .headerB {
+    &.headerScrolled {
+      backdrop-filter: blur(0.75vw);
+
+      & .headerNav {
+        & .headerKnowledgeLogoMain {
+          width: 10vw;
+        }
+      }
+    }
+  }
+}
+
 .container {
   width: 68.75vw;
   margin: 0 auto;
@@ -140,8 +154,13 @@
 
 @media (max-width: 576px) {
   .headerNav {
-    .headerLogo {
+    & .headerLogo {
       width: 28vw;
+    }
+
+    & .headerKnowledgeLogoMain {
+      display: flex;
+      width: 10vw;
     }
   }
 }

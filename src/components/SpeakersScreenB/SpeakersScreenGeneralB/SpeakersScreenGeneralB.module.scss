@@ -76,3 +76,26 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .generalInfoBlock {
+    & .generalInfoText,
+    .generalInfoTitle {
+      font-size: 3.6vw;
+    }
+
+    & .generalInfoTitle {
+      margin-top: 8vw;
+    }
+
+    .generalInfoList {
+      margin-top: 5vw;
+
+      & li {
+        display: block;
+        font-size: 3.6vw;
+        gap: 1vw;
+      }
+    }
+  }
+}

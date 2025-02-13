@@ -27,7 +27,7 @@ export default function FooterScreenB({ imageLogo }) {
             </a>
           </div>
         </div>
-        <div className={scss.footerColumn}>
+        <div className={clsx(scss.footerColumn, scss.footerColumnNone)}>
           <h4>Company</h4>
           <div className={scss.footerScreenBlockInfo}>
             <a href='#' target='_blank' rel='noopener noreferrer'>
@@ -43,6 +43,14 @@ export default function FooterScreenB({ imageLogo }) {
             <BsYoutube className={scss.footerScreenBlockIcon} />
             <BsReddit className={scss.footerScreenBlockIcon} />
             <BsWhatsapp className={scss.footerScreenBlockIcon} />
+          </div>
+          <div className={clsx(scss.footerColumn, scss.footerColumnPhone)}>
+            <h4>Company</h4>
+            <div className={scss.footerScreenBlockInfo}>
+              <a href='#' target='_blank' rel='noopener noreferrer'>
+                <h6>Contact Us</h6>
+              </a>
+            </div>
           </div>
         </div>
       </div>

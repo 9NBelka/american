@@ -21,7 +21,7 @@ import {
 import css from './HeadScreenBurger.module.scss';
 import { NavLink } from 'react-router-dom';
 
-export default function HeadScreenBurger({ scrollToSection }) {
+export default function HeadScreenBurger({ scrollToSection, architecturePageB }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null); // Реф для меню
 
@@ -162,6 +162,16 @@ export default function HeadScreenBurger({ scrollToSection }) {
               </div>
               {/* <h6 className={css.menuListNewCourse}>new</h6> */}
             </li>
+            {architecturePageB && (
+              <li>
+                <div className={css.menuListIconSection}>
+                  <BsCaretRight className={css.menuListIcons} />
+                  <a className={css.menuListPoint} onClick={() => scrollToSection('price', 100)}>
+                    <h4>Price</h4>
+                  </a>
+                </div>
+              </li>
+            )}
           </ul>
         </div>
         <div className={css.menuListIconsAnd}>

@@ -24,6 +24,12 @@ export default function SpeakersScreenB({ speakersInfo }) {
               target='_blank'>
               Watch performances on YouTube
             </a>
+            <a
+              className={clsx(scss.linkedInSpeaker, scss.youTubeSpeakerPhone)}
+              href={info.linkedInSpeaker}
+              target='_blank'>
+              Watch on YouTube
+            </a>
             <div className={scss.descriptionSpeakerBlock}>
               {info.descriptionSpeaker.map((description, index) => (
                 <p key={index} className={scss.descriptionSpeaker}>

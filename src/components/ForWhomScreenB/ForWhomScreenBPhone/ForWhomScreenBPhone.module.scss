@@ -45,3 +45,25 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .forWhomScreenBlockPhone {
+    gap: 5vw;
+    margin-top: 5vw;
+
+    & h4 {
+      font-size: 3.6vw;
+      border-radius: 2vw;
+      padding: 6vw 4vw;
+      text-align: center;
+    }
+
+    & h5 {
+      font-size: 3.6vw;
+    }
+
+    & p {
+      font-size: 3.6vw;
+    }
+  }
+}

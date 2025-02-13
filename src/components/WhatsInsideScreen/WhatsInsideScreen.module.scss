@@ -100,6 +100,10 @@
 }
 
 @media (max-width: 576px) {
+  .iconNone {
+    display: none;
+  }
+
   .iconBs {
     width: 2.2vw;
     height: 2.2vw;
@@ -121,7 +125,10 @@
     width: 90%;
 
     &.insideScreenTitleWhite {
-      color: white;
+      color: #c6c6c6;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
     }
   }
 }
@@ -188,6 +195,7 @@
     font-size: 1.8vw;
 
     &.insideScreenContentWhite {
+      font-family: var(--font-hankenGrotesk), sans-serif;
       color: white;
     }
   }

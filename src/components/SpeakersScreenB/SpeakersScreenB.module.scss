@@ -16,6 +16,16 @@
   }
 }
 
+@media (max-width: 576px) {
+  .speakersScreenBlockMain {
+    flex-direction: column;
+    align-items: center;
+    gap: 10vw;
+    margin-top: 10vw;
+    padding-bottom: 5vw;
+  }
+}
+
 .speakersScreenBlock {
   display: flex;
   flex-direction: column;
@@ -34,6 +44,15 @@
   }
 }
 
+@media (max-width: 576px) {
+  .speakersScreenBlock {
+    width: auto;
+    border-radius: 4vw;
+    padding: 5vw;
+    padding-bottom: 10vw;
+  }
+}
+
 .imageSpeaker {
   width: 5vw;
   border-radius: 10vw;
@@ -43,6 +62,13 @@
   .imageSpeaker {
     width: 10.5vw;
     border-radius: 15vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .imageSpeaker {
+    width: 20vw;
+    border-radius: 20vw;
   }
 }
 
@@ -61,6 +87,13 @@
   .nameSpeaker {
     font-size: 2.6vw;
     margin-top: 2.4vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .nameSpeaker {
+    font-size: 5vw;
+    margin-top: 5vw;
   }
 }
 
@@ -136,6 +169,19 @@
   }
 }
 
+@media (max-width: 576px) {
+  .subText {
+    font-size: 3.6vw;
+    border-bottom: 0.1vw solid #c6c6c6;
+    padding-bottom: 1vw;
+
+    &.lineInstructor {
+      display: none;
+      margin-top: 5vw;
+    }
+  }
+}
+
 .linkedInSpeaker {
   display: flex;
   justify-content: center;
@@ -156,6 +202,10 @@
     background: #d9d9d9;
     margin-top: 0.5vw;
   }
+
+  &.youTubeSpeakerPhone {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -169,6 +219,27 @@
       color: #000000;
       background: #d9d9d9;
       margin-top: 1vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .linkedInSpeaker {
+    width: 65%;
+    padding: 1.5vw 0;
+    font-size: 3.6vw;
+    border-radius: 5vw;
+    margin-top: 5vw;
+
+    &.youTubeSpeaker {
+      display: none;
+    }
+
+    &.youTubeSpeakerPhone {
+      display: flex;
+      color: #000000;
+      background: #d9d9d9;
+      margin-top: 2vw;
     }
   }
 }
@@ -197,6 +268,16 @@
 
     & .descriptionSpeaker {
       font-size: 1.8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .descriptionSpeakerBlock {
+    margin-top: 5vw;
+
+    & .descriptionSpeaker {
+      font-size: 3.6vw;
     }
   }
 }

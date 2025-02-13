@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import scss from './PriceScreenB.module.scss';
 
 export default function PriceScreenB({ infoAboutProduct }) {
@@ -10,7 +11,7 @@ export default function PriceScreenB({ infoAboutProduct }) {
           {infoAboutProduct.blockInfoAboutCourseTitleB.map((title, index) => (
             <div key={index} className={scss.blockInfoAboutCourseBlock}>
               <h6>{title}</h6>
-              <h6 className={index == 0 && scss.colorRed}>
+              <h6 className={clsx(index == 0 && scss.colorRed)}>
                 {infoAboutProduct.blockInfoAboutCourseB[index]}
               </h6>
             </div>

@@ -43,9 +43,9 @@ export default function DemoVideosScreenB({ demoVideos }) {
       <div className={scss.sliderVideo}>
         <iframe
           src={demoVideos.demoVideos.demoVideosLink[currentIndex - 1]}
-          title='Demo Video'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen></iframe>
+          title='YouTube video player'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;'
+          referrerPolicy='strict-origin-when-cross-origin'></iframe>
       </div>
     </div>
   );

@@ -43,6 +43,11 @@
     display: flex;
     margin-top: 3vw;
     gap: 1.2vw;
+
+    &.ratingNoMarg {
+      margin-top: 0;
+      gap: 1.5vw;
+    }
   }
 
   .starFilled,
@@ -50,5 +55,11 @@
   .starEmpty {
     width: 4vw;
     height: 4vw;
+
+    &.ratingSmall {
+      display: flex;
+      width: 3vw;
+      height: 3vw;
+    }
   }
 }

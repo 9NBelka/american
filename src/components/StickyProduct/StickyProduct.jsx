@@ -1,16 +1,15 @@
-import { useState } from 'react';
-import FormOnBuyProduct from '../FormOnBuyProduct/FormOnBuyProduct';
 import scss from './StickyProduct.module.scss';
 
-export default function StickyProduct({ infoAboutProduct, toggleModal, isOpen }) {
+export default function StickyProduct({ infoAboutProduct, toggleModal }) {
   return (
     <div className={scss.stickyBlockFlex}>
       <div className={scss.stickyBlock}>
         <iframe
           src={infoAboutProduct.stickyBlockVideo}
           className={scss.stickyBlockVideo}
-          allow='autoplay; encrypted-media'
-          allowFullScreen></iframe>
+          title='YouTube video player'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;'
+          referrerPolicy='strict-origin-when-cross-origin'></iframe>
 
         <h5 className={scss.stickyBlockPrice}>{infoAboutProduct.stickyBlockPrice}</h5>
         <a

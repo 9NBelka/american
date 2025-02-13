@@ -83,6 +83,11 @@ export default function HeadScreenHeader({
             <li>
               <a onClick={() => scrollToSection('demoLessons', 100)}>Demo lessons</a>
             </li>
+            {architecturePageB && (
+              <li>
+                <a onClick={() => scrollToSection('price', 100)}>Price</a>
+              </li>
+            )}
           </ul>
           <ul className={scss.headerList}>
             {architecturePageA && <li className={scss.headerButtonAnswer}>Ask a question</li>}
@@ -94,7 +99,11 @@ export default function HeadScreenHeader({
               Sign Up
             </li>
             <li className={scss.burgerMenu}>
-              <HeadScreenBurger isScrolled={isScrolled} scrollToSection={scrollToSection} />
+              <HeadScreenBurger
+                isScrolled={isScrolled}
+                scrollToSection={scrollToSection}
+                architecturePageB={architecturePageB}
+              />
             </li>
           </ul>
         </nav>

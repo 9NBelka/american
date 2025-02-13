@@ -34,7 +34,7 @@ export default function WhatsInsideScreen({
               )}>
               {info.insideScreenTitle}
             </h3>
-            <span className={scss.icon}>
+            <span className={clsx(scss.icon, architecturePageB && scss.iconNone)}>
               {activeIndex === index ? (
                 <BsCaretDownFill
                   className={clsx(scss.iconBs, architecturePageB && scss.iconBsWhite)}

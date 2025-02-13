@@ -13,6 +13,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .footerMain {
+    padding: 15vw 0;
+    padding-bottom: 10vw;
+  }
+}
+
 .footerColumnRow {
   display: flex;
   flex-direction: row;
@@ -30,6 +37,10 @@
 .footerColumn {
   display: flex;
   flex-direction: column;
+
+  &.footerColumnPhone {
+    display: none;
+  }
 
   &.firstChild {
     width: 35%;
@@ -164,6 +175,60 @@
         &:hover {
           opacity: 1;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footerColumn {
+    &.footerColumnNone {
+      display: none;
+    }
+
+    &.footerColumnPhone {
+      display: flex;
+      margin-top: 8vw;
+    }
+
+    &.firstChild {
+      width: 100%;
+      margin-top: 15vw;
+    }
+
+    & img {
+      width: 35vw;
+    }
+
+    & .footerScreenGeneralInfo {
+      font-size: 3vw;
+      margin-top: 5vw;
+      width: 100%;
+    }
+
+    & h4 {
+      font-size: 3.6vw;
+    }
+
+    & .footerScreenBlockInfo {
+      margin-top: 3vw;
+
+      a {
+        margin-top: 3vw;
+
+        & h6 {
+          font-size: 3.6vw;
+        }
+      }
+    }
+
+    & .footerScreenBlockIcons {
+      gap: 5vw;
+      margin-top: 3vw;
+
+      & .footerScreenBlockIcon {
+        width: 4vw;
+        height: 4vw;
       }
     }
   }

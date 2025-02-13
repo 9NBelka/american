@@ -177,25 +177,57 @@
     padding-top: 16vw;
     width: 100%;
 
+    &.headScreenTitleB {
+      padding-top: 14vw;
+      width: 100%;
+    }
+
     & .categoryCourseText {
       font-size: 3.2vw;
       margin-top: 5vw;
+
+      &.categoryCourseTextB {
+        font-size: 3.2vw;
+      }
     }
 
     & .nameCoursePhone {
       display: none;
+
+      &.nameCoursePhoneB {
+        display: flex;
+        width: 100%;
+        font-size: 11vw;
+      }
     }
 
     & .nameCourseText {
       display: flex;
       width: 98%;
       font-size: 8vw;
+
+      &.nameCourseTextB {
+        display: none;
+      }
     }
 
     & .descriptionCourseText {
       font-size: 3.6vw;
       margin-top: 4vw;
       width: 100%;
+
+      &.descriptionCourseTextB {
+        width: 100%;
+        font-size: 3.6vw;
+        margin-top: 3vw;
+      }
+    }
+
+    & .headScreenButtonAnswer {
+      font-size: 3.6vw;
+      padding: 1.5vw 6vw;
+      border-radius: 5vw;
+      margin-top: 10vw;
     }
   }
 
