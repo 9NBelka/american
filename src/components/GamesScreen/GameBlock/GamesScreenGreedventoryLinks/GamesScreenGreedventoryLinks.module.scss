@@ -36,6 +36,12 @@
     margin-top: 2vw;
     gap: 1vw;
 
+    &.linkOnGameGreedventoryBlockB {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
     & .linkOnGameGreedventory {
       font-size: 3.6vw;
     }

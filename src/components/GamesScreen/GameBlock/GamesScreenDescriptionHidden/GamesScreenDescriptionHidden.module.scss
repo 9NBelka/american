@@ -89,5 +89,15 @@
 @media (max-width: 576px) {
   .descriptionGame {
     font-size: 3.6vw;
+
+    &.descriptionGameB {
+      color: white;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      margin-top: 0.5vw;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }

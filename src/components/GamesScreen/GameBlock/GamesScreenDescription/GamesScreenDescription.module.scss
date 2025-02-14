@@ -29,6 +29,10 @@
   .descriptionGameBlock {
     width: 100%;
     margin-top: 4vw;
+
+    &.descriptionGameBlockB {
+      margin-top: 7vw;
+    }
   }
 
   .descriptionGameBlockWidth {
@@ -72,5 +76,9 @@
 @media (max-width: 576px) {
   .descriptionGame {
     font-size: 3.6vw;
+
+    &.descriptionGameB {
+      text-align: center;
+    }
   }
 }

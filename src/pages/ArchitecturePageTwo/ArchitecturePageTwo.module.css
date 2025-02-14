@@ -69,7 +69,8 @@
 }
 
 .whatsInsideScreenPhone,
-.gamesScreenPhone {
+.gamesScreenPhone,
+.priceScreenBPhone {
   display: none;
 }
 
@@ -81,6 +82,16 @@
 
   .whatsInsideScreenPhone,
   .gamesScreenPhone {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .priceScreenBNonePhone {
+    display: none;
+  }
+
+  .priceScreenBPhone {
     display: flex;
   }
 }

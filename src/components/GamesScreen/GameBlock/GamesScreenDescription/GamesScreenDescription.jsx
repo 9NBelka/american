@@ -3,10 +3,22 @@ import scss from './GamesScreenDescription.module.scss';
 
 export default function GamesScreenDescription({
   gamesInfo,
-  searchLinks,
+
   architecturePageB,
   architecturePageWhiteColorB,
 }) {
+  const getDescriptionWithLinks = (description) => {
+    return description
+      .replace(
+        /\biOS\b/g,
+        `<a href="${gamesInfo.linkOnGameIos}" target="_blank" rel="noopener noreferrer">iOS</a>`,
+      )
+      .replace(
+        /\bAndroid\b/g,
+        `<a href="${gamesInfo.linkOnGameGoogle}" target="_blank" rel="noopener noreferrer">Android</a>`,
+      );
+  };
+
   return (
     <div
       className={clsx(
@@ -15,6 +27,7 @@ export default function GamesScreenDescription({
           ? scss.descriptionGameBlock
           : scss.descriptionGameBlockWidth,
         architecturePageB && scss.descriptionGameBlockB,
+        architecturePageWhiteColorB && scss.descriptionGameBlockB,
       )}>
       <h5
         className={clsx(
@@ -23,7 +36,7 @@ export default function GamesScreenDescription({
           architecturePageWhiteColorB && scss.descriptionGameB,
         )}
         dangerouslySetInnerHTML={{
-          __html: searchLinks(gamesInfo.shortDescription),
+          __html: getDescriptionWithLinks(gamesInfo.shortDescription),
         }}></h5>
     </div>
   );

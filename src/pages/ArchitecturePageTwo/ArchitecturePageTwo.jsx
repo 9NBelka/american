@@ -13,6 +13,7 @@ import ReviewsScreenB from '../../components/ReviewsScreenB/ReviewsScreenB';
 import PriceScreenB from '../../components/PriceScreenB/PriceScreenB';
 import TrustedScreenB from '../../components/TrustedScreenB/TrustedScreenB';
 import FooterScreenB from '../../components/FooterScreenB/FooterScreenB';
+import PriceScreenBPhone from '../../components/PriceScreenB/PriceScreenBPhone/PriceScreenBPhone';
 
 export default function ArchitecturePageOne({
   currentInfo,
@@ -89,7 +90,13 @@ export default function ArchitecturePageOne({
         <h3 className={css.titleScreens} id='price'>
           Price
         </h3>
-        <PriceScreenB infoAboutProduct={currentInfo} />
+        <div className={css.priceScreenBNonePhone}>
+          <PriceScreenB infoAboutProduct={currentInfo} />
+        </div>
+        <div className={css.priceScreenBPhone}>
+          <PriceScreenBPhone infoAboutProduct={currentInfo} />
+        </div>
+
         <h3 className={css.titleScreens}>We worked with:</h3>
         <TrustedScreenB imageTrusted={currentInfo} />
         <FooterScreenB imageLogo={currentInfo} />

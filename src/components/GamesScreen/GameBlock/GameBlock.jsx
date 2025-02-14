@@ -6,22 +6,48 @@ import GamesScreenDescriptionHidden from './GamesScreenDescriptionHidden/GamesSc
 import GamesScreenGreedventoryLinks from './GamesScreenGreedventoryLinks/GamesScreenGreedventoryLinks';
 import GamesScreenDescriptionGreedventory from './GamesScreenDescriptionGreedventory/GamesScreenDescriptionGreedventory';
 import clsx from 'clsx';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 export default function GameBlock({
   gamesInfo,
   expandedStates,
   toggleDescription,
-  getDescriptionWithLinks,
+
   architecturePageB,
   architecturePageWhiteColorB,
+  architecturePageBGamePhone,
+  prevSlide,
+  nextSlide,
 }) {
   return (
     <div className={clsx(scss.gamesMain, architecturePageB && scss.gamesMainB)}>
-      <div className={clsx(scss.gamesBlock, architecturePageB && scss.gamesBlockB)}>
-        <div className={scss.gamesImageblock}>
-          <img className={scss.imageGame} src={gamesInfo.imageGame} alt={gamesInfo.nameGame} />
+      <div
+        className={clsx(
+          scss.gamesBlock,
+          architecturePageB && scss.gamesBlockB,
+          architecturePageBGamePhone && scss.gamesBlockB,
+        )}>
+        <div
+          className={clsx(
+            scss.gamesImageblock,
+            architecturePageBGamePhone && scss.gamesImageblockSliderPhone,
+          )}>
+          {architecturePageBGamePhone && (
+            <BsArrowLeft className={scss.iconSlider} onClick={prevSlide} />
+          )}
+          <div className={scss.gamesImageblockSlider}>
+            <img className={scss.imageGame} src={gamesInfo.imageGame} alt={gamesInfo.nameGame} />
+          </div>
+          {architecturePageBGamePhone && (
+            <BsArrowRight className={scss.iconSlider} onClick={nextSlide} />
+          )}
         </div>
-        <div className={clsx(scss.gamesInfoBlock, architecturePageB && scss.gamesInfoBlockB)}>
+        <div
+          className={clsx(
+            scss.gamesInfoBlock,
+            architecturePageB && scss.gamesInfoBlockB,
+            architecturePageWhiteColorB && scss.gamesInfoBlockB,
+          )}>
           <h3
             className={clsx(
               scss.nameGame,
@@ -33,7 +59,6 @@ export default function GameBlock({
           <div className={scss.gamesInfoBlockDescriptionAndButton}>
             <GamesScreenDescription
               gamesInfo={gamesInfo}
-              searchLinks={getDescriptionWithLinks}
               architecturePageB={architecturePageB}
               architecturePageWhiteColorB={architecturePageWhiteColorB}
             />
@@ -61,18 +86,36 @@ export default function GameBlock({
           </div>
         </div>
       </div>
-      <div className={scss.gamesInfoBlockDescriptionAndButtonPhone}>
-        <GamesScreenDescription gamesInfo={gamesInfo} searchLinks={getDescriptionWithLinks} />
+      <div
+        className={clsx(
+          scss.gamesInfoBlockDescriptionAndButtonPhone,
+          architecturePageBGamePhone && scss.gamesInfoBlockDescriptionAndButtonPhoneB,
+        )}>
+        <GamesScreenDescription
+          gamesInfo={gamesInfo}
+          architecturePageB={architecturePageB}
+          architecturePageWhiteColorB={architecturePageWhiteColorB}
+        />
         {gamesInfo.nameGame === 'GREEDVENTORY' && (
           <div>
-            <GamesScreenGreedventoryLinks gamesInfo={gamesInfo} />
-            <GamesScreenDescriptionGreedventory gamesInfo={gamesInfo} />
+            <GamesScreenGreedventoryLinks
+              gamesInfo={gamesInfo}
+              architecturePageB={architecturePageB}
+              architecturePageWhiteColorB={architecturePageWhiteColorB}
+            />
+            <GamesScreenDescriptionGreedventory
+              gamesInfo={gamesInfo}
+              architecturePageB={architecturePageB}
+              architecturePageWhiteColorB={architecturePageWhiteColorB}
+            />
           </div>
         )}
         <GamesScreenButton
           gamesInfo={gamesInfo}
           button={() => toggleDescription(gamesInfo.id)}
           isExpanded={!!expandedStates[gamesInfo.id]}
+          architecturePageB={architecturePageB}
+          architecturePageWhiteColorB={architecturePageWhiteColorB}
         />
       </div>
       <GamesScreenDescriptionHidden

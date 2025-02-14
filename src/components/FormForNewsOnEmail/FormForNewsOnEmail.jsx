@@ -26,7 +26,7 @@ export default function FormForNewsOnEmail() {
           {() => (
             <Form className={scss.modalOverlayForm}>
               <h2>STUDENT’S FORM</h2>
-              <div className={scss.modalOverlayFormInputErrorColumn}>
+              <div className={clsx(scss.modalOverlayFormInputErrorColumn, scss.firstChild)}>
                 <label>full name</label>
                 <Field type='text' name='fullName' placeholder='Knowledge Syndicate' />
                 <ErrorMessage

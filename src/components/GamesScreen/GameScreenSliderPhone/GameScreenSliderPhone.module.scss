@@ -1,0 +1,24 @@
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  width: 80vw; /* или другой размер */
+  overflow: hidden;
+}
+
+.sliderInner {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}

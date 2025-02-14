@@ -26,11 +26,23 @@
       padding-bottom: 5vw;
     }
   }
+
+  .gameBlockMainB {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
 }
 
 @media (max-width: 576px) {
   .gameBlockMain {
     margin-top: 6vw;
+
+    &.margTop {
+      & .gameBlockMainB {
+        display: none;
+      }
+    }
   }
 }
 
@@ -72,5 +84,22 @@
   .generalTextForGames {
     margin-top: 5vw;
     font-size: 3.6vw;
+
+    &.generalTextForGamesWhiteColorB {
+      text-align: center;
+      font-size: 3vw;
+      opacity: 0.5;
+      margin-top: 7vw;
+    }
+  }
+}
+
+.architecturePageBGamePhone {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .architecturePageBGamePhone {
+    display: flex;
   }
 }

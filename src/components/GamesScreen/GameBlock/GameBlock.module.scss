@@ -63,10 +63,10 @@
   .gamesBlock {
     gap: 3.5vw;
 
-    .gamesImageblock {
+    & .gamesImageblock {
       width: 20%;
 
-      .imageGame {
+      & .imageGame {
         border-radius: 1vw;
       }
     }
@@ -81,8 +81,43 @@
       width: 22.5%;
 
       .imageGame {
-        border-radius: 1.5vw;
+        border-radius: 3vw;
       }
+    }
+  }
+
+  .gamesBlockB {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vw;
+
+    & .gamesImageblock {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5vw;
+      width: 100%;
+
+      & .gamesImageblockSlider {
+        width: 60%;
+      }
+
+      & .imageGame {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    & .iconSlider {
+      display: flex;
+      width: 5vw;
+      height: 5vw;
+      fill: white;
+      border: 0.1vw solid white;
+      padding: 1vw 1vw;
+      border-radius: 5vw;
     }
   }
 }
@@ -103,6 +138,17 @@
 }
 
 @media (max-width: 576px) {
+  .gamesInfoBlock {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+
+    &.gamesInfoBlockB {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
   .gamesInfoBlockDescriptionAndButton {
     display: none;
   }
@@ -111,6 +157,10 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    &.gamesInfoBlockDescriptionAndButtonPhoneB {
+      align-items: center;
+    }
   }
 }
 
@@ -139,5 +189,11 @@
   .nameGame {
     font-size: 5.5vw;
     line-height: var(--font-lineh-small);
+    text-align: left;
+
+    &.nameGameB {
+      color: #ffea00;
+      text-align: center;
+    }
   }
 }

@@ -20,6 +20,7 @@
     "stickyBlockInfoAboutCourse": ["16h 40m", "145", "145"],
     "blockInfoAboutCourseTitleB": ["price", "time", "videos", "students"],
     "blockInfoAboutCourseB": ["500$", "16h 40m", "145", "145"],
+    "blockInfoAboutCourseJustPrice": ["500$"],
     "blockInfoAboutCourseImage": "/src/assets/img/priceimagePageB.jpg",
     "blockInfoAboutCourseRegistration": "Registration now open",
     "blockInfoAboutCourseRegistrationDate": "8 MAR,2025 - 10 APR,2025",
