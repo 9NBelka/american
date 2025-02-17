@@ -25,6 +25,14 @@
     "blockInfoAboutCourseRegistration": "Registration now open",
     "blockInfoAboutCourseRegistrationDate": "8 MAR,2025 - 10 APR,2025",
     "blockInfoAboutCourseCourseStart": "Course start 12 apr, 2025",
+    "blockInfoAboutCourseCourseDescription": [
+      "ACCESS TO VIDEO AND DISCORD COMMUNITY",
+      "ACCESS TO REPOSITORY WITH DEMO PROJECT CODE, CONVENIENTLY DIVISIONED INTO LESSONS",
+      "ANSWERS TO YOUR QUESTIONS IN CHAT",
+      "EVERYTHING IN VANILLA",
+      "INDIVIDUAL CHECKING OF TASKS AND YOUR IDEAS IN CODE REVIEW FORMAT",
+      "ANALYSIS OF TASKS, IDEAS AND DISCUSSION OF PRODUCTION SOLUTIONS, ADDITIONAL FRAMEWORKS, ETC. ON WEEKLY GENERAL STREAMS"
+    ],
     "viewCourseScreenText": [
       "A course on how to make confident games. This is not a guru course trying to tell you about everything, but instead contains a set of approaches and practices suitable for projects of any scale. The project in the course specifically does not use third-party libraries in order to give a detailed understanding of all parts of the project (DI, entry point, etc.).",
       "After you write this project consistently and together with us, there will be nothing left that you do not know about it. Every corner containing simple or complex code will be known to you.",

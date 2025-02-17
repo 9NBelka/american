@@ -1,12 +1,19 @@
+import clsx from 'clsx';
 import scss from './ViewCourseScreen.module.scss';
 import { BsArrowRightShort } from 'react-icons/bs';
 
-export default function ViewCourseScreen({ currentInfo }) {
+export default function ViewCourseScreen({ currentInfo, architecturePageC }) {
   return (
-    <ul className={scss.viewCourseScreenList}>
+    <ul
+      className={clsx(scss.viewCourseScreenList, architecturePageC && scss.viewCourseScreenListB)}>
       {currentInfo.viewCourseScreenText.map((text, index) => (
-        <li key={index} className={scss.viewCourseScreenItem}>
-          <BsArrowRightShort className={scss.viewCourseScreenIcon} />
+        <li
+          key={index}
+          className={clsx(
+            scss.viewCourseScreenItem,
+            architecturePageC && scss.viewCourseScreenItemB,
+          )}>
+          {!architecturePageC && <BsArrowRightShort className={scss.viewCourseScreenIcon} />}
           <h5>{text}</h5>
         </li>
       ))}

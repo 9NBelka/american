@@ -113,6 +113,7 @@ export default function App() {
             Component={ArchitecturePageThree}
             currentInfo={currentInfo} // Пропс info для страницы C
             reviewsArchitecture={reviewsArchitecture}
+            architecturePageC={architecturePageC}
           />
         }
       />
@@ -124,6 +125,7 @@ export default function App() {
             currentInfo={currentInfo}
             scrollToSection={scrollToSection} // Пропс info для страницы A
             reviewsArchitecture={reviewsArchitecture}
+            architecturePageA={architecturePageA}
           />
         }
       />

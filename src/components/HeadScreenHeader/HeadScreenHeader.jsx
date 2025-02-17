@@ -9,6 +9,7 @@ export default function HeadScreenHeader({
   scrollToSection,
   architecturePageA,
   architecturePageB,
+  architecturePageC,
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -32,11 +33,12 @@ export default function HeadScreenHeader({
         scss.header,
         `${isScrolled ? scss.headerScrolled : ''}`,
         architecturePageB && scss.headerB,
+        architecturePageC && scss.headerC,
       )}>
       <div className={scss.container}>
         <nav className={scss.headerNav}>
           <div className={scss.headerLogosAndButtonAnswer}>
-            {architecturePageA && (
+            {(architecturePageA || architecturePageC) && (
               <div>
                 <img
                   className={clsx(scss.headerLogo)}
@@ -54,7 +56,7 @@ export default function HeadScreenHeader({
                 />
               </div>
             )}
-            {architecturePageA && (
+            {(architecturePageA || architecturePageC) && (
               <div>
                 <img
                   className={scss.headerLogoUnity}
@@ -90,11 +92,20 @@ export default function HeadScreenHeader({
             )}
           </ul>
           <ul className={scss.headerList}>
-            {architecturePageA && <li className={scss.headerButtonAnswer}>Ask a question</li>}
+            {(architecturePageA || architecturePageC) && (
+              <li
+                className={clsx(
+                  scss.headerButtonAnswer,
+                  architecturePageC && scss.headerButtonAnswerC,
+                )}>
+                Ask a question
+              </li>
+            )}
             <li
               className={clsx(
                 scss.headerButtonSingUp,
                 architecturePageB && scss.headerButtonSingUpB,
+                architecturePageC && scss.headerButtonSingUpC,
               )}>
               Sign Up
             </li>

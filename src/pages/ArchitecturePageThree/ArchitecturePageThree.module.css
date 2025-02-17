@@ -1,0 +1,52 @@
+.container {
+  width: 68.75vw;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 79.167vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 82vw;
+  }
+}
+
+.titleScreens {
+  font-size: 2.2vw;
+  color: black;
+  font-family: var(--font-alata), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 3vw;
+}
+
+@media (max-width: 1024px) {
+  .titleScreens {
+    font-size: 4.5vw;
+    margin-top: 7vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .titleScreens {
+    font-size: 9vw;
+    margin-top: 10vw;
+  }
+}
+
+.backgroundHeadScreen {
+  display: flex;
+  background: url(/src/assets/img/HeadScreenBackgroundC.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 6.3vw;
+}

@@ -1,3 +1,10 @@
+.headScreenMainBlockRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 6vw;
+}
+
 .headScreenTitle {
   display: flex;
   flex-direction: column;
@@ -9,10 +16,21 @@
     width: 100%;
   }
 
+  &.headScreenTitleC {
+    padding-top: 0vw;
+    width: 60.5%;
+  }
+
   & .headScreenCourseInfoB {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  & .headScreenCourseInfoC {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   & .categoryCourseText {
@@ -27,6 +45,12 @@
     &.categoryCourseTextB {
       font-size: 1.15vw;
       font-family: var(--font-hankenGrotesk), sans-serif;
+    }
+
+    &.categoryCourseTextC {
+      font-size: 1.25vw;
+      font-family: var(--font-alata), sans-serif;
+      font-weight: var(--font-weight-normal);
     }
   }
 
@@ -43,6 +67,13 @@
       text-align: center;
       font-family: var(--font-hankenGrotesk), sans-serif;
       width: 70%;
+    }
+
+    &.nameCourseTextC {
+      font-size: 3.4vw;
+      font-family: var(--font-alata), sans-serif;
+      font-weight: var(--font-weight-normal);
+      width: 80%;
     }
   }
 
@@ -66,6 +97,12 @@
       width: 50%;
       margin-top: 1.25vw;
     }
+
+    &.descriptionCourseTextC {
+      font-family: var(--font-albertSans), sans-serif;
+      width: 75%;
+      margin-top: 1.5vw;
+    }
   }
 
   & .headScreenButtonAnswer {
@@ -83,6 +120,25 @@
 
     &:hover {
       box-shadow: 0px 0vw 1vw 0vw #ff0000;
+    }
+  }
+
+  & .headScreenButtonMoreInfo {
+    display: flex;
+    width: auto;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    background-color: #ec6532;
+    padding: 0.5vw 1.5vw;
+    border-radius: 0.25vw;
+    margin-top: 1.5vw;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0vw 1vw 0vw #ec6532;
     }
   }
 }

@@ -15,7 +15,7 @@ import TrustedScreenB from '../../components/TrustedScreenB/TrustedScreenB';
 import FooterScreenB from '../../components/FooterScreenB/FooterScreenB';
 import PriceScreenBPhone from '../../components/PriceScreenB/PriceScreenBPhone/PriceScreenBPhone';
 
-export default function ArchitecturePageOne({
+export default function ArchitecturePageTwo({
   currentInfo,
   scrollToSection,
   reviewsArchitecture,

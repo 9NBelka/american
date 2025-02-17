@@ -7,8 +7,39 @@
   margin: 0;
   gap: 1vw;
 
+  &.viewCourseScreenListB {
+    list-style-type: disc;
+    color: black;
+    padding-left: 1.5vw;
+    margin-top: 1vw;
+  }
+
   & .viewCourseScreenItem {
     display: flex;
+    flex-direction: row;
+    gap: 1vw;
+
+    & .viewCourseScreenIcon {
+      display: flex;
+      fill: black;
+      width: 1.6vw;
+      height: 1.6vw;
+      width: 4%;
+    }
+
+    & h5 {
+      font-size: 0.85vw;
+      color: black;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      width: 98%;
+      margin-top: 0.4vw;
+    }
+  }
+
+  & .viewCourseScreenItemB {
+    display: list-item;
     flex-direction: row;
     gap: 1vw;
 
