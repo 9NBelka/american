@@ -1,0 +1,86 @@
+.forWhomScreenMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 3vw;
+}
+
+.forWhomScreenBlock {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.forWhomScreenImageBackground {
+  position: relative;
+  display: flex;
+  width: 16vw;
+  height: 22.4vw;
+  transition: 0.5s ease-in-out;
+  border-radius: 0.75vw;
+}
+
+.forWhomScreenBlockInfoAbsolute {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 1.25vw;
+  left: 1vw;
+  width: 20vw;
+  height: 20vw;
+}
+
+.forWhomScreenTitle {
+  width: 12vw;
+  display: flex;
+  color: white;
+  font-size: 0.85vw;
+  font-family: var(--font-alata), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.forWhomScreenBlock:hover .forWhomScreenTitle {
+  text-decoration: underline;
+}
+
+.forWhomScreenBlock:hover .forWhomScreenImageBackground {
+  width: 22vw;
+}
+
+.forWhomScreenBlock:hover .forWhomScreenDescriptionBlock,
+.forWhomScreenBlock:hover .forWhomScreenDescriptionSubTitle {
+  opacity: 1;
+}
+
+.forWhomScreenDescriptionBlock {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0.5vw);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  border-radius: 0.5vw;
+  padding: 1vw;
+}
+
+.forWhomScreenDescription {
+  display: flex;
+  color: white;
+  font-size: 0.85vw;
+  font-family: var(--font-albertSans), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+
+  &.forWhomScreenDescriptionSubTitle {
+    transition: 0.5s ease-in-out;
+    margin-top: 1vw;
+    opacity: 0;
+  }
+}

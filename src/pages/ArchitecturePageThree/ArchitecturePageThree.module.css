@@ -28,6 +28,10 @@
   margin-top: 3vw;
 }
 
+.titleScreens.whiteColor {
+  color: white;
+}
+
 @media (max-width: 1024px) {
   .titleScreens {
     font-size: 4.5vw;
@@ -49,4 +53,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 6.3vw;
+}
+
+.backgroundForWhoScreen {
+  display: flex;
+  background: url(/src/assets/img/forWhoBackgroundScreenC.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 4vw;
+  margin-top: 6vw;
 }

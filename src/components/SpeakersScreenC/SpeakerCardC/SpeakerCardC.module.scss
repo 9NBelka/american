@@ -1,0 +1,67 @@
+.speakerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  & .speakerImage {
+    width: 100%;
+    border-radius: 0.5vw;
+  }
+
+  & .nameTag {
+    display: flex;
+    color: black;
+    font-size: 0.85vw;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin-top: 1vw;
+  }
+
+  & .nameSpeaker {
+    display: flex;
+    color: black;
+    font-size: 1.3vw;
+    font-family: var(--font-alata), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    margin-top: 0.5vw;
+  }
+
+  & .speakerCardDescription {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5vw;
+
+    & p {
+      color: black;
+      font-size: 0.85vw;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  & .linkedin {
+    display: flex;
+    width: 7vw;
+    justify-content: center;
+    padding: 0.5vw 0vw;
+    background-color: #ec6532;
+    border-radius: 0.25vw;
+    margin-top: 1.5vw;
+    transition: 0.5s;
+
+    &:hover {
+      box-shadow: 0px 0vw 1vw 0vw #ec6532;
+    }
+
+    & img {
+      width: 4.5vw;
+    }
+  }
+}

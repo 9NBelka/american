@@ -1,0 +1,83 @@
+.speakersContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vw;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  background: #efefef;
+  width: 25%;
+  border-radius: 0.5vw;
+  padding: 1.25vw;
+}
+
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background: #efefef;
+  border-radius: 0.5vw;
+  padding: 1.25vw;
+
+  & .logoCourse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #25293f;
+    padding: 2vw 0;
+    border-radius: 0.25vw;
+
+    & img {
+      display: flex;
+      width: 15vw;
+    }
+  }
+
+  & .generalInfoText {
+    color: black;
+    font-size: 0.85vw;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    padding: 0;
+    margin: 0;
+    margin-top: 1vw;
+  }
+
+  & .generalInfoTitleList {
+    color: black;
+    font-size: 0.85vw;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    padding: 0;
+    margin: 0;
+    margin-top: 3vw;
+  }
+
+  & ul {
+    margin-top: 2vw;
+    padding-left: 1vw;
+
+    & li {
+      margin-top: 1vw;
+      color: black;
+      font-size: 0.85vw;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      & a {
+        font-family: var(--font-albertSans), sans-serif;
+        font-weight: var(--font-weight-bold);
+        color: #ec6532;
+      }
+    }
+  }
+}
