@@ -5,6 +5,7 @@ import ViewCourseScreenC from '../../components/ViewCourseScreenC/ViewCourseScre
 import ForWhomScreenC from '../../components/ForWhomScreenC/ForWhomScreenC';
 import clsx from 'clsx';
 import SpeakersScreenC from '../../components/SpeakersScreenC/SpeakersScreenC';
+import ReviewsScreenC from '../../components/ReviewsScreenC/ReviewsScreenC';
 
 export default function ArchitecturePageThree({
   currentInfo,
@@ -41,8 +42,12 @@ export default function ArchitecturePageThree({
         <h3 className={css.titleScreens}>Who?</h3>
         <SpeakersScreenC speakersInfo={currentInfo} />
       </div>
-
-      <h3 className={css.titleScreens}>For who?</h3>
+      <div className={css.backgroundReviewsScreen}>
+        <div className={css.container}>
+          <h3 className={clsx(css.titleScreens, css.whiteColor)}>REVIEWS</h3>
+          <ReviewsScreenC reviews={reviewsArchitecture} />
+        </div>
+      </div>
     </>
   );
 }

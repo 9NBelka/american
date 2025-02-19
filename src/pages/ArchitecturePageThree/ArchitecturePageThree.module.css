@@ -64,3 +64,13 @@
   padding-bottom: 4vw;
   margin-top: 6vw;
 }
+
+.backgroundReviewsScreen {
+  display: flex;
+  background: url(/src/assets/img/reviewsBackgroundScreenC.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 4vw;
+  margin-top: 6vw;
+}
