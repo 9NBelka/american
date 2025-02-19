@@ -1,0 +1,81 @@
+.demoVideosContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vw;
+  gap: 1vw;
+}
+
+.videoBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #efefef;
+  border-radius: 0.5vw;
+  padding: 1.5vw;
+  gap: 3vw;
+}
+
+.videoThumbnail {
+  display: flex;
+  width: 12vw;
+  height: 100%;
+}
+
+.videoInfo {
+  display: flex;
+  flex-direction: column;
+
+  .videoInfoIconAndTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+
+    & .icon {
+      display: flex;
+      fill: #ec6532;
+      width: 1.3vw;
+      height: 1.3vw;
+    }
+
+    & h3 {
+      display: flex;
+      font-size: 1.2vw;
+      color: black;
+      font-family: var(--font-alata), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-small);
+      text-transform: uppercase;
+    }
+  }
+
+  & p {
+    display: flex;
+    font-size: 0.85vw;
+    color: black;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+    margin-top: 1vw;
+    width: 80%;
+  }
+}
+
+.watchButton {
+  display: flex;
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-albertSans), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  border-radius: 0.25vw;
+  height: 100%;
+  padding: 0.25vw 1.5vw;
+  background-color: #ec6532;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0vw 1vw 0vw #ec6532;
+  }
+}

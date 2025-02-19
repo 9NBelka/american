@@ -1,0 +1,71 @@
+.insideScreenBlockMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 3vw;
+  gap: 1.3vw;
+}
+
+.moduleBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f344d;
+  padding: 2vw 1.2vw;
+  border-radius: 0.5vw;
+  width: 45.5%;
+
+  & h3 {
+    display: flex;
+    font-size: 1.2vw;
+    color: #ec6532;
+    font-family: var(--font-alata), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+
+    &.colorWhite {
+      color: white;
+    }
+  }
+}
+
+.moduleColumns {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-top: 2vw;
+}
+
+.insideScreenTitleAndContent {
+  display: flex;
+  flex-direction: column;
+
+  & h3 {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    margin-top: 1vw;
+  }
+
+  & h5 {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin-top: 1vw;
+  }
+
+  & img {
+    display: flex;
+    width: 100%;
+    border-radius: 0.5vw;
+  }
+}

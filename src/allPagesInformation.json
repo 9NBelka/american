@@ -22,6 +22,8 @@
     "blockInfoAboutCourseB": ["500$", "16h 40m", "145", "145"],
     "blockInfoAboutCourseJustPrice": ["500$"],
     "blockInfoAboutCourseImage": "/src/assets/img/priceimagePageB.jpg",
+    "blockInfoAboutCourseImageC": "/src/assets/img/priceimagePageC.jpg",
+    "blockInfoAboutCourseSpeakers": ["Oleksii Naumenko", "Kateryna Revvo"],
     "blockInfoAboutCourseRegistration": "Registration now open",
     "blockInfoAboutCourseRegistrationDate": "8 MAR,2025 - 10 APR,2025",
     "blockInfoAboutCourseCourseStart": "Course start 12 apr, 2025",
@@ -254,63 +256,83 @@
     "insideScreen": [
       {
         "insideScreenTitle": "Setting up the environment for work",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will connect advertising (Unity Ads) and in-app purchases",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will compile builds for devices",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "Setting up the environment for work",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "What about Dependency Injection?",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will compile builds for devices",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "Setting up the environment for work",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "Setting up the environment for work",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
-        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order."
+        "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
+        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
       }
     ],
     "demoVideos": {
@@ -337,6 +359,14 @@
         "https://www.youtube.com/embed/QwlbqQLw95A",
         "https://www.youtube.com/embed/RgofmP7BouU",
         "https://www.youtube.com/embed/4EoX0Ir_fUI"
+      ],
+      "demoVideosLinkOnYoutube": [
+        "https://www.youtube.com/watch?v=po8UTUzi8dM",
+        "https://www.youtube.com/watch?v=cJFNRyG0sKA",
+        "https://www.youtube.com/watch?v=M7CRZ3UChXM",
+        "https://www.youtube.com/watch?v=QwlbqQLw95A",
+        "https://www.youtube.com/watch?v=RgofmP7BouU",
+        "https://www.youtube.com/watch?v=4EoX0Ir_fUI"
       ],
       "demoVideosLinkTimeLine": ["3:31", "8:37", "4:13", "1:18", "7:49", "6:16"]
     },

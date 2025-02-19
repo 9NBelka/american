@@ -74,3 +74,23 @@
   padding-bottom: 4vw;
   margin-top: 6vw;
 }
+
+.backgroundWhatInsideScreen {
+  display: flex;
+  background: url(/src/assets/img/whatInsideBackgroundScreenC.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 4vw;
+  margin-top: 6vw;
+}
+
+.backgroundPriceScreen {
+  display: flex;
+  background: url(/src/assets/img/priceBackgroundScreenC.jpg);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 4vw;
+  margin-top: 6vw;
+}
