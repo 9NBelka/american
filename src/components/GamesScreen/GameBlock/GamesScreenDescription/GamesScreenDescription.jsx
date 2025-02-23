@@ -3,9 +3,9 @@ import scss from './GamesScreenDescription.module.scss';
 
 export default function GamesScreenDescription({
   gamesInfo,
-
   architecturePageB,
   architecturePageWhiteColorB,
+  architecturePageC,
 }) {
   const getDescriptionWithLinks = (description) => {
     return description
@@ -28,12 +28,14 @@ export default function GamesScreenDescription({
           : scss.descriptionGameBlockWidth,
         architecturePageB && scss.descriptionGameBlockB,
         architecturePageWhiteColorB && scss.descriptionGameBlockB,
+        architecturePageC && scss.descriptionGameBlockC,
       )}>
       <h5
         className={clsx(
           scss.descriptionGame,
           architecturePageB && scss.descriptionGameB,
           architecturePageWhiteColorB && scss.descriptionGameB,
+          architecturePageC && scss.descriptionGameC,
         )}
         dangerouslySetInnerHTML={{
           __html: getDescriptionWithLinks(gamesInfo.shortDescription),

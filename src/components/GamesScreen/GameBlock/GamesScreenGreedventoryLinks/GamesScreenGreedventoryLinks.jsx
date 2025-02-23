@@ -5,6 +5,7 @@ export default function GamesScreenGreedventoryLinks({
   gamesInfo,
   architecturePageB,
   architecturePageWhiteColorB,
+  architecturePageC,
 }) {
   return (
     <div
@@ -12,6 +13,7 @@ export default function GamesScreenGreedventoryLinks({
         scss.linkOnGameGreedventoryBlock,
         architecturePageB && scss.linkOnGameGreedventoryBlockB,
         architecturePageWhiteColorB && scss.linkOnGameGreedventoryBlockB,
+        architecturePageC && scss.linkOnGameGreedventoryBlockC,
       )}>
       {gamesInfo.linksGame.includes('Steam') && (
         <a href={gamesInfo.linkOnGameSteam} target='_blank' rel='noopener noreferrer'>

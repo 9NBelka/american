@@ -244,6 +244,7 @@
       {
         "id": 5,
         "imageGame": "/src/assets/img/greedventory.jpg",
+        "imageGameGVFullSize": "/src/assets/img/greedventoryFullSize.jpg",
         "nameGame": "GREEDVENTORY",
         "shortDescription": "An ironic, bloody and demanding linear point'n'slash RPG in detailed pixel art.",
         "linksGame": ["Steam", "GOG"],

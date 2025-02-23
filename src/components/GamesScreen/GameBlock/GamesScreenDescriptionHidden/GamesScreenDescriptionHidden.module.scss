@@ -6,7 +6,8 @@
   max-height: 0vw;
   transition: max-height 0.4s ease-out;
 
-  &.expandedDescriptionB {
+  &.expandedDescriptionB,
+  &.expandedDescriptionC {
     width: 100%;
 
     & ul {
@@ -72,6 +73,16 @@
   &.descriptionGameB {
     color: white;
     font-family: var(--font-hankenGrotesk), sans-serif;
+    margin-top: 0.5vw;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &.descriptionGameC {
+    color: black;
+    font-family: var(--font-albertSans), sans-serif;
     margin-top: 0.5vw;
 
     &:first-child {

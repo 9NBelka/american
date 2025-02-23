@@ -6,6 +6,7 @@ export default function GamesScreenDescriptionHidden({
   isExpanded,
   architecturePageB,
   architecturePageWhiteColorB,
+  architecturePageC,
 }) {
   return (
     <>
@@ -15,6 +16,7 @@ export default function GamesScreenDescriptionHidden({
             scss.expandedDescription,
             isExpanded && scss.show,
             architecturePageB && scss.expandedDescriptionB,
+            architecturePageC && scss.expandedDescriptionC,
           )}>
           <ul>
             {gamesInfo.descriptionGame &&
@@ -26,6 +28,7 @@ export default function GamesScreenDescriptionHidden({
                     scss.descriptionGame,
                     architecturePageB && scss.descriptionGameB,
                     architecturePageWhiteColorB && scss.descriptionGameB,
+                    architecturePageC && scss.descriptionGameC,
                   )}>
                   {description}
                 </li>

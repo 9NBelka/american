@@ -112,6 +112,7 @@ export default function App() {
             page='c'
             Component={ArchitecturePageThree}
             currentInfo={currentInfo} // Пропс info для страницы C
+            scrollToSection={scrollToSection}
             reviewsArchitecture={reviewsArchitecture}
             architecturePageC={architecturePageC}
           />

@@ -5,6 +5,7 @@ export default function GamesScreenDescriptionGreedventory({
   gamesInfo,
   architecturePageB,
   architecturePageWhiteColorB,
+  architecturePageC,
 }) {
   return (
     <h5
@@ -13,6 +14,7 @@ export default function GamesScreenDescriptionGreedventory({
         scss.descriptionGameMarg,
         architecturePageB && scss.descriptionGameGreedventoryB,
         architecturePageWhiteColorB && scss.descriptionGameGreedventoryB,
+        architecturePageC && scss.descriptionGameGreedventoryC,
       )}>
       {gamesInfo.descriptionGame}
     </h5>

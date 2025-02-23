@@ -20,6 +20,14 @@
   }
 }
 
+.linkOnGameGreedventoryBlockC {
+  & .linkOnGameGreedventory {
+    color: #ec6532;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+  }
+}
+
 @media (max-width: 1024px) {
   .linkOnGameGreedventoryBlock {
     margin-top: 2vw;

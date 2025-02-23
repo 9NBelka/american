@@ -10,6 +10,7 @@ export default function HeadScreenTitle({
   architecturePageC,
   toggleModal,
   isOpen,
+  scrollToSection,
 }) {
   return (
     <div className={clsx(architecturePageC && scss.headScreenMainBlockRow)}>
@@ -64,7 +65,10 @@ export default function HeadScreenTitle({
             </a>
           )}
           {architecturePageC && (
-            <a href='#' className={scss.headScreenButtonMoreInfo}>
+            <a
+              href='#'
+              className={scss.headScreenButtonMoreInfo}
+              onClick={() => scrollToSection('whatsInside', 100)}>
               More information
             </a>
           )}

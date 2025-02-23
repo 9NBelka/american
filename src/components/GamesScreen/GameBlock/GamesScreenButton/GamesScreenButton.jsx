@@ -7,6 +7,7 @@ export default function GamesScreenButton({
   isExpanded,
   architecturePageB,
   architecturePageWhiteColorB,
+  architecturePageC,
 }) {
   return (
     <button
@@ -16,6 +17,7 @@ export default function GamesScreenButton({
           : scss.descriptionGameButtonHide,
         architecturePageB && scss.descriptionGameButtonB,
         architecturePageWhiteColorB && scss.descriptionGameButtonB,
+        architecturePageC && scss.descriptionGameButtonC,
       )}
       onClick={button}>
       {isExpanded ? 'Hide' : 'Technically interesting:'}

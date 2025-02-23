@@ -85,7 +85,7 @@ export default function HeadScreenHeader({
             <li>
               <a onClick={() => scrollToSection('demoLessons', 100)}>Demo lessons</a>
             </li>
-            {architecturePageB && (
+            {(architecturePageB || architecturePageC) && (
               <li>
                 <a onClick={() => scrollToSection('price', 100)}>Price</a>
               </li>

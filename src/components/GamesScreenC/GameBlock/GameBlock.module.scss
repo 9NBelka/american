@@ -1,0 +1,66 @@
+.gamesBlock {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
+  & .gamesImageblock {
+    display: flex;
+
+    & .imageGame {
+      display: flex;
+      width: 100%;
+      border-radius: 0.5vw;
+    }
+  }
+}
+
+.gamesInfoBlock {
+  display: flex;
+  flex-direction: column;
+
+  & .nameGame {
+    display: flex;
+    font-size: 1.2vw;
+    color: black;
+    font-family: var(--font-alata), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    margin-top: 1vw;
+  }
+}
+
+.gamesBlockGreedVentory {
+  flex-direction: row;
+  width: 100%;
+  gap: 5vw;
+  margin-top: 3vw;
+
+  & .gamesImageblock {
+    display: flex;
+    width: 50%;
+
+    & .imageGame {
+      display: flex;
+      width: 100%;
+      border-radius: 0.5vw;
+    }
+  }
+
+  & .gamesInfoBlock {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    & .nameGame {
+      display: flex;
+      font-size: 1.2vw;
+      color: black;
+      font-family: var(--font-alata), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+      margin-top: 0vw;
+    }
+  }
+}
