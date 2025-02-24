@@ -48,7 +48,12 @@ export default function HeadScreenTitle({
             )}>
             {infoTitleAboutCourse.nameCourse}
           </h1>
-          <h1 className={clsx(scss.nameCoursePhone, architecturePageB && scss.nameCoursePhoneB)}>
+          <h1
+            className={clsx(
+              scss.nameCoursePhone,
+              architecturePageB && scss.nameCoursePhoneB,
+              architecturePageC && scss.nameCoursePhoneC,
+            )}>
             {infoTitleAboutCourse.nameCoursePhone}
           </h1>
           <h2
@@ -75,7 +80,7 @@ export default function HeadScreenTitle({
           {architecturePageB && <FormForNewsOnEmail toggleModal={toggleModal} isOpen={isOpen} />}
         </div>
       </div>
-      {architecturePageC && <FormForNewsOnEmailC />}
+      <div className={scss.formForNewsOnEmailC}>{architecturePageC && <FormForNewsOnEmailC />}</div>
     </div>
   );
 }

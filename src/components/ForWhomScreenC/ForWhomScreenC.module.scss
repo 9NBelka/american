@@ -6,11 +6,36 @@
   margin-top: 3vw;
 }
 
+@media (max-width: 1024px) {
+  .forWhomScreenMain {
+    gap: 4vw;
+    justify-content: flex-start; /* Изменил с center, чтобы блоки начинались слева */
+    padding-bottom: 1vw;
+    overflow-x: auto; /* Включил горизонтальный скролл */
+    overflow-y: hidden; /* Убрал вертикальный скролл */
+    white-space: nowrap; /* Оставил для inline-блоков */
+    width: 100%; /* Контейнер занимает всю ширину экрана */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+    -webkit-overflow-scrolling: touch; /* Поддержка скролла на мобильных */
+    margin-top: 4vw;
+  }
+}
+
 .forWhomScreenBlock {
   display: flex;
   position: relative;
   cursor: pointer;
   overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .forWhomScreenBlock {
+    display: inline-flex;
+    width: 40vw;
+    cursor: default;
+    flex-shrink: 0;
+    overflow: visible; /* Изменил на visible, чтобы текст не обрезался */
+  }
 }
 
 .forWhomScreenImageBackground {
@@ -20,6 +45,16 @@
   height: 22.4vw;
   transition: 0.5s ease-in-out;
   border-radius: 0.75vw;
+}
+
+@media (max-width: 1024px) {
+  .forWhomScreenImageBackground {
+    width: 100%; /* Убрал фиксированный vw, теперь зависит от блока */
+    height: 56vw; /* Подогнал пропорцию под ширину 40vw */
+    transition: 0s ease-in-out;
+    border-radius: 1.5vw;
+    object-fit: cover; /* Для корректного отображения изображения */
+  }
 }
 
 .forWhomScreenBlockInfoAbsolute {
@@ -33,9 +68,26 @@
   height: 20vw;
 }
 
+@media (max-width: 1024px) {
+  .forWhomScreenBlockInfoAbsolute {
+    top: 2vw;
+    left: 2vw;
+    width: calc(100% - 4vw);
+    height: 100%;
+    padding: 0vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .forWhomScreenBlockInfoText {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .forWhomScreenTitle {
-  width: 12vw;
   display: flex;
+  width: 14vw;
   color: white;
   font-size: 0.85vw;
   font-family: var(--font-alata), sans-serif;
@@ -46,12 +98,35 @@
   text-decoration: none;
 }
 
+@media (max-width: 1024px) {
+  .forWhomScreenTitle {
+    width: auto;
+    font-size: 2.4vw;
+    transition: 0s ease-in-out;
+    overflow-wrap: break-word; /* Перенос слов */
+    word-break: break-word; /* Разрыв длинных слов */
+    white-space: normal; /* Убедились, что текст не остаётся в одной строке */
+  }
+}
+
 .forWhomScreenBlock:hover .forWhomScreenTitle {
   text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+  .forWhomScreenBlock:hover .forWhomScreenTitle {
+    text-decoration: none;
+  }
+}
+
 .forWhomScreenBlock:hover .forWhomScreenImageBackground {
   width: 22vw;
+}
+
+@media (max-width: 1024px) {
+  .forWhomScreenBlock:hover .forWhomScreenImageBackground {
+    width: 100%;
+  }
 }
 
 .forWhomScreenBlock:hover .forWhomScreenDescriptionBlock,
@@ -70,6 +145,16 @@
   padding: 1vw;
 }
 
+@media (max-width: 1024px) {
+  .forWhomScreenDescriptionBlock {
+    opacity: 1;
+    transition: 0s ease-in-out;
+    padding: 1.5vw;
+    overflow: visible; /* Убедились, что текст не скрывается */
+    margin-bottom: 5vw;
+  }
+}
+
 .forWhomScreenDescription {
   display: flex;
   color: white;
@@ -82,5 +167,20 @@
     transition: 0.5s ease-in-out;
     margin-top: 1vw;
     opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .forWhomScreenDescription {
+    font-size: 1.8vw;
+    overflow-wrap: break-word; /* Перенос слов */
+    word-break: break-word; /* Разрыв длинных слов */
+    white-space: normal; /* Убедились, что текст не остаётся в одной строке */
+
+    &.forWhomScreenDescriptionSubTitle {
+      transition: 0s ease-in-out;
+      margin-top: 2vw;
+      opacity: 1;
+    }
   }
 }

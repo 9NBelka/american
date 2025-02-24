@@ -1,0 +1,97 @@
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+
+  & .logoCourse {
+    display: flex;
+    justify-content: center;
+    // width: 15vw;
+    background-color: #25293f;
+    padding: 1.8vw 1.5vw;
+    border-radius: 0.25vw;
+
+    & img {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  & .generalInfoText {
+    color: black;
+    font-size: 0.85vw;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    padding: 0;
+    margin: 0;
+    margin-top: 1vw;
+  }
+
+  & .generalInfoTitleList {
+    color: black;
+    font-size: 0.85vw;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    padding: 0;
+    margin: 0;
+    margin-top: 3vw;
+  }
+
+  & ul {
+    margin-top: 2vw;
+    padding-left: 1vw;
+
+    & li {
+      margin-top: 1vw;
+      color: black;
+      font-size: 0.85vw;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      & a {
+        font-family: var(--font-albertSans), sans-serif;
+        font-weight: var(--font-weight-bold);
+        color: #ec6532;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .generalInfo {
+    width: 60%;
+    align-items: center;
+
+    & .logoCourse {
+      display: none;
+    }
+
+    & .generalInfoText {
+      font-size: 1.8vw;
+      margin-top: 5vw;
+      text-align: center;
+    }
+
+    & .generalInfoTitleList {
+      font-size: 1.8vw;
+      margin-top: 3vw;
+      text-align: center;
+    }
+
+    & ul {
+      margin-top: 3vw;
+      padding-left: 4vw;
+
+      & li {
+        margin-top: 2vw;
+        font-size: 1.8vw;
+      }
+    }
+  }
+}

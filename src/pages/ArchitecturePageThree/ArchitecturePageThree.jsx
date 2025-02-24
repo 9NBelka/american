@@ -12,6 +12,7 @@ import TrustedScreenC from '../../components/TrustedScreenC/TrustedScreenC';
 import PriceScreenC from '../../components/PriceScreenC/PriceScreenC';
 import GamesScreenC from '../../components/GamesScreenC/GamesScreenC';
 import FooterScreenC from '../../components/FooterScreenC/FooterScreenC';
+import FormForNewsOnEmailC from '../../components/FormForNewsOnEmailC/FormForNewsOnEmailC';
 
 export default function ArchitecturePageThree({
   currentInfo,
@@ -34,6 +35,10 @@ export default function ArchitecturePageThree({
             architecturePageC={architecturePageC}
           />
         </div>
+      </div>
+
+      <div className={css.formForNewsOnEmailC}>
+        <div className={css.container}>{architecturePageC && <FormForNewsOnEmailC />}</div>
       </div>
       <div className={css.container}>
         <h3 className={css.titleScreens}>Course Overview</h3>

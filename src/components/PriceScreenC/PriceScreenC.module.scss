@@ -5,6 +5,12 @@
   margin-top: 3vw;
 }
 
+@media (max-width: 1024px) {
+  .priceScreenMain {
+    margin-top: 4vw;
+  }
+}
+
 .priceScreenCard {
   display: flex;
   width: 18vw;
@@ -19,11 +25,30 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .priceScreenCard {
+    width: 50%;
+    padding: 3vw;
+    border-radius: 1vw;
+
+    & img {
+      width: 100%;
+      border-radius: 1vw;
+    }
+  }
+}
+
 .infoCourseBlock {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1vw;
+}
+
+@media (max-width: 1024px) {
+  .infoCourseBlock {
+    margin-top: 3vw;
+  }
 }
 
 .infoCourseName {
@@ -52,6 +77,20 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .infoCourseName {
+    width: 50%;
+
+    & h6 {
+      font-size: 1.8vw;
+    }
+
+    & h3 {
+      font-size: 3vw;
+    }
+  }
+}
+
 .infoCourseNameSpeakers {
   display: flex;
   flex-direction: row;
@@ -72,6 +111,17 @@
 
     &.colorOrange {
       color: #ec6532;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .infoCourseNameSpeakers {
+    width: 50%;
+    gap: 1vw;
+
+    & p {
+      font-size: 1.8vw;
     }
   }
 }
@@ -108,5 +158,26 @@
     font-family: var(--font-alata), sans-serif;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 1024px) {
+  .infoCourseButtonPriceBlock {
+    margin-top: 4vw;
+
+    & .buttonBuy {
+      font-size: 2.2vw;
+      padding: 1.2vw 4.5vw;
+      border-radius: 0.5vw;
+      transition: 0s ease-in-out;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    & h5 {
+      font-size: 5vw;
+    }
   }
 }

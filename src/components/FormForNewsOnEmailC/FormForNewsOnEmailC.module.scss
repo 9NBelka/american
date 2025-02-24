@@ -5,7 +5,6 @@
   padding: 1.5vw 1.5vw;
   border-radius: 0.5vw;
   margin-right: 1.1vw;
-  width: 26%;
 
   & h2 {
     display: flex;
@@ -20,13 +19,13 @@
 
 @media (max-width: 1024px) {
   .modalContent {
-    padding: 5vw 3vw;
+    padding: 5vw 8vw;
     padding-top: 4vw;
     border-radius: 0.75vw;
     max-width: 70vw;
 
     & h2 {
-      font-size: 5vw;
+      font-size: 3vw;
     }
   }
 }
@@ -103,10 +102,19 @@
 }
 
 @media (max-width: 1024px) {
-  input {
-    padding: 1.5vw 1.5vw;
-    border-radius: 0.5vw;
-    font-size: 2vw;
+  .modalOverlayFormInputErrorColumn {
+    & .iconAndInput {
+      & .iconInput {
+        width: 2.2vw;
+        height: 2.2vw;
+      }
+    }
+
+    & input {
+      padding: 1vw 2vw;
+      border-radius: 0.5vw;
+      font-size: 2vw;
+    }
   }
 }
 
@@ -162,8 +170,8 @@
 
 @media (max-width: 1024px) {
   .modalContentSubmitButton {
-    width: 50%;
-    border-radius: 0.5vw;
+    width: 60%;
+    border-radius: 1vw;
     font-size: 2.6vw;
     padding: 1vw 0vw;
   }
@@ -197,5 +205,14 @@
     font-family: var(--font-albertSans), sans-serif;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 1024px) {
+  .formPrivacyPolicy {
+    & p {
+      margin-top: 1vw;
+      font-size: 1.8vw;
+    }
   }
 }

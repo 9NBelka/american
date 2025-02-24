@@ -7,7 +7,7 @@
 
 @media (max-width: 1024px) {
   .container {
-    width: 79.167vw;
+    width: 86vw;
   }
 }
 
@@ -64,6 +64,17 @@
   padding-bottom: 4vw;
   margin-top: 6vw;
 }
+@media (max-width: 1024px) {
+  .backgroundForWhoScreen {
+    background-image: none;
+    background-color: #2f344d;
+    overflow: hidden;
+  }
+
+  .backgroundForWhoScreen .container {
+    width: 100%;
+  }
+}
 
 .backgroundReviewsScreen {
   display: flex;
@@ -93,4 +104,21 @@
   background-repeat: no-repeat;
   padding-bottom: 4vw;
   margin-top: 6vw;
+}
+
+@media (max-width: 1024px) {
+  .backgroundPriceScreen {
+    padding-bottom: 8vw;
+  }
+}
+
+.formForNewsOnEmailC {
+  display: none;
+  background-color: #25293f;
+}
+
+@media (max-width: 1024px) {
+  .formForNewsOnEmailC {
+    display: flex;
+  }
 }

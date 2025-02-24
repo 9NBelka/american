@@ -12,7 +12,7 @@ export default function ForWhomScreenC({ infoForWhom }) {
             alt={info.forWhomScreenTitleList}
           />
           <div className={scss.forWhomScreenBlockInfoAbsolute}>
-            <div>
+            <div className={scss.forWhomScreenBlockInfoText}>
               <h4 className={scss.forWhomScreenTitle}>{info.forWhomScreenTitleList}</h4>
               <h4
                 className={clsx(

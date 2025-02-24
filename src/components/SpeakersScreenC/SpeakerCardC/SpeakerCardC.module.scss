@@ -4,6 +4,11 @@
   justify-content: space-between;
   height: 100%;
 
+  & .speakerCardBlock {
+    display: flex;
+    flex-direction: column;
+  }
+
   & .speakerImage {
     width: 100%;
     border-radius: 0.5vw;
@@ -62,6 +67,68 @@
 
     & img {
       width: 4.5vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .speakerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .speakerImageContainer {
+      width: 100%;
+      height: 60%;
+      overflow: hidden;
+      border-radius: 1vw;
+    }
+
+    & .speakerImage {
+      width: 100%;
+      height: auto;
+      border-radius: 0vw;
+    }
+
+    & .nameTag {
+      justify-content: center;
+      font-size: 1.8vw;
+      margin-top: 2vw;
+    }
+
+    & .nameSpeaker {
+      justify-content: center;
+      font-size: 2.6vw;
+      margin-top: 0vw;
+    }
+
+    & .speakerCardDescription {
+      margin-top: 2vw;
+
+      & p {
+        font-size: 1.8vw;
+        text-align: center;
+
+        &.phoneMarg {
+          margin-top: 2vw;
+        }
+      }
+    }
+
+    & .linkedin {
+      width: 17vw;
+      padding: 1.2vw 0vw;
+      border-radius: 0.5vw;
+      margin-top: 3vw;
+      transition: 0s;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      & img {
+        width: 11vw;
+      }
     }
   }
 }

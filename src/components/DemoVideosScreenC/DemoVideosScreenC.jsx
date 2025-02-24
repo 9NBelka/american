@@ -20,22 +20,31 @@ export default function DemoVideosScreenC({ demoVideos }) {
           : 'https://via.placeholder.com/480x270?text=Invalid+Video';
 
         return (
-          <div key={index} className={scss.videoBlock}>
-            <img src={thumbnailUrl} alt={title} className={scss.videoThumbnail} />
-            <div className={scss.videoInfo}>
-              <div className={scss.videoInfoIconAndTitle}>
-                <BsFillPlayBtnFill className={scss.icon} />
-                <h3>{title}</h3>
+          <div key={index} className={scss.videoBlockMain}>
+            <div className={scss.videoBlock}>
+              <div className={scss.videoBlockImageAndText}>
+                <img src={thumbnailUrl} alt={title} className={scss.videoThumbnail} />
+                <div className={scss.videoInfo}>
+                  <div className={scss.videoInfoIconAndTitle}>
+                    <BsFillPlayBtnFill className={scss.icon} />
+                    <h3>{title}</h3>
+                  </div>
+                  <p className={scss.descriptionText}>
+                    {demoVideos.demoVideos.demoVideosDescription[index]}
+                  </p>
+                </div>
               </div>
-              <p>{demoVideos.demoVideos.demoVideosDescription[index]}</p>
+              <a
+                href={videoUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className={scss.watchButton}>
+                Watch
+              </a>
             </div>
-            <a
-              href={videoUrl}
-              target='_blank'
-              rel='noopener noreferrer'
-              className={scss.watchButton}>
-              Watch
-            </a>
+            <p className={scss.descriptionTextPhone}>
+              {demoVideos.demoVideos.demoVideosDescription[index]}
+            </p>
           </div>
         );
       })}

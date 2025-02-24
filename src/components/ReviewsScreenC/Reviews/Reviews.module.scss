@@ -1,0 +1,189 @@
+.sliderReview {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 3vw;
+}
+
+@media (max-width: 1024px) {
+  .sliderReview {
+    margin-top: 4vw;
+  }
+}
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5vw;
+}
+
+.reviewItem {
+  display: flex;
+  width: 33.33%;
+  background-color: #2f344d;
+  border-radius: 0.5vw;
+  padding: 1.5vw;
+}
+
+@media (max-width: 1024px) {
+  .reviewItem {
+    width: 100%;
+    border-radius: 1%;
+    padding: 3vw;
+  }
+}
+
+.studentsName {
+  display: flex;
+  font-size: 1vw;
+  color: white;
+  font-family: var(--font-alata), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .studentsName {
+    font-size: 2.4vw;
+  }
+}
+
+.reviewBlock {
+  display: flex;
+  margin-top: 1vw;
+  position: relative;
+
+  & .shadow {
+    width: 100%;
+    height: 5vw;
+    position: absolute;
+    bottom: 0;
+    box-shadow: inset 0px -2.5vw 2vw -1vw #2f344d;
+    transition: 0.5s ease-in-out;
+  }
+
+  &:hover .shadow {
+    height: 0vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviewBlock {
+    margin-top: 3vw;
+
+    & .shadow {
+      display: none;
+    }
+  }
+}
+
+.reviewText {
+  display: flex;
+  font-size: 0.85vw;
+  color: white;
+  font-family: var(--font-albertSans), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
+  margin: 0;
+  height: 18vw;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  padding-right: 1.4vw;
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0.2vw #25293f;
+    border-radius: 1vw;
+    background-color: #25293f;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.34vw;
+    background-color: #25293f;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviewText {
+    font-size: 1.8vw;
+    height: 35vw;
+    padding-right: 3vw;
+
+    &::-webkit-scrollbar {
+      width: 0.5vw;
+    }
+  }
+}
+
+.sliderControls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1vw;
+  gap: 1vw;
+
+  & p {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+  }
+
+  & .sliderReviewNavigationButton {
+    display: flex;
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    & .icon {
+      display: flex;
+      height: 2vw;
+      width: 2vw;
+      fill: white;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderControls {
+    margin-top: 3vw;
+    gap: 3vw;
+
+    & p {
+      font-size: 1.8vw;
+    }
+
+    & .sliderReviewNavigationButton {
+      &:hover {
+        opacity: 1;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+
+      & .icon {
+        height: 4vw;
+        width: 4vw;
+      }
+    }
+  }
+}
