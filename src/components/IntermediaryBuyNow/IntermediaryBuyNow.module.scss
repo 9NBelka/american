@@ -38,6 +38,22 @@
       font-size: 1.8vw;
     }
 
+    & .whiteTextC {
+      display: flex;
+      color: white;
+      font-size: 1.8vw;
+      font-family: var(--font-albertSans), sans-serif;
+      text-transform: uppercase;
+    }
+
+    & .whiteTextLowerC {
+      display: flex;
+      color: white;
+      font-size: 1.8vw;
+      font-family: var(--font-albertSans), sans-serif;
+      text-transform: capitalize;
+    }
+
     & h6 {
       font-weight: var(--font-weight-normal);
     }
@@ -58,6 +74,10 @@
       border-radius: 0.5vw;
       margin-top: 0.5vw;
       cursor: pointer;
+    }
+
+    &.intermediaryBuyNowBlockOrange a {
+      background-color: #ec6532;
     }
   }
 }

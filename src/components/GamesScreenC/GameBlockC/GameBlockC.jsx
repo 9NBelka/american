@@ -4,9 +4,9 @@ import GamesScreenDescription from '../../GamesScreen/GameBlock/GamesScreenDescr
 import GamesScreenDescriptionGreedventory from '../../GamesScreen/GameBlock/GamesScreenDescriptionGreedventory/GamesScreenDescriptionGreedventory';
 import GamesScreenDescriptionHidden from '../../GamesScreen/GameBlock/GamesScreenDescriptionHidden/GamesScreenDescriptionHidden';
 import GamesScreenGreedventoryLinks from '../../GamesScreen/GameBlock/GamesScreenGreedventoryLinks/GamesScreenGreedventoryLinks';
-import scss from './GameBlock.module.scss';
+import scss from './GameBlockC.module.scss';
 
-export default function GameBlock({
+export default function GameBlockC({
   gamesInfo,
   expandedStates,
   toggleDescription,

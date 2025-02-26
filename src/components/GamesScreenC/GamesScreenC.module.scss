@@ -4,3 +4,28 @@
   gap: 5vw;
   margin-top: 3vw;
 }
+
+.displayTablet {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .displayPc {
+    display: none;
+  }
+
+  .displayTablet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+  }
+
+  .generalTextForGames {
+    margin-top: 4vw;
+    font-size: 1.8vw;
+    color: black;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
+}

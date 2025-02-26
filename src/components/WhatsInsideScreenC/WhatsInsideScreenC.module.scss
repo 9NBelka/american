@@ -7,6 +7,22 @@
   gap: 1.3vw;
 }
 
+.insideScreenBlockMainPhone {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .insideScreenBlockMain {
+    display: none;
+  }
+
+  .insideScreenBlockMainPhone {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+  }
+}
+
 .moduleBlock {
   display: flex;
   flex-direction: column;
@@ -25,7 +41,7 @@
     line-height: var(--font-lineh-normal);
     text-transform: uppercase;
 
-    &.colorWhite {
+    & .colorWhite {
       color: white;
     }
   }

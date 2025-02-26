@@ -1,7 +1,8 @@
 import { BsLinkedin, BsReddit, BsTwitterX, BsWhatsapp, BsYoutube } from 'react-icons/bs';
 import scss from './FooterScreenC.module.scss';
+import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 
-export default function FooterScreenC() {
+export default function FooterScreenC({ architecturePageC }) {
   return (
     <div className={scss.footerScreenC}>
       <div className={scss.emailAndGeneralTextBlock}>
@@ -9,6 +10,9 @@ export default function FooterScreenC() {
           <a href='mailto:k.syndicate@gmail.com'>
             <h5>k.syndicate@gmail.com</h5>
           </a>
+        </div>
+        <div className={scss.intermediaryBuyNow}>
+          <IntermediaryBuyNow architecturePageC={architecturePageC} />
         </div>
         <div className={scss.generalTextBlock}>
           <p>

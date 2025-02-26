@@ -1,6 +1,8 @@
 import scss from './WhatsInsideScreenC.module.scss';
+import WhatsInsideScreenSliderC from './WhatsInsideScreenSliderC/WhatsInsideScreenSliderC';
+import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 
-export default function WhatsInsideScreenC({ programCourseInfo }) {
+export default function WhatsInsideScreenC({ programCourseInfo, architecturePageC }) {
   const modulesCount = 5; // определяет количество модулей (всего 5 модулей).
   const columnsPerModule = 3; // задает, что в каждом модуле будет 3 столбца.
   const lessonsPerModule = Math.ceil(programCourseInfo.insideScreen.length / modulesCount);
@@ -27,30 +29,36 @@ export default function WhatsInsideScreenC({ programCourseInfo }) {
 
   // Использую .flat() для извлечения всех уроков модуля, затем .find() для получения названия первого модуля:
   return (
-    <div className={scss.insideScreenBlockMain}>
-      {modules.map((module, moduleIndex) => (
-        <div key={moduleIndex} className={scss.moduleBlock}>
-          <h3>
-            Module {moduleIndex + 1}:{' '}
-            <h3 className={scss.colorWhite}>
-              {module.flat().find((lesson) => lesson)?.insideScreenModuleTitle}
+    <>
+      <div className={scss.insideScreenBlockMain}>
+        {modules.map((module, moduleIndex) => (
+          <div key={moduleIndex} className={scss.moduleBlock}>
+            <h3>
+              Module {moduleIndex + 1}:{' '}
+              <span className={scss.colorWhite}>
+                {module.flat().find((lesson) => lesson)?.insideScreenModuleTitle}
+              </span>
             </h3>
-          </h3>
-          <div className={scss.moduleColumns}>
-            {module.map((column, colIndex) => (
-              <div key={colIndex} className={scss.insideScreenBlock}>
-                {column.map((info, lessonIndex) => (
-                  <div key={lessonIndex} className={scss.insideScreenTitleAndContent}>
-                    <img src={info.insideScreenImage} alt={`image ${info.insideScreenTitle}`} />
-                    <h3>{info.insideScreenTitle}</h3>
-                    <h5>{info.insideScreenContent}</h5>
-                  </div>
-                ))}
-              </div>
-            ))}
+            <div className={scss.moduleColumns}>
+              {module.map((column, colIndex) => (
+                <div key={colIndex} className={scss.insideScreenBlock}>
+                  {column.map((info, lessonIndex) => (
+                    <div key={lessonIndex} className={scss.insideScreenTitleAndContent}>
+                      <img src={info.insideScreenImage} alt={`image ${info.insideScreenTitle}`} />
+                      <h3>{info.insideScreenTitle}</h3>
+                      <h5>{info.insideScreenContent}</h5>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <div className={scss.insideScreenBlockMainPhone}>
+        <WhatsInsideScreenSliderC programCourseInfo={programCourseInfo} />
+        <IntermediaryBuyNow architecturePageC={architecturePageC} />
+      </div>
+    </>
   );
 }

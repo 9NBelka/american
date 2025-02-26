@@ -1,0 +1,66 @@
+.viewCourseScreenBlockVideoText {
+  display: flex;
+  flex-direction: column;
+  width: 58%;
+}
+
+@media (max-width: 1024px) {
+  .viewCourseScreenBlockVideoText {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5vw;
+  }
+}
+
+.viewCourseScreenVideo {
+  display: flex;
+  width: 95%;
+  height: 21.3vw;
+  border: 0;
+  border-radius: 0.4vw;
+}
+
+@media (max-width: 1024px) {
+  .viewCourseScreenVideo {
+    display: flex;
+    width: 50%;
+    height: 22.7vw;
+    border: 0;
+    border-radius: 0.4vw;
+  }
+}
+
+.viewCourseScreenText {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewCourseScreenList {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .viewCourseScreenText {
+    display: none;
+  }
+
+  .viewCourseScreenList {
+    display: flex;
+    width: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .viewCourseScreenItem {
+    padding: 0;
+    & h5 {
+      font-size: 1.8vw;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      padding: 0;
+    }
+  }
+}

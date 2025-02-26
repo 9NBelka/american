@@ -182,6 +182,12 @@
 @media (max-width: 1024px) {
   .nameGame {
     font-size: 2.6vw;
+
+    &.nameGameC {
+      font-family: var(--font-alata), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+    }
   }
 }
 

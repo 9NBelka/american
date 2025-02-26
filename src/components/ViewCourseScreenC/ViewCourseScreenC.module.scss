@@ -3,154 +3,21 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 3vw;
+}
 
-  & .viewCourseScreenBlockVideoText {
+@media (max-width: 1024px) {
+  .viewCourseScreenMainBlock {
+    display: none;
+  }
+}
+
+.viewCourseScreenMainBlockPhone {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .viewCourseScreenMainBlockPhone {
     display: flex;
-    flex-direction: column;
-    width: 58%;
-  }
-
-  & .viewCourseScreenInfoAboutProductBlock {
-    display: flex;
-    flex-direction: column;
-    background-color: #efefef;
-    padding: 1.5vw 1.5vw;
-    border-radius: 0.5vw;
-    width: 27.5%;
-  }
-}
-
-.viewCourseScreenVideo {
-  display: flex;
-  width: 95%;
-  height: 21.3vw;
-  border: 0;
-  border-radius: 0.4vw;
-}
-
-.registrationTextOrange {
-  font-size: 0.85vw;
-  color: #ec6532;
-  font-family: var(--font-albertSans), sans-serif;
-  font-weight: var(--font-weight-normal);
-  line-height: var(--font-lineh-normal);
-  padding: 0;
-  margin: 0;
-}
-
-.infoAboutProductBlockDates {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.5vw;
-  border-radius: 0.25vw;
-  padding: 0.75vw;
-  background-color: #25293f;
-
-  & h6 {
-    font-size: 0.75vw;
-    color: white;
-    font-family: var(--font-albertSans), sans-serif;
-    font-weight: var(--font-weight-normal);
-    line-height: var(--font-lineh-normal);
-    margin-top: 0.5vw;
-    text-transform: capitalize;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  & h5 {
-    font-size: 0.75vw;
-    color: white;
-    font-family: var(--font-alata), sans-serif;
-    font-weight: var(--font-weight-normal);
-    line-height: var(--font-lineh-normal);
-    text-transform: uppercase;
-  }
-}
-
-.infoAboutProductBlockInfoTimeVideoStudentsGeneral {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75vw;
-  margin-top: 1.5vw;
-
-  & .infoAboutProductBlockInfoTimeVideoStudents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    & .infoAboutProductBlockInfoTitleAndIcon {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 0.75vw;
-
-      & .icon {
-        width: 1.25vw;
-        height: 1.25vw;
-        fill: #ec6532;
-      }
-    }
-
-    & .infoAboutProductBlockInfoTitle,
-    & .infoAboutProductBlockInfoNums {
-      font-size: 0.85vw;
-      color: black;
-      font-family: var(--font-albertSans), sans-serif;
-      font-weight: var(--font-weight-normal);
-      line-height: var(--font-lineh-normal);
-      text-transform: capitalize;
-    }
-  }
-}
-
-.infoAboutProductBlockDescriptionOnCourse {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5vw;
-
-  & .infoAboutProductBlockDescriptionOnCourseList {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    padding-left: 1vw;
-
-    & li {
-      font-size: 0.85vw;
-      color: black;
-      font-family: var(--font-albertSans), sans-serif;
-      font-weight: var(--font-weight-normal);
-      line-height: var(--font-lineh-normal);
-      text-transform: lowercase;
-      margin-top: 1vw;
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-.infoAboutProductBlockBuyNow {
-  display: flex;
-  justify-content: center;
-  background: #ec6532;
-  border-radius: 0.4vw;
-  color: white;
-  font-size: 0.85vw;
-  font-family: var(--font-albertSans), sans-serif;
-  font-weight: var(--font-weight-normal);
-  line-height: var(--font-lineh-normal);
-  padding: 0.75vw 0;
-  margin-top: 3vw;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    opacity: 0.8;
+    margin-top: 4vw;
   }
 }

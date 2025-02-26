@@ -1,0 +1,141 @@
+@media (max-width: 1024px) {
+  .moduleBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f344d;
+    padding: 4vw 2.5vw;
+    border-radius: 1vw;
+    width: 100%;
+
+    & h3 {
+      display: flex;
+      font-size: 2.8vw;
+      color: #ec6532;
+      font-family: var(--font-alata), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+
+      & .colorWhite {
+        color: white;
+      }
+    }
+  }
+}
+
+.moduleColumns {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin-top: 2vw;
+}
+
+@media (max-width: 1024px) {
+  .moduleColumns {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    margin-top: 4vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .insideScreenTitleAndContent {
+    display: flex;
+    flex-direction: column;
+
+    & h3 {
+      display: flex;
+      font-size: 1.8vw;
+      color: white;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+      margin-top: 3vw;
+    }
+
+    & h5 {
+      display: flex;
+      font-size: 1.8vw;
+      color: white;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      margin-top: 3vw;
+    }
+
+    & img {
+      display: flex;
+      width: 100%;
+      border-radius: 0.5vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .sliderWrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slidesTrack {
+    display: flex;
+    width: 100%; // Умножается на количество слайдов автоматически через translateX
+  }
+
+  .moduleBlock {
+    flex: 0 0 100%; // Каждый модуль занимает 100% ширины контейнера
+    min-width: 100%; // Убедимся, что слайд не сжимается
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    margin-top: 4vw;
+  }
+
+  .sliderButton {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 1.1vw 2.5vw;
+    font-size: 1.85vw;
+    color: white;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    background-color: #ec6532;
+
+    border: none;
+    border-radius: 0.75vw;
+    cursor: pointer;
+
+    & .sliderIcon {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+
+  .slideCounter {
+    text-align: center;
+    display: flex;
+    font-size: 1.8vw;
+    color: white;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+  }
+}

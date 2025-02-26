@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import scss from './IntermediaryBuyNow.module.scss';
 
-export default function IntermediaryBuyNow({ forStyle, toggleModal, isOpen }) {
+export default function IntermediaryBuyNow({ forStyle, toggleModal, isOpen, architecturePageC }) {
   return (
     <div
       className={clsx(
@@ -9,8 +9,15 @@ export default function IntermediaryBuyNow({ forStyle, toggleModal, isOpen }) {
         forStyle && scss.intermediaryBuyNowBlockMainGap,
       )}>
       <div className={scss.intermediaryBuyNowBlock}>
-        <h5 className={clsx(forStyle && scss.whiteText)}>Want to scale up your projects? </h5>
-        <h6 className={clsx(forStyle && scss.whiteText, scss.whiteTextNone)}>
+        <h5 className={clsx(forStyle && scss.whiteText, architecturePageC && scss.whiteTextC)}>
+          Want to scale up your projects?{' '}
+        </h5>
+        <h6
+          className={clsx(
+            forStyle && scss.whiteText,
+            scss.whiteTextNone,
+            architecturePageC && scss.whiteTextLowerC,
+          )}>
           Take our industrial solutions for systemic problems!
         </h6>
       </div>
@@ -18,6 +25,7 @@ export default function IntermediaryBuyNow({ forStyle, toggleModal, isOpen }) {
         className={clsx(
           scss.intermediaryBuyNowBlock,
           forStyle && scss.intermediaryBuyNowBlockBlue,
+          architecturePageC && scss.intermediaryBuyNowBlockOrange,
         )}>
         <a rel='noopener noreferrer' onClick={toggleModal}>
           Buy now

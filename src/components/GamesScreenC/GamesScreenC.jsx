@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import scss from './GamesScreenC.module.scss';
-import GameBlock from './GameBlock/GameBlock';
+import GameBlockC from './GameBlockC/GameBlockC';
+import GameBlock from '../GamesScreen/GameBlock/GameBlock';
 
 export default function GamesScreenC({ gamesInfo, architecturePageC }) {
   const [expandedStates, setExpandedStates] = useState({});
@@ -15,28 +16,43 @@ export default function GamesScreenC({ gamesInfo, architecturePageC }) {
   const greedventory = true;
   return (
     <>
-      <div className={scss.gamesMain}>
-        {gamesInfo.fourGamesScreen.slice(0, 4).map((game, index) => (
+      <div className={scss.displayPc}>
+        <div className={scss.gamesMain}>
+          {gamesInfo.fourGamesScreen.slice(0, 4).map((game, index) => (
+            <GameBlockC
+              key={index}
+              toggleDescription={toggleDescription}
+              gamesInfo={game}
+              expandedStates={expandedStates}
+              architecturePageC={architecturePageC}
+            />
+          ))}
+        </div>
+        <div className={scss.fifthGame}>
+          {gamesInfo.fourGamesScreen[4] && (
+            <GameBlockC
+              key={4}
+              greedventory={greedventory}
+              toggleDescription={toggleDescription}
+              gamesInfo={gamesInfo.fourGamesScreen[4]}
+              expandedStates={expandedStates}
+              architecturePageC={architecturePageC}
+            />
+          )}
+        </div>
+      </div>
+      <div className={scss.displayTablet}>
+        {gamesInfo.fourGamesScreen.map((gamesInfo, index) => (
           <GameBlock
             key={index}
+            greedventory={greedventory}
             toggleDescription={toggleDescription}
-            gamesInfo={game}
+            gamesInfo={gamesInfo}
             expandedStates={expandedStates}
             architecturePageC={architecturePageC}
           />
         ))}
-      </div>
-      <div className={scss.fifthGame}>
-        {gamesInfo.fourGamesScreen[4] && (
-          <GameBlock
-            key={4}
-            greedventory={greedventory}
-            toggleDescription={toggleDescription}
-            gamesInfo={gamesInfo.fourGamesScreen[4]}
-            expandedStates={expandedStates}
-            architecturePageC={architecturePageC}
-          />
-        )}
+        <h6 className={scss.generalTextForGames}>{gamesInfo.fourGamesScreenGeneralText}</h6>
       </div>
     </>
   );

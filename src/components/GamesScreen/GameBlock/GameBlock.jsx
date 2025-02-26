@@ -18,6 +18,7 @@ export default function GameBlock({
   architecturePageBGamePhone,
   prevSlide,
   nextSlide,
+  architecturePageC,
 }) {
   return (
     <div className={clsx(scss.gamesMain, architecturePageB && scss.gamesMainB)}>
@@ -53,6 +54,7 @@ export default function GameBlock({
               scss.nameGame,
               architecturePageB && scss.nameGameB,
               architecturePageWhiteColorB && scss.nameGameB,
+              architecturePageC && scss.nameGameC,
             )}>
             {gamesInfo.nameGame}
           </h3>

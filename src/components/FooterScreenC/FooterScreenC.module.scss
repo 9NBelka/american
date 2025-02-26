@@ -5,11 +5,24 @@
   padding: 5vw 0;
 }
 
+@media (max-width: 1024px) {
+  .footerScreenC {
+    padding: 8vw 0;
+  }
+}
+
 .emailAndGeneralTextBlock {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .emailAndGeneralTextBlock {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .emailBlock {
@@ -33,6 +46,22 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .emailBlock {
+    justify-content: center;
+    width: 100%;
+    padding-right: 0vw;
+
+    & h5 {
+      font-size: 1.8vw;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .generalTextBlock {
   display: flex;
   width: 50%;
@@ -49,6 +78,29 @@
     text-transform: uppercase;
     margin: 0;
     padding: 1.5vw 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .generalTextBlock {
+    justify-content: center;
+    width: 100%;
+    border-left: none;
+    padding-left: 0vw;
+
+    & p {
+      width: 60%;
+      text-align: center;
+      font-size: 1.8vw;
+      color: white;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+      margin-top: 4vw;
+      padding: 0;
+      opacity: 0.5;
+    }
   }
 }
 
@@ -80,6 +132,22 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .privatLinksblock {
+    margin-top: 5vw;
+
+    & a {
+      font-size: 1.8vw;
+      border-left: 0.1vw solid white;
+      padding: 0 3vw;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .iconsBlock {
   display: flex;
   flex-direction: row;
@@ -100,6 +168,22 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .iconsBlock {
+    margin-top: 6vw;
+    gap: 5vw;
+
+    & .icon {
+      width: 3vw;
+      height: 3vw;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .certificationText {
   display: flex;
   justify-content: center;
@@ -110,4 +194,24 @@
   font-weight: var(--font-weight-normal);
   line-height: var(--font-lineh-normal);
   text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .certificationText {
+    margin-top: 6vw;
+    font-size: 1.8vw;
+    text-align: center;
+    opacity: 0.5;
+  }
+}
+
+.intermediaryBuyNow {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .intermediaryBuyNow {
+    display: flex;
+    width: 70%;
+  }
 }

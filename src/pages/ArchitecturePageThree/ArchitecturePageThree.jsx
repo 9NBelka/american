@@ -77,7 +77,10 @@ export default function ArchitecturePageThree({
           <h3 className={clsx(css.titleScreens, css.whiteColor)} id='whatsInside'>
             what`s inside?
           </h3>
-          <WhatsInsideScreenC programCourseInfo={currentInfo} />
+          <WhatsInsideScreenC
+            programCourseInfo={currentInfo}
+            architecturePageC={architecturePageC}
+          />
         </div>
       </div>
       <div className={css.container}>
@@ -96,7 +99,7 @@ export default function ArchitecturePageThree({
       </div>
       <h3 className={css.titleScreens}>WY are trusted by:</h3>
       <TrustedScreenC imageTrusted={currentInfo} architecturePageC={architecturePageC} />
-      <FooterScreenC />
+      <FooterScreenC architecturePageC={architecturePageC} />
     </>
   );
 }
