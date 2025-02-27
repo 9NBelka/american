@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .footerScreenC {
+    padding: 14vw 0;
+  }
+}
+
 .emailAndGeneralTextBlock {
   display: flex;
   flex-direction: row;
@@ -62,6 +68,14 @@
   }
 }
 
+@media (max-width: 576px) {
+  .emailBlock {
+    & h5 {
+      font-size: 3.6vw;
+    }
+  }
+}
+
 .generalTextBlock {
   display: flex;
   width: 50%;
@@ -100,6 +114,16 @@
       margin-top: 4vw;
       padding: 0;
       opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .generalTextBlock {
+    & p {
+      width: 90%;
+      font-size: 3.6vw;
+      margin-top: 8vw;
     }
   }
 }
@@ -148,6 +172,17 @@
   }
 }
 
+@media (max-width: 576px) {
+  .privatLinksblock {
+    margin-top: 8vw;
+
+    & a {
+      font-size: 3.6vw;
+      padding: 0 4vw;
+    }
+  }
+}
+
 .iconsBlock {
   display: flex;
   flex-direction: row;
@@ -184,6 +219,18 @@
   }
 }
 
+@media (max-width: 576px) {
+  .iconsBlock {
+    margin-top: 8vw;
+    gap: 8vw;
+
+    & .icon {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
+}
+
 .certificationText {
   display: flex;
   justify-content: center;
@@ -205,6 +252,14 @@
   }
 }
 
+@media (max-width: 576px) {
+  .certificationText {
+    margin-top: 9vw;
+    font-size: 3vw;
+    padding: 0 10vw;
+  }
+}
+
 .intermediaryBuyNow {
   display: none;
 }
@@ -213,5 +268,14 @@
   .intermediaryBuyNow {
     display: flex;
     width: 70%;
+  }
+}
+
+@media (max-width: 576px) {
+  .intermediaryBuyNow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
   }
 }

@@ -114,6 +114,7 @@ export default function HeadScreenHeader({
                 isScrolled={isScrolled}
                 scrollToSection={scrollToSection}
                 architecturePageB={architecturePageB}
+                architecturePageC={architecturePageC}
               />
             </li>
           </ul>

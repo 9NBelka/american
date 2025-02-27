@@ -269,12 +269,20 @@
       width: 100%;
     }
 
+    &.headScreenTitleC {
+      padding-top: 14vw;
+    }
+
     & .categoryCourseText {
       font-size: 3.2vw;
       margin-top: 5vw;
 
       &.categoryCourseTextB {
         font-size: 3.2vw;
+      }
+
+      &.categoryCourseTextC {
+        font-size: 3.6vw;
       }
     }
 
@@ -296,6 +304,15 @@
       &.nameCourseTextB {
         display: none;
       }
+
+      &.nameCourseTextC {
+        display: flex;
+        width: 100%;
+        font-size: 11vw;
+        font-family: var(--font-alata), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-small);
+      }
     }
 
     & .descriptionCourseText {
@@ -308,6 +325,12 @@
         font-size: 3.6vw;
         margin-top: 3vw;
       }
+
+      &.descriptionCourseTextC {
+        width: 100%;
+        font-size: 3.6vw;
+        margin-top: 5vw;
+      }
     }
 
     & .headScreenButtonAnswer {
@@ -315,6 +338,13 @@
       padding: 1.5vw 6vw;
       border-radius: 5vw;
       margin-top: 10vw;
+    }
+
+    & .headScreenButtonMoreInfo {
+      font-size: 3.6vw;
+      padding: 1.5vw 6vw;
+      border-radius: 0.75vw;
+      margin-top: 6vw;
     }
   }
 

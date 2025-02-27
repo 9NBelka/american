@@ -14,6 +14,31 @@
   }
 }
 
+@media (max-width: 576px) {
+  .gamesBlock {
+    align-items: center;
+    width: 100%;
+
+    & .gamesImageblock {
+      width: 100%;
+      height: 35vw;
+      overflow: hidden;
+      position: relative;
+      border-radius: 2vw;
+
+      & .imageGame {
+        display: flex;
+        width: 80%;
+        height: auto;
+        border-radius: 2vw;
+        position: absolute;
+        top: -40%;
+        left: 10%;
+      }
+    }
+  }
+}
+
 .gamesInfoBlock {
   display: flex;
   flex-direction: column;
@@ -27,6 +52,16 @@
     line-height: var(--font-lineh-normal);
     text-transform: uppercase;
     margin-top: 1vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .gamesInfoBlock {
+    & .nameGame {
+      justify-content: center;
+      font-size: 4.5vw;
+      margin-top: 3vw;
+    }
   }
 }
 
@@ -61,6 +96,47 @@
       line-height: var(--font-lineh-normal);
       text-transform: uppercase;
       margin-top: 0vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .gamesBlockGreedVentory {
+    flex-direction: column;
+    width: 100%;
+    gap: 0vw;
+    margin-top: 5vw;
+
+    & .gamesImageblock {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      position: static;
+      border-radius: 0vw;
+
+      & .imageGame {
+        display: flex;
+
+        width: 80%;
+        height: 100%;
+        position: static;
+        border-radius: 0vw;
+      }
+    }
+
+    & .gamesInfoBlock {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      & .nameGame {
+        display: flex;
+        justify-content: center;
+        font-size: 4.5vw;
+        margin-top: 3vw;
+      }
     }
   }
 }

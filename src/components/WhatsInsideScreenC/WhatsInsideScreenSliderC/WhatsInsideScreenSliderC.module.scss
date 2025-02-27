@@ -24,6 +24,20 @@
   }
 }
 
+@media (max-width: 576px) {
+  .moduleBlock {
+    padding: 5vw 4vw;
+    border-radius: 1.25vw;
+    width: 100%;
+
+    & h3 {
+      flex-direction: column;
+      text-align: center;
+      font-size: 5.7vw;
+    }
+  }
+}
+
 .moduleColumns {
   display: flex;
   flex-direction: row;
@@ -37,6 +51,14 @@
     flex-direction: row;
     gap: 3vw;
     margin-top: 4vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .moduleColumns {
+    flex-direction: column;
+    gap: 5vw;
+    margin-top: 5vw;
   }
 }
 
@@ -70,6 +92,26 @@
       display: flex;
       width: 100%;
       border-radius: 0.5vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .insideScreenTitleAndContent {
+    align-items: center;
+    & h3 {
+      font-size: 3.6vw;
+      text-align: center;
+    }
+
+    & h5 {
+      font-size: 3.6vw;
+    }
+
+    & img {
+      display: flex;
+      width: 70%;
+      border-radius: 0.75vw;
     }
   }
 }
@@ -137,5 +179,28 @@
     font-family: var(--font-albertSans), sans-serif;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 576px) {
+  .sliderControls {
+    gap: 5vw;
+    margin-top: 4vw;
+  }
+
+  .sliderButton {
+    gap: 2vw;
+    padding: 1.5vw 4vw;
+    font-size: 3.65vw;
+    border-radius: 0.75vw;
+
+    & .sliderIcon {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
+
+  .slideCounter {
+    font-size: 3.6vw;
   }
 }

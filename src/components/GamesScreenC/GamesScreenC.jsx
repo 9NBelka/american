@@ -40,6 +40,7 @@ export default function GamesScreenC({ gamesInfo, architecturePageC }) {
             />
           )}
         </div>
+        <h6 className={scss.generalTextForGames}>{gamesInfo.fourGamesScreenGeneralText}</h6>
       </div>
       <div className={scss.displayTablet}>
         {gamesInfo.fourGamesScreen.map((gamesInfo, index) => (

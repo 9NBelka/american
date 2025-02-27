@@ -5,8 +5,26 @@
   margin-top: 3vw;
 }
 
+@media (max-width: 576px) {
+  .gamesMain {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    margin-top: 0vw;
+  }
+}
+
 .displayTablet {
   display: none;
+}
+
+.generalTextForGames {
+  margin-top: 2vw;
+  font-size: 0.85vw;
+  color: black;
+  font-family: var(--font-albertSans), sans-serif;
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-lineh-normal);
 }
 
 @media (max-width: 1024px) {
@@ -23,9 +41,22 @@
   .generalTextForGames {
     margin-top: 4vw;
     font-size: 1.8vw;
-    color: black;
-    font-family: var(--font-albertSans), sans-serif;
-    font-weight: var(--font-weight-normal);
-    line-height: var(--font-lineh-normal);
+  }
+}
+
+@media (max-width: 576px) {
+  .displayPc {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vw;
+  }
+
+  .displayTablet {
+    display: none;
+  }
+
+  .generalTextForGames {
+    margin-top: 5vw;
+    font-size: 3vw;
   }
 }

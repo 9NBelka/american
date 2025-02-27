@@ -38,6 +38,10 @@
     &.descriptionGameBlockB {
       margin-top: 7vw;
     }
+
+    &.descriptionGameBlockC {
+      margin-top: 3vw;
+    }
   }
 
   .descriptionGameBlockWidth {
@@ -92,6 +96,10 @@
 
     &.descriptionGameB {
       text-align: center;
+    }
+
+    &.descriptionGameC {
+      font-size: 3.6vw;
     }
   }
 }

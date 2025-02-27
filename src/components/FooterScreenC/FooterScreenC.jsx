@@ -3,6 +3,7 @@ import scss from './FooterScreenC.module.scss';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 
 export default function FooterScreenC({ architecturePageC }) {
+  const footerC = true;
   return (
     <div className={scss.footerScreenC}>
       <div className={scss.emailAndGeneralTextBlock}>
@@ -12,7 +13,7 @@ export default function FooterScreenC({ architecturePageC }) {
           </a>
         </div>
         <div className={scss.intermediaryBuyNow}>
-          <IntermediaryBuyNow architecturePageC={architecturePageC} />
+          <IntermediaryBuyNow architecturePageC={architecturePageC} footerC={footerC} />
         </div>
         <div className={scss.generalTextBlock}>
           <p>

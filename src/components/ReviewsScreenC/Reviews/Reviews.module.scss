@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .sliderReview {
+    margin-top: 6vw;
+  }
+}
+
 .reviewsContainer {
   display: flex;
   flex-direction: row;
@@ -29,8 +35,15 @@
 @media (max-width: 1024px) {
   .reviewItem {
     width: 100%;
-    border-radius: 1%;
+    border-radius: 1vw;
     padding: 3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .reviewItem {
+    padding: 4vw;
+    padding-right: 3vw;
   }
 }
 
@@ -47,6 +60,12 @@
 @media (max-width: 1024px) {
   .studentsName {
     font-size: 2.4vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .studentsName {
+    font-size: 4vw;
   }
 }
 
@@ -76,6 +95,12 @@
     & .shadow {
       display: none;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .reviewBlock {
+    margin-top: 4vw;
   }
 }
 
@@ -118,6 +143,17 @@
 
     &::-webkit-scrollbar {
       width: 0.5vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .reviewText {
+    font-size: 3.6vw;
+    height: 85vw;
+
+    &::-webkit-scrollbar {
+      width: 0.75vw;
     }
   }
 }
@@ -183,6 +219,24 @@
       & .icon {
         height: 4vw;
         width: 4vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .sliderControls {
+    margin-top: 5vw;
+    gap: 5vw;
+
+    & p {
+      font-size: 3.6vw;
+    }
+
+    & .sliderReviewNavigationButton {
+      & .icon {
+        height: 7vw;
+        width: 7vw;
       }
     }
   }

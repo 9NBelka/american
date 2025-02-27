@@ -5,7 +5,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 export default function ViewCourseScreen({ currentInfo, architecturePageC }) {
   return (
     <ul
-      className={clsx(scss.viewCourseScreenList, architecturePageC && scss.viewCourseScreenListB)}>
+      className={clsx(scss.viewCourseScreenList, architecturePageC && scss.viewCourseScreenListC)}>
       {currentInfo.viewCourseScreenText.map((text, index) => (
         <li
           key={index}

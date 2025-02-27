@@ -11,6 +11,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .priceScreenMain {
+    margin-top: 6vw;
+  }
+}
+
 .priceScreenCard {
   display: flex;
   width: 18vw;
@@ -38,6 +44,19 @@
   }
 }
 
+@media (max-width: 576px) {
+  .priceScreenCard {
+    width: 100%;
+    padding: 5vw;
+    border-radius: 1vw;
+
+    & img {
+      width: 100%;
+      border-radius: 1vw;
+    }
+  }
+}
+
 .infoCourseBlock {
   display: flex;
   flex-direction: row;
@@ -48,6 +67,12 @@
 @media (max-width: 1024px) {
   .infoCourseBlock {
     margin-top: 3vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCourseBlock {
+    margin-top: 5vw;
   }
 }
 
@@ -91,6 +116,20 @@
   }
 }
 
+@media (max-width: 576px) {
+  .infoCourseName {
+    width: 50%;
+
+    & h6 {
+      font-size: 3.6vw;
+    }
+
+    & h3 {
+      font-size: 5vw;
+    }
+  }
+}
+
 .infoCourseNameSpeakers {
   display: flex;
   flex-direction: row;
@@ -122,6 +161,17 @@
 
     & p {
       font-size: 1.8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCourseNameSpeakers {
+    width: 50%;
+    gap: 1.5vw;
+
+    & p {
+      font-size: 3.4vw;
     }
   }
 }
@@ -178,6 +228,22 @@
 
     & h5 {
       font-size: 5vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCourseButtonPriceBlock {
+    margin-top: 5vw;
+
+    & .buttonBuy {
+      font-size: 4vw;
+      padding: 1.5vw 6vw;
+      border-radius: 0.75vw;
+    }
+
+    & h5 {
+      font-size: 8vw;
     }
   }
 }

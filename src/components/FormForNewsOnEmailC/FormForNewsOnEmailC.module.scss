@@ -32,13 +32,12 @@
 
 @media (max-width: 576px) {
   .modalContent {
-    padding: 8vw 5vw;
+    padding: 8vw 0vw;
     padding-top: 8vw;
-    border-radius: 1vw;
-    max-width: 80vw;
+    max-width: 100%;
 
     & h2 {
-      font-size: 8vw;
+      font-size: 5vw;
     }
   }
 }
@@ -60,7 +59,7 @@
 @media (max-width: 576px) {
   .modalOverlayForm {
     margin-top: 5vw;
-    gap: 4vw;
+    gap: 3vw;
   }
 }
 
@@ -119,10 +118,18 @@
 }
 
 @media (max-width: 576px) {
-  input {
-    padding: 2.5vw 4vw;
-    border-radius: 1vw;
-    font-size: 4vw;
+  .modalOverlayFormInputErrorColumn {
+    & .iconAndInput {
+      & .iconInput {
+        width: 3.5vw;
+        height: 3.5vw;
+      }
+    }
+
+    & input {
+      padding: 1.5vw 3vw;
+      font-size: 3.6vw;
+    }
   }
 }
 
@@ -142,7 +149,7 @@
 
 @media (max-width: 576px) {
   .modalContentErrorText {
-    font-size: 3vw;
+    font-size: 3.6vw;
   }
 }
 
@@ -179,10 +186,10 @@
 
 @media (max-width: 576px) {
   .modalContentSubmitButton {
-    width: 55%;
-    border-radius: 1vw;
-    font-size: 5vw;
-    padding: 1.5vw 0vw;
+    width: 100%;
+    border-radius: 1.5vw;
+    font-size: 4.5vw;
+    padding: 1.4vw 0vw;
   }
 }
 
@@ -213,6 +220,15 @@
     & p {
       margin-top: 1vw;
       font-size: 1.8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .formPrivacyPolicy {
+    & p {
+      margin-top: 2vw;
+      font-size: 3.6vw;
     }
   }
 }

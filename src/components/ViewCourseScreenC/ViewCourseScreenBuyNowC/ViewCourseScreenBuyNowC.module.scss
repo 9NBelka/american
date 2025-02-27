@@ -14,6 +14,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .viewCourseScreenPhoneRowBlock {
+    margin-top: 6vw;
+  }
+}
+
 .viewCourseScreenInfoAboutProductBlock {
   display: flex;
   flex-direction: column;
@@ -30,6 +36,14 @@
   }
 }
 
+@media (max-width: 576px) {
+  .viewCourseScreenInfoAboutProductBlock {
+    padding: 4vw;
+    border-radius: 1vw;
+    width: 100%;
+  }
+}
+
 .registrationTextOrange {
   font-size: 0.85vw;
   color: #ec6532;
@@ -43,6 +57,12 @@
 @media (max-width: 1024px) {
   .registrationTextOrange {
     font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .registrationTextOrange {
+    font-size: 3.6vw;
   }
 }
 
@@ -91,6 +111,23 @@
 
     & h5 {
       font-size: 1.8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .infoAboutProductBlockDates {
+    margin-top: 2vw;
+    border-radius: 1vw;
+    padding: 3vw;
+
+    & h6 {
+      font-size: 3.6vw;
+      margin-top: 3vw;
+    }
+
+    & h5 {
+      font-size: 3.6vw;
     }
   }
 }
@@ -150,6 +187,29 @@
       & .infoAboutProductBlockInfoTitle,
       & .infoAboutProductBlockInfoNums {
         font-size: 1.8vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .infoAboutProductBlockInfoTimeVideoStudentsGeneral {
+    gap: 3vw;
+    margin-top: 4vw;
+
+    & .infoAboutProductBlockInfoTimeVideoStudents {
+      & .infoAboutProductBlockInfoTitleAndIcon {
+        gap: 3vw;
+
+        & .icon {
+          width: 4vw;
+          height: 4vw;
+        }
+      }
+
+      & .infoAboutProductBlockInfoTitle,
+      & .infoAboutProductBlockInfoNums {
+        font-size: 3.6vw;
       }
     }
   }
@@ -221,6 +281,26 @@
   }
 }
 
+@media (max-width: 576px) {
+  .infoAboutProductBlockDescriptionOnCourseDisplayPhone {
+    display: none;
+  }
+
+  .infoAboutProductBlockDescriptionOnCourseNonePhone {
+    display: flex;
+    margin-top: 4vw;
+
+    & .infoAboutProductBlockDescriptionOnCourseList {
+      padding-left: 4.2vw;
+
+      & li {
+        font-size: 3.6vw;
+        margin-top: 3vw;
+      }
+    }
+  }
+}
+
 .infoAboutProductBlockBuyNow {
   display: flex;
   justify-content: center;
@@ -252,5 +332,14 @@
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .infoAboutProductBlockBuyNow {
+    border-radius: 1.5vw;
+    font-size: 3.6vw;
+    padding: 1.5vw 0;
+    margin-top: 5vw;
   }
 }

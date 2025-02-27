@@ -132,3 +132,42 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .speakerCard {
+    & .speakerImageContainer {
+      border-radius: 3vw;
+    }
+
+    & .nameTag {
+      font-size: 3.6vw;
+    }
+
+    & .nameSpeaker {
+      font-size: 4vw;
+    }
+
+    & .speakerCardDescription {
+      margin-top: 5vw;
+
+      & p {
+        font-size: 3.6vw;
+
+        &.phoneMarg {
+          margin-top: 0vw;
+        }
+      }
+    }
+
+    & .linkedin {
+      width: 30vw;
+      padding: 2.2vw 0vw;
+      border-radius: 1vw;
+      margin-top: 5vw;
+
+      & img {
+        width: 18vw;
+      }
+    }
+  }
+}

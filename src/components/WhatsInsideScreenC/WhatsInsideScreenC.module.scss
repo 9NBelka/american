@@ -23,6 +23,12 @@
   }
 }
 
+@media (max-width: 576px) {
+  .insideScreenBlockMainPhone {
+    margin-top: 6vw;
+  }
+}
+
 .moduleBlock {
   display: flex;
   flex-direction: column;

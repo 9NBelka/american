@@ -7,7 +7,7 @@
   margin: 0;
   gap: 1vw;
 
-  &.viewCourseScreenListB {
+  &.viewCourseScreenListC {
     list-style-type: disc;
     color: black;
     padding-left: 1.5vw;
@@ -88,6 +88,12 @@
 @media (max-width: 576px) {
   .viewCourseScreenList {
     gap: 5vw;
+
+    &.viewCourseScreenListC {
+      padding-left: 0vw;
+      margin-top: 1vw;
+      list-style-type: none;
+    }
 
     & .viewCourseScreenItem {
       & h5 {
