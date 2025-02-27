@@ -31,8 +31,8 @@ export default function FooterScreen({ toggleModal, isOpen }) {
 
     // Помечаем форму как отправленную
     setIsSubmitted(true);
-    resetForm();
     toast.success('The form is successfully sent!');
+    resetForm();
   };
 
   const footer = true;
