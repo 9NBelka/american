@@ -409,5 +409,9 @@
     "stickyBlockPrice": "",
     "stickyBlockLinkBuy": "",
     "viewCourseScreenText": []
+  },
+  {
+    "id": 100,
+    "path": "/privacy-policy"
   }
 ]

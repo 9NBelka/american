@@ -1,9 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import scss from './FormForNewsOnEmailC.module.scss'; // Подключаем стили
-import toast, { Toaster } from 'react-hot-toast';
-import clsx from 'clsx';
+import scss from './FormForNewsOnEmailC.module.scss';
+import toast from 'react-hot-toast';
 import { BsTelephone, BsPerson, BsEnvelope, BsGeoAlt } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Incorrect email').required('*Required field'),
@@ -15,7 +15,7 @@ const validationSchema = Yup.object().shape({
     .required('*Required field'),
 });
 
-export default function FormForNewsOnEmailC({ toggleModal, isOpen }) {
+export default function FormForNewsOnEmailC({ toggleModal }) {
   return (
     <div className={scss.modalContent}>
       <h2>STUDENT ENQUIRY</h2>
@@ -71,7 +71,10 @@ export default function FormForNewsOnEmailC({ toggleModal, isOpen }) {
               <ErrorMessage name='country' component='h5' className={scss.modalContentErrorText} />
             </div>
             <div className={scss.formPrivacyPolicy}>
-              <p>By signing up you agree to Skillshare's Terms of Service and Privacy Policy.</p>
+              <p>
+                By signing up you agree to Skillshare`s Terms of Service and{' '}
+                <Link to='/privacy-policy'>Privacy Policy</Link>.
+              </p>
             </div>
             <div className={scss.modalContentSubmitBlock}>
               <button type='submit' className={scss.modalContentSubmitButton}>
@@ -81,7 +84,6 @@ export default function FormForNewsOnEmailC({ toggleModal, isOpen }) {
           </Form>
         )}
       </Formik>
-      <Toaster position='bottom-center' reverseOrder={false} />
     </div>
   );
 }

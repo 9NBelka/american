@@ -48,7 +48,7 @@ export default function ArchitecturePageTwo({
         <h3 className={css.titleScreens} id='forWhom'>
           For Who?
         </h3>
-        <ForWhomScreenB infoForWhom={currentInfo} />
+        <ForWhomScreenB infoForWhom={currentInfo} scrollToSection={scrollToSection} />
         <h3 className={css.titleScreens} id='who'>
           Who?
         </h3>

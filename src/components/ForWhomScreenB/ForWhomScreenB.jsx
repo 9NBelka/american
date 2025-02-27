@@ -3,7 +3,7 @@ import scss from './ForWhomScreenB.module.scss';
 import clsx from 'clsx';
 import ForWhomScreenBPhone from './ForWhomScreenBPhone/ForWhomScreenBPhone';
 
-export default function ForWhomScreenB({ infoForWhom }) {
+export default function ForWhomScreenB({ infoForWhom, scrollToSection }) {
   const [activeBlock, setActiveBlock] = useState(0);
 
   return (
@@ -18,8 +18,14 @@ export default function ForWhomScreenB({ infoForWhom }) {
           )}
         </div>
         <div className={scss.buttons}>
-          <button className={scss.buttonNow}>Buy now</button>
-          <button className={scss.buttonReadMore}>Read more</button>
+          <button className={scss.buttonNow} onClick={() => scrollToSection('price', 100)}>
+            Buy now
+          </button>
+          <button
+            className={scss.buttonReadMore}
+            onClick={() => scrollToSection('whatsInside', 100)}>
+            Read more
+          </button>
         </div>
       </div>
       <div className={scss.rightSide}>

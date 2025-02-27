@@ -198,3 +198,45 @@
     margin-top: 5vw;
   }
 }
+
+.formPrivacyPolicy {
+  display: none;
+  justify-content: center;
+
+  & p {
+    width: 50%;
+    font-size: 0.85vw;
+    color: black;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-align: center;
+    margin: 0;
+    opacity: 0.5;
+
+    & a {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .formPrivacyPolicy {
+    display: flex;
+    margin-top: 4vw;
+    & p {
+      width: 60%;
+      font-size: 1.8vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .formPrivacyPolicy {
+    & p {
+      width: 90%;
+      font-size: 3.6vw;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { BsLinkedin, BsReddit, BsTwitterX, BsWhatsapp, BsYoutube } from 'react-icons/bs';
 import scss from './FooterScreenB.module.scss';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 export default function FooterScreenB({ imageLogo }) {
   return (
@@ -16,15 +17,15 @@ export default function FooterScreenB({ imageLogo }) {
         <div className={scss.footerColumn}>
           <h4>Important Links</h4>
           <div className={scss.footerScreenBlockInfo}>
-            <a href='#' target='_blank' rel='noopener noreferrer'>
+            <Link to='/privacy-policy'>
               <h6>Privacy Policy</h6>
-            </a>
-            <a href='#' target='_blank' rel='noopener noreferrer'>
+            </Link>
+            <Link to='/privacy-policy'>
               <h6>Privacy Policy</h6>
-            </a>
-            <a href='#' target='_blank' rel='noopener noreferrer'>
+            </Link>
+            <Link to='/privacy-policy'>
               <h6>Privacy Policy</h6>
-            </a>
+            </Link>
           </div>
         </div>
         <div className={clsx(scss.footerColumn, scss.footerColumnNone)}>

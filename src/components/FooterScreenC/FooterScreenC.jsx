@@ -1,6 +1,7 @@
 import { BsLinkedin, BsReddit, BsTwitterX, BsWhatsapp, BsYoutube } from 'react-icons/bs';
 import scss from './FooterScreenC.module.scss';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
+import { Link } from 'react-router-dom';
 
 export default function FooterScreenC({ architecturePageC }) {
   const footerC = true;
@@ -24,9 +25,9 @@ export default function FooterScreenC({ architecturePageC }) {
         </div>
       </div>
       <div className={scss.privatLinksblock}>
-        <a href='#'>Privacy policy</a>
-        <a href='#'>Privacy policy</a>
-        <a href='#'>Privacy policy</a>
+        <Link to='/privacy-policy'>Privacy policy</Link>
+        <Link to='/privacy-policy'>Privacy policy</Link>
+        <Link to='/privacy-policy'>Privacy policy</Link>
       </div>
       <div className={scss.iconsBlock}>
         <BsLinkedin className={scss.icon} />

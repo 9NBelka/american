@@ -5,7 +5,8 @@ import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import clsx from 'clsx';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 export default function FooterScreen({ toggleModal, isOpen }) {
   const [isSubmitted, setIsSubmitted] = useState(false); // Флаг, чтобы предотвратить повторную отправку
@@ -17,7 +18,7 @@ export default function FooterScreen({ toggleModal, isOpen }) {
       .required('Mail is required to fill out'),
   });
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, { resetForm }) => {
     if (isSubmitted) {
       toast('You have already sent a form!', {
         icon: '👏',
@@ -30,7 +31,7 @@ export default function FooterScreen({ toggleModal, isOpen }) {
 
     // Помечаем форму как отправленную
     setIsSubmitted(true);
-    // alert('The form is successfully sent!');
+    resetForm();
     toast.success('The form is successfully sent!');
   };
 
@@ -80,22 +81,21 @@ export default function FooterScreen({ toggleModal, isOpen }) {
       </div>
       <div className={scss.footerScreenBlockInfoColumn}>
         <div className={scss.footerScreenBlockInfo}>
-          <a href='#' target='_blank' rel='noopener noreferrer'>
+          <Link to='/privacy-policy'>
             <h6>Privacy Policy</h6>
-          </a>
-          <a href='#' target='_blank' rel='noopener noreferrer'>
+          </Link>
+          <Link to='/privacy-policy'>
             <h6>Privacy Policy</h6>
-          </a>
-          <a href='#' target='_blank' rel='noopener noreferrer'>
+          </Link>
+          <Link to='/privacy-policy'>
             <h6>Privacy Policy</h6>
-          </a>
+          </Link>
         </div>
         <h6 className={scss.footerScreenGeneralInfo}>
           © 2025 - EDUCBA. ALL RIGHTS RESERVED. THE CERTIFICATION NAMES ARE THE TRADEMARKS OF THEIR
           RESPECTIVE OWNERS.
         </h6>
       </div>
-      <Toaster position='bottom-center' reverseOrder={false} />
     </div>
   );
 }

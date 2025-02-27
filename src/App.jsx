@@ -7,6 +7,8 @@ import ArchitecturePageThree from './pages/ArchitecturePageThree/ArchitecturePag
 import TeamLead from './pages/TeamLead/TeamLead';
 import allInfo from './allPagesInformation.json';
 import reviewsArchitecture from './review-jsons/review-architecture.json';
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
+import { Toaster } from 'react-hot-toast';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -69,70 +71,74 @@ export default function App() {
   const architecturePageWhiteColorB = true;
   const architecturePageC = true;
   return (
-    <Routes>
-      {/*
-       * Если путь /architecture/a то перенаправляет на страницу А - плавающий товар
-       * Если путь /architecture/b то перенаправляет на страницу B - человек с компьютером (первый экран)
-       * Если путь /architecture/c то перенаправляет на страницу C - синие горы (первый экран)
-       */}
-      {/* Страница A */}
-      <Route
-        path='/architecture/a'
-        element={
-          <TestPage
-            page='a'
-            Component={ArchitecturePageOne}
-            currentInfo={currentInfo}
-            scrollToSection={scrollToSection} // Пропс info для страницы A
-            reviewsArchitecture={reviewsArchitecture}
-            architecturePageA={architecturePageA}
-          />
-        }
-      />
-      {/* Страница B */}
-      <Route
-        path='/architecture/b'
-        element={
-          <TestPage
-            page='b'
-            Component={ArchitecturePageTwo}
-            currentInfo={currentInfo}
-            scrollToSection={scrollToSection} // Пропс info для страницы B
-            reviewsArchitecture={reviewsArchitecture}
-            architecturePageB={architecturePageB}
-            architecturePageWhiteColorB={architecturePageWhiteColorB}
-          />
-        }
-      />
-      {/* Страница C */}
-      <Route
-        path='/architecture/c'
-        element={
-          <TestPage
-            page='c'
-            Component={ArchitecturePageThree}
-            currentInfo={currentInfo} // Пропс info для страницы C
-            scrollToSection={scrollToSection}
-            reviewsArchitecture={reviewsArchitecture}
-            architecturePageC={architecturePageC}
-          />
-        }
-      />
-      {/* Если путь просто /architecture то перенаправляет на страницу А */}
-      <Route
-        path='/architecture'
-        element={
-          <ArchitecturePageOne
-            currentInfo={currentInfo}
-            scrollToSection={scrollToSection} // Пропс info для страницы A
-            reviewsArchitecture={reviewsArchitecture}
-            architecturePageA={architecturePageA}
-          />
-        }
-      />
-      <Route path='/teamlead' element={<TeamLead />} />
-      {/* Страница 404 */}
-      <Route path='*' element={<NotFoundPage />} />
-    </Routes>
+    <>
+      <Routes>
+        {/*
+         * Если путь /architecture/a то перенаправляет на страницу А - плавающий товар
+         * Если путь /architecture/b то перенаправляет на страницу B - человек с компьютером (первый экран)
+         * Если путь /architecture/c то перенаправляет на страницу C - синие горы (первый экран)
+         */}
+        {/* Страница A */}
+        <Route
+          path='/architecture/a'
+          element={
+            <TestPage
+              page='a'
+              Component={ArchitecturePageOne}
+              currentInfo={currentInfo}
+              scrollToSection={scrollToSection} // Пропс info для страницы A
+              reviewsArchitecture={reviewsArchitecture}
+              architecturePageA={architecturePageA}
+            />
+          }
+        />
+        {/* Страница B */}
+        <Route
+          path='/architecture/b'
+          element={
+            <TestPage
+              page='b'
+              Component={ArchitecturePageTwo}
+              currentInfo={currentInfo}
+              scrollToSection={scrollToSection} // Пропс info для страницы B
+              reviewsArchitecture={reviewsArchitecture}
+              architecturePageB={architecturePageB}
+              architecturePageWhiteColorB={architecturePageWhiteColorB}
+            />
+          }
+        />
+        {/* Страница C */}
+        <Route
+          path='/architecture/c'
+          element={
+            <TestPage
+              page='c'
+              Component={ArchitecturePageThree}
+              currentInfo={currentInfo} // Пропс info для страницы C
+              scrollToSection={scrollToSection}
+              reviewsArchitecture={reviewsArchitecture}
+              architecturePageC={architecturePageC}
+            />
+          }
+        />
+        {/* Если путь просто /architecture то перенаправляет на страницу А */}
+        <Route
+          path='/architecture'
+          element={
+            <ArchitecturePageOne
+              currentInfo={currentInfo}
+              scrollToSection={scrollToSection} // Пропс info для страницы A
+              reviewsArchitecture={reviewsArchitecture}
+              architecturePageA={architecturePageA}
+            />
+          }
+        />
+        <Route path='/teamlead' element={<TeamLead />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        {/* Страница 404 */}
+        <Route path='*' element={<NotFoundPage />} />
+      </Routes>
+      <Toaster position='bottom-center' reverseOrder={false} />
+    </>
   );
 }

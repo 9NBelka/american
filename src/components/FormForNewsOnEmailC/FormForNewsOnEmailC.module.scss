@@ -212,6 +212,11 @@
     font-family: var(--font-albertSans), sans-serif;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
+
+    & a {
+      color: white;
+      text-decoration: underline;
+    }
   }
 }
 

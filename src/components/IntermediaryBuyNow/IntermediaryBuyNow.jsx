@@ -1,13 +1,7 @@
 import clsx from 'clsx';
 import scss from './IntermediaryBuyNow.module.scss';
 
-export default function IntermediaryBuyNow({
-  forStyle,
-  toggleModal,
-  isOpen,
-  architecturePageC,
-  footerC,
-}) {
+export default function IntermediaryBuyNow({ forStyle, toggleModal, architecturePageC, footerC }) {
   return (
     <div
       className={clsx(

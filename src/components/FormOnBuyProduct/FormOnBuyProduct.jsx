@@ -1,9 +1,10 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import scss from './FormOnBuyProduct.module.scss'; // Подключаем стили
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import clsx from 'clsx';
 import { BsXLg } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Incorrect email').required('*Required field'),
@@ -38,7 +39,7 @@ export default function FormOnBuyProduct({ toggleModal, isOpen }) {
             onSubmit={(values, { resetForm }) => {
               toast.success('The form is successfully sent!', values);
               resetForm();
-              toggleModal();
+              // toggleModal();
             }}>
             {() => (
               <Form className={scss.modalOverlayForm}>
@@ -85,6 +86,12 @@ export default function FormOnBuyProduct({ toggleModal, isOpen }) {
                     className={scss.modalContentErrorText}
                   />
                 </div>
+                <div className={scss.formPrivacyPolicy}>
+                  <p>
+                    By signing up you agree to Skillshare`s Terms of Service and{' '}
+                    <Link to='/privacy-policy'>Privacy Policy</Link>.
+                  </p>
+                </div>
 
                 <div className={scss.modalContentSubmitBlock}>
                   <button type='submit' className={scss.modalContentSubmitButton}>
@@ -95,7 +102,6 @@ export default function FormOnBuyProduct({ toggleModal, isOpen }) {
             )}
           </Formik>
         </div>
-        <Toaster position='bottom-center' reverseOrder={false} />
       </div>
     </div>
   );

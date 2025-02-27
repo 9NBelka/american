@@ -1,8 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import scss from './FormForNewsOnEmail.module.scss';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().min(2, 'Minimum 2 characters').required('*Required field'),
@@ -47,7 +48,12 @@ export default function FormForNewsOnEmail() {
                 <Field type='email' name='email' placeholder='k.syndicate@gmail.com' />
                 <ErrorMessage name='email' component='h5' className={scss.modalContentErrorText} />
               </div>
-
+              <div className={scss.formPrivacyPolicy}>
+                <p>
+                  By signing up you agree to Skillshare`s Terms of Service and{' '}
+                  <Link to='/privacy-policy'>Privacy Policy</Link>.
+                </p>
+              </div>
               <div className={scss.modalContentSubmitBlock}>
                 <button type='submit' className={scss.modalContentSubmitButton}>
                   Send
@@ -57,7 +63,6 @@ export default function FormForNewsOnEmail() {
           )}
         </Formik>
       </div>
-      <Toaster position='bottom-center' reverseOrder={false} />
     </div>
   );
 }
