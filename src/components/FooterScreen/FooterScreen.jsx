@@ -13,9 +13,7 @@ export default function FooterScreen({ toggleModal, isOpen }) {
 
   // Схема валидации с использованием Yup
   const validationSchema = Yup.object({
-    email: Yup.string()
-      .email('The wrong post format') // Проверка на формат email
-      .required('Mail is required to fill out'),
+    email: Yup.string().email('The wrong post format').required('Mail is required to fill out'),
   });
 
   const handleSubmit = (values, { resetForm }) => {
