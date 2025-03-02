@@ -80,6 +80,7 @@ export default function SignUp() {
             <button type='submit' disabled={isSubmitting}>
               Зарегистрироваться
             </button>
+            <button type='submit'>Google</button>
           </Form>
         )}
       </Formik>
