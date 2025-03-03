@@ -3,6 +3,7 @@ import scss from './HeadScreenHeader.module.scss';
 // import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
 import HeadScreenBurger from '../HeadScreenBurger/HeadScreenBurger';
+import { Link } from 'react-router-dom';
 
 export default function HeadScreenHeader({
   currentInfo,
@@ -101,14 +102,17 @@ export default function HeadScreenHeader({
                 Ask a question
               </li>
             )}
-            <li
-              className={clsx(
-                scss.headerButtonSingUp,
-                architecturePageB && scss.headerButtonSingUpB,
-                architecturePageC && scss.headerButtonSingUpC,
-              )}>
-              Sign Up
-            </li>
+            <Link to='https://lms-theta-nine.vercel.app/signUp'>
+              {' '}
+              <li
+                className={clsx(
+                  scss.headerButtonSingUp,
+                  architecturePageB && scss.headerButtonSingUpB,
+                  architecturePageC && scss.headerButtonSingUpC,
+                )}>
+                Sign Up
+              </li>
+            </Link>
             <li className={scss.burgerMenu}>
               <HeadScreenBurger
                 isScrolled={isScrolled}
