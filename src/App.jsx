@@ -9,10 +9,6 @@ import allInfo from './allPagesInformation.json';
 import reviewsArchitecture from './review-jsons/review-architecture.json';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import { Toaster } from 'react-hot-toast';
-import SingUp from './pages/SingUp/Singup';
-import Login from './pages/Login/Login';
-import Account from './pages/Account/Account';
-import AdminDashBoard from './pages/AdminDashBoard/AdminDashBoard';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -139,10 +135,7 @@ export default function App() {
         />
         <Route path='/teamlead' element={<TeamLead />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signUp' element={<SingUp />} />
-        <Route path='/account' element={<Account />} />
-        <Route path='/dashboard' element={<AdminDashBoard />} />
+
         {/* Страница 404 */}
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

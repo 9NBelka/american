@@ -413,21 +413,5 @@
   {
     "id": 100,
     "path": "/privacy-policy"
-  },
-  {
-    "id": 110,
-    "path": "/login"
-  },
-  {
-    "id": 120,
-    "path": "/signUp"
-  },
-  {
-    "id": 130,
-    "path": "/account"
-  },
-  {
-    "id": 140,
-    "path": "/dashboard"
   }
 ]
