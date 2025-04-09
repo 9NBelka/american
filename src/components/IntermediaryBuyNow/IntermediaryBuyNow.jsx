@@ -1,7 +1,13 @@
 import clsx from 'clsx';
 import scss from './IntermediaryBuyNow.module.scss';
 
-export default function IntermediaryBuyNow({ forStyle, toggleModal, architecturePageC, footerC }) {
+export default function IntermediaryBuyNow({
+  forStyle,
+  toggleModal,
+  architecturePageC,
+  footerC,
+  scrollToSection,
+}) {
   return (
     <div
       className={clsx(
@@ -33,7 +39,7 @@ export default function IntermediaryBuyNow({ forStyle, toggleModal, architecture
           forStyle && scss.intermediaryBuyNowBlockBlue,
           architecturePageC && scss.intermediaryBuyNowBlockOrange,
         )}>
-        <a rel='noopener noreferrer' onClick={toggleModal}>
+        <a rel='noopener noreferrer' onClick={() => scrollToSection('price', 100)}>
           Buy now
         </a>
       </div>

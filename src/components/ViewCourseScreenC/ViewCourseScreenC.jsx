@@ -3,7 +3,7 @@ import scss from './ViewCourseScreenC.module.scss';
 import ViewCourseScreenTabletC from './ViewCourseScreenTabletC/ViewCourseScreenTabletC';
 import ViewCourseScreenVideoC from './ViewCourseScreenVideoC/ViewCourseScreenVideoC';
 
-export default function ViewCourseScreenC({ viewCourseInfo, architecturePageC }) {
+export default function ViewCourseScreenC({ viewCourseInfo, architecturePageC, scrollToSection }) {
   return (
     <>
       <div className={scss.viewCourseScreenMainBlock}>
@@ -11,7 +11,10 @@ export default function ViewCourseScreenC({ viewCourseInfo, architecturePageC })
           viewCourseInfo={viewCourseInfo}
           architecturePageC={architecturePageC}
         />
-        <ViewCourseScreenBuyNowC viewCourseInfo={viewCourseInfo} />
+        <ViewCourseScreenBuyNowC
+          viewCourseInfo={viewCourseInfo}
+          scrollToSection={scrollToSection}
+        />
       </div>
       <div className={scss.viewCourseScreenMainBlockPhone}>
         <ViewCourseScreenTabletC

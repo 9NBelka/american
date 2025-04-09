@@ -13,6 +13,11 @@ import PriceScreenC from '../../components/PriceScreenC/PriceScreenC';
 import GamesScreenC from '../../components/GamesScreenC/GamesScreenC';
 import FooterScreenC from '../../components/FooterScreenC/FooterScreenC';
 import FormForNewsOnEmailC from '../../components/FormForNewsOnEmailC/FormForNewsOnEmailC';
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { doc, getDoc } from 'firebase/firestore'; // Используем getDoc для получения конкретных документов
+import { db } from '../../firebase';
+import { addToCart } from '../../store/cartSlice';
 
 export default function ArchitecturePageThree({
   currentInfo,
@@ -20,6 +25,38 @@ export default function ArchitecturePageThree({
   reviewsArchitecture,
   architecturePageC,
 }) {
+  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchSpecificProducts = async () => {
+      try {
+        // Запрашиваем только два конкретных товара по их id
+        const productIds = ['dddd', 'ecs5']; // Укажи нужные id
+        const productsData = [];
+
+        for (const id of productIds) {
+          const docRef = doc(db, 'products', id);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            productsData.push({ id: docSnap.id, ...docSnap.data() });
+          }
+        }
+
+        setProducts(productsData);
+      } catch (error) {
+        console.error('Ошибка при загрузке товаров:', error);
+      }
+    };
+
+    fetchSpecificProducts();
+  }, []);
+
+  const handleAddToCart = (product) => {
+    console.log('Добавляем товар в корзину:', product);
+    dispatch(addToCart(product));
+  };
+
   return (
     <>
       <div className={css.backgroundHeadScreen}>
@@ -42,7 +79,11 @@ export default function ArchitecturePageThree({
       </div>
       <div className={css.container}>
         <h3 className={css.titleScreens}>Course Overview</h3>
-        <ViewCourseScreenC viewCourseInfo={currentInfo} architecturePageC={architecturePageC} />
+        <ViewCourseScreenC
+          viewCourseInfo={currentInfo}
+          architecturePageC={architecturePageC}
+          scrollToSection={scrollToSection}
+        />
       </div>
       <div className={css.backgroundForWhoScreen}>
         <div className={css.container}>
@@ -80,6 +121,7 @@ export default function ArchitecturePageThree({
           <WhatsInsideScreenC
             programCourseInfo={currentInfo}
             architecturePageC={architecturePageC}
+            scrollToSection={scrollToSection}
           />
         </div>
       </div>
@@ -94,12 +136,16 @@ export default function ArchitecturePageThree({
           <h3 className={clsx(css.titleScreens, css.whiteColor)} id='price'>
             Price
           </h3>
-          <PriceScreenC infoAboutProduct={currentInfo} />
+          <PriceScreenC
+            infoAboutProduct={currentInfo}
+            handleAddToCart={handleAddToCart}
+            products={products}
+          />
         </div>
       </div>
       <h3 className={css.titleScreens}>WY are trusted by:</h3>
       <TrustedScreenC imageTrusted={currentInfo} architecturePageC={architecturePageC} />
-      <FooterScreenC architecturePageC={architecturePageC} />
+      <FooterScreenC architecturePageC={architecturePageC} scrollToSection={scrollToSection} />
     </>
   );
 }

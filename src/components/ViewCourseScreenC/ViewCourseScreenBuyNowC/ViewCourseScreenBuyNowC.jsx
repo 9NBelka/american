@@ -2,7 +2,7 @@ import { BsClockFill, BsFillPlayBtnFill, BsPeopleFill } from 'react-icons/bs';
 import scss from './ViewCourseScreenBuyNowC.module.scss';
 import clsx from 'clsx';
 
-export default function ViewCourseScreenBuyNowC({ viewCourseInfo }) {
+export default function ViewCourseScreenBuyNowC({ viewCourseInfo, scrollToSection }) {
   return (
     <div className={scss.viewCourseScreenPhoneRowBlock}>
       <div className={scss.viewCourseScreenInfoAboutProductBlock}>
@@ -42,7 +42,9 @@ export default function ViewCourseScreenBuyNowC({ viewCourseInfo }) {
             ))}
           </ul>
         </div>
-        <a href='#' className={scss.infoAboutProductBlockBuyNow}>
+        <a
+          className={scss.infoAboutProductBlockBuyNow}
+          onClick={() => scrollToSection('price', 100)}>
           Buy now
         </a>
       </div>

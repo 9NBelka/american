@@ -2,7 +2,11 @@ import scss from './WhatsInsideScreenC.module.scss';
 import WhatsInsideScreenSliderC from './WhatsInsideScreenSliderC/WhatsInsideScreenSliderC';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 
-export default function WhatsInsideScreenC({ programCourseInfo, architecturePageC }) {
+export default function WhatsInsideScreenC({
+  programCourseInfo,
+  architecturePageC,
+  scrollToSection,
+}) {
   const modulesCount = 5; // определяет количество модулей (всего 5 модулей).
   const columnsPerModule = 3; // задает, что в каждом модуле будет 3 столбца.
   const lessonsPerModule = Math.ceil(programCourseInfo.insideScreen.length / modulesCount);
@@ -57,7 +61,10 @@ export default function WhatsInsideScreenC({ programCourseInfo, architecturePage
       </div>
       <div className={scss.insideScreenBlockMainPhone}>
         <WhatsInsideScreenSliderC programCourseInfo={programCourseInfo} />
-        <IntermediaryBuyNow architecturePageC={architecturePageC} />
+        <IntermediaryBuyNow
+          architecturePageC={architecturePageC}
+          scrollToSection={scrollToSection}
+        />
       </div>
     </>
   );

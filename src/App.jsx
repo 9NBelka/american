@@ -9,6 +9,9 @@ import allInfo from './allPagesInformation.json';
 import reviewsArchitecture from './review-jsons/review-architecture.json';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import { Toaster } from 'react-hot-toast';
+import { db } from './firebase';
+import { collection, getDocs } from 'firebase/firestore';
+import Cart from './pages/Cart/Cart';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -51,9 +54,17 @@ export default function App() {
     return course ? course.id : null;
   };
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productsCollection = collection(db, 'products');
+      const productsSnapshot = await getDocs(productsCollection);
+      const productsList = productsSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+    };
+    fetchProducts();
+  }, []);
+
   const courseId = getCourseIdByPath(location.pathname);
   const currentInfo = allInfo.find((item) => item.id === courseId);
-  console.log(currentInfo); // Для отладки
   if (!currentInfo) {
     return <NotFoundPage />;
   }
@@ -66,6 +77,7 @@ export default function App() {
       window.scrollTo({ top, behavior: 'smooth' });
     }
   };
+
   const architecturePageA = true;
   const architecturePageB = true;
   const architecturePageWhiteColorB = true;
@@ -134,6 +146,7 @@ export default function App() {
           }
         />
         <Route path='/teamlead' element={<TeamLead />} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
 
         {/* Страница 404 */}

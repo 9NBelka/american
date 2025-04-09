@@ -1,0 +1,24 @@
+.container {
+  width: 68.75vw;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.header {
+  background-color: #111111;
+}
+
+.navigationBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1vw solid #1e1e1e;
+  padding: 1vw 0;
+  padding-bottom: 0.65vw;
+
+  & .logoBlock {
+    display: flex;
+    height: 100%;
+  }
+}

@@ -285,6 +285,35 @@
       }
     }
   }
+
+  & .cartLink {
+    display: flex;
+    position: relative;
+
+    &.cartLinkTablet {
+      display: none;
+    }
+
+    & .cartIcon {
+      width: 0.75vw;
+      height: 0.75vw;
+      fill: #efefef;
+    }
+
+    & .cartItemCount {
+      position: absolute;
+      top: -0.2vw;
+      right: -0.3vw;
+      background-color: red;
+      font-size: 0.4vw;
+      border-radius: 50%;
+      color: white;
+      padding: 0.1vw 0.16vw;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-small);
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -312,6 +341,25 @@
         }
       }
     }
+
+    & .cartLink {
+      display: none;
+
+      &.cartLinkTablet {
+        display: flex;
+        & .cartIcon {
+          width: 2.4vw;
+          height: 2.4vw;
+        }
+
+        & .cartItemCount {
+          top: -0.5vw;
+          right: -0.65vw;
+          font-size: 1.2vw;
+          padding: 0.3vw 0.35vw;
+        }
+      }
+    }
   }
 }
 
@@ -327,6 +375,22 @@
 
       &.headerButtonSingUp {
         display: none;
+      }
+    }
+
+    & .cartLink {
+      &.cartLinkTablet {
+        & .cartIcon {
+          width: 4vw;
+          height: 4vw;
+        }
+
+        & .cartItemCount {
+          top: -1.2vw;
+          right: -1.4vw;
+          font-size: 2vw;
+          padding: 0.5vw 0.7vw;
+        }
       }
     }
   }

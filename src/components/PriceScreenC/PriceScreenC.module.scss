@@ -3,10 +3,14 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 3vw;
+  gap: 2vw;
 }
 
 @media (max-width: 1024px) {
   .priceScreenMain {
+    flex-direction: column;
+    align-items: center;
+    gap: 5vw;
     margin-top: 4vw;
   }
 }
@@ -180,13 +184,22 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   margin-top: 2vw;
+
+  & .availableText {
+    font-size: 1vw;
+    color: red;
+    font-family: var(--font-alata), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-small);
+    margin: 0;
+  }
 
   & .buttonBuy {
     display: flex;
     font-size: 0.85vw;
     color: white;
+    border: 0;
     font-family: var(--font-albertSans), sans-serif;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-lineh-normal);
@@ -195,19 +208,32 @@
     text-align: center;
     border-radius: 0.25vw;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 0px 0vw 1vw 0vw #ec6532;
     }
   }
 
-  & h5 {
+  & .priceProductBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  & .priceProduct {
     display: flex;
     font-size: 1.8vw;
     color: white;
     font-family: var(--font-alata), sans-serif;
     font-weight: var(--font-weight-normal);
-    line-height: var(--font-lineh-normal);
+    line-height: var(--font-lineh-small);
+
+    &.priceProductLine {
+      font-size: 1.4vw;
+      color: #919191;
+      text-decoration: line-through;
+    }
   }
 }
 
@@ -226,8 +252,12 @@
       }
     }
 
-    & h5 {
+    & .priceProduct {
       font-size: 5vw;
+
+      &.priceProductLine {
+        font-size: 4vw;
+      }
     }
   }
 }
@@ -242,8 +272,12 @@
       border-radius: 0.75vw;
     }
 
-    & h5 {
+    & .priceProduct {
       font-size: 8vw;
+
+      &.priceProductLine {
+        font-size: 6vw;
+      }
     }
   }
 }

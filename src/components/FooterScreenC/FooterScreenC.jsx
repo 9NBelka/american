@@ -3,7 +3,7 @@ import scss from './FooterScreenC.module.scss';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
 import { Link } from 'react-router-dom';
 
-export default function FooterScreenC({ architecturePageC }) {
+export default function FooterScreenC({ architecturePageC, scrollToSection }) {
   const footerC = true;
   return (
     <div className={scss.footerScreenC}>
@@ -14,7 +14,11 @@ export default function FooterScreenC({ architecturePageC }) {
           </a>
         </div>
         <div className={scss.intermediaryBuyNow}>
-          <IntermediaryBuyNow architecturePageC={architecturePageC} footerC={footerC} />
+          <IntermediaryBuyNow
+            architecturePageC={architecturePageC}
+            footerC={footerC}
+            scrollToSection={scrollToSection}
+          />
         </div>
         <div className={scss.generalTextBlock}>
           <p>

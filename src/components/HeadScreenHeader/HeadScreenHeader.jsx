@@ -1,9 +1,10 @@
 import clsx from 'clsx';
 import scss from './HeadScreenHeader.module.scss';
-// import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import { useEffect, useState } from 'react';
 import HeadScreenBurger from '../HeadScreenBurger/HeadScreenBurger';
 import { Link } from 'react-router-dom';
+import { BsCartFill } from 'react-icons/bs';
+import { useSelector } from 'react-redux'; // Добавляем useSelector для доступа к Redux
 
 export default function HeadScreenHeader({
   currentInfo,
@@ -13,15 +14,17 @@ export default function HeadScreenHeader({
   architecturePageC,
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const cartItems = useSelector((state) => state.cart.items); // Получаем товары из корзины
+
+  // Считаем общее количество товаров (суммируем quantity)
+  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
     };
 
-    // Проверка скролла при загрузке страницы
     handleScroll();
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -93,6 +96,10 @@ export default function HeadScreenHeader({
             )}
           </ul>
           <ul className={scss.headerList}>
+            <Link to='/cart' className={scss.cartLink}>
+              <BsCartFill className={scss.cartIcon} />
+              {cartItemCount > 0 && <span className={scss.cartItemCount}>{cartItemCount}</span>}
+            </Link>
             {(architecturePageA || architecturePageC) && (
               <li
                 className={clsx(
@@ -103,7 +110,6 @@ export default function HeadScreenHeader({
               </li>
             )}
             <Link to='https://lms-theta-nine.vercel.app/signUp'>
-              {' '}
               <li
                 className={clsx(
                   scss.headerButtonSingUp,
@@ -112,6 +118,10 @@ export default function HeadScreenHeader({
                 )}>
                 Sign Up
               </li>
+            </Link>
+            <Link to='/cart' className={clsx(scss.cartLink, scss.cartLinkTablet)}>
+              <BsCartFill className={scss.cartIcon} />
+              {cartItemCount > 0 && <span className={scss.cartItemCount}>{cartItemCount}</span>}
             </Link>
             <li className={scss.burgerMenu}>
               <HeadScreenBurger

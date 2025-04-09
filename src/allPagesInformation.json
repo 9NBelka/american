@@ -2,8 +2,8 @@
   {
     "id": 0,
     "path": ["/architecture", "/architecture/a", "/architecture/b", "/architecture/c"],
-    "knowledgeLogoMain": "/src/assets/img/knowledge-logo.png",
-    "logoCourse": "/src/assets/img/ArchLogo.png",
+    "knowledgeLogoMain": "/img/knowledge-logo.png",
+    "logoCourse": "/img/ArchLogo.png",
     "logoUnity": "https://lms.k-syndicate.school/wp-content/uploads/2022/08/Unity-logo-new.png",
     "categoryCourse": "Course",
     "nameCourse": "ARCHITECTURE UNITY MOBILE GAME",
@@ -21,8 +21,8 @@
     "blockInfoAboutCourseTitleB": ["price", "time", "videos", "students"],
     "blockInfoAboutCourseB": ["500$", "16h 40m", "145", "145"],
     "blockInfoAboutCourseJustPrice": ["500$"],
-    "blockInfoAboutCourseImage": "/src/assets/img/priceimagePageB.jpg",
-    "blockInfoAboutCourseImageC": "/src/assets/img/priceimagePageC.jpg",
+    "blockInfoAboutCourseImage": "/img/priceimagePageB.jpg",
+    "blockInfoAboutCourseImageC": "/img/priceimagePageC.jpg",
     "blockInfoAboutCourseSpeakers": ["Oleksii Naumenko", "Kateryna Revvo"],
     "blockInfoAboutCourseRegistration": "Registration now open",
     "blockInfoAboutCourseRegistrationDate": "8 MAR,2025 - 10 APR,2025",
@@ -60,7 +60,7 @@
     "forWhomScreen": [
       {
         "forWhomScreenTitleList": "Independent developers",
-        "forWhomScreenImageBackground": "/src/assets/img/forWhoCardBackgroundBlue.jpg",
+        "forWhomScreenImageBackground": "/img/forWhoCardBackgroundBlue.jpg",
         "forWhomScreenListTextTitle": "Take industrial solutions for systemic problems from us and create space for creativity.",
         "forWhomScreenListTextOne": "Want to spend less time fiddling with unstable architecture and focus on gameplay fun and content?",
         "forWhomScreenListTextTwo": "Want to scale up your projects? Take our industrial solutions for systemic problems and free up space for creativity.",
@@ -68,7 +68,7 @@
       },
       {
         "forWhomScreenTitleList": "Developers are already in the industry",
-        "forWhomScreenImageBackground": "/src/assets/img/forWhoCardBackgroundGreen.jpg",
+        "forWhomScreenImageBackground": "/img/forWhoCardBackgroundGreen.jpg",
         "forWhomScreenListTextTitle": "Take industrial solutions for systemic problems from us and create space for creativity.",
         "forWhomScreenListTextOne": "Do you make games but often run into issues of stability, extensibility and support?",
         "forWhomScreenListTextTwo": "Do you want to deepen your understanding of design and architecture?",
@@ -76,7 +76,7 @@
       },
       {
         "forWhomScreenTitleList": ".Net Developers who want to get into gamedev",
-        "forWhomScreenImageBackground": "/src/assets/img/forWhoCardBackgroundRed.jpg",
+        "forWhomScreenImageBackground": "/img/forWhoCardBackgroundRed.jpg",
         "forWhomScreenListTextTitle": "Take industrial solutions for systemic problems from us and create space for creativity.",
         "forWhomScreenListTextOne": "Have you always wanted to make games, but it didn't work out?",
         "forWhomScreenListTextTwo": "We'll tell you what parts games consist of, how to think when solving typical problems, and how to write games so that they work as a coherent system.",
@@ -92,8 +92,8 @@
           "Previous: Unity Software Architect on Raid: Shadow Legends and several other world-class mobile projects."
         ],
         "linkedInSpeaker": "https://www.linkedin.com/in/oleksii-naumenko-0766bb59/",
-        "imageSpeaker": "/src/assets/img/frame25.jpg",
-        "linkedInButton": "/src/assets/img/linkedIn.png"
+        "imageSpeaker": "/img/frame25.jpg",
+        "linkedInButton": "/img/linkedIn.png"
       },
       {
         "nameSpeaker": "EKATERINA REVVO",
@@ -103,8 +103,8 @@
           "CTO Black Tower Basement. In the past: Client Team Lead on Raid: Shadow Legends and Shadow Legends and several other large-scale projects"
         ],
         "linkedInSpeaker": "https://www.linkedin.com/in/kate-revvo-400721a8/",
-        "imageSpeaker": "/src/assets/img/frame26.jpg",
-        "linkedInButton": "/src/assets/img/linkedIn.png"
+        "imageSpeaker": "/img/frame26.jpg",
+        "linkedInButton": "/img/linkedIn.png"
       }
     ],
     "speakerScreenGeneralInformation": [
@@ -147,7 +147,7 @@
         "position": "CEO of Black Tower Basement",
         "experience": "12 years of development experience.",
         "previous": "In the past: Unity Software Architect on Raid: Shadow Legends and other world-class projects.",
-        "image": "/src/assets/img/frame25.jpg",
+        "image": "/img/frame25.jpg",
         "linkedin": "https://www.linkedin.com/in/oleksii-naumenko-0766bb59/"
       },
       {
@@ -155,7 +155,7 @@
         "position": "CTO Black Tower Basement",
         "experience": "10 years of experience in development and project management.",
         "previous": "In the past: Client Team Lead on Raid: Shadow Legends and other large-scale projects.",
-        "image": "/src/assets/img/frame26.jpg",
+        "image": "/img/frame26.jpg",
         "linkedin": "https://www.linkedin.com/in/kate-revvo-400721a8/"
       }
     ],
@@ -243,8 +243,8 @@
       },
       {
         "id": 5,
-        "imageGame": "/src/assets/img/greedventory.jpg",
-        "imageGameGVFullSize": "/src/assets/img/greedventoryFullSize.jpg",
+        "imageGame": "/img/greedventory.jpg",
+        "imageGameGVFullSize": "/img/greedventoryFullSize.jpg",
         "nameGame": "GREEDVENTORY",
         "shortDescription": "An ironic, bloody and demanding linear point'n'slash RPG in detailed pixel art.",
         "linksGame": ["Steam", "GOG"],
@@ -258,82 +258,82 @@
       {
         "insideScreenTitle": "Setting up the environment for work",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg",
         "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will connect advertising (Unity Ads) and in-app purchases",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will compile builds for devices",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "Setting up the environment for work",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg",
         "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "What about Dependency Injection?",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will compile builds for devices",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg",
         "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "Setting up the environment for work",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "Setting up the environment for work",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg",
         "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg",
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg",
         "insideScreenModuleTitle": "beginner basics"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       },
       {
         "insideScreenTitle": "We will improve and refactor the previously created game entity factory and DI",
         "insideScreenContent": "Let's organize one of the convenient ways to save and load\\update data on the player's progress and state. At the same time, we will get a special place for this and avoid problems with the initialization order.",
-        "insideScreenImage": "/src/assets/img/whatInsideImageForlessonOne.jpg"
+        "insideScreenImage": "/img/whatInsideImageForlessonOne.jpg"
       }
     ],
     "demoVideos": {
@@ -371,32 +371,32 @@
       ],
       "demoVideosLinkTimeLine": ["3:31", "8:37", "4:13", "1:18", "7:49", "6:16"]
     },
-    "sampleCertificate": "/src/assets/img/sampleCertificate.jpg",
+    "sampleCertificate": "/img/sampleCertificate.jpg",
     "trustedScreenImages": [
-      "/src/assets/img/lit-game.png",
-      "/src/assets/img/My-Games.png",
-      "/src/assets/img/mytona.png",
-      "/src/assets/img/perfect-play.png",
-      "/src/assets/img/Pixode.png",
-      "/src/assets/img/play.cat.png",
-      "/src/assets/img/RJ_Games.png",
-      "/src/assets/img/univirlab.png",
-      "/src/assets/img/voodoo.png",
-      "/src/assets/img/lit-game.png",
-      "/src/assets/img/My-Games.png",
-      "/src/assets/img/mytona.png",
-      "/src/assets/img/perfect-play.png",
-      "/src/assets/img/Pixode.png",
-      "/src/assets/img/play.cat.png",
-      "/src/assets/img/RJ_Games.png",
-      "/src/assets/img/univirlab.png",
-      "/src/assets/img/voodoo.png"
+      "/img/lit-game.png",
+      "/img/My-Games.png",
+      "/img/mytona.png",
+      "/img/perfect-play.png",
+      "/img/Pixode.png",
+      "/img/play.cat.png",
+      "/img/RJ_Games.png",
+      "/img/univirlab.png",
+      "/img/voodoo.png",
+      "/img/lit-game.png",
+      "/img/My-Games.png",
+      "/img/mytona.png",
+      "/img/perfect-play.png",
+      "/img/Pixode.png",
+      "/img/play.cat.png",
+      "/img/RJ_Games.png",
+      "/img/univirlab.png",
+      "/img/voodoo.png"
     ]
   },
   {
     "id": 1,
     "path": "/teamlead",
-    "logoCourse": "/src/assets/img/teamlead/teamlead-logo.png",
+    "logoCourse": "/img/teamlead/teamlead-logo.png",
     "logoUnity": "https://lms.k-syndicate.school/wp-content/uploads/2022/08/Unity-logo-new.png",
     "categoryCourse": "Master Class",
     "nameCourse": "Team Lead",
@@ -413,5 +413,9 @@
   {
     "id": 100,
     "path": "/privacy-policy"
+  },
+  {
+    "id": 200,
+    "path": "/cart"
   }
 ]
