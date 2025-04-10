@@ -7,15 +7,42 @@ import clsx from 'clsx';
 import HeadScreenHeaderCart from '../../components/HeadScreenHeaderCart/HeadScreenHeaderCart';
 import { useNavigate } from 'react-router-dom';
 import CartSlider from '../../components/CartSlider/CartSlider';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 export default function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
-  const removedItems = useSelector((state) => state.cart.removedItems); // Получаем удаленные товары
+  const removedItems = useSelector((state) => state.cart.removedItems);
   const navigate = useNavigate();
+
+  // Состояние для промокодов
+  const [promoCodes, setPromoCodes] = useState([]);
+  const [promoCodeInput, setPromoCodeInput] = useState('');
+  const [appliedPromoCode, setAppliedPromoCode] = useState(null);
+
+  // Загружаем промокоды из Firestore
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      collection(db, 'promoCodes'),
+      (snapshot) => {
+        const promoCodeList = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setPromoCodes(promoCodeList);
+      },
+      (error) => {
+        console.error('Ошибка при загрузке промокодов:', error);
+        toast.error('Ошибка при загрузке промокодов: ' + error.message);
+      },
+    );
+
+    return () => unsubscribe();
+  }, []);
 
   // Показываем уведомление, если есть удаленные товары
   useEffect(() => {
@@ -30,7 +57,7 @@ export default function Cart() {
         draggable: true,
       });
     }
-  }, [removedItems]); // Зависимость от removedItems
+  }, [removedItems]);
 
   const handleRemove = (id) => {
     dispatch(removeFromCart(id));
@@ -46,6 +73,8 @@ export default function Cart() {
 
   const handleClearCart = () => {
     dispatch(clearCart());
+    setAppliedPromoCode(null); // Сбрасываем промокод при очистке корзины
+    setPromoCodeInput(''); // Очищаем поле ввода
   };
 
   const getItemPrice = (item) => {
@@ -54,20 +83,98 @@ export default function Cart() {
       : item.priceProduct;
   };
 
-  const totalPrice = cartItems.reduce((total, item) => {
-    const itemPrice = getItemPrice(item);
-    return total + itemPrice * item.quantity;
-  }, 0);
+  // Вычисляем итоговую цену с учетом промокода
+  const calculateTotalPrice = () => {
+    let totalPrice = cartItems.reduce((total, item) => {
+      const itemPrice = getItemPrice(item);
+      return total + itemPrice * item.quantity;
+    }, 0);
 
-  const totalOriginalPrice = cartItems.reduce(
-    (total, item) => total + item.priceProduct * item.quantity,
-    0,
-  );
+    let totalOriginalPrice = cartItems.reduce(
+      (total, item) => total + item.priceProduct * item.quantity,
+      0,
+    );
 
+    let promoDiscount = 0;
+    if (appliedPromoCode) {
+      // Проверяем, какие товары в корзине соответствуют промокоду
+      const applicableItems = cartItems.filter((item) =>
+        appliedPromoCode.items.some(
+          (promoItem) => promoItem.productId === item.id && promoItem.accessLevelId === item.access,
+        ),
+      );
+
+      // Вычисляем скидку от промокода только для применимых товаров
+      promoDiscount = applicableItems.reduce((discount, item) => {
+        const itemPrice = getItemPrice(item);
+        const discountAmount = (itemPrice * item.quantity * appliedPromoCode.discountPercent) / 100;
+        return discount + discountAmount;
+      }, 0);
+
+      totalPrice -= promoDiscount;
+    }
+
+    return { totalPrice, totalOriginalPrice, promoDiscount };
+  };
+
+  const { totalPrice, totalOriginalPrice, promoDiscount } = calculateTotalPrice();
   const savings = totalOriginalPrice - totalPrice;
 
   const handleGoBack = () => {
     navigate(-1);
+  };
+
+  // Обработчик применения промокода
+  const handleApplyPromoCode = () => {
+    if (!promoCodeInput) {
+      toast.error('Please enter the promo code.');
+      return;
+    }
+
+    const promoCode = promoCodes.find(
+      (promo) => promo.name.toLowerCase() === promoCodeInput.toLowerCase(),
+    );
+
+    if (!promoCode) {
+      toast.error('Promo code not found.');
+      return;
+    }
+
+    if (!promoCode.available) {
+      toast.error('The promotional code is invalid.');
+      return;
+    }
+
+    if (promoCode.expiryDate) {
+      const expiry = new Date(promoCode.expiryDate);
+      const now = new Date();
+      if (now > expiry) {
+        toast.error('The promo code has expired.');
+        return;
+      }
+    }
+
+    // Проверяем, есть ли в корзине товары, соответствующие промокоду
+    const applicableItems = cartItems.filter((item) =>
+      promoCode.items.some(
+        (promoItem) => promoItem.productId === item.id && promoItem.accessLevelId === item.access,
+      ),
+    );
+
+    if (applicableItems.length === 0) {
+      toast.error('The promo code does not apply to items in your cart.');
+      return;
+    }
+
+    setAppliedPromoCode(promoCode);
+    toast.success('Promo code successfully applied!');
+  };
+
+  // Обработчик сброса промокода
+  const handleRemovePromoCode = () => {
+    setAppliedPromoCode(null);
+    setPromoCodeInput('');
+    toast.info('Promo code removed.');
   };
 
   const itemVariants = {
@@ -202,7 +309,7 @@ export default function Cart() {
                 initial='initial'
                 animate='animate'>
                 {savings > 0 && <h3 className={scss.totalOriginalPrice}>{totalOriginalPrice} $</h3>}
-                <h3 className={scss.cartTotalPrice}>{totalPrice} $</h3>
+                <h3 className={scss.cartTotalPrice}>{totalPrice.toFixed(2)} $</h3>
                 {savings > 0 && (
                   <motion.p
                     className={scss.savings}
@@ -210,10 +317,39 @@ export default function Cart() {
                     variants={totalVariants}
                     initial='initial'
                     animate='animate'>
-                    You saved: {savings} $
+                    You saved: {savings.toFixed(2)} $
                   </motion.p>
                 )}
               </motion.div>
+              {/* Поле ввода промокода и кнопка "Применить" */}
+              <div className={scss.promoCodeContainer}>
+                <input
+                  type='text'
+                  value={promoCodeInput}
+                  onChange={(e) => setPromoCodeInput(e.target.value)}
+                  placeholder='Promo code'
+                  className={scss.promoCodeInput}
+                  disabled={!!appliedPromoCode} // Отключаем поле ввода, если промокод применен
+                />
+                <button
+                  className={scss.applyPromoButton}
+                  onClick={handleApplyPromoCode}
+                  disabled={!!appliedPromoCode} // Отключаем кнопку, если промокод применен
+                >
+                  Apply
+                </button>
+              </div>
+              {appliedPromoCode && (
+                <div className={scss.promoAppliedContainer}>
+                  <p className={scss.promoApplied}>
+                    Promo applied: {appliedPromoCode.name} (
+                    <span>-{appliedPromoCode.discountPercent}%</span>)
+                  </p>
+                  <button className={scss.removePromoButton} onClick={handleRemovePromoCode}>
+                    Remove
+                  </button>
+                </div>
+              )}
               <div className={scss.cartTotalButtonBuyBlock}>
                 <button className={scss.cartTotalButtonBuy}>Buy the course</button>
               </div>

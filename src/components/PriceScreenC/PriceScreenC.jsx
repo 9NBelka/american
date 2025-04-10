@@ -42,14 +42,7 @@ export default function PriceScreenC({ infoAboutProduct, handleAddToCart, produc
                   Get to buy
                 </button>
               ) : (
-                <button
-                  className={scss.buttonBuy}
-                  onClick={() => {
-                    handleAddToCart(product);
-                  }}>
-                  Get to buy
-                </button>
-                // <p className={scss.availableText}>Not available</p>
+                <p className={scss.availableText}>Not available</p>
               )}
             </div>
             <div>
