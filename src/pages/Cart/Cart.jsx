@@ -118,6 +118,11 @@ export default function Cart() {
                       initial='hidden'
                       animate='visible'
                       exit='exit'>
+                      {!item.available && (
+                        <p className={scss.unavailableNotice}>
+                          This item is currently unavailable. Please refresh the page.
+                        </p>
+                      )}
                       <div className={scss.itemInfo}>
                         <div className={scss.imageAndNameProduct}>
                           <img

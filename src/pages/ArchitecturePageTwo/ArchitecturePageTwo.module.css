@@ -47,7 +47,7 @@
 
 .backgroundHeadScreen {
   display: flex;
-  background: url(/src/assets/img/HeadScreenBackgroundB.png);
+  background: url(/img/HeadScreenBackgroundB.png);
   background-color: #29282d;
   background-size: cover;
   background-repeat: no-repeat;

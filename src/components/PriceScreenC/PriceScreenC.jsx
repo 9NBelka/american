@@ -49,6 +49,7 @@ export default function PriceScreenC({ infoAboutProduct, handleAddToCart, produc
                   }}>
                   Get to buy
                 </button>
+                // <p className={scss.availableText}>Not available</p>
               )}
             </div>
             <div>

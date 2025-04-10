@@ -20,13 +20,6 @@
     line-height: var(--font-lineh-small);
     padding-top: 1vw;
   }
-
-  & .removedNotice {
-    color: red;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
-  }
 }
 
 .emptyCart {
@@ -102,14 +95,27 @@
       display: flex;
       justify-content: space-between;
       position: relative;
-      border-radius: 0.5vw;
+      // border-radius: 0.5vw;
+      border-top: 0.1vw solid #2c2c2c;
+      padding-top: 1vw;
 
       &.cartItemDisable {
-        background-color: #5a6268;
+        background-color: #2c2c2c;
 
         & .itemInfo {
-          opacity: 0.5;
+          opacity: 0.2;
         }
+      }
+
+      & .unavailableNotice {
+        position: absolute;
+        top: 26%;
+        left: 25%;
+        color: red;
+        font-family: var(--font-roboto);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-small);
+        font-size: 0.85vw;
       }
 
       & .itemInfo {
@@ -126,8 +132,8 @@
           gap: 1vw;
 
           & .itemImage {
-            width: 5vw;
-            height: 5vw;
+            width: 4vw;
+            height: 4vw;
           }
 
           & .itemName {
