@@ -12,6 +12,7 @@ import { Toaster } from 'react-hot-toast';
 import { db } from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import Cart from './pages/Cart/Cart';
+import CartOrderForm from './components/CartOrderForm/CartOrderForm';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -147,8 +148,8 @@ export default function App() {
         />
         <Route path='/teamlead' element={<TeamLead />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/order' element={<CartOrderForm />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-
         {/* Страница 404 */}
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

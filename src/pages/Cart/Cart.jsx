@@ -351,7 +351,12 @@ export default function Cart() {
                 </div>
               )}
               <div className={scss.cartTotalButtonBuyBlock}>
-                <button className={scss.cartTotalButtonBuy}>Buy the course</button>
+                <button
+                  className={scss.cartTotalButtonBuy}
+                  onClick={() => navigate('/order')}
+                  disabled={cartItems.length === 0}>
+                  Buy the course
+                </button>
               </div>
             </div>
           </div>
