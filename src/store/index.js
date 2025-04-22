@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer, { setCart, setRemovedItems } from './cartSlice';
+import currencyReducer from './currencySlice';
 import { doc, getDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 
@@ -90,7 +91,6 @@ const subscribeToCartUpdates = (dispatch) => {
   const productIds = cartItems.map((item) => item.id);
   const unsubscribes = [];
 
-  // Подписываемся на изменения каждого товара в корзине
   productIds.forEach((id) => {
     const docRef = doc(db, 'products', id);
     const unsubscribe = onSnapshot(
@@ -111,13 +111,11 @@ const subscribeToCartUpdates = (dispatch) => {
                   }
                 : item,
             )
-            .filter((item) => item.available); // Убираем недоступные товары
+            .filter((item) => item.available);
 
-          // Обновляем localStorage и Redux
           localStorage.setItem('cart', JSON.stringify(updatedCart));
           dispatch(setCart(updatedCart));
 
-          // Определяем удаленные товары
           const removedItems = currentCart.filter(
             (item) => !updatedCart.some((updated) => updated.id === item.id),
           );
@@ -131,27 +129,31 @@ const subscribeToCartUpdates = (dispatch) => {
     unsubscribes.push(unsubscribe);
   });
 
-  // Возвращаем функцию для отписки
   return () => unsubscribes.forEach((unsubscribe) => unsubscribe());
 };
 
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
+    currency: currencyReducer,
   },
   preloadedState: {
     cart: {
       items: [],
       removedItems: [],
     },
+    currency: {
+      currencies: [],
+      activeCurrency: null,
+      status: 'idle',
+      error: null,
+    },
   },
 });
 
-// Асинхронно загружаем корзину и настраиваем подписку
 let unsubscribeFromCartUpdates = () => {};
 loadAndValidateCart(store.dispatch).then(() => {
   unsubscribeFromCartUpdates = subscribeToCartUpdates(store.dispatch);
 });
 
-// Экспортируем функцию отписки, если нужно будет использовать где-то еще
 export { unsubscribeFromCartUpdates };

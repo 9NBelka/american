@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { clearCart } from '../../store/cartSlice';
+import { fetchCurrencies } from '../../store/currencySlice';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { collection, addDoc } from 'firebase/firestore';
@@ -8,6 +9,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import scss from './CartOrderForm.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useMemo } from 'react';
 import HeadScreenHeaderCart from '../HeadScreenHeaderCart/HeadScreenHeaderCart';
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -16,10 +18,34 @@ export default function CartOrderForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
-  const appliedPromoCode = useSelector((state) => state.cart.appliedPromoCode); // Assuming promo code is stored in Redux
+  const appliedPromoCode = useSelector((state) => state.cart.appliedPromoCode);
+  const {
+    currencies,
+    activeCurrency,
+    status: currencyStatus,
+    error: currencyError,
+  } = useSelector((state) => state.currency);
 
-  // Calculate total price (similar to Cart component)
-  const calculateTotalPrice = () => {
+  // Загружаем валюты при монтировании
+  useEffect(() => {
+    dispatch(fetchCurrencies()).then((result) => {
+      if (result.error) {
+        toast.error('Не удалось загрузить валюты, используется USD по умолчанию');
+      }
+    });
+  }, [dispatch]);
+
+  // Находим активную валюту
+  const activeCurrencyData = currencies.find((c) => c.id === activeCurrency) || {
+    code: 'USD',
+    rate: 1,
+    customRate: null,
+  };
+  const conversionRate = activeCurrencyData.customRate || activeCurrencyData.rate || 1;
+  const currencyCode = activeCurrencyData.code || 'USD';
+
+  // Calculate total price with currency conversion (мемоизируем)
+  const { totalPrice, totalOriginalPrice, promoDiscount, convertedTotal } = useMemo(() => {
     let totalPrice = cartItems.reduce((total, item) => {
       const itemPrice =
         'discountedPrice' in item && item.discountedPrice > 0
@@ -51,10 +77,18 @@ export default function CartOrderForm() {
       totalPrice -= promoDiscount;
     }
 
-    return { totalPrice, totalOriginalPrice, promoDiscount };
-  };
+    // Конвертация в активную валюту
+    const convertedTotal = totalPrice * conversionRate;
 
-  const { totalPrice, totalOriginalPrice, promoDiscount } = calculateTotalPrice();
+    // Вывод в консоль для проверки
+    console.log(
+      `Конвертированная сумма: ${convertedTotal.toFixed(
+        2,
+      )} ${currencyCode} (курс: ${conversionRate})`,
+    );
+
+    return { totalPrice, totalOriginalPrice, promoDiscount, convertedTotal };
+  }, [cartItems, appliedPromoCode, conversionRate, currencyCode]);
 
   // Form validation schema using Yup
   const validationSchema = Yup.object({
@@ -104,7 +138,7 @@ export default function CartOrderForm() {
         userDetails: {
           firstName: values.firstName,
           lastName: values.lastName,
-          email: values.email, // Email comes from the form input, not auth
+          email: values.email,
           phone: values.phone,
           address: values.address,
         },
@@ -117,8 +151,10 @@ export default function CartOrderForm() {
           quantity: item.quantity,
           access: item.access,
         })),
-        totalPrice: totalPrice.toFixed(2),
-        totalOriginalPrice: totalOriginalPrice.toFixed(2),
+        totalPrice: totalPrice.toFixed(2), // Сумма в USD
+        totalOriginalPrice: totalOriginalPrice.toFixed(2), // Оригинальная сумма в USD
+        convertedTotal: convertedTotal.toFixed(2), // Конвертированная сумма
+        currency: currencyCode, // Код валюты (например, USD, EUR)
         promoCode: appliedPromoCode
           ? {
               name: appliedPromoCode.name,
@@ -127,7 +163,7 @@ export default function CartOrderForm() {
               discountAmount: promoDiscount.toFixed(2),
             }
           : null,
-        paymentStatus: 'Processing', // Default status
+        paymentStatus: 'Processing',
         createdAt: new Date().toISOString(),
       };
 
@@ -176,6 +212,10 @@ export default function CartOrderForm() {
         </div>
 
         <h1 className={scss.orderFormTitle}>Order Checkout</h1>
+        {currencyStatus === 'loading' && <div className={scss.loader}>Loading currencies...</div>}
+        {currencyStatus === 'failed' && (
+          <div className={scss.error}>Error loading currencies: {currencyError}</div>
+        )}
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -253,7 +293,9 @@ export default function CartOrderForm() {
                   <button
                     type='submit'
                     className={scss.submitButton}
-                    disabled={isSubmitting || cartItems.length === 0}>
+                    disabled={
+                      isSubmitting || cartItems.length === 0 || currencyStatus === 'loading'
+                    }>
                     {isSubmitting ? 'Placing Order...' : 'Place Order'}
                   </button>
                 </div>

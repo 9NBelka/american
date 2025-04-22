@@ -146,6 +146,17 @@ export default function App() {
             />
           }
         />
+        <Route
+          path='/'
+          element={
+            <ArchitecturePageOne
+              currentInfo={currentInfo}
+              scrollToSection={scrollToSection} // Пропс info для страницы A
+              reviewsArchitecture={reviewsArchitecture}
+              architecturePageA={architecturePageA}
+            />
+          }
+        />
         <Route path='/teamlead' element={<TeamLead />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/order' element={<CartOrderForm />} />
