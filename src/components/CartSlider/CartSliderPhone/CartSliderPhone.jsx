@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../store/cartSlice';
+import { addToCart } from '../../../store/cartSlice';
 import { getDocs, collection } from 'firebase/firestore';
-import { db } from '../../firebase';
-import scss from './CartSlider.module.scss';
+import { db } from '../../../firebase';
+import scss from './CartSliderPhone.module.scss';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import clsx from 'clsx';
-import CartSliderPhone from './CartSliderPhone/CartSliderPhone';
 
-const ITEMS_PER_SLIDE = 4; // Количество товаров на слайде
+const ITEMS_PER_SLIDE = 1; // Количество товаров на слайде
 
-export default function CartSlider() {
+export default function CartSliderPhone() {
   const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,39 +60,41 @@ export default function CartSlider() {
   ];
 
   return (
-    <>
-      <div className={scss.sliderContainer}>
-        <div className={scss.sliderButtonsAndTitle}>
-          <h5 className={scss.sliderButtonsTitle}>Buy a course at a better price</h5>
-          <div className={scss.sliderButtons}>
-            <button className={scss.sliderButton} onClick={handlePrev}>
-              <BsArrowLeftShort className={scss.sliderIcon} />
-            </button>
-            <button className={scss.sliderButton} onClick={handleNext}>
-              <BsArrowRightShort className={scss.sliderIcon} />
-            </button>
-          </div>
+    <div className={scss.sliderContainer}>
+      <div className={scss.sliderButtonsAndTitle}>
+        <h5 className={scss.sliderButtonsTitle}>Buy a course at a better price</h5>
+        <div className={scss.sliderButtons}>
+          <button className={scss.sliderButton} onClick={handlePrev}>
+            <BsArrowLeftShort className={scss.sliderIcon} />
+          </button>
+          <button className={scss.sliderButton} onClick={handleNext}>
+            <BsArrowRightShort className={scss.sliderIcon} />
+          </button>
         </div>
-        <div className={scss.sliderWrapper}>
-          <div
-            className={scss.sliderTrack}
-            style={{
-              transform: `translateX(-${
-                (currentIndex + ITEMS_PER_SLIDE) * (100 / ITEMS_PER_SLIDE)
-              }%)`,
-              transition: 'transform 0.5s ease-in-out', // Плавный переход
-            }}>
-            {extendedProducts.map((product, index) => (
-              <div key={`${product.id}-${index}`} className={scss.sliderItem}>
-                <div className={scss.productImageBlock}>
-                  <img
-                    className={scss.productImage}
-                    src={product.imageProduct}
-                    alt={product.nameProduct}
-                  />
+      </div>
+      <div className={scss.sliderWrapper}>
+        <div
+          className={scss.sliderTrack}
+          style={{
+            transform: `translateX(-${
+              (currentIndex + ITEMS_PER_SLIDE) * (100 / ITEMS_PER_SLIDE)
+            }%)`,
+            transition: 'transform 0.5s ease-in-out', // Плавный переход
+          }}>
+          {extendedProducts.map((product, index) => (
+            <div key={`${product.id}-${index}`} className={scss.sliderItem}>
+              <div className={scss.productImageBlock}>
+                <img
+                  className={scss.productImage}
+                  src={product.imageProduct}
+                  alt={product.nameProduct}
+                />
+              </div>
+              <div className={scss.productInfoBlockColumn}>
+                <div className={scss.productNameAndProductCategory}>
+                  <h3 className={scss.productName}>{product.nameProduct}</h3>
+                  <p className={scss.productCategory}>{product.categoryProduct}</p>
                 </div>
-                <h3 className={scss.productName}>{product.nameProduct}</h3>
-                <p className={scss.productCategory}>{product.categoryProduct}</p>
                 <div
                   className={clsx(
                     scss.priceContainer,
@@ -128,11 +129,10 @@ export default function CartSlider() {
                   )}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-      <CartSliderPhone />
-    </>
+    </div>
   );
 }

@@ -1,15 +1,15 @@
 .sliderContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
+  display: none;
 }
 
 @media (max-width: 576px) {
   .sliderContainer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -268,6 +268,83 @@
   }
 }
 
+@media (max-width: 576px) {
+  .sliderWrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 3vw;
+
+    & .sliderTrack {
+      display: flex;
+      width: calc(100%); // Учитываем дублирующие элементы
+      gap: 1vw;
+    }
+
+    & .sliderItem {
+      flex-direction: row;
+      flex: 0 0 99%; // 25% ширины для 4 элементов
+      padding: 4vw 4vw;
+      border-radius: 3vw;
+      gap: 4vw;
+      border: 0.1vw solid #ec6532;
+
+      & .productImageBlock {
+        border-radius: 0.75vw;
+        width: 45%;
+        height: 35vw;
+
+        & .productImage {
+          width: 85%;
+          height: auto;
+        }
+      }
+
+      & .productInfoBlockColumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .productNameAndProductCategory {
+          display: flex;
+          flex-direction: column;
+          & .productName {
+            font-size: 3.8vw;
+            margin-top: 0vw;
+          }
+
+          & .productCategory {
+            font-size: 3.4vw;
+            margin-top: 1vw;
+          }
+        }
+
+        & .priceContainer {
+          flex-direction: column;
+          justify-content: flex-start;
+          margin-top: 5vw;
+
+          & .originalPrice {
+            font-size: 4.2vw;
+
+            &.originalPriceLine {
+              font-size: 3.6vw;
+            }
+          }
+
+          & .discountedPrice {
+            margin-top: 1vw;
+            font-size: 4.2vw;
+          }
+        }
+      }
+
+      & .availableText {
+        font-size: 2vw;
+      }
+    }
+  }
+}
+
 .addButton {
   width: 100%;
   background-color: #ff7b00;
@@ -301,5 +378,14 @@
     &:hover {
       box-shadow: none;
     }
+  }
+}
+
+@media (max-width: 576px) {
+  .addButton {
+    padding: 1.6vw 4vw;
+    border-radius: 1vw;
+    font-size: 3.6vw;
+    margin-top: 5vw;
   }
 }

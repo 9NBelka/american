@@ -4,6 +4,18 @@
   max-width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    width: 92vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90vw;
+  }
+}
+
 .header {
   background-color: #111111;
 }
@@ -20,5 +32,29 @@
   & .logoBlock {
     display: flex;
     height: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigationBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1vw solid #1e1e1e;
+    padding: 2vw 0;
+    padding-bottom: 2vw;
+
+    & .logoBlock {
+      display: flex;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .navigationBlock {
+    padding: 3vw 0;
+    padding-bottom: 3vw;
   }
 }
