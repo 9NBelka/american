@@ -13,7 +13,7 @@
 
 @media (max-width: 1024px) {
   .cartCountProducts {
-    font-size: 1.8vw;
+    font-size: 2.4vw;
 
     &.cartCountProductsTotal {
       display: flex;
@@ -95,11 +95,11 @@
     gap: 1.5vw;
 
     & .totalOriginalPrice {
-      font-size: 2vw;
+      font-size: 2.4vw;
     }
 
     & .cartTotalPrice {
-      font-size: 2.4vw;
+      font-size: 3.2vw;
       margin-top: 0vw;
     }
   }
@@ -135,8 +135,8 @@
 
 @media (max-width: 1024px) {
   .savings {
-    font-size: 1.8vw;
-    margin-top: 1vw;
+    font-size: 2.4vw;
+    margin-top: 1.5vw;
   }
 }
 

@@ -27,8 +27,8 @@
     width: 92vw;
 
     & .orderFormTitle {
-      font-size: 3.6vw;
-      padding-top: 1.5vw;
+      font-size: 4vw;
+      padding-top: 5vw;
     }
   }
 }
@@ -56,10 +56,10 @@
 @media (max-width: 1024px) {
   .orderFormWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 2vw;
-    padding-top: 3vw;
+    gap: 0vw;
+    padding-top: 4vw;
   }
 }
 
@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 4vw;
+    gap: 0vw;
     padding-top: 6vw;
   }
 }
@@ -131,28 +131,30 @@
 
 @media (max-width: 1024px) {
   .formLeftBlock {
-    width: 67%;
-    padding: 1.5vw;
+    width: auto;
+    padding: 3vw 2.5vw;
     background-color: #1e1e1e;
-    border-radius: 0.75vw;
+    border-radius: 0;
+    border-top-right-radius: 1.5vw;
+    border-top-left-radius: 1.5vw;
 
     & .motionDiv {
-      gap: 1.5vw;
+      gap: 2vw;
     }
 
     & .formGroup {
       & .input {
-        padding: 1.2vw 1.5vw;
+        padding: 2vw 2.5vw;
         border-radius: 0.75vw;
-        font-size: 1.8vw;
+        font-size: 2.4vw;
 
         &::placeholder {
-          font-size: 1.8vw;
+          font-size: 2.4vw;
         }
       }
 
       & .error {
-        font-size: 1.6vw;
+        font-size: 2.2vw;
         margin-top: 1vw;
       }
     }
@@ -162,17 +164,18 @@
 @media (max-width: 576px) {
   .formLeftBlock {
     width: auto;
-    padding: 3vw;
-    border-radius: 1vw;
+    padding: 4vw;
+    border-top-right-radius: 2vw;
+    border-top-left-radius: 2vw;
 
     & .motionDiv {
-      gap: 3vw;
+      gap: 3.5vw;
     }
 
     & .formGroup {
       & .input {
-        padding: 2vw 3vw;
-        border-radius: 1vw;
+        padding: 3vw 3vw;
+        border-radius: 1.5vw;
         font-size: 3.6vw;
 
         &::placeholder {
@@ -260,30 +263,36 @@
 
 @media (max-width: 1024px) {
   .orderSummaryBlock {
-    border-radius: 0.75vw;
+    display: flex;
+    width: auto;
+    border-radius: 0vw;
     padding-top: 3vw;
-    padding-bottom: 3vw;
+    padding: 3.5vw 2.5vw;
+    padding-bottom: 5vw;
+    border-bottom-right-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    border-top: 0.1vw solid #919191;
 
     & .orderSummary {
       & h3 {
-        font-size: 2vw;
+        font-size: 2.8vw;
       }
 
       & p {
-        font-size: 1.8vw;
-        margin: 2vw 0;
+        font-size: 2.4vw;
+        margin: 2.5vw 0;
       }
     }
 
     & .submitButtonBlock {
-      padding-top: 3vw;
+      padding-top: 5vw;
       margin-top: 2vw;
     }
 
     & .submitButton {
-      padding: 1vw 2.2vw;
+      font-size: 2.4vw;
+      padding: 2vw 8vw;
       border-radius: 0.75vw;
-      font-size: 1.8vw;
 
       &:hover {
         box-shadow: none;
@@ -294,19 +303,19 @@
 
 @media (max-width: 576px) {
   .orderSummaryBlock {
-    width: 100%;
-    border-radius: 1vw;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
 
     & .orderSummary {
       & h3 {
-        font-size: 4vw;
+        font-size: 4.2vw;
       }
 
       & p {
         font-size: 3.6vw;
-        margin: 4vw 0;
+        margin: 4.5vw 0;
       }
     }
 
@@ -316,8 +325,8 @@
     }
 
     & .submitButton {
-      padding: 2.2vw 6vw;
-      border-radius: 1vw;
+      padding: 3vw 8vw;
+      border-radius: 1.5vw;
       font-size: 3.6vw;
     }
   }
@@ -360,7 +369,7 @@
     padding-top: 3vw;
 
     & .backButton {
-      font-size: 1.8vw;
+      font-size: 2.4vw;
       gap: 0.5vw;
 
       &:hover {

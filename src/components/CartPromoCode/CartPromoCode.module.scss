@@ -62,21 +62,21 @@
     margin-top: 0vw;
 
     & .promoCodeInput {
-      padding: 0.8vw 1.5vw;
-      width: 20vw;
-      font-size: 1.8vw;
+      padding: 1.6vw 2vw;
+      width: 24vw;
+      font-size: 2.4vw;
       border-radius: 0.75vw;
 
       &::placeholder {
-        font-size: 1.8vw;
+        font-size: 2.4vw;
       }
     }
 
     & .applyPromoButton {
-      width: 8.6vw;
-      font-size: 1.8vw;
+      width: 14vw;
+      font-size: 2.4vw;
       border-radius: 0.75vw;
-      padding: 1vw 2vw;
+      padding: 1.6vw 2vw;
 
       &:hover {
         opacity: 1;

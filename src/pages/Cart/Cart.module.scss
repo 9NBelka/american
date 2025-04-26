@@ -13,7 +13,7 @@
 
 @media (max-width: 1024px) {
   .cartBackgroundMain {
-    padding-bottom: 20vw;
+    padding-bottom: 25vw;
   }
 }
 
@@ -44,8 +44,8 @@
     width: 92vw;
 
     & .cartTitle {
-      font-size: 3.6vw;
-      padding-top: 1.5vw;
+      font-size: 4vw;
+      padding-top: 5vw;
     }
   }
 }
@@ -94,7 +94,7 @@
   .cartLeftRightBlock {
     flex-direction: column;
     gap: 0vw;
-    padding-top: 3vw;
+    padding-top: 4vw;
   }
 }
 
@@ -199,9 +199,9 @@
         margin-top: 0vw;
 
         & .cartTotalButtonBuy {
-          padding: 1vw 2.2vw;
+          padding: 1.8vw 4vw;
           border-radius: 0.75vw;
-          font-size: 1.8vw;
+          font-size: 2.4vw;
 
           &:hover {
             box-shadow: none;
@@ -287,7 +287,7 @@
     padding-top: 3vw;
 
     & .backButton {
-      font-size: 1.8vw;
+      font-size: 2.4vw;
       gap: 0.5vw;
 
       &:hover {
