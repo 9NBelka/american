@@ -1,6 +1,7 @@
 .stickyBlockFlex {
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .stickyBlock {
@@ -19,29 +20,84 @@
   border: 0.05vw solid #656565;
   transition: 0.5s;
 
-  & .stickyBlockVideo {
+  & .discountPercent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: #d74f3e;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    gap: 1vw;
+    margin-top: 0.5vw;
+
+    & span {
+      font-size: 1.2vw;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+    }
+  }
+
+  & .stickyBlockVideoImage {
     display: flex;
     width: 100%;
-    height: 11vw;
-    border-radius: 0.4vw;
-    border: 0;
-    transition: 0.3s;
-    filter: brightness(0.7);
+    position: relative;
 
-    &:hover {
-      filter: brightness(1);
+    & .stickyBlockVideo {
+      display: flex;
+      width: 100%;
+      height: 11vw;
+      border-radius: 0.4vw;
+      border: 0;
+      transition: 0.3s;
+      filter: brightness(0.7);
+
+      &:hover {
+        filter: brightness(1);
+      }
+    }
+
+    & .stickyBlockDiscountImage {
+      position: absolute;
+      top: -0.75vw;
+      right: -0.75vw;
+      width: 5vw;
+    }
+  }
+
+  & .priceProductBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+
+    & .stickyBlockPrice {
+      display: flex;
+      justify-content: center;
+      font-size: 2vw;
+      color: black;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      margin-top: 0vw;
+
+      &.stickyBlockPriceProductLine {
+        font-size: 1.4vw;
+        color: #919191;
+        text-decoration: line-through;
+      }
     }
   }
 
   & .stickyBlockPrice {
-    display: flex;
-    justify-content: center;
-    font-size: 2.2vw;
+    font-size: 2vw;
     color: black;
     font-family: var(--font-akatab), sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--font-lineh-normal);
-    margin-top: 0.5vw;
+    margin-top: 1vw;
   }
 
   & .stickyBlockBuyNow {
@@ -59,13 +115,23 @@
     background-color: #d74f3e;
     text-align: center;
     border-radius: 0.25vw;
-    margin-top: 0.5vw;
+    margin-top: 1vw;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  & .availableText {
+    font-size: 1vw;
+    color: red;
+    font-family: var(--font-alata), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-small);
+    margin: 0;
+    margin-top: 1vw;
   }
 }
 
@@ -87,8 +153,37 @@
     border-radius: 0vw;
     border: 0vw;
 
-    & .stickyBlockVideo {
-      display: none;
+    & .discountPercent {
+      font-size: 5vw;
+      gap: 3vw;
+      margin-top: 1vw;
+
+      & span {
+        font-size: 3.5vw;
+      }
+    }
+
+    & .stickyBlockVideoImage {
+      & .stickyBlockVideo {
+        display: none;
+      }
+
+      & .stickyBlockDiscountImage {
+        display: none;
+      }
+    }
+
+    & .priceProductBlock {
+      gap: 3vw;
+
+      & .stickyBlockPrice {
+        font-size: 6vw;
+        margin-top: 0vw;
+
+        &.stickyBlockPriceProductLine {
+          font-size: 4vw;
+        }
+      }
     }
 
     & .stickyBlockPrice {
@@ -103,6 +198,11 @@
       border-radius: 0.5vw;
       margin-top: 1vw;
     }
+
+    & .availableText {
+      font-size: 2.8vw;
+      margin-top: 1.5vw;
+    }
   }
 }
 
@@ -112,9 +212,42 @@
   }
 
   .stickyBlock {
+    & .discountPercent {
+      font-size: 7vw;
+      gap: 4vw;
+      margin-top: 3vw;
+
+      & span {
+        font-size: 6vw;
+      }
+    }
+
+    & .stickyBlockVideoImage {
+      & .stickyBlockVideo {
+        display: none;
+      }
+
+      & .stickyBlockDiscountImage {
+        display: flex;
+        width: 12vw;
+      }
+    }
+
+    & .priceProductBlock {
+      flex-direction: column;
+      gap: 0vw;
+      & .stickyBlockPrice {
+        font-size: 8vw;
+
+        &.stickyBlockPriceProductLine {
+          font-size: 6.5vw;
+          margin-top: 2vw;
+        }
+      }
+    }
+
     & .stickyBlockPrice {
       font-size: 8vw;
-      margin-top: 0vw;
     }
 
     & .stickyBlockBuyNow {
@@ -122,6 +255,11 @@
       font-size: 5vw;
       padding: 1.2vw 0vw;
       border-radius: 0.75vw;
+      margin-top: 3vw;
+    }
+
+    & .availableText {
+      font-size: 5vw;
       margin-top: 3vw;
     }
   }

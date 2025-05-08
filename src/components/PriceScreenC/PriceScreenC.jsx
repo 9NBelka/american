@@ -6,7 +6,14 @@ export default function PriceScreenC({ infoAboutProduct, handleAddToCart, produc
     <div className={scss.priceScreenMain}>
       {products.map((product) => (
         <div key={product.id} className={scss.priceScreenCard}>
-          {product.discountPercent > 0 && <h6>-{product.discountPercent}%</h6>}
+          {product.discountPercent > 0 && (
+            <div className={scss.discountPercentBlock}>
+              <div className={scss.discountPercentBlockRelative}>
+                <img src='/img/discountBackgroundImageC.png' alt='discountBackgroundImage' />
+                {product.discountPercent > 0 && <h6>-{product.discountPercent}%</h6>}
+              </div>
+            </div>
+          )}
 
           <img
             src={infoAboutProduct.blockInfoAboutCourseImageC}

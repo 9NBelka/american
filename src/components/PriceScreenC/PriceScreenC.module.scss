@@ -28,6 +28,34 @@
   background-color: #2f344d;
   padding: 1.5vw;
   border-radius: 0.5vw;
+  position: relative;
+
+  & .discountPercentBlock {
+    position: absolute;
+    top: -1.5vw;
+    left: -1.5vw;
+
+    & .discountPercentBlockRelative {
+      display: flex;
+      position: relative;
+
+      & img {
+        width: 6.5vw;
+      }
+
+      & h6 {
+        display: flex;
+        position: absolute;
+        top: 28%;
+        left: 15%;
+        font-size: 1.55vw;
+        color: white;
+        font-family: var(--font-albertSans), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-normal);
+      }
+    }
+  }
 
   & img {
     width: 100%;

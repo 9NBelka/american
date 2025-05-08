@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import DemoVideosScreen from '../../components/DemoVideosScreen/DemoVideosScreen';
 import FooterScreen from '../../components/FooterScreen/FooterScreen';
 import ForWhomScreen from '../../components/ForWhomScreen/ForWhomScreen';
@@ -14,6 +14,10 @@ import ViewCourseScreen from '../../components/ViewCourseScreen/ViewCourseScreen
 import WhatsInsideScreen from '../../components/WhatsInsideScreen/WhatsInsideScreen';
 import css from './ArchitecturePageOne.module.css';
 import FormOnBuyProduct from '../../components/FormOnBuyProduct/FormOnBuyProduct';
+import { useDispatch } from 'react-redux';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { addToCart } from '../../store/cartSlice';
 
 export default function ArchitecturePageOne({
   currentInfo,
@@ -23,6 +27,37 @@ export default function ArchitecturePageOne({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
+  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const fetchSpecificProducts = async () => {
+      try {
+        // Запрашиваем только два конкретных товара по их id
+        const productIds = ['ecs5']; // Укажи нужные id
+        const productsData = [];
+
+        for (const id of productIds) {
+          const docRef = doc(db, 'products', id);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            productsData.push({ id: docSnap.id, ...docSnap.data() });
+          }
+        }
+
+        setProducts(productsData);
+      } catch (error) {
+        console.error('Ошибка при загрузке товаров:', error);
+      }
+    };
+
+    fetchSpecificProducts();
+  }, []);
+
+  const handleAddToCart = (product) => {
+    console.log('Добавляем товар в корзину:', product);
+    dispatch(addToCart(product));
+  };
 
   return (
     <>
@@ -47,6 +82,8 @@ export default function ArchitecturePageOne({
                 infoAboutProduct={currentInfo}
                 toggleModal={toggleModal}
                 isOpen={isOpen}
+                handleAddToCart={handleAddToCart}
+                products={products}
               />
             </div>
             <div className={css.backgroundViewCourseScreen}>
@@ -89,6 +126,8 @@ export default function ArchitecturePageOne({
               infoAboutProduct={currentInfo}
               toggleModal={toggleModal}
               isOpen={isOpen}
+              handleAddToCart={handleAddToCart}
+              products={products}
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer, { setCart, setRemovedItems } from './cartSlice';
 import currencyReducer from './currencySlice';
+import courseReducer, { fetchCourseData, subscribeToCourseUpdates } from './courseSlice';
 import { doc, getDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 
@@ -136,6 +137,7 @@ export const store = configureStore({
   reducer: {
     cart: cartReducer,
     currency: currencyReducer,
+    course: courseReducer,
   },
   preloadedState: {
     cart: {
@@ -148,12 +150,29 @@ export const store = configureStore({
       status: 'idle',
       error: null,
     },
+    course: {
+      course: null,
+      forWhom: [],
+      speakers: [],
+      speakerGeneralInfo: [],
+      games: [],
+      modules: [],
+      demoVideos: [],
+      status: 'idle',
+      error: null,
+    },
   },
 });
 
 let unsubscribeFromCartUpdates = () => {};
+let unsubscribeFromCourseUpdates = () => {};
+
 loadAndValidateCart(store.dispatch).then(() => {
   unsubscribeFromCartUpdates = subscribeToCartUpdates(store.dispatch);
+  // Fetch course data only for ArchitecturePageOne
+  store.dispatch(fetchCourseData()).then(() => {
+    unsubscribeFromCourseUpdates = subscribeToCourseUpdates(store.dispatch);
+  });
 });
 
-export { unsubscribeFromCartUpdates };
+export { unsubscribeFromCartUpdates, unsubscribeFromCourseUpdates };
