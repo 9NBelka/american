@@ -1,12 +1,13 @@
 .modalOverlay {
   display: flex;
-  margin-top: 12vw;
+  flex-direction: column;
+  margin-top: 8.5vw;
   width: 100%;
 }
 
 @media (max-width: 1024px) {
   .modalOverlay {
-    margin-top: 10vw;
+    margin-top: 6vw;
   }
 }
 
@@ -17,7 +18,7 @@
   background-color: #ffffff;
   border-radius: 0.75vw;
   padding: 0.75vw 1.5vw;
-  width: 100%;
+  margin-top: 1vw;
 
   & h2 {
     display: none;
@@ -31,6 +32,7 @@
     align-items: center;
     border-radius: 1vw;
     padding: 3vw 5vw;
+    margin-top: 3vw;
 
     & h2 {
       display: flex;
@@ -48,6 +50,7 @@
   .modalOverlayForm {
     border-radius: 2vw;
     padding: 4vw 5vw;
+    margin-top: 5vw;
 
     & h2 {
       font-size: 7vw;

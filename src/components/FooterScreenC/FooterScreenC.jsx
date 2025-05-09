@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function FooterScreenC({ architecturePageC, scrollToSection }) {
   const footerC = true;
   return (
-    <div className={scss.footerScreenC}>
+    <div className={scss.footerScreenC} id='footer'>
       <div className={scss.emailAndGeneralTextBlock}>
         <div className={scss.emailBlock}>
           <a href='mailto:k.syndicate@gmail.com'>

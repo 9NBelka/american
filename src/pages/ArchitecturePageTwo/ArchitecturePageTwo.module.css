@@ -63,7 +63,7 @@
 
 @media (max-width: 576px) {
   .backgroundHeadScreen {
-    height: 200vw;
+    height: 225vw;
     background-position-x: -95vw;
   }
 }

@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import scss from './HeadScreenTitle.module.scss';
 import FormForNewsOnEmail from '../FormForNewsOnEmail/FormForNewsOnEmail';
 import FormForNewsOnEmailC from '../FormForNewsOnEmailC/FormForNewsOnEmailC';
+import AboutUsText from './AboutUsText/AboutUsText';
 
 export default function HeadScreenTitle({
   infoTitleAboutCourse,
@@ -12,6 +13,8 @@ export default function HeadScreenTitle({
   isOpen,
   scrollToSection,
 }) {
+  const AboutUsTextHalfBlock = true;
+  const AboutUsTextHalfBlockDown = true;
   return (
     <div className={clsx(architecturePageC && scss.headScreenMainBlockRow)}>
       <div
@@ -32,6 +35,12 @@ export default function HeadScreenTitle({
             architecturePageB && scss.headScreenCourseInfoB,
             architecturePageC && scss.headScreenCourseInfoC,
           )}>
+          {architecturePageC && (
+            <AboutUsText
+              architecturePageC={architecturePageC}
+              AboutUsTextHalfBlock={AboutUsTextHalfBlock}
+            />
+          )}
           <h4
             className={clsx(
               scss.categoryCourseText,
@@ -64,6 +73,7 @@ export default function HeadScreenTitle({
             )}>
             {infoTitleAboutCourse.descriptionCourse}
           </h2>
+          {architecturePageA && <AboutUsText />}
           {architecturePageB && (
             <a href='#' className={scss.headScreenButtonAnswer}>
               Ask a quention
@@ -77,7 +87,21 @@ export default function HeadScreenTitle({
               More information
             </a>
           )}
-          {architecturePageB && <FormForNewsOnEmail toggleModal={toggleModal} isOpen={isOpen} />}
+          {architecturePageC && (
+            <AboutUsText
+              architecturePageC={architecturePageC}
+              AboutUsTextHalfBlockDown={AboutUsTextHalfBlockDown}
+              scrollToSection={scrollToSection}
+            />
+          )}
+
+          {architecturePageB && (
+            <FormForNewsOnEmail
+              toggleModal={toggleModal}
+              isOpen={isOpen}
+              architecturePageB={architecturePageB}
+            />
+          )}
         </div>
       </div>
       <div className={scss.formForNewsOnEmailC}>{architecturePageC && <FormForNewsOnEmailC />}</div>

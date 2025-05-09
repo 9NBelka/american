@@ -1,0 +1,287 @@
+.aboutUsTextAndFounders {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vw;
+
+  &.aboutUsTextAndFoundersBPage {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & .foundersBlock {
+      margin-top: 0;
+    }
+  }
+  &.aboutUsTextAndFoundersCPage {
+    margin-top: 0vw;
+    padding-bottom: 0.5vw;
+  }
+
+  & .aboutUsText {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    gap: 0.25vw;
+    margin: 0;
+
+    &.aboutUsTextBPage {
+      & a {
+        color: white;
+        font-weight: var(--font-weight-bold);
+      }
+    }
+
+    &.aboutUsTextCPage {
+      & a {
+        color: #ec6532;
+        font-weight: var(--font-weight-bold);
+      }
+    }
+
+    & a {
+      display: flex;
+      color: #ffea00;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  & .foundersBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 0.5vw;
+
+    &.foundersBlockCHalf {
+      margin-top: 3.5vw;
+    }
+
+    & .foundersText {
+      display: flex;
+      font-size: 0.85vw;
+      color: white;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      margin: 0;
+    }
+
+    & .foundersBlockWithIcon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.75vw;
+
+      & .founder {
+        display: flex;
+        font-size: 0.85vw;
+        color: white;
+        font-family: var(--font-akatab), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-normal);
+        margin: 0;
+      }
+
+      & .backgroundIcon {
+        display: flex;
+        background-color: #0055ff;
+        padding: 0.25vw;
+        border-radius: 0.25vw;
+        border: 0.01vw solid transparent;
+        transition: 0.3s ease-in-out;
+
+        & .icon {
+          width: 0.75vw;
+          height: 0.75vw;
+          color: white;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          background-color: transparent;
+          border: 0.01vw solid #0055ff;
+
+          & .icon {
+            color: #0055ff;
+          }
+        }
+
+        &.backgroundIconBPage {
+          background-color: white;
+
+          & .icon {
+            color: #29282d;
+          }
+
+          &:hover {
+            background-color: #29282d;
+            border: 0.01vw solid #29282d;
+
+            & .icon {
+              color: white;
+            }
+          }
+        }
+
+        &.backgroundIconCPage {
+          background-color: #ec6532;
+
+          & .icon {
+            color: white;
+          }
+
+          &:hover {
+            background-color: white;
+            border: 0.01vw solid white;
+
+            & .icon {
+              color: #ec6532;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .historyButton {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+    margin-top: 0.5vw;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .aboutUsTextAndFounders {
+    margin-top: 4vw;
+
+    &.aboutUsTextAndFoundersCPage {
+      margin-top: 6vw;
+      padding-bottom: 0.5vw;
+    }
+
+    &.aboutUsTextAndFoundersBPage {
+      flex-direction: column;
+
+      & .foundersBlock {
+        margin-top: 2vw;
+      }
+    }
+
+    & .aboutUsText {
+      font-size: 1.8vw;
+      gap: 0.75vw;
+    }
+
+    & .foundersBlock {
+      gap: 5vw;
+      margin-top: 1.5vw;
+
+      & .foundersText {
+        font-size: 1.8vw;
+      }
+
+      & .foundersBlockWithIcon {
+        gap: 1vw;
+
+        & .founder {
+          font-size: 1.8vw;
+        }
+
+        & .backgroundIcon {
+          padding: 0.5vw;
+          border-radius: 0.5vw;
+
+          & .icon {
+            width: 1.5vw;
+            height: 1.5vw;
+          }
+        }
+      }
+    }
+
+    & .historyButton {
+      justify-content: center;
+      font-size: 1.8vw;
+      margin-top: 2vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutUsTextAndFounders {
+    margin-top: 6vw;
+
+    &.aboutUsTextAndFoundersBPage {
+      align-items: start;
+    }
+
+    & .aboutUsText {
+      display: block;
+      font-size: 3.6vw;
+      gap: 1vw;
+
+      &.aboutUsTextCPage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    & .foundersBlock {
+      justify-content: space-between;
+      gap: 0;
+      width: 100%;
+      margin-top: 4vw;
+
+      &.foundersBlockCHalf {
+        gap: 5vw;
+      }
+
+      & .foundersText {
+        font-size: 3.6vw;
+      }
+
+      & .foundersBlockWithIcon {
+        gap: 2vw;
+
+        & .founder {
+          font-size: 3.6vw;
+        }
+
+        & .backgroundIcon {
+          padding: 0.75vw;
+          border-radius: 0.75vw;
+
+          & .icon {
+            width: 3vw;
+            height: 3vw;
+          }
+        }
+      }
+    }
+
+    & .historyButton {
+      justify-content: center;
+      font-size: 3.6vw;
+      margin-top: 4vw;
+    }
+  }
+}

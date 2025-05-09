@@ -120,7 +120,7 @@
   border: 0.15vw solid transparent;
   overflow: hidden;
   border-radius: 1vw;
-  background-image: url('/src/assets/img/forwhobackgroundCardBGrey.jpg');
+  background-image: url('/img/forwhobackgroundCardBGrey.jpg');
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,7 +128,7 @@
   transition: all 0.3s ease-in-out;
 
   &.active {
-    background-image: url('/src/assets/img/forwhobackgroundCardB.jpg');
+    background-image: url('/img/forwhobackgroundCardB.jpg');
     border-color: #ff0000;
   }
 

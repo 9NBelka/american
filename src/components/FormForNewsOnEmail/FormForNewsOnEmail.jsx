@@ -4,6 +4,7 @@ import scss from './FormForNewsOnEmail.module.scss';
 import toast from 'react-hot-toast';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
+import AboutUsText from '../HeadScreenTitle/AboutUsText/AboutUsText';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().min(2, 'Minimum 2 characters').required('*Required field'),
@@ -13,10 +14,11 @@ const validationSchema = Yup.object().shape({
     .required('*Required field'),
 });
 
-export default function FormForNewsOnEmail() {
+export default function FormForNewsOnEmail({ architecturePageB }) {
   return (
     <div>
       <div className={scss.modalOverlay}>
+        <AboutUsText architecturePageB={architecturePageB} />
         <Formik
           initialValues={{ email: '', fullName: '', phone: '' }}
           validationSchema={validationSchema}

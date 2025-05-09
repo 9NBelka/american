@@ -43,7 +43,19 @@
 .backgroundHeadScreen {
   display: flex;
   background-color: #092332;
-  padding-bottom: 5vw;
+  padding-bottom: 2.5vw;
+}
+
+@media (max-width: 1024px) {
+  .backgroundHeadScreen {
+    padding-bottom: 5vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .backgroundHeadScreen {
+    padding-bottom: 8vw;
+  }
 }
 
 .halfBlocks {

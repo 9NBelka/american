@@ -6,7 +6,7 @@
     "studentsDate": "2021",
     "studentPackage": "Vanilla",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "studentsDate": "2021",
     "studentPackage": "Advanced",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "studentsDate": "2021",
     "studentPackage": "Advanced",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "studentsDate": "2021",
     "studentPackage": "Advanced",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "studentsDate": "2021",
     "studentPackage": "Vanilla",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "studentsDate": "2021",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "studentsDate": "2022",
     "studentPackage": "Vanilla",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "studentsDate": "2022",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "studentsDate": "2022",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "studentsDate": "2022",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "studentsDate": "2022",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "studentsDate": "2023",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "studentsDate": "2022",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "studentsDate": "2023",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 21,
@@ -186,7 +186,7 @@
     "studentsDate": "2024",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "studentsDate": "2024",
     "studentPackage": "Standart",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "studentsDate": "2022",
     "studentPackage": "Vanilla",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   },
   {
     "id": 24,
@@ -213,6 +213,6 @@
     "studentsDate": "2022",
     "studentPackage": "Vanilla",
     "rating": 5,
-    "imageDiscord": "/src/assets/img/discordPhotoYellow.png"
+    "imageDiscord": "/img/discordPhotoYellow.png"
   }
 ]
