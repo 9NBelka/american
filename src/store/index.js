@@ -3,6 +3,7 @@ import cartReducer, { setCart, setRemovedItems } from './cartSlice';
 import currencyReducer from './currencySlice';
 import courseReducer, { fetchCourseData, subscribeToCourseUpdates } from './courseSlice';
 import { doc, getDoc, onSnapshot } from 'firebase/firestore';
+import formReducer from './formSlice';
 import { db } from '../firebase';
 
 // Функция для начальной загрузки и валидации корзины
@@ -138,6 +139,7 @@ export const store = configureStore({
     cart: cartReducer,
     currency: currencyReducer,
     course: courseReducer,
+    form: formReducer,
   },
   preloadedState: {
     cart: {
@@ -158,6 +160,10 @@ export const store = configureStore({
       games: [],
       modules: [],
       demoVideos: [],
+      status: 'idle',
+      error: null,
+    },
+    form: {
       status: 'idle',
       error: null,
     },

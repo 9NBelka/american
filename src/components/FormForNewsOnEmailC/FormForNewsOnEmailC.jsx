@@ -4,6 +4,9 @@ import scss from './FormForNewsOnEmailC.module.scss';
 import toast from 'react-hot-toast';
 import { BsTelephone, BsPerson, BsEnvelope, BsGeoAlt } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { submitForm } from '../../store/formSlice';
+import { useEffect } from 'react';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email('Incorrect email').required('*Required field'),
@@ -15,7 +18,18 @@ const validationSchema = Yup.object().shape({
     .required('*Required field'),
 });
 
-export default function FormForNewsOnEmailC({ toggleModal }) {
+export default function FormForNewsOnEmailC({ toggleModal, page }) {
+  const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.form);
+
+  useEffect(() => {
+    if (status === 'succeeded') {
+      toast.success('The form is successfully sent!');
+    } else if (status === 'failed') {
+      toast.error(`Error: ${error}`);
+    }
+  }, [status, error]);
+
   return (
     <div className={scss.modalContent}>
       <h2>STUDENT ENQUIRY</h2>
@@ -24,9 +38,9 @@ export default function FormForNewsOnEmailC({ toggleModal }) {
         initialValues={{ email: '', firstName: '', lastName: '', country: '', phone: '' }}
         validationSchema={validationSchema}
         onSubmit={(values, { resetForm }) => {
-          toast.success('The form is successfully sent!', values);
+          dispatch(submitForm({ page, formData: values }));
           resetForm();
-          toggleModal();
+          if (toggleModal) toggleModal();
         }}>
         {() => (
           <Form className={scss.modalOverlayForm}>
@@ -62,7 +76,6 @@ export default function FormForNewsOnEmailC({ toggleModal }) {
               </div>
               <ErrorMessage name='email' component='h5' className={scss.modalContentErrorText} />
             </div>
-
             <div className={scss.modalOverlayFormInputErrorColumn}>
               <div className={scss.iconAndInput}>
                 <BsGeoAlt className={scss.iconInput} />
@@ -77,8 +90,11 @@ export default function FormForNewsOnEmailC({ toggleModal }) {
               </p>
             </div>
             <div className={scss.modalContentSubmitBlock}>
-              <button type='submit' className={scss.modalContentSubmitButton}>
-                SUBMIT
+              <button
+                type='submit'
+                className={scss.modalContentSubmitButton}
+                disabled={status === 'loading'}>
+                {status === 'loading' ? 'Submitting...' : 'SUBMIT'}
               </button>
             </div>
           </Form>

@@ -70,12 +70,15 @@ export default function ArchitecturePageThree({
             infoTitleAboutCourse={currentInfo}
             scrollToSection={scrollToSection}
             architecturePageC={architecturePageC}
+            page='ArchitectureC'
           />
         </div>
       </div>
 
       <div className={css.formForNewsOnEmailC}>
-        <div className={css.container}>{architecturePageC && <FormForNewsOnEmailC />}</div>
+        <div className={css.container}>
+          {architecturePageC && <FormForNewsOnEmailC page='ArchitectureC' />}
+        </div>
       </div>
       <div className={css.container}>
         <h3 className={css.titleScreens}>Course Overview</h3>

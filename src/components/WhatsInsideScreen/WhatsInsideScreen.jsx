@@ -9,6 +9,7 @@ export default function WhatsInsideScreen({
   toggleModal,
   isOpen,
   architecturePageB,
+  scrollToSection,
 }) {
   const [activeIndex, setActiveIndex] = useState(null); // Хранит индекс активного спойлера
 
@@ -63,7 +64,11 @@ export default function WhatsInsideScreen({
         </div>
       ))}
       <div className={architecturePageB && scss.intermediaryBuyNow}>
-        <IntermediaryBuyNow toggleModal={toggleModal} isOpen={isOpen} />
+        <IntermediaryBuyNow
+          toggleModal={toggleModal}
+          isOpen={isOpen}
+          scrollToSection={scrollToSection}
+        />
       </div>
     </div>
   );

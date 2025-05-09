@@ -1,43 +1,41 @@
 import { BsWhatsapp, BsLinkedin, BsTwitterX, BsYoutube, BsReddit } from 'react-icons/bs';
 import scss from './FooterScreen.module.scss';
 import IntermediaryBuyNow from '../IntermediaryBuyNow/IntermediaryBuyNow';
-import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import clsx from 'clsx';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { submitForm } from '../../store/formSlice';
 
-export default function FooterScreen({ toggleModal, isOpen }) {
-  const [isSubmitted, setIsSubmitted] = useState(false); // Флаг, чтобы предотвратить повторную отправку
+const validationSchema = Yup.object({
+  email: Yup.string().email('The wrong post format').required('Mail is required to fill out'),
+});
 
-  // Схема валидации с использованием Yup
-  const validationSchema = Yup.object({
-    email: Yup.string().email('The wrong post format').required('Mail is required to fill out'),
-  });
+export default function FooterScreen({ toggleModal, isOpen, page, scrollToSection }) {
+  const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.form);
 
-  const handleSubmit = (values, { resetForm }) => {
-    if (isSubmitted) {
-      toast('You have already sent a form!', {
-        icon: '👏',
-      });
-      return;
+  useEffect(() => {
+    if (status === 'succeeded') {
+      toast.success('The form is successfully sent!');
+    } else if (status === 'failed') {
+      toast.error(`Error: ${error}`);
     }
-
-    // Здесь ты можешь отправить данные, например, на сервер
-    console.log('Email sent:', values.email);
-
-    // Помечаем форму как отправленную
-    setIsSubmitted(true);
-    toast.success('The form is successfully sent!');
-    resetForm();
-  };
+  }, [status, error]);
 
   const footer = true;
   return (
     <div className={scss.footerScreenBlockColumn}>
       <div className={clsx(scss.intermediaryBuyNowPhone)}>
-        <IntermediaryBuyNow forStyle={footer} toggleModal={toggleModal} isOpen={isOpen} />
+        <IntermediaryBuyNow
+          forStyle={footer}
+          toggleModal={toggleModal}
+          isOpen={isOpen}
+          scrollToSection={scrollToSection}
+        />
       </div>
       <div className={scss.footerScreenBlocks}>
         <div className={clsx(scss.footerScreenBlock, scss.footerScreenBlockNone)}>
@@ -45,22 +43,26 @@ export default function FooterScreen({ toggleModal, isOpen }) {
           <Formik
             initialValues={{ email: '' }}
             validationSchema={validationSchema}
-            onSubmit={handleSubmit}>
-            <Form className={scss.footerScreenBlockForm}>
-              <div className={scss.footerScreenBlockInput}>
-                <Field
-                  type='email'
-                  name='email'
-                  placeholder='Enter your email adress'
-                  disabled={isSubmitted} // Блокируем поле, если форма уже отправлена
-                />
-
-                <button type='submit' disabled={isSubmitted}>
-                  Subscribe
-                </button>
-              </div>
-              <ErrorMessage name='email' component='div' className={scss.errorMessage} />
-            </Form>
+            onSubmit={(values, { resetForm }) => {
+              dispatch(submitForm({ page, formData: values }));
+              resetForm();
+            }}>
+            {() => (
+              <Form className={scss.footerScreenBlockForm}>
+                <div className={scss.footerScreenBlockInput}>
+                  <Field
+                    type='email'
+                    name='email'
+                    placeholder='Enter your email address'
+                    disabled={status === 'loading'}
+                  />
+                  <button type='submit' disabled={status === 'loading'}>
+                    {status === 'loading' ? 'Sending...' : 'Subscribe'}
+                  </button>
+                </div>
+                <ErrorMessage name='email' component='div' className={scss.errorMessage} />
+              </Form>
+            )}
           </Formik>
         </div>
         <div className={scss.footerScreenBlock}>
@@ -75,7 +77,12 @@ export default function FooterScreen({ toggleModal, isOpen }) {
         </div>
       </div>
       <div className={scss.intermediaryBuyNow}>
-        <IntermediaryBuyNow forStyle={footer} toggleModal={toggleModal} isOpen={isOpen} />
+        <IntermediaryBuyNow
+          forStyle={footer}
+          toggleModal={toggleModal}
+          isOpen={isOpen}
+          scrollToSection={scrollToSection}
+        />
       </div>
       <div className={scss.footerScreenBlockInfoColumn}>
         <div className={scss.footerScreenBlockInfo}>

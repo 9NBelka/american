@@ -77,7 +77,7 @@ export default function ArchitecturePageOne({
       <div className={css.container}>
         <div className={css.pageWrapper}>
           <div className={css.leftColumn}>
-            <div className={css.stickyProduct}>
+            <div className={css.stickyProduct} id='price'>
               <StickyProduct
                 infoAboutProduct={currentInfo}
                 toggleModal={toggleModal}
@@ -112,6 +112,7 @@ export default function ArchitecturePageOne({
               programCourseInfo={currentInfo}
               toggleModal={toggleModal}
               isOpen={isOpen}
+              scrollToSection={scrollToSection}
             />
             <h3 className={css.titleScreens} id='demoLessons'>
               Demo lessons
@@ -135,7 +136,12 @@ export default function ArchitecturePageOne({
 
       <TrustedScreen imageTrusted={currentInfo} />
       <div className={css.backgroundFooterScreen}>
-        <FooterScreen toggleModal={toggleModal} isOpen={isOpen} />
+        <FooterScreen
+          toggleModal={toggleModal}
+          isOpen={isOpen}
+          page='ArchitectureA'
+          scrollToSection={scrollToSection}
+        />
       </div>
       <FormOnBuyProduct toggleModal={toggleModal} isOpen={isOpen} />
     </>

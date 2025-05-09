@@ -39,6 +39,7 @@ export default function ArchitecturePageTwo({
             architecturePageB={architecturePageB}
             toggleModal={toggleModal}
             isOpen={isOpen}
+            page='ArchitectureB'
           />
         </div>
       </div>

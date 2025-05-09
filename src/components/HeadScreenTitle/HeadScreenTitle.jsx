@@ -12,6 +12,7 @@ export default function HeadScreenTitle({
   toggleModal,
   isOpen,
   scrollToSection,
+  page,
 }) {
   const AboutUsTextHalfBlock = true;
   const AboutUsTextHalfBlockDown = true;
@@ -100,11 +101,14 @@ export default function HeadScreenTitle({
               toggleModal={toggleModal}
               isOpen={isOpen}
               architecturePageB={architecturePageB}
+              page={page}
             />
           )}
         </div>
       </div>
-      <div className={scss.formForNewsOnEmailC}>{architecturePageC && <FormForNewsOnEmailC />}</div>
+      <div className={scss.formForNewsOnEmailC}>
+        {architecturePageC && <FormForNewsOnEmailC page={page} />}
+      </div>
     </div>
   );
 }

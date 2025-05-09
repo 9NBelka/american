@@ -5,6 +5,9 @@ import toast from 'react-hot-toast';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import AboutUsText from '../HeadScreenTitle/AboutUsText/AboutUsText';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { submitForm } from '../../store/formSlice';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().min(2, 'Minimum 2 characters').required('*Required field'),
@@ -14,7 +17,17 @@ const validationSchema = Yup.object().shape({
     .required('*Required field'),
 });
 
-export default function FormForNewsOnEmail({ architecturePageB }) {
+export default function FormForNewsOnEmail({ architecturePageB, page }) {
+  const dispatch = useDispatch();
+  const { status, error } = useSelector((state) => state.form);
+
+  useEffect(() => {
+    if (status === 'succeeded') {
+      toast.success('The form is successfully sent!');
+    } else if (status === 'failed') {
+      toast.error(`Error: ${error}`);
+    }
+  }, [status, error]);
   return (
     <div>
       <div className={scss.modalOverlay}>
@@ -23,7 +36,7 @@ export default function FormForNewsOnEmail({ architecturePageB }) {
           initialValues={{ email: '', fullName: '', phone: '' }}
           validationSchema={validationSchema}
           onSubmit={(values, { resetForm }) => {
-            toast.success('The form is successfully sent!', values);
+            dispatch(submitForm({ page, formData: values }));
             resetForm();
           }}>
           {() => (
@@ -57,8 +70,11 @@ export default function FormForNewsOnEmail({ architecturePageB }) {
                 </p>
               </div>
               <div className={scss.modalContentSubmitBlock}>
-                <button type='submit' className={scss.modalContentSubmitButton}>
-                  Send
+                <button
+                  type='submit'
+                  className={scss.modalContentSubmitButton}
+                  disabled={status === 'loading'}>
+                  {status === 'loading' ? 'Sending...' : 'Send'}
                 </button>
               </div>
             </Form>
