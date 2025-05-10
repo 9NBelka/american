@@ -18,6 +18,7 @@ import { useDispatch } from 'react-redux';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { addToCart } from '../../store/cartSlice';
+import JoinUsScreen from '../../components/JoinUsScreen/JoinUsScreen';
 
 export default function ArchitecturePageOne({
   currentInfo,
@@ -89,6 +90,8 @@ export default function ArchitecturePageOne({
             <div className={css.backgroundViewCourseScreen}>
               <ViewCourseScreen currentInfo={currentInfo} />
             </div>
+            <h3 className={css.titleScreens}>Join Us:</h3>
+            <JoinUsScreen architecturePageA={architecturePageA} />
             <h3 className={css.titleScreens} id='forWhom'>
               For who
             </h3>

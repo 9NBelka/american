@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react';
 import { doc, getDoc } from 'firebase/firestore'; // Используем getDoc для получения конкретных документов
 import { db } from '../../firebase';
 import { addToCart } from '../../store/cartSlice';
+import JoinUsScreen from '../../components/JoinUsScreen/JoinUsScreen';
 
 export default function ArchitecturePageThree({
   currentInfo,
@@ -78,6 +79,11 @@ export default function ArchitecturePageThree({
       <div className={css.formForNewsOnEmailC}>
         <div className={css.container}>
           {architecturePageC && <FormForNewsOnEmailC page='ArchitectureC' />}
+        </div>
+      </div>
+      <div className={css.joinUsScreen}>
+        <div className={css.container}>
+          <JoinUsScreen architecturePageC={architecturePageC} />
         </div>
       </div>
       <div className={css.container}>

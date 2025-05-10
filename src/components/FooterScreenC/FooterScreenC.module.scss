@@ -17,24 +17,42 @@
   }
 }
 
+.footerScreenBlocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 10vw;
+}
+
+@media (max-width: 1024px) {
+  .footerScreenBlocks {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+  }
+}
+
 .emailAndGeneralTextBlock {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
 @media (max-width: 1024px) {
   .emailAndGeneralTextBlock {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 }
 
 .emailBlock {
   display: flex;
   justify-content: flex-end;
-  width: 50%;
+  width: 30%;
   padding-right: 2vw;
 
   & h5 {
@@ -52,6 +70,21 @@
   }
 }
 
+.emailBlockSchoolStory {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  padding-right: 2vw;
+  & h5 {
+    font-size: 0.85vw;
+    color: #ec6532;
+    font-family: var(--font-albertSans), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+  }
+}
+
 @media (max-width: 1024px) {
   .emailBlock {
     justify-content: center;
@@ -66,6 +99,15 @@
       }
     }
   }
+
+  .emailBlockSchoolStory {
+    justify-content: center;
+    width: 100%;
+    padding-right: 0vw;
+    & h5 {
+      font-size: 1.8vw;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -74,16 +116,28 @@
       font-size: 3.6vw;
     }
   }
+
+  .emailBlockSchoolStory {
+    & h5 {
+      font-size: 3.6vw;
+    }
+  }
 }
 
 .generalTextBlock {
   display: flex;
-  width: 50%;
+  width: 70%;
   border-left: 0.15vw solid white;
   padding-left: 2vw;
 
+  &.generalTextBlockSchoolStory {
+    & p {
+      font-size: 0.8vw;
+      text-transform: none;
+    }
+  }
+
   & p {
-    width: 55%;
     font-size: 0.85vw;
     color: white;
     font-family: var(--font-albertSans), sans-serif;
@@ -102,6 +156,12 @@
     border-left: none;
     padding-left: 0vw;
 
+    &.generalTextBlockSchoolStory {
+      & p {
+        font-size: 1.8vw;
+      }
+    }
+
     & p {
       width: 60%;
       text-align: center;
@@ -111,7 +171,7 @@
       font-weight: var(--font-weight-normal);
       line-height: var(--font-lineh-normal);
       text-transform: uppercase;
-      margin-top: 4vw;
+      margin-top: 2vw;
       padding: 0;
       opacity: 0.5;
     }
@@ -123,7 +183,13 @@
     & p {
       width: 90%;
       font-size: 3.6vw;
-      margin-top: 8vw;
+      margin-top: 5vw;
+    }
+
+    &.generalTextBlockSchoolStory {
+      & p {
+        font-size: 3.6vw;
+      }
     }
   }
 }
@@ -267,7 +333,7 @@
 @media (max-width: 1024px) {
   .intermediaryBuyNow {
     display: flex;
-    width: 70%;
+    padding: 0 15vw;
   }
 }
 
@@ -276,6 +342,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    padding: 0 2vw;
   }
 }

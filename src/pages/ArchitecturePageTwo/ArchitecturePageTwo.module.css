@@ -68,6 +68,27 @@
   }
 }
 
+.joinUsScreen {
+  padding: 4vw 0;
+  background-color: #0f131c;
+}
+
+@media (max-width: 1024px) {
+  .joinUsScreen {
+    padding: 8vw 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .joinUsScreen {
+    padding: 14vw 0;
+  }
+}
+
+.joinUsScreen .titleScreens {
+  margin-top: 0;
+}
+
 .whatsInsideScreenPhone,
 .gamesScreenPhone,
 .priceScreenBPhone {

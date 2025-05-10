@@ -14,6 +14,7 @@ import PriceScreenB from '../../components/PriceScreenB/PriceScreenB';
 import TrustedScreenB from '../../components/TrustedScreenB/TrustedScreenB';
 import FooterScreenB from '../../components/FooterScreenB/FooterScreenB';
 import PriceScreenBPhone from '../../components/PriceScreenB/PriceScreenBPhone/PriceScreenBPhone';
+import JoinUsScreen from '../../components/JoinUsScreen/JoinUsScreen';
 
 export default function ArchitecturePageTwo({
   currentInfo,
@@ -41,6 +42,12 @@ export default function ArchitecturePageTwo({
             isOpen={isOpen}
             page='ArchitectureB'
           />
+        </div>
+      </div>
+      <div className={css.joinUsScreen}>
+        <div className={css.container}>
+          <h3 className={css.titleScreens}>Join Us:</h3>
+          <JoinUsScreen architecturePageB={architecturePageB} />
         </div>
       </div>
       <div className={css.container}>

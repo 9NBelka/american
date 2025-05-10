@@ -55,6 +55,25 @@
   padding-bottom: 6.3vw;
 }
 
+.joinUsScreen {
+  padding: 3vw 0;
+  background-color: #25293f;
+  background-image: url('/img/joinUsBackgroundPageC.png');
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .joinUsScreen {
+    padding: 8vw 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .joinUsScreen {
+    padding: 14vw 0;
+  }
+}
+
 .backgroundForWhoScreen {
   display: flex;
   background: url(/img/forWhoBackgroundScreenC.jpg);

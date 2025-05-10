@@ -1,0 +1,373 @@
+.joinUsScreenBlockMain {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+
+  &.joinUsScreenBlockMainPageB {
+    padding: 0 7vw;
+    margin-top: 1.5vw;
+  }
+
+  &.joinUsScreenBlockMainPageC {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .joinUsScreenBlockMain {
+    margin-top: 3vw;
+
+    &.joinUsScreenBlockMainPageB {
+      padding: 0 0vw;
+      margin-top: 3vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .joinUsScreenBlockMain {
+    margin-top: 6vw;
+  }
+}
+
+.titleBlock {
+  display: flex;
+  & .title {
+    font-size: 3vw;
+    color: white;
+    font-family: var(--font-alata), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1024px) {
+  .titleBlock {
+    & .title {
+      font-size: 4.5vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .titleBlock {
+    & .title {
+      font-size: 7vw;
+    }
+  }
+}
+
+.iconsAndTextBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+
+  &.iconsAndTextBlockPageB {
+    gap: 4vw;
+  }
+
+  &.iconsAndTextBlockPageC {
+    flex-direction: row-reverse;
+  }
+
+  & .iconsBlocks {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    height: 100%;
+
+    & .iconBlock {
+      display: flex;
+      background-color: #0055ff;
+      border-radius: 0.75vw;
+      padding: 0.5vw;
+
+      &.iconBlockPageC {
+        background-color: #ec6532;
+        padding: 1vw;
+
+        & .icon {
+          width: 4vw;
+          height: 4vw;
+        }
+      }
+
+      &.iconBlockPageBYouTube {
+        background-image: url('/img/youtubeBackgroundIconPageB.png');
+        background-size: cover;
+        border-radius: 0.25vw;
+        padding: 0.75vw;
+
+        & .icon {
+          width: 3.5vw;
+          height: 3.5vw;
+        }
+      }
+
+      &.iconBlockPageBTwoDiscord {
+        background-image: url('/img/discordBackgroundIconPageB.png');
+        background-size: cover;
+        border-radius: 0.25vw;
+        padding: 0.75vw;
+
+        & .icon {
+          width: 3.5vw;
+          height: 3.5vw;
+        }
+      }
+
+      & .icon {
+        display: flex;
+        fill: white;
+        width: 3vw;
+        height: 3vw;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  & .textBlock {
+    display: flex;
+    flex-direction: column;
+
+    & p {
+      font-size: 0.85vw;
+      color: black;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      margin: 0;
+    }
+
+    &.textBlockPageB {
+      & p {
+        text-align: right;
+        color: white;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+      }
+
+      & .redTextPageB {
+        margin-top: 1vw;
+        color: #ff0000;
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bold);
+      }
+    }
+
+    &.textBlockPageC {
+      width: 48%;
+      & p {
+        font-family: var(--font-albertSans), sans-serif;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .iconsAndTextBlock {
+    gap: 3vw;
+
+    &.iconsAndTextBlockPageB {
+      gap: 5vw;
+    }
+
+    & .iconsBlocks {
+      gap: 3vw;
+      & .iconBlock {
+        border-radius: 1.5vw;
+        padding: 1.5vw;
+
+        &.iconBlockPageC {
+          padding: 2vw;
+
+          & .icon {
+            width: 8vw;
+            height: 8vw;
+          }
+        }
+
+        &.iconBlockPageBYouTube {
+          border-radius: 0.5vw;
+          padding: 1vw;
+
+          & .icon {
+            width: 8vw;
+            height: 8vw;
+          }
+        }
+
+        &.iconBlockPageBTwoDiscord {
+          border-radius: 0.5vw;
+          padding: 1vw;
+
+          & .icon {
+            width: 8vw;
+            height: 8vw;
+          }
+        }
+
+        & .icon {
+          width: 8vw;
+          height: 8vw;
+        }
+      }
+    }
+
+    & .textBlock {
+      & p {
+        font-size: 1.8vw;
+      }
+
+      &.textBlockPageB {
+        & .redTextPageB {
+          margin-top: 2vw;
+        }
+      }
+
+      &.textBlockPageC {
+        width: auto;
+        & p {
+          font-family: var(--font-albertSans), sans-serif;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .iconsAndTextBlock {
+    flex-direction: column-reverse;
+    gap: 6vw;
+
+    &.iconsAndTextBlockPageC {
+      flex-direction: column-reverse;
+    }
+
+    & .iconsBlocks {
+      gap: 6vw;
+      & .iconBlock {
+        border-radius: 3vw;
+        padding: 2.5vw;
+
+        &.iconBlockPageC {
+          padding: 2.5vw;
+
+          & .icon {
+            width: 15vw;
+            height: 15vw;
+          }
+        }
+
+        &.iconBlockPageBYouTube {
+          border-radius: 1vw;
+          padding: 2vw;
+
+          & .icon {
+            width: 15vw;
+            height: 15vw;
+          }
+        }
+
+        &.iconBlockPageBTwoDiscord {
+          border-radius: 1vw;
+          padding: 2vw;
+
+          & .icon {
+            width: 15vw;
+            height: 15vw;
+          }
+        }
+
+        & .icon {
+          width: 15vw;
+          height: 15vw;
+        }
+      }
+    }
+
+    & .textBlock {
+      & p {
+        font-size: 3.6vw;
+      }
+
+      &.textBlockPageB {
+        & p {
+          text-align: center;
+        }
+
+        & .redTextPageB {
+          margin-top: 4vw;
+        }
+      }
+
+      &.textBlockPageC {
+        margin-top: 4vw;
+      }
+    }
+  }
+}
+
+.redTextBlock {
+  display: flex;
+  margin-top: 2.5vw;
+  & p {
+    font-size: 1.2vw;
+    color: #d74f3e;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+  }
+
+  &.redTextBlockPageC {
+    margin-top: 0vw;
+    & p {
+      font-size: 0.85vw;
+      color: white;
+      font-family: var(--font-albertSans), sans-serif;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .redTextBlock {
+    margin-top: 4vw;
+    & p {
+      font-size: 3vw;
+    }
+
+    &.redTextBlockPageC {
+      margin-top: 0vw;
+      & p {
+        font-size: 1.8vw;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .redTextBlock {
+    margin-top: 6vw;
+    & p {
+      font-size: 5vw;
+    }
+
+    &.redTextBlockPageC {
+      margin-top: 5vw;
+      & p {
+        font-size: 4vw;
+        color: white;
+      }
+    }
+  }
+}
