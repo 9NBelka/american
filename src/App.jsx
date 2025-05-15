@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import ArchitecturePageOne from './pages/ArchitecturePageOne/ArchitecturePageOne';
 import ArchitecturePageTwo from './pages/ArchitecturePageTwo/ArchitecturePageTwo';
@@ -13,6 +14,7 @@ import { db } from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import Cart from './pages/Cart/Cart';
 import CartOrderForm from './components/CartOrderForm/CartOrderForm';
+import { fetchTimers } from './store/timersSlice';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -45,6 +47,13 @@ const TestPage = ({ page, Component, ...restProps }) => {
 
 export default function App() {
   const location = useLocation();
+  const dispatch = useDispatch();
+  const { timers, status: timersStatus } = useSelector((state) => state.timers);
+
+  // Fetch timers on component mount
+  useEffect(() => {
+    dispatch(fetchTimers());
+  }, [dispatch]);
 
   // Получаем id курса на основе текущего пути
   const getCourseIdByPath = (path) => {
@@ -70,7 +79,7 @@ export default function App() {
     return <NotFoundPage />;
   }
 
-  //плавный скролл
+  // Плавный скролл
   const scrollToSection = (id, offset = 0) => {
     const element = document.getElementById(id);
     if (element) {
@@ -79,10 +88,21 @@ export default function App() {
     }
   };
 
+  // Find timers for each page
+  const timerA = timers.find((timer) => timer.id === 'ArchitectureA') || null;
+  const timerB = timers.find((timer) => timer.id === 'ArchitectureB') || null;
+  const timerC = timers.find((timer) => timer.id === 'ArchitectureC') || null;
+
   const architecturePageA = true;
   const architecturePageB = true;
   const architecturePageWhiteColorB = true;
   const architecturePageC = true;
+
+  // Show loading state while fetching timers
+  if (timersStatus === 'loading') {
+    return <Loading />;
+  }
+
   return (
     <>
       <Routes>
@@ -99,9 +119,10 @@ export default function App() {
               page='a'
               Component={ArchitecturePageOne}
               currentInfo={currentInfo}
-              scrollToSection={scrollToSection} // Пропс info для страницы A
+              scrollToSection={scrollToSection}
               reviewsArchitecture={reviewsArchitecture}
               architecturePageA={architecturePageA}
+              timer={timerA} // Pass timer for ArchitectureA
             />
           }
         />
@@ -113,10 +134,11 @@ export default function App() {
               page='b'
               Component={ArchitecturePageTwo}
               currentInfo={currentInfo}
-              scrollToSection={scrollToSection} // Пропс info для страницы B
+              scrollToSection={scrollToSection}
               reviewsArchitecture={reviewsArchitecture}
               architecturePageB={architecturePageB}
               architecturePageWhiteColorB={architecturePageWhiteColorB}
+              timer={timerB} // Pass timer for ArchitectureB
             />
           }
         />
@@ -127,10 +149,11 @@ export default function App() {
             <TestPage
               page='c'
               Component={ArchitecturePageThree}
-              currentInfo={currentInfo} // Пропс info для страницы C
+              currentInfo={currentInfo}
               scrollToSection={scrollToSection}
               reviewsArchitecture={reviewsArchitecture}
               architecturePageC={architecturePageC}
+              timer={timerC} // Pass timer for ArchitectureC
             />
           }
         />
@@ -140,9 +163,10 @@ export default function App() {
           element={
             <ArchitecturePageOne
               currentInfo={currentInfo}
-              scrollToSection={scrollToSection} // Пропс info для страницы A
+              scrollToSection={scrollToSection}
               reviewsArchitecture={reviewsArchitecture}
               architecturePageA={architecturePageA}
+              timer={timerA} // Pass timer for ArchitectureA
             />
           }
         />
@@ -151,9 +175,10 @@ export default function App() {
           element={
             <ArchitecturePageOne
               currentInfo={currentInfo}
-              scrollToSection={scrollToSection} // Пропс info для страницы A
+              scrollToSection={scrollToSection}
               reviewsArchitecture={reviewsArchitecture}
               architecturePageA={architecturePageA}
+              timer={timerA} // Pass timer for ArchitectureA
             />
           }
         />

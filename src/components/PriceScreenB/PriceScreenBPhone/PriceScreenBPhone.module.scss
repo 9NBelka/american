@@ -54,6 +54,8 @@
     border-radius: 3vw;
     margin-top: 8vw;
     padding: 8vw 0vw;
+    padding-bottom: 1.5vw;
+    position: relative;
 
     & .nameCourse {
       display: flex;
@@ -66,15 +68,34 @@
       width: 70%;
     }
 
-    & .priceCourse {
+    & .blockWithInfoPriceAndDiscount {
       display: flex;
-      font-size: 8vw;
-      color: #ff0000;
-      font-family: var(--font-hankenGrotesk), sans-serif;
-      font-weight: var(--font-weight-bold);
-      line-height: var(--font-lineh-normal);
-      text-align: center;
-      margin-top: 5vw;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 4vw;
+      margin-top: 2vw;
+
+      & .colorRed {
+        display: flex;
+        font-size: 8vw;
+        color: #ff0000;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-lineh-normal);
+        text-align: center;
+        margin: 0;
+      }
+
+      & .discountPercentText {
+        font-size: 6vw;
+        color: #919191;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-normal);
+        text-decoration: line-through;
+        margin: 0;
+        margin-bottom: 0.5vw;
+      }
     }
 
     & .categoryCourse {
@@ -86,6 +107,18 @@
       line-height: var(--font-lineh-normal);
       text-align: center;
       text-transform: uppercase;
+    }
+
+    & .accessCourse {
+      display: flex;
+      font-size: 3.5vw;
+      color: black;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 3vw;
     }
   }
 
@@ -144,5 +177,152 @@
     border-radius: 5vw;
     cursor: pointer;
     margin-top: 8vw;
+  }
+
+  .availableText {
+    color: red;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+    margin-top: 10vw;
+    font-size: 4vw;
+  }
+
+  .blockWithInfoMoreInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
+
+    & .downInfoText {
+      display: flex;
+      font-size: 4.5vw;
+      color: black;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      margin: 0;
+    }
+
+    & .icon {
+      fill: black;
+      width: 4.5vw;
+      height: 4.5vw;
+    }
+  }
+
+  .expandedContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    padding: 0 7vw;
+    padding-bottom: 8vw;
+    & ul {
+      padding: 0;
+      margin: 0;
+      & li {
+        font-size: 3.6vw;
+        color: black;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-normal);
+        text-transform: uppercase;
+        margin-top: 3vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .timerTablet {
+    display: flex;
+    margin-top: 5vw;
+
+    & .textAndTimerBlock {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      & p {
+        font-size: 6vw;
+        color: #ffde01;
+        text-align: center;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-lineh-normal);
+        margin: 0;
+
+        &.descriptionTimer {
+          font-size: 5vw;
+          color: white;
+          margin-top: 1.5vw;
+        }
+      }
+
+      & .timer {
+        display: flex;
+        justify-content: center;
+        background-color: #494750;
+        border-radius: 3vw;
+        padding: 4vw 1vw;
+        margin-top: 3vw;
+
+        & span {
+          display: flex;
+          flex-direction: row;
+          gap: 1vw;
+          padding: 1.5vw 3.5vw;
+          color: white;
+          font-size: 6vw;
+          font-family: var(--font-hankenGrotesk), sans-serif;
+          font-weight: var(--font-weight-bold);
+          line-height: var(--font-lineh-small);
+
+          &.daysYellow {
+            color: #ffde01;
+          }
+
+          &:last-child {
+            border: 0;
+          }
+
+          & span {
+            align-items: flex-end;
+            padding: 0;
+            color: #919191;
+            font-size: 5vw;
+            padding-bottom: 0.05vw;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.discountPercentBlock {
+  position: absolute;
+  right: -0.2vw;
+  top: 63vw;
+
+  & .discountPercentBlockRelative {
+    position: relative;
+
+    & img {
+      width: 22vw;
+    }
+
+    & h6 {
+      display: flex;
+      position: absolute;
+      top: 43%;
+      left: 12%;
+      font-size: 6vw;
+      color: white;
+      font-family: var(--font-albertSans), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+    }
   }
 }

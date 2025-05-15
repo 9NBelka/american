@@ -12,6 +12,7 @@ export default function HeadScreenHeader({
   architecturePageA,
   architecturePageB,
   architecturePageC,
+  isCloseButton,
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const cartItems = useSelector((state) => state.cart.items); // Получаем товары из корзины
@@ -38,6 +39,7 @@ export default function HeadScreenHeader({
         `${isScrolled ? scss.headerScrolled : ''}`,
         architecturePageB && scss.headerB,
         architecturePageC && scss.headerC,
+        isCloseButton && scss.headerDefault,
       )}>
       <div className={scss.container}>
         <nav className={scss.headerNav}>
@@ -92,6 +94,11 @@ export default function HeadScreenHeader({
             {(architecturePageB || architecturePageC) && (
               <li>
                 <a onClick={() => scrollToSection('price', 100)}>Price</a>
+              </li>
+            )}
+            {architecturePageA && (
+              <li>
+                <a onClick={() => scrollToSection('price-section', 100)}>Price</a>
               </li>
             )}
           </ul>

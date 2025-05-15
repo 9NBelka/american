@@ -27,6 +27,14 @@ export default function Cart() {
   const [promoCodeInput, setPromoCodeInput] = useState('');
   const [appliedPromoCode, setAppliedPromoCode] = useState(null);
 
+  useEffect(() => {
+    const ids = cartItems.map((item) => item.id);
+    const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
+    if (duplicates.length > 0) {
+      console.warn('Найдены дублирующиеся ID в корзине:', duplicates);
+    }
+  }, [cartItems]);
+
   // Загружаем промокоды из Firestore
   useEffect(() => {
     const unsubscribe = onSnapshot(

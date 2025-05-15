@@ -2,8 +2,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import cartReducer, { setCart, setRemovedItems } from './cartSlice';
 import currencyReducer from './currencySlice';
 import courseReducer, { fetchCourseData, subscribeToCourseUpdates } from './courseSlice';
-import { doc, getDoc, onSnapshot } from 'firebase/firestore';
 import formReducer from './formSlice';
+import timersReducer from './timersSlice'; // Import the new timers slice
+import { doc, getDoc, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 
 // Функция для начальной загрузки и валидации корзины
@@ -140,6 +141,7 @@ export const store = configureStore({
     currency: currencyReducer,
     course: courseReducer,
     form: formReducer,
+    timers: timersReducer, // Add timers reducer
   },
   preloadedState: {
     cart: {
@@ -164,6 +166,11 @@ export const store = configureStore({
       error: null,
     },
     form: {
+      status: 'idle',
+      error: null,
+    },
+    timers: {
+      timers: [],
       status: 'idle',
       error: null,
     },

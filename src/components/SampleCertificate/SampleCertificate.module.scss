@@ -16,7 +16,13 @@
 }
 
 .sampleCertificate {
-  width: 95%;
+  width: 65%;
+}
+
+@media (max-width: 1024px) {
+  .sampleCertificate {
+    width: 85%;
+  }
 }
 
 @media (max-width: 576px) {

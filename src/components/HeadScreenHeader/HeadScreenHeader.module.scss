@@ -1,27 +1,31 @@
 .header {
   position: fixed;
-  top: 1.5vw;
+  top: 3.7vw;
   width: 100%;
   z-index: 1000;
-  padding: 0.6vw 0;
+  padding: 0.7vw 0;
   transition: 0.5s;
   background-color: #092332;
 
   &.headerScrolled {
     top: 0;
   }
+
+  &.headerDefault {
+    top: 0vw;
+  }
 }
 
 @media (max-width: 1024px) {
   .header {
-    top: 0vw;
+    top: 9vw;
     padding: 2vw 0;
   }
 }
 
 @media (max-width: 576px) {
   .header {
-    top: 0vw;
+    top: 14.5vw;
     padding: 3vw 0;
   }
 }

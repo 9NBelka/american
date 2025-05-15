@@ -56,7 +56,7 @@ export default function HeadScreenBurger({
       <div ref={menuRef} className={clsx(css.menu, { [css.open]: isOpen })}>
         <div>
           <div className={css.menuLogoAndIcon}>
-            <img className={css.menuLogo} src='/src/assets/img/logoBurger.webp' alt='menuLogo' />
+            <img className={css.menuLogo} src='/img/logoBurger.webp' alt='menuLogo' />
             <BsXLg onClick={toggleMenu} className={css.headerIconBurger} />
           </div>
           {/* <h5 className={css.menuListTitle}>Courses</h5>
@@ -166,16 +166,15 @@ export default function HeadScreenBurger({
               </div>
               {/* <h6 className={css.menuListNewCourse}>new</h6> */}
             </li>
-            {(architecturePageB || architecturePageC) && (
-              <li>
-                <div className={css.menuListIconSection}>
-                  <BsCaretRight className={css.menuListIcons} />
-                  <a className={css.menuListPoint} onClick={() => scrollToSection('price', 100)}>
-                    <h4>Price</h4>
-                  </a>
-                </div>
-              </li>
-            )}
+
+            <li>
+              <div className={css.menuListIconSection}>
+                <BsCaretRight className={css.menuListIcons} />
+                <a className={css.menuListPoint} onClick={() => scrollToSection('price', 100)}>
+                  <h4>Price</h4>
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div className={css.menuListIconsAnd}>

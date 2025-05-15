@@ -1,0 +1,135 @@
+.timerBlockMain {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .title {
+    color: #ffea00;
+    font-size: 1.2vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-small);
+  }
+
+  & .description {
+    color: white;
+    font-size: 1.2vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-small);
+  }
+
+  & .timer {
+    display: flex;
+    gap: 0.5vw;
+    & span {
+      padding: 0.1vw 0.2vw;
+      color: white;
+      font-size: 1.2vw;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-small);
+
+      & span {
+        color: #656565;
+        font-size: 0.75vw;
+      }
+    }
+  }
+
+  & .buttonBuy {
+    font-size: 1.5vw;
+    padding: 0.3vw 1.25vw;
+    color: white;
+    border: 0;
+    font-size: 1.2vw;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    background-color: #d74f3e;
+    text-align: center;
+    border-radius: 0.25vw;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  & .buttonClose {
+    display: flex;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    & .iconClose {
+      width: 1.5vw;
+      height: 1.5vw;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .timerBlockMain {
+    & .title {
+      font-size: 3vw;
+    }
+
+    & .description {
+      font-size: 3vw;
+    }
+
+    & .timer {
+      gap: 0.5vw;
+      & span {
+        padding: 0.1vw 0.25vw;
+        font-size: 3vw;
+
+        & span {
+          font-size: 1.8vw;
+        }
+      }
+    }
+
+    & .buttonBuy {
+      display: none;
+    }
+
+    & .buttonClose {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .timerBlockMain {
+    & .title {
+      font-size: 4.5vw;
+    }
+
+    & .description {
+      display: none;
+    }
+
+    & .timer {
+      gap: 1vw;
+      & span {
+        padding: 0.1vw 0.2vw;
+        font-size: 4.5vw;
+
+        & span {
+          font-size: 3.2vw;
+        }
+      }
+    }
+  }
+}

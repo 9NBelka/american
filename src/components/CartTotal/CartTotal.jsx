@@ -17,7 +17,7 @@ export default function CartTotal({
         <div className={scss.totalContainerWidthSavings}>
           <motion.div
             className={scss.totalContainer}
-            key={totalPrice}
+            key='total-price' // Уникальный строковый ключ
             variants={totalVariants}
             initial='initial'
             animate='animate'>
@@ -27,7 +27,7 @@ export default function CartTotal({
           {savings > 0 && (
             <motion.p
               className={scss.savings}
-              key={savings}
+              key='savings' // Уникальный строковый ключ
               variants={totalVariants}
               initial='initial'
               animate='animate'>

@@ -63,7 +63,7 @@ export default function CartItemsInfo({
                     <BsDash className={scss.icon} />
                   </button>
                   <motion.span
-                    key={item.quantity}
+                    key={`${item.id}-quantity`}
                     variants={quantityVariants}
                     initial='initial'
                     animate='animate'
@@ -106,7 +106,7 @@ export default function CartItemsInfo({
         </AnimatePresence>
         <button className={scss.clearButton} onClick={handleClearCart}>
           Clear Cart
-        </button>{' '}
+        </button>
       </div>
       <div className={scss.cartSlider}>
         <CartSlider />

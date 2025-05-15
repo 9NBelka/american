@@ -26,6 +26,7 @@ export default function ArchitecturePageTwo({
   reviewsArchitecture,
   architecturePageB,
   architecturePageWhiteColorB,
+  timer,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
@@ -139,10 +140,16 @@ export default function ArchitecturePageTwo({
             infoAboutProduct={currentInfo}
             handleAddToCart={handleAddToCart}
             products={products}
+            timer={timer}
           />
         </div>
         <div className={css.priceScreenBPhone}>
-          <PriceScreenBPhone infoAboutProduct={currentInfo} />
+          <PriceScreenBPhone
+            infoAboutProduct={currentInfo}
+            timer={timer}
+            products={products}
+            handleAddToCart={handleAddToCart}
+          />
         </div>
 
         <h3 className={css.titleScreens}>We worked with:</h3>

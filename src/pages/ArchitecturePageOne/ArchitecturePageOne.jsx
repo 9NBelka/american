@@ -19,23 +19,27 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { addToCart } from '../../store/cartSlice';
 import JoinUsScreen from '../../components/JoinUsScreen/JoinUsScreen';
+import TopDiscountAndTimer from '../../components/TopDiscountAndTimer/TopDiscountAndTimer';
+import clsx from 'clsx';
 
 export default function ArchitecturePageOne({
   currentInfo,
   scrollToSection,
   reviewsArchitecture,
   architecturePageA,
+  timer,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
   const [products, setProducts] = useState([]);
+  const [isCloseButton, setCloseButton] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchSpecificProducts = async () => {
       try {
         // Запрашиваем только два конкретных товара по их id
-        const productIds = ['ecs5']; // Укажи нужные id
+        const productIds = ['dddd', 'ecs5']; // Укажи нужные id
         const productsData = [];
 
         for (const id of productIds) {
@@ -60,13 +64,33 @@ export default function ArchitecturePageOne({
     dispatch(addToCart(product));
   };
 
+  const handleClose = () => {
+    setCloseButton(true);
+  };
+
+  const staticProduct = true;
+
   return (
     <>
+      <div
+        className={clsx(
+          css.backgroundDiscountAndTimer,
+          isCloseButton && css.backgroundDiscountAndTimerNone,
+        )}>
+        <div className={css.container}>
+          <TopDiscountAndTimer
+            timer={timer}
+            handleClose={handleClose}
+            scrollToSection={scrollToSection}
+          />
+        </div>
+      </div>
       <div className={css.backgroundHeadScreen}>
         <HeadScreenHeader
           currentInfo={currentInfo}
           scrollToSection={scrollToSection}
           architecturePageA={architecturePageA}
+          isCloseButton={isCloseButton}
         />
         <div className={css.container}>
           <HeadScreenTitle
@@ -84,7 +108,16 @@ export default function ArchitecturePageOne({
                 toggleModal={toggleModal}
                 isOpen={isOpen}
                 handleAddToCart={handleAddToCart}
-                products={products}
+                timer={timer}
+                product={products[0]}
+              />
+              <StickyProduct
+                infoAboutProduct={currentInfo}
+                toggleModal={toggleModal}
+                isOpen={isOpen}
+                handleAddToCart={handleAddToCart}
+                timer={timer}
+                product={products[1]}
               />
             </div>
             <div className={css.backgroundViewCourseScreen}>
@@ -121,9 +154,41 @@ export default function ArchitecturePageOne({
               Demo lessons
             </h3>
             <DemoVideosScreen demoVideos={currentInfo} />
-            <h3 className={css.titleScreens}>Sample Certificate</h3>
-            <SampleCertificate imageCerctificate={currentInfo} />
-            <h3 className={css.titleScreens}>Wу are trusted by:</h3>
+            <div className={css.productOnPc}>
+              <h3 className={css.titleScreens} id='price-section'>
+                Price
+              </h3>
+              <div className={css.productAndText}>
+                <div className={css.productBlock}>
+                  <StickyProduct
+                    infoAboutProduct={currentInfo}
+                    toggleModal={toggleModal}
+                    isOpen={isOpen}
+                    handleAddToCart={handleAddToCart}
+                    timer={timer}
+                    staticProduct={staticProduct}
+                    product={products[0]}
+                  />
+                </div>
+                <ul className={css.listProduct}>
+                  <li>
+                    Subscribe to our channels to miss nothing from news, promotions, promo codes.
+                    Among the subscribers of our channel you can also find friends, like-minded
+                    people, mentors.
+                  </li>
+                  <li>
+                    Subscribe to our channels to miss nothing from news, promotions, promo codes.
+                    Among the subscribers of our channel you can also find friends, like-minded
+                    people, mentors.
+                  </li>
+                  <li>
+                    Subscribe to our channels to miss nothing from news, promotions, promo codes.
+                    Among the subscribers of our channel you can also find friends, like-minded
+                    people, mentors.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className={css.rightColumn}>
             <StickyProduct
@@ -131,10 +196,17 @@ export default function ArchitecturePageOne({
               toggleModal={toggleModal}
               isOpen={isOpen}
               handleAddToCart={handleAddToCart}
-              products={products}
+              product={products[1]}
+              timer={timer}
             />
           </div>
         </div>
+      </div>
+
+      <div className={css.container}>
+        <h3 className={css.titleScreens}>Sample Certificate</h3>
+        <SampleCertificate imageCerctificate={currentInfo} />
+        <h3 className={css.titleScreens}>We are trusted by:</h3>
       </div>
 
       <TrustedScreen imageTrusted={currentInfo} />

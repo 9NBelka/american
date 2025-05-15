@@ -16,7 +16,7 @@
 .priceScreenInfoBlock {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 65%;
 
   & h3 {
     display: flex;
@@ -54,7 +54,7 @@
 
     &.availableText {
       color: red;
-      margin-top: 1vw;
+      margin-top: 1.5vw;
       font-size: 1vw;
     }
   }
@@ -96,6 +96,12 @@
       &.colorYellow {
         margin-top: 5vw;
       }
+
+      &.availableText {
+        justify-content: flex-start;
+        margin-top: 2.5vw;
+        font-size: 2.2vw;
+      }
     }
 
     & h5 {
@@ -115,9 +121,17 @@
   margin-top: 2.5vw;
   padding: 1.25vw 0vw;
   position: relative;
+
+  &.priceScreenInfoForCourseGrey {
+    background-color: #494750;
+  }
 }
 
 @media (max-width: 1024px) {
+  .priceScreenInfoForCourseMain {
+    width: 100%;
+  }
+
   .priceScreenInfoForCourse {
     width: 100%;
     border-radius: 2.5vw;
@@ -128,49 +142,179 @@
 
 .blockInfoAboutCourseBlock {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  border-right: 0.01vw solid #c6c6c6;
-  width: 25%;
+  width: 100%;
 
-  &:last-child {
-    border-right: none;
-  }
-
-  & h6 {
+  & .blockWithInfo {
     display: flex;
-    font-size: 1.15vw;
-    color: black;
-    font-family: var(--font-hankenGrotesk), sans-serif;
-    font-weight: var(--font-weight-normal);
-    line-height: var(--font-lineh-normal);
-    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.01vw solid #c6c6c6;
+    width: 25%;
 
-    &:first-child {
-      font-size: 0.85vw;
+    &.blockWithInfoMini {
+      width: 13%;
     }
 
-    &.colorRed {
-      color: red;
-      font-weight: var(--font-weight-bold);
+    &:last-child {
+      border-right: none;
+    }
+
+    &.blockWithInfoMoreInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1vw;
+      cursor: pointer;
+
+      & p {
+        margin: 0;
+      }
+
+      & .icon {
+        width: 0.75vw;
+        height: 0.75vw;
+        fill: black;
+
+        &.iconWhite {
+          fill: white;
+        }
+      }
+    }
+
+    & .blockWithInfoPriceAndDiscount {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 0.5vw;
+      margin-top: 0.25vw;
+
+      & p {
+        display: flex;
+        font-size: 1.15vw;
+        color: black;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-normal);
+        line-height: var(--font-lineh-normal);
+        margin: 0;
+        gap: 0.25vw;
+
+        &.textWhite {
+          color: white;
+        }
+
+        &.colorRed {
+          color: red;
+          font-weight: var(--font-weight-bold);
+
+          &.textYellow {
+            color: #ffde01;
+          }
+        }
+
+        &.discountPercentText {
+          font-size: 0.85vw;
+          color: #919191;
+          font-family: var(--font-hankenGrotesk), sans-serif;
+          font-weight: var(--font-weight-normal);
+          line-height: var(--font-lineh-normal);
+          text-decoration: line-through;
+          margin-bottom: 0.1vw;
+        }
+      }
+    }
+
+    & h6 {
+      display: flex;
+      font-size: 0.85vw;
+      color: black;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      margin: 0;
+      gap: 0.25vw;
+
+      &.textWhite {
+        color: white;
+      }
+
+      & span {
+        font-weight: var(--font-weight-bold);
+      }
+    }
+
+    & .downInfoText {
+      display: flex;
+      font-size: 1.15vw;
+      color: black;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      margin: 0;
+      margin-top: 0.25vw;
+
+      &.textWhite {
+        color: white;
+      }
     }
   }
 }
 
 @media (max-width: 1024px) {
   .blockInfoAboutCourseBlock {
-    border-right: 0.01vw solid #c6c6c6;
-    width: 25%;
+    width: 100%;
 
-    &:last-child {
-      border-right: none;
-    }
+    & .blockWithInfo {
+      &.blockWithInfoMini {
+        display: none;
+      }
 
-    & h6 {
-      font-size: 2.8vw;
+      &:last-child {
+        border: none;
+      }
 
-      &:first-child {
-        font-size: 2vw;
+      &.blockWithInfoMoreInfo {
+        gap: 1vw;
+
+        & p {
+          margin: 0;
+        }
+
+        & .icon {
+          width: 1.75vw;
+          height: 1.75vw;
+          fill: black;
+
+          &.iconWhite {
+            fill: white;
+          }
+        }
+      }
+
+      & .blockWithInfoPriceAndDiscount {
+        gap: 1vw;
+        margin-top: 0.5vw;
+
+        & p {
+          font-size: 2.6vw;
+
+          &.discountPercentText {
+            font-size: 1.9vw;
+            margin-bottom: 0.1vw;
+          }
+        }
+      }
+
+      & h6 {
+        font-size: 1.8vw;
+        gap: 0.25vw;
+      }
+
+      & .downInfoText {
+        font-size: 2.4vw;
+        margin-top: 0.5vw;
       }
     }
   }
@@ -178,14 +322,77 @@
 
 .priceScreenImageBlock {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 50%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 35%;
   height: 100%;
 
   & img {
     border-radius: 0.75vw;
-    width: 21.9vw;
+    width: 20vw;
+  }
+
+  & .textAndTimerBlock {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-bottom: 1vw;
+
+    & p {
+      font-size: 1.45vw;
+      color: #ffde01;
+      text-align: center;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      margin: 0;
+
+      &.descriptionTimer {
+        font-size: 1vw;
+        color: white;
+        margin-top: 0.25vw;
+      }
+    }
+
+    & .timer {
+      display: flex;
+      justify-content: center;
+      background-color: #494750;
+      border-radius: 0.75vw;
+      padding: 1.5vw 1vw;
+      margin-top: 0.5vw;
+
+      & span {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5vw;
+        padding: 0.3vw 1vw;
+        color: white;
+        font-size: 1.2vw;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-lineh-small);
+        border-right: 0.1vw solid #919191;
+
+        &.daysYellow {
+          color: #ffde01;
+        }
+
+        &:last-child {
+          border: 0;
+        }
+
+        & span {
+          align-items: flex-end;
+          padding: 0;
+          color: #919191;
+          font-size: 1vw;
+          padding-bottom: 0.05vw;
+          border: 0;
+        }
+      }
+    }
   }
 }
 
@@ -209,11 +416,16 @@
   border: none;
   border-radius: 3vw;
   cursor: pointer;
-  margin-top: 2.5vw;
+  margin-top: 1.5vw;
   transition: 0.5s ease-in-out;
 
   &:hover {
     box-shadow: 0px 0vw 1vw 0vw #ff0000;
+  }
+
+  &.buttonYellow {
+    background: #ffde01;
+    color: black;
   }
 }
 
@@ -253,6 +465,135 @@
       font-family: var(--font-albertSans), sans-serif;
       font-weight: var(--font-weight-normal);
       line-height: var(--font-lineh-normal);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .discountPercentBlock {
+    position: absolute;
+    right: -0.2vw;
+    bottom: -10vw;
+
+    & .discountPercentBlockRelative {
+      & img {
+        width: 12vw;
+      }
+
+      & h6 {
+        top: 34%;
+        left: 13%;
+        font-size: 2.8vw;
+      }
+    }
+  }
+}
+
+.expandedContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5vw;
+
+  & ul {
+    width: 75%;
+    margin: 0;
+    padding-left: 1vw;
+    & li {
+      font-size: 0.8vw;
+      color: white;
+      font-family: var(--font-hankenGrotesk), sans-serif;
+      font-weight: var(--font-weight-normal);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+      margin-top: 0.75vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .expandedContent {
+    margin-top: 1vw;
+
+    & ul {
+      width: 80%;
+      margin: 0;
+      padding-left: 2.5vw;
+      & li {
+        font-size: 1.8vw;
+        margin-top: 2vw;
+      }
+    }
+  }
+}
+.timerTablet {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .timerTablet {
+    display: flex;
+    margin-top: 3vw;
+
+    & .textAndTimerBlock {
+      display: flex;
+      flex-direction: column;
+      width: 50vw;
+      margin-bottom: 1vw;
+
+      & p {
+        font-size: 3vw;
+        color: #ffde01;
+        text-align: center;
+        font-family: var(--font-hankenGrotesk), sans-serif;
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-lineh-normal);
+        margin: 0;
+
+        &.descriptionTimer {
+          font-size: 2.6vw;
+          color: white;
+          margin-top: 1vw;
+        }
+      }
+
+      & .timer {
+        display: flex;
+        justify-content: center;
+        background-color: #494750;
+        border-radius: 2.5vw;
+        padding: 4vw 1vw;
+        margin-top: 1.5vw;
+
+        & span {
+          display: flex;
+          flex-direction: row;
+          gap: 1vw;
+          padding: 1vw 3vw;
+          color: white;
+          font-size: 3vw;
+          font-family: var(--font-hankenGrotesk), sans-serif;
+          font-weight: var(--font-weight-bold);
+          line-height: var(--font-lineh-small);
+          border-right: 0.1vw solid #919191;
+
+          &.daysYellow {
+            color: #ffde01;
+          }
+
+          &:last-child {
+            border: 0;
+          }
+
+          & span {
+            align-items: flex-end;
+            padding: 0;
+            color: #919191;
+            font-size: 2.6vw;
+            padding-bottom: 0.05vw;
+            border: 0;
+          }
+        }
+      }
     }
   }
 }
