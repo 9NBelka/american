@@ -1,0 +1,79 @@
+.backgroundThankPage {
+  width: 100%;
+  background-color: #29282d;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  width: 68.75vw;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 79.167vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 82vw;
+  }
+}
+
+.thankPageMainBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  & .title {
+    font-size: 4.8vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+  }
+
+  & .textForLink {
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+    margin-top: 2.5vw;
+    padding: 0 0.75vw;
+    padding-bottom: 0.75vw;
+    border-bottom: 0.2vw solid rgba(217, 217, 217, 0.3);
+
+    & a {
+      color: #f7bb0d;
+      font-weight: var(--font-weight-bold);
+      text-decoration: underline;
+    }
+
+    &.contactUs {
+      padding: 0;
+      border: 0;
+      margin-top: 1vw;
+    }
+  }
+
+  & .buttonToHomePage {
+    display: flex;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-hankenGrotesk), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    background-color: #ff0000;
+    padding: 0.4vw 2.4vw;
+    border-radius: 2vw;
+    margin-top: 2.5vw;
+  }
+}

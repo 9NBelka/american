@@ -15,6 +15,9 @@ import { collection, getDocs } from 'firebase/firestore';
 import Cart from './pages/Cart/Cart';
 import CartOrderForm from './components/CartOrderForm/CartOrderForm';
 import { fetchTimers } from './store/timersSlice';
+import ThankYouPageArchOne from './pages/ThankYouPages/ThankYouPageArchOne/ThankYouPageArchOne';
+import ThankYouPageArchTwo from './pages/ThankYouPages/ThankYouPageArchTwo/ThankYouPageArchTwo';
+import ThankYouPageArchThree from './pages/ThankYouPages/ThankYouPageArchThree/ThankYouPageArchThree';
 
 const Loading = () => <h1>Загрузка...</h1>;
 
@@ -186,6 +189,9 @@ export default function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/order' element={<CartOrderForm />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/thank-you-a' element={<ThankYouPageArchOne />} />
+        <Route path='/thank-you-b' element={<ThankYouPageArchTwo />} />
+        <Route path='/thank-you-c' element={<ThankYouPageArchThree />} />
         {/* Страница 404 */}
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

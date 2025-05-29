@@ -415,6 +415,18 @@
     "path": "/privacy-policy"
   },
   {
+    "id": 110,
+    "path": "/thank-you-a"
+  },
+  {
+    "id": 111,
+    "path": "/thank-you-b"
+  },
+  {
+    "id": 112,
+    "path": "/thank-you-c"
+  },
+  {
     "id": 200,
     "path": "/cart"
   },

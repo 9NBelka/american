@@ -1,0 +1,146 @@
+.backgroundThankPage {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  width: 68.75vw;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 79.167vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 82vw;
+  }
+}
+
+.thankPageMainBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  & .title {
+    font-size: 3.2vw;
+    color: black;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+  }
+
+  & .textForLink {
+    font-size: 0.85vw;
+    color: #092332;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-lineh-normal);
+    margin: 0;
+    margin-top: 1.5vw;
+
+    &.textForLinkSocial {
+      margin-top: 2.5vw;
+    }
+  }
+
+  & .discordButton {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    align-items: center;
+    background-color: #0055ff;
+    font-size: 0.85vw;
+    color: white;
+    font-family: var(--font-akatab), sans-serif;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-lineh-normal);
+    text-transform: uppercase;
+    padding: 0.4vw 1.2vw;
+    border: 0;
+    border-radius: 0.25vw;
+    margin-top: 1vw;
+
+    & .icon {
+      fill: white;
+      width: 1.2vw;
+      height: 1.2vw;
+    }
+
+    &.mainSocialButton {
+      background-color: white;
+      border: 0.1vw solid #0055ff;
+      color: black;
+      gap: 1vw;
+
+      & .icon {
+        fill: #0055ff;
+        width: 1.2vw;
+        height: 1.2vw;
+      }
+    }
+  }
+
+  & .socialAndOurSitesBlock {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4vw;
+  }
+
+  & .socialBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1vw solid #656565;
+    padding: 1.3vw 5vw;
+    border-radius: 0.75vw;
+
+    & h3 {
+      font-size: 1.6vw;
+      color: black;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+    }
+
+    & .socialIcons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1.2vw;
+      margin-top: 0.5vw;
+
+      & .socialIcon {
+        fill: #0055ff;
+        width: 1.2vw;
+        height: 1.2vw;
+      }
+    }
+
+    & .websiteButton {
+      background-color: #0055ff;
+      font-size: 0.85vw;
+      color: white;
+      font-family: var(--font-akatab), sans-serif;
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-lineh-normal);
+      text-transform: uppercase;
+      padding: 0.4vw 1.2vw;
+      border: 0;
+      border-radius: 0.25vw;
+      margin-top: 0.5vw;
+    }
+  }
+}
