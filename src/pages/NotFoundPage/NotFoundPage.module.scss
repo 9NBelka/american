@@ -1,18 +1,44 @@
+.backgroundColor {
+  background-color: #111111;
+  height: 100vh;
+}
+
 .backgroundBlock {
-  background-color: black;
+  background-color: #111111;
   background-image: url('/img/NotFoundPageBackground.jpg');
   background-repeat: no-repeat;
   background-position: left top;
   background-position-y: -2vw;
   background-size: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+  .backgroundBlock {
+    background-image: url('/img/NotFoundPageBackgroundTablet.jpg');
+    background-position-y: 0vw;
+    background-size: 100%;
+    background-position: center top;
+    height: 100%;
+    width: 100%;
+    background-size: 100vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .backgroundBlock {
+    background-position-x: -25vw;
+    height: 100%;
+    width: 100%;
+    background-size: 135vw;
+  }
+}
+
 .imageSnakes {
   position: absolute;
-  top: 2.4vw;
+  top: 0.4vw;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -22,12 +48,40 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .imageSnakes {
+    position: absolute;
+    top: 10.3vw;
+    left: -70vw;
+    width: 198vw;
+    height: 100vh;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .imageSnakes {
+    position: absolute;
+    top: 13.9vw;
+    left: -121vw;
+    width: 270vw;
+    height: 100vh;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
 .textsBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 7.8vw;
+  padding-top: 5.7vw;
 
   & .textError {
     font-size: 4.2vw;
@@ -79,6 +133,76 @@
       fill: white;
       width: 1vw;
       height: 1vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .textsBlock {
+    padding-top: 23vw;
+
+    & .textError {
+      font-size: 8.6vw;
+    }
+
+    & .textErrorNumb {
+      font-size: 44vw;
+      line-height: 0.96em;
+      margin-top: 30vw;
+    }
+
+    & p {
+      font-size: 4.2vw;
+      margin-top: 8vw;
+    }
+
+    & .buttonBack {
+      gap: 1.5vw;
+      font-size: 1.8vw;
+      padding: 1vw 3vw;
+      border-radius: 0.75vw;
+      margin-top: 3vw;
+
+      & .icon {
+        width: 2.4vw;
+        height: 2.4vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .textsBlock {
+    padding-top: 26vw;
+
+    & .textError {
+      font-size: 10vw;
+    }
+
+    & .textErrorNumb {
+      font-size: 50vw;
+      line-height: 0.96em;
+      margin-top: 51vw;
+    }
+
+    & p {
+      font-size: 6.9vw;
+      text-align: center;
+      margin-top: 4vw;
+      line-height: var(--font-lineh-normal);
+    }
+
+    & .buttonBack {
+      gap: 3vw;
+      font-size: 3.6vw;
+      padding: 2vw 4vw;
+      border-radius: 1vw;
+      margin-top: 4vw;
+
+      & .icon {
+        width: 3.8vw;
+        height: 3.8vw;
+      }
     }
   }
 }
