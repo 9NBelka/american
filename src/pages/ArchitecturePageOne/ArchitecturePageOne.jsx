@@ -85,7 +85,7 @@ export default function ArchitecturePageOne({
           />
         </div>
       </div>
-      <div className={css.backgroundHeadScreen}>
+      <div className={css.backgroundHeadScreen} id='headerToTop'>
         <HeadScreenHeader
           currentInfo={currentInfo}
           scrollToSection={scrollToSection}

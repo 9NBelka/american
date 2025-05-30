@@ -65,7 +65,7 @@ export default function ArchitecturePageTwo({
 
   return (
     <div className={css.mainBackground}>
-      <div className={css.backgroundHeadScreen}>
+      <div className={css.backgroundHeadScreen} id='headerToTop'>
         <HeadScreenHeader
           currentInfo={currentInfo}
           scrollToSection={scrollToSection}

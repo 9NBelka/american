@@ -60,7 +60,7 @@ export default function ArchitecturePageThree({
 
   return (
     <>
-      <div className={css.backgroundHeadScreen}>
+      <div className={css.backgroundHeadScreen} id='headerToTop'>
         <HeadScreenHeader
           currentInfo={currentInfo}
           scrollToSection={scrollToSection}

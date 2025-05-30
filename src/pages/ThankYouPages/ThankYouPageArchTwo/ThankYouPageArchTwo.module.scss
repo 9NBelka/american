@@ -55,6 +55,11 @@
       color: #f7bb0d;
       font-weight: var(--font-weight-bold);
       text-decoration: underline;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &.contactUs {
@@ -75,5 +80,80 @@
     padding: 0.4vw 2.4vw;
     border-radius: 2vw;
     margin-top: 2.5vw;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0vw 1vw 0vw #ff0000;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .thankPageMainBlock {
+    & .title {
+      font-size: 9vw;
+    }
+
+    & .textForLink {
+      font-size: 1.8vw;
+      margin-top: 4vw;
+      padding: 0 1vw;
+      padding-bottom: 1.5vw;
+      border-bottom: 0.5vw solid rgba(217, 217, 217, 0.3);
+      text-align: center;
+
+      & a {
+        text-decoration: underline;
+        transition: 0s ease-in-out;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.contactUs {
+        margin-top: 1.5vw;
+      }
+    }
+
+    & .buttonToHomePage {
+      font-size: 1.8vw;
+      padding: 0.9vw 4vw;
+      border-radius: 3vw;
+      margin-top: 4vw;
+      transition: 0s ease-in-out;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .thankPageMainBlock {
+    & .title {
+      font-size: 14vw;
+    }
+
+    & .textForLink {
+      font-size: 3.6vw;
+      margin-top: 6vw;
+      padding: 0 1vw;
+      padding-bottom: 3vw;
+      border-bottom: 1vw solid rgba(217, 217, 217, 0.3);
+      text-align: center;
+
+      &.contactUs {
+        margin-top: 3vw;
+      }
+    }
+
+    & .buttonToHomePage {
+      font-size: 3.6vw;
+      padding: 1.5vw 6vw;
+      border-radius: 5vw;
+      margin-top: 6vw;
+    }
   }
 }

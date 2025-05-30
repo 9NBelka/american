@@ -69,9 +69,11 @@ export default function AboutUsText({
         </div>
       )}
       {architecturePageC && !AboutUsTextHalfBlock && (
-        <a href='#' className={scss.historyButton} onClick={() => scrollToSection('footer', 100)}>
-          Read the school history
-        </a>
+        <div className={scss.historyButtonBlock}>
+          <a href='#' className={scss.historyButton} onClick={() => scrollToSection('footer', 100)}>
+            Read the school history
+          </a>
+        </div>
       )}
     </div>
   );

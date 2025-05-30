@@ -21,7 +21,7 @@
 
 @media (max-width: 576px) {
   .container {
-    width: 82vw;
+    width: 100%;
   }
 }
 
@@ -67,6 +67,10 @@
       & a {
         color: #ec6532;
         text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       &.contactUs {
@@ -87,6 +91,93 @@
       padding: 0.6vw 2.4vw;
       border-radius: 0.25vw;
       margin-top: 1.25vw;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        box-shadow: 0px 0vw 1vw 0vw #ec6532;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .thankPageMainBlock {
+    & .thankPageMainBlockBackground {
+      padding: 10vw 5vw;
+
+      & .title {
+        font-size: 8vw;
+      }
+
+      & .completeIcon {
+        width: 10vw;
+        height: 10vw;
+        margin-top: 5vw;
+      }
+
+      & .textForLink {
+        font-size: 1.8vw;
+        margin-top: 5vw;
+
+        & a {
+          transition: 0s ease-in-out;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &.contactUs {
+          margin-top: 2vw;
+        }
+      }
+
+      & .buttonToHomePage {
+        font-size: 1.8vw;
+        padding: 1.4vw 4vw;
+        border-radius: 0.5vw;
+        margin-top: 5vw;
+        transition: 0s ease-in-out;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .thankPageMainBlock {
+    & .thankPageMainBlockBackground {
+      padding: 15vw 0vw;
+      width: 100%;
+
+      & .title {
+        font-size: 15vw;
+      }
+
+      & .completeIcon {
+        width: 18vw;
+        height: 18vw;
+        margin-top: 8vw;
+      }
+
+      & .textForLink {
+        font-size: 3.6vw;
+        text-align: center;
+        margin-top: 8vw;
+
+        &.contactUs {
+          margin-top: 3vw;
+        }
+      }
+
+      & .buttonToHomePage {
+        font-size: 3.6vw;
+        padding: 2.6vw 7vw;
+        border-radius: 0.75vw;
+        margin-top: 8vw;
+      }
     }
   }
 }

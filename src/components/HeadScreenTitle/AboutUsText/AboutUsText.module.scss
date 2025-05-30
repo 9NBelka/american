@@ -150,15 +150,20 @@
     }
   }
 
+  & .historyButtonBlock {
+    margin-top: 0.5vw;
+  }
+
   & .historyButton {
-    display: flex;
+    // display: block;
     font-size: 0.85vw;
     color: white;
     font-family: var(--font-akatab), sans-serif;
     font-weight: var(--font-weight-bold);
     line-height: var(--font-lineh-normal);
     margin: 0;
-    margin-top: 0.5vw;
+
+    text-decoration: underline;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 
@@ -217,10 +222,13 @@
       }
     }
 
+    & .historyButtonBlock {
+      margin-top: 2vw;
+    }
+
     & .historyButton {
       justify-content: center;
       font-size: 1.8vw;
-      margin-top: 2vw;
     }
   }
 }
@@ -278,10 +286,13 @@
       }
     }
 
+    & .historyButtonBlock {
+      margin-top: 4vw;
+    }
+
     & .historyButton {
       justify-content: center;
       font-size: 3.6vw;
-      margin-top: 4vw;
     }
   }
 }

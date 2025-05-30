@@ -20,7 +20,7 @@
 
 @media (max-width: 576px) {
   .container {
-    width: 82vw;
+    width: 100%;
   }
 }
 
@@ -70,6 +70,11 @@
     border: 0;
     border-radius: 0.25vw;
     margin-top: 1vw;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0vw 1vw 0vw #0055ff;
+    }
 
     & .icon {
       fill: white;
@@ -126,6 +131,12 @@
         fill: #0055ff;
         width: 1.2vw;
         height: 1.2vw;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
 
@@ -141,6 +152,176 @@
       border: 0;
       border-radius: 0.25vw;
       margin-top: 0.5vw;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        box-shadow: 0px 0vw 1vw 0vw #0055ff;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .thankPageMainBlock {
+    & .title {
+      font-size: 10vw;
+    }
+
+    & .textForLink {
+      font-size: 1.8vw;
+      margin-top: 2vw;
+
+      &.textForLinkSocial {
+        margin-top: 4vw;
+      }
+    }
+
+    & .discordButton {
+      gap: 1vw;
+      background-color: #0055ff;
+      font-size: 1.8vw;
+      padding: 0.75vw 2vw;
+      border-radius: 0.5vw;
+      margin-top: 1.5vw;
+      transition: 0s ease-in-out;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      & .icon {
+        width: 2vw;
+        height: 2vw;
+      }
+
+      &.mainSocialButton {
+        border: 0.15vw solid #0055ff;
+        gap: 1.5vw;
+
+        & .icon {
+          width: 2vw;
+          height: 2vw;
+        }
+      }
+    }
+
+    & .socialAndOurSitesBlock {
+      width: auto;
+      flex-direction: column-reverse;
+      margin-top: 5vw;
+      gap: 3vw;
+    }
+
+    & .socialBlock {
+      border: 0.15vw solid #656565;
+      padding: 2.5vw 6vw;
+      border-radius: 0.75vw;
+
+      & h3 {
+        font-size: 2.4vw;
+      }
+
+      & .socialIcons {
+        gap: 4vw;
+        margin-top: 1.5vw;
+
+        & .socialIcon {
+          width: 2.4vw;
+          height: 2.4vw;
+          transition: 0s ease-in-out;
+
+          &:hover {
+            transform: scale(1);
+          }
+        }
+      }
+
+      & .websiteButton {
+        font-size: 1.8vw;
+        padding: 0.75vw 2vw;
+        border-radius: 0.5vw;
+        margin-top: 1.5vw;
+        transition: 0s ease-in-out;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  @media (max-width: 1024px) {
+    .thankPageMainBlock {
+      & .title {
+        font-size: 14vw;
+      }
+
+      & .textForLink {
+        font-size: 3.6vw;
+        margin-top: 3vw;
+        text-align: center;
+
+        &.textForLinkSocial {
+          margin-top: 6vw;
+        }
+      }
+
+      & .discordButton {
+        gap: 2vw;
+        font-size: 3.6vw;
+        padding: 1.4vw 5vw;
+        border-radius: 1vw;
+        margin-top: 2vw;
+
+        & .icon {
+          width: 4vw;
+          height: 4vw;
+        }
+
+        &.mainSocialButton {
+          border: 0.15vw solid #0055ff;
+          gap: 2vw;
+
+          & .icon {
+            width: 4vw;
+            height: 4vw;
+          }
+        }
+      }
+
+      & .socialAndOurSitesBlock {
+        margin-top: 8vw;
+        gap: 3vw;
+      }
+
+      & .socialBlock {
+        border: 0.15vw solid #656565;
+        padding: 5vw 12vw;
+        border-radius: 1.5vw;
+
+        & h3 {
+          font-size: 5vw;
+        }
+
+        & .socialIcons {
+          gap: 6.5vw;
+          margin-top: 3vw;
+
+          & .socialIcon {
+            width: 4.5vw;
+            height: 4.5vw;
+          }
+        }
+
+        & .websiteButton {
+          font-size: 3.6vw;
+          padding: 1.4vw 5vw;
+          border-radius: 1vw;
+          margin-top: 2vw;
+        }
+      }
     }
   }
 }

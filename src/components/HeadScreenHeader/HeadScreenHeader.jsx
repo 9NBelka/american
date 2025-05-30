@@ -50,6 +50,7 @@ export default function HeadScreenHeader({
                   className={clsx(scss.headerLogo)}
                   src={currentInfo.logoCourse}
                   alt='icon-logo'
+                  onClick={() => scrollToSection('headerToTop', 100)}
                 />
               </div>
             )}
@@ -59,6 +60,7 @@ export default function HeadScreenHeader({
                   className={clsx(scss.headerKnowledgeLogoMain)}
                   src={currentInfo.knowledgeLogoMain}
                   alt='icon-logo'
+                  onClick={() => scrollToSection('headerToTop', 100)}
                 />
               </div>
             )}
@@ -116,7 +118,7 @@ export default function HeadScreenHeader({
                 Ask a question
               </li>
             )}
-            <Link to='https://lms-theta-nine.vercel.app/signUp'>
+            <Link to='https://lms-jet-one.vercel.app/signUp'>
               <li
                 className={clsx(
                   scss.headerButtonSingUp,

@@ -160,6 +160,16 @@
     &:hover {
       opacity: 0.8;
     }
+
+    &.stickyBlockBuyNowGrey {
+      color: white;
+      background-color: rgb(69, 69, 69);
+      cursor: no-drop;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   & .availableText {

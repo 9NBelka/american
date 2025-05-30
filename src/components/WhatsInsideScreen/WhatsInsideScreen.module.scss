@@ -73,6 +73,7 @@
   padding-bottom: 0vw;
 
   .insideScreenTitle {
+    transition: 0.2s ease-in-out;
     font-weight: var(--font-weight-bold);
   }
 }

@@ -66,7 +66,6 @@ export default function StickyProduct({
             <p className={scss.categoryText}>{product.access}</p>
           </div>
         </div>
-
         {product.discountedPrice && product.discountedPrice > 0 ? (
           <div className={scss.priceProductBlock}>
             <h5 className={scss.stickyBlockPrice}>{product.discountedPrice}$</h5>
@@ -84,7 +83,6 @@ export default function StickyProduct({
         ) : (
           <h5 className={scss.stickyBlockPrice}>{product.priceProduct}$</h5>
         )}
-
         {product.discountedPrice && product.discountedPrice > 0 && (
           <div className={scss.textAndTimerBlock}>
             <BsClock className={scss.icon} />
@@ -103,17 +101,26 @@ export default function StickyProduct({
             </div>
           </div>
         )}
-
         {product.available ? (
           <button
-            href={infoAboutProduct.stickyBlockLinkBuy}
-            className={scss.stickyBlockBuyNow}
+            className={clsx(
+              scss.stickyBlockBuyNow,
+              !product.available && scss.stickyBlockBuyNowGrey,
+            )}
             rel='noopener noreferrer'
             onClick={() => handleAddToCart(product)}>
             <h5>BUY NOW</h5>
           </button>
         ) : (
-          <p className={scss.availableText}>Not available</p>
+          <button
+            className={clsx(
+              scss.stickyBlockBuyNow,
+              !product.available && scss.stickyBlockBuyNowGrey,
+            )}
+            rel='noopener noreferrer'
+            disabled>
+            <h5>Not available</h5>
+          </button>
         )}
 
         {/* <div className={scss.stickyBlockInfoAboutCourse}>
